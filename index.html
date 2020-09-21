@@ -35,8 +35,15 @@
         </div>
     </div>
     <div class="side">
-        <div class="side-bar"></div>
+        <div class="side-bar">
+            <div class="side-arrow toggle-side-bar">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+        </div>
         <div class="side-menu">
+            <div class="side-arrow toggle-side-menu">
+                <i class="fas fa-chevron-left"></i>
+            </div>
             <p>Lorem ipsum dolor sit amet.</p>
             <p>Lorem ipsum dolor sit amet.</p>
             <p>Lorem ipsum dolor sit amet.</p>
@@ -77,12 +84,13 @@
     </div>
 
 
+    <script src="https://kit.fontawesome.com/e9f50f9a1c.js" crossorigin="anonymous"></script>
     <script>
         //TOGGLE SIDE BAR
         document.querySelector('.toggle-side-bar').addEventListener('click', function() {
             document.querySelector('.side-bar').classList.toggle('side-bar-close')
             if(document.querySelector('.side-bar').classList.contains('side-bar-close')) {
-                document.documentElement.style.setProperty('--side-bar-width', "1.5em");
+                document.documentElement.style.setProperty('--side-bar-width', "2em");
             } else {
                 document.documentElement.style.setProperty('--side-bar-width', "7.5em");
             }
@@ -91,7 +99,7 @@
         document.querySelector('.toggle-side-menu').addEventListener('click', function() {
             document.querySelector('.side-menu').classList.toggle('side-menu-close')
             if(document.querySelector('.side-menu').classList.contains('side-menu-close')) {
-                document.documentElement.style.setProperty('--side-menu-width', "0em");
+                document.documentElement.style.setProperty('--side-menu-width', "3em");
             } else {
                 document.documentElement.style.setProperty('--side-menu-width', "24em");
             }
