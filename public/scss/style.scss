@@ -649,12 +649,12 @@
       & .side {
 
         &-bar {
-          margin-left: -7.5em!important;
+          margin-left: -7.5em;
           visibility: hidden;
 
-          &-close {
-            margin-left: 0;
-          }
+          // &-close {
+          //   margin-left: -7.5em;
+          // }
         }
       }
 
@@ -713,6 +713,7 @@
     z-index: 900;
 
     &-bar {
+      margin-left: 0;
       position: relative;
       height: 100%;
       width: 7.5em;

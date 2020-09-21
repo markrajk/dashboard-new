@@ -34,10 +34,8 @@ body {
     top: 0;
     visibility: visible; }
   body.top .side-bar {
-    margin-left: -7.5em !important;
+    margin-left: -7.5em;
     visibility: hidden; }
-    body.top .side-bar-close {
-      margin-left: 0; }
 
 .header {
   padding-left: 3.2em;
@@ -117,6 +115,7 @@ body {
   transition-property: height width;
   z-index: 900; }
   .side-bar {
+    margin-left: 0;
     position: relative;
     height: 100%;
     width: 7.5em;
