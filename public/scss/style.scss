@@ -692,7 +692,7 @@
     }
 
     &-close {
-      top: -5.5em;
+      top: -5.5em!important;
       opacity: 0;
       visibility: hidden;
     }
@@ -812,6 +812,18 @@
     /* WebKit */
     width: 0;
     height: 0;
+    }
+  }
+
+  .toggle-top {
+    padding: 3em;
+    & input {
+      transform: scale(2);
+    }
+
+    & label {
+      margin-left: .5em;
+      font-size: 2em;
     }
   }
   

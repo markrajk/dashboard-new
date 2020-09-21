@@ -86,7 +86,7 @@ body {
     justify-content: flex-start;
     list-style: none; }
   .header-close {
-    top: -5.5em;
+    top: -5.5em !important;
     opacity: 0;
     visibility: hidden; }
 
@@ -210,3 +210,11 @@ body {
     /* WebKit */
     width: 0;
     height: 0; }
+
+.toggle-top {
+  padding: 3em; }
+  .toggle-top input {
+    transform: scale(2); }
+  .toggle-top label {
+    margin-left: .5em;
+    font-size: 2em; }

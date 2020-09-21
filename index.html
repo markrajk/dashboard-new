@@ -78,10 +78,7 @@
     </div>
 
     <div class="page-content">
-        <button class="toggle-side-bar">TOGGLE SIDE BAR</button>
-        <button class="toggle-side-menu">TOGGLE SIDE MENU</button>
-        <button class="toggle-header">TOGGLE HEADER</button>
-        <div>
+        <div class="toggle-top">
             <input type="checkbox" id="top" name="bars" value="top" checked>
             <label for="top">top</label><br>
         </div>
@@ -108,15 +105,15 @@
                 document.documentElement.style.setProperty('--side-menu-width', "24em");
             }
         })
-        //TOGGLE HEADER
-        document.querySelector('.toggle-header').addEventListener('click', function() {
-            document.querySelector('.header').classList.toggle('header-close')
-            if(document.querySelector('.header').classList.contains('header-close')) {
-                document.documentElement.style.setProperty('--header-height', "0em");
-            } else {
-                document.documentElement.style.setProperty('--header-height', "5.5em");
-            }
-        })
+        // //TOGGLE HEADER
+        // document.querySelector('.toggle-header').addEventListener('click', function() {
+        //     document.querySelector('.header').classList.toggle('header-close')
+        //     if(document.querySelector('.header').classList.contains('header-close')) {
+        //         document.documentElement.style.setProperty('--header-height', "0em");
+        //     } else {
+        //         document.documentElement.style.setProperty('--header-height', "5.5em");
+        //     }
+        // })
 
         document.querySelector('#top').addEventListener('click', checkMenuPos)
 
