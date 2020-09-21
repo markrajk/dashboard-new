@@ -1,142 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basic Layout</title>
-    <link rel="stylesheet" href="public/css/style.css">
-</head>
-<body>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="public/css/style.css" />
+  </head>
+  <body>
     <div class="header">
-        <ul class="header-list">
-            <li class="header-list-item">
-                <button class="header-list-item-link">Link 1</button>
-            </li>
-            <li class="header-list-item">
-                <button class="header-list-item-link">Link 2</button>
-            </li>
-            <li class="header-list-item">
-                <button class="header-list-item-link">Link 3</button>
-            </li>
-            <li class="header-list-item">
-                <button class="header-list-item-link">Link 4</button>
-            </li>
-            <li class="header-list-item">
-                <button class="header-list-item-link">Link 5</button>
-            </li>
-        </ul>
+      <ul class="header-list">
+        <li class="header-list-item">
+          <button class="header-list-item-link">Home</button>
+        </li>
+        <li class="header-list-item">
+          <button class="header-list-item-link active">My Teams</button>
+        </li>
+        <li class="header-list-item">
+          <button class="header-list-item-link">My People</button>
+        </li>
+        <li class="header-list-item">
+          <button class="header-list-item-link">My Own Feedback</button>
+        </li>
+        <li class="header-list-item">
+          <button class="header-list-item-link">Give Feedback</button>
+        </li>
+      </ul>
 
-        <div class="header-buttons">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-        </div>
+      <div class="header-buttons">
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="21.9"
+            height="21.9"
+            viewBox="0 0 21.9 21.9"
+          >
+            <g transform="translate(-1263.25 -17.55)">
+              <path
+                d="M19.064,16.282A2.782,2.782,0,1,1,16.282,13.5,2.782,2.782,0,0,1,19.064,16.282Z"
+                transform="translate(1257.918 12.218)"
+                fill="none"
+                stroke="#344563"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+              <path
+                d="M18.562,14.482a1.53,1.53,0,0,0,.306,1.688l.056.056A1.856,1.856,0,1,1,16.3,18.849l-.056-.056a1.542,1.542,0,0,0-2.615,1.094v.158a1.855,1.855,0,0,1-3.709,0v-.083a1.53,1.53,0,0,0-1-1.4,1.53,1.53,0,0,0-1.688.306l-.056.056A1.856,1.856,0,1,1,4.551,16.3l.056-.056a1.542,1.542,0,0,0-1.094-2.615H3.355a1.855,1.855,0,0,1,0-3.709h.083a1.53,1.53,0,0,0,1.4-1,1.53,1.53,0,0,0-.306-1.688l-.056-.056A1.856,1.856,0,1,1,7.1,4.551l.056.056a1.53,1.53,0,0,0,1.688.306h.074a1.53,1.53,0,0,0,.927-1.4V3.355a1.855,1.855,0,0,1,3.709,0v.083a1.542,1.542,0,0,0,2.615,1.094l.056-.056A1.856,1.856,0,1,1,18.849,7.1l-.056.056a1.53,1.53,0,0,0-.306,1.688v.074a1.53,1.53,0,0,0,1.4.927h.158a1.855,1.855,0,0,1,0,3.709h-.083a1.53,1.53,0,0,0-1.4.927Z"
+                transform="translate(1262.5 16.8)"
+                fill="none"
+                stroke="#344563"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </g>
+          </svg>
+        </button>
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20.622"
+            height="21.31"
+            viewBox="0 0 20.622 21.31"
+          >
+            <g transform="translate(-1305 -16.5)">
+              <g transform="translate(1305 17)" fill="#fff">
+                <path
+                  d="M 10.31085968017578 20.08499908447266 C 5.025199890136719 20.08499908447266 0.7249996662139893 15.74256992340088 0.7249996662139893 10.40499973297119 C 0.7249996662139893 5.067429542541504 5.025199890136719 0.724999725818634 10.31085968017578 0.724999725818634 C 15.59651947021484 0.724999725818634 19.89671897888184 5.067429542541504 19.89671897888184 10.40499973297119 C 19.89671897888184 15.74256992340088 15.59651947021484 20.08499908447266 10.31085968017578 20.08499908447266 Z"
+                  stroke="none"
+                />
+                <path
+                  d="M 10.31085968017578 1.44999885559082 C 5.424969673156738 1.44999885559082 1.44999885559082 5.467199325561523 1.44999885559082 10.40499973297119 C 1.44999885559082 15.34280014038086 5.424969673156738 19.36000061035156 10.31085968017578 19.36000061035156 C 15.19674968719482 19.36000061035156 19.17172050476074 15.34280014038086 19.17172050476074 10.40499973297119 C 19.17172050476074 5.467199325561523 15.19674968719482 1.44999885559082 10.31085968017578 1.44999885559082 M 10.31085968017578 0 C 16.00539016723633 0 20.62171936035156 4.658479690551758 20.62171936035156 10.40499973297119 C 20.62171936035156 16.15151977539062 16.00539016723633 20.80999946594238 10.31085968017578 20.80999946594238 C 4.616329193115234 20.80999946594238 0 16.15151977539062 0 10.40499973297119 C 0 4.658479690551758 4.616329193115234 0 10.31085968017578 0 Z"
+                  stroke="none"
+                  fill="#344563"
+                />
+              </g>
+              <text
+                transform="translate(1315 32.5)"
+                fill="#344563"
+                stroke="rgba(0,0,0,0)"
+                stroke-width="1"
+                font-size="14.25"
+                font-family="Roboto-Bold, Roboto"
+                font-weight="700"
+                letter-spacing="-0.005em"
+              >
+                <tspan x="-3.545" y="0">?</tspan>
+              </text>
+            </g>
+          </svg>
+        </button>
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18.384"
+            height="20.811"
+            viewBox="0 0 18.384 20.811"
+          >
+            <path
+              d="M59.53,17.066h-.342a7.122,7.122,0,0,1-1.667-4.543V8.894a6.3,6.3,0,0,0-4.846-6,1.83,1.83,0,0,0,.29-.983,2.026,2.026,0,0,0-4.045,0,1.83,1.83,0,0,0,.29.983,6.3,6.3,0,0,0-4.846,6v3.63A7.114,7.114,0,0,1,42.7,17.066h-.338a.579.579,0,1,0,0,1.155h5.292a3.381,3.381,0,0,0,6.574,0h5.3a.594.594,0,0,0,.611-.578A.584.584,0,0,0,59.53,17.066ZM50.942,1.155a.781.781,0,0,1,.8.758.8.8,0,0,1-1.6,0A.781.781,0,0,1,50.942,1.155Zm0,18.5a2.118,2.118,0,0,1-2.035-1.434h4.071A2.118,2.118,0,0,1,50.942,19.655ZM44.2,17.066a8.2,8.2,0,0,0,1.39-4.543V8.894a5.365,5.365,0,0,1,10.714,0v3.63a8.192,8.192,0,0,0,1.386,4.543Z"
+              transform="translate(-41.748 0)"
+              fill="#344563"
+            />
+          </svg>
+        </button>
+        <button class="initials">T</button>
+      </div>
     </div>
     <div class="side">
-        <div class="side-bar">
-            <div class="side-arrow toggle-side-bar">
-                <i class="fas fa-chevron-left"></i>
-            </div>
+      <div class="side-bar">
+        <div class="side-arrow toggle-side-bar">
+          <i class="fas fa-chevron-left"></i>
         </div>
-        <div class="side-menu">
-            <div class="side-arrow toggle-side-menu">
-                <i class="fas fa-chevron-left"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="side-menu">
+        <div class="side-arrow toggle-side-menu">
+          <i class="fas fa-chevron-left"></i>
         </div>
+        <div class="side-menu-content">
+          <div class="side-menu-content-section">
+            <div class="side-menu-content-section-header">
+              <div class="side-menu-content-section-header-icon">
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <div class="side-menu-content-section-header-info">
+                <p class="side-menu-content-section-header-info-title">
+                  Team React Native
+                </p>
+                <p class="side-menu-content-section-header-info-subtitle">
+                  Our example test team
+                </p>
+              </div>
+            </div>
+
+            <div class="side-menu-content-section-back">
+              <i class="fas fa-arrow-circle-left"></i>
+              <p class="side-menu-content-section-back-text">
+                Back to all teams
+              </p>
+            </div>
+          </div>
+
+          <div class="side-menu-content-section">
+            <div class="side-menu-content-section-title">Feedback data</div>
+
+            <div class="side-menu-content-section-item">
+              <i class="fas fa-chart-bar"></i>
+              <p class="side-menu-content-section-item-text">
+                Back to all teams
+              </p>
+            </div>
+
+            <div class="side-menu-content-section-item">
+              <i class="fas fa-chart-bar"></i>
+              <p class="side-menu-content-section-item-text">
+                Back to all teams
+              </p>
+            </div>
+
+            <div class="side-menu-content-section-item">
+              <i class="fas fa-chart-bar"></i>
+              <p class="side-menu-content-section-item-text">
+                Back to all teams
+              </p>
+            </div>
+
+            <div class="side-menu-content-section-item">
+              <i class="fas fa-chart-bar"></i>
+              <p class="side-menu-content-section-item-text">
+                Back to all teams
+              </p>
+            </div>
+          </div>
+
+          <div class="side-menu-content-section">
+            <div class="side-menu-content-section-title">Team members</div>
+          </div>
+
+          <div class="side-menu-content-section">
+            <div class="side-menu-content-section-title">Feedback data</div>
+
+            <div class="side-menu-content-section-item">
+              <i class="fas fa-chart-bar"></i>
+              <p class="side-menu-content-section-item-text">
+                Back to all teams
+              </p>
+            </div>
+
+            <div class="side-menu-content-section-item">
+              <i class="fas fa-chart-bar"></i>
+              <p class="side-menu-content-section-item-text">
+                Back to all teams
+              </p>
+            </div>
+
+            <div class="side-menu-content-section-item">
+              <i class="fas fa-chart-bar"></i>
+              <p class="side-menu-content-section-item-text">
+                Back to all teams
+              </p>
+            </div>
+          </div>
+
+          <div class="side-menu-content-section">
+            <div class="side-menu-content-section-title">Team members</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="page-header">
-        <h3 class="page-header-subtitle">Team React Native / Settings</h3>
-        <h2 class="page-header-title">Team Settings</h2>
+      <h3 class="page-header-subtitle">Team React Native / Settings</h3>
+      <h2 class="page-header-title">Team Settings</h2>
 
-        <ul class="page-header-list">
-            <li class="page-header-list-item">
-                <button class="page-header-list-item-link">Link 1</button>
-            </li>
-            <li class="page-header-list-item">
-                <button class="page-header-list-item-link">Link 2</button>
-            </li>
-            <li class="page-header-list-item">
-                <button class="page-header-list-item-link">Link 3</button>
-            </li>
-            <li class="page-header-list-item">
-                <button class="page-header-list-item-link">Link 4</button>
-            </li>
-            <li class="page-header-list-item">
-                <button class="page-header-list-item-link">Link 5</button>
-            </li>
-        </ul>
+      <ul class="page-header-list">
+        <li class="page-header-list-item">
+          <button class="page-header-list-item-link">Link 1</button>
+        </li>
+        <li class="page-header-list-item">
+          <button class="page-header-list-item-link">Link 2</button>
+        </li>
+        <li class="page-header-list-item">
+          <button class="page-header-list-item-link">Link 3</button>
+        </li>
+        <li class="page-header-list-item">
+          <button class="page-header-list-item-link">Link 4</button>
+        </li>
+        <li class="page-header-list-item">
+          <button class="page-header-list-item-link">Link 5</button>
+        </li>
+      </ul>
     </div>
 
     <div class="page-content">
-        <div class="toggle-top">
-            <input type="checkbox" id="top" name="bars" value="top" checked>
-            <label for="top">top</label><br>
-        </div>
+      <div class="toggle-top">
+        <input type="checkbox" id="top" name="bars" value="top" checked />
+        <label for="top">top</label><br />
+      </div>
     </div>
 
-
-    <script src="https://kit.fontawesome.com/e9f50f9a1c.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/e9f50f9a1c.js"
+      crossorigin="anonymous"
+    ></script>
     <script>
-        //TOGGLE SIDE BAR
-        document.querySelector('.toggle-side-bar').addEventListener('click', function() {
-            document.querySelector('.side-bar').classList.toggle('side-bar-close')
-            if(document.querySelector('.side-bar').classList.contains('side-bar-close')) {
-                document.documentElement.style.setProperty('--side-bar-width', "2em");
-            } else {
-                document.documentElement.style.setProperty('--side-bar-width', "7.5em");
-            }
-        })
-        //TOGGLE SIDE MENU
-        document.querySelector('.toggle-side-menu').addEventListener('click', function() {
-            document.querySelector('.side-menu').classList.toggle('side-menu-close')
-            if(document.querySelector('.side-menu').classList.contains('side-menu-close')) {
-                document.documentElement.style.setProperty('--side-menu-width', "3em");
-            } else {
-                document.documentElement.style.setProperty('--side-menu-width', "24em");
-            }
-        })
-        // //TOGGLE HEADER
-        // document.querySelector('.toggle-header').addEventListener('click', function() {
-        //     document.querySelector('.header').classList.toggle('header-close')
-        //     if(document.querySelector('.header').classList.contains('header-close')) {
-        //         document.documentElement.style.setProperty('--header-height', "0em");
-        //     } else {
-        //         document.documentElement.style.setProperty('--header-height', "5.5em");
-        //     }
-        // })
+      //TOGGLE SIDE BAR
+      document
+        .querySelector(".toggle-side-bar")
+        .addEventListener("click", function () {
+          document
+            .querySelector(".side-bar")
+            .classList.toggle("side-bar-close");
+          if (
+            document
+              .querySelector(".side-bar")
+              .classList.contains("side-bar-close")
+          ) {
+            document.documentElement.style.setProperty(
+              "--side-bar-width",
+              "2em"
+            );
+          } else {
+            document.documentElement.style.setProperty(
+              "--side-bar-width",
+              "7.5em"
+            );
+          }
+        });
+      //TOGGLE SIDE MENU
+      document
+        .querySelector(".toggle-side-menu")
+        .addEventListener("click", function () {
+          document
+            .querySelector(".side-menu")
+            .classList.toggle("side-menu-close");
+          if (
+            document
+              .querySelector(".side-menu")
+              .classList.contains("side-menu-close")
+          ) {
+            document.documentElement.style.setProperty(
+              "--side-menu-width",
+              "3em"
+            );
+          } else {
+            document.documentElement.style.setProperty(
+              "--side-menu-width",
+              "24em"
+            );
+          }
+        });
+      // //TOGGLE HEADER
+      // document.querySelector('.toggle-header').addEventListener('click', function() {
+      //     document.querySelector('.header').classList.toggle('header-close')
+      //     if(document.querySelector('.header').classList.contains('header-close')) {
+      //         document.documentElement.style.setProperty('--header-height', "0em");
+      //     } else {
+      //         document.documentElement.style.setProperty('--header-height', "5.5em");
+      //     }
+      // })
 
-        document.querySelector('#top').addEventListener('click', checkMenuPos)
+      document.querySelector("#top").addEventListener("click", checkMenuPos);
 
-        function checkMenuPos() {
-            document.querySelector('body').classList.toggle('top')
+      function checkMenuPos() {
+        document.querySelector("body").classList.toggle("top");
 
-            if(document.querySelector('body').classList.contains('top')) {
-                document.documentElement.style.setProperty('--header-height', "5.5em");
-                document.documentElement.style.setProperty('--side-bar-width', "0em");
-            } else {
-                document.documentElement.style.setProperty('--header-height', "0em");
-                if(document.querySelector('.side-bar').classList.contains('side-bar-close')) {
-                    document.documentElement.style.setProperty('--side-bar-width', "2em");
-                }else {
-                    document.documentElement.style.setProperty('--side-bar-width', "7.5em");
-                }
-            }
-
-            console.log(getComputedStyle(document.documentElement).getPropertyValue('--side-bar-width'))
+        if (document.querySelector("body").classList.contains("top")) {
+          document.documentElement.style.setProperty(
+            "--header-height",
+            "5.5em"
+          );
+          document.documentElement.style.setProperty("--side-bar-width", "0em");
+        } else {
+          document.documentElement.style.setProperty("--header-height", "0em");
+          if (
+            document
+              .querySelector(".side-bar")
+              .classList.contains("side-bar-close")
+          ) {
+            document.documentElement.style.setProperty(
+              "--side-bar-width",
+              "2em"
+            );
+          } else {
+            document.documentElement.style.setProperty(
+              "--side-bar-width",
+              "7.5em"
+            );
+          }
         }
 
-        checkMenuPos()
+        console.log(
+          getComputedStyle(document.documentElement).getPropertyValue(
+            "--side-bar-width"
+          )
+        );
+      }
+
+      checkMenuPos();
     </script>
-    
-</body>
+  </body>
 </html>
