@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Layout</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+
+    <div class="header">
+        <ul class="header-list">
+            <li class="header-list-item">
+                <button class="header-list-item-link">Link 1</button>
+            </li>
+            <li class="header-list-item">
+                <button class="header-list-item-link">Link 2</button>
+            </li>
+            <li class="header-list-item">
+                <button class="header-list-item-link">Link 3</button>
+            </li>
+            <li class="header-list-item">
+                <button class="header-list-item-link">Link 4</button>
+            </li>
+            <li class="header-list-item">
+                <button class="header-list-item-link">Link 5</button>
+            </li>
+        </ul>
+
+        <div class="header-buttons">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+        </div>
+    </div>
+    <div class="side">
+        <div>Lorem ipsum dolor sit amet.</div>
+        <div>Lorem ipsum dolor sit amet.</div>
+        <div>Lorem ipsum dolor sit amet.</div>
+        <div>Lorem ipsum dolor sit amet.</div>
+        <div>Lorem ipsum dolor sit amet.</div>
+        <div>Lorem ipsum dolor sit amet.</div>
+        <div>Lorem ipsum dolor sit amet.</div>
+        <div>Lorem ipsum dolor sit amet.</div>
+        <div>Lorem ipsum dolor sit amet.</div>
+        <div>Lorem ipsum dolor sit amet.</div>
+        <div>Lorem ipsum dolor sit amet.</div>
+        <div>Lorem ipsum dolor sit amet.</div>
+        <div>Lorem ipsum dolor sit amet.</div>
+    </div>
+
+    <div class="page-header">
+        <h3 class="page-header-subtitle">Team React Native / Settings</h3>
+        <h2 class="page-header-title">Team Settings</h2>
+
+        <ul class="page-header-list">
+            <li class="page-header-list-item">
+                <button class="page-header-list-item-link">Link 1</button>
+            </li>
+            <li class="page-header-list-item">
+                <button class="page-header-list-item-link">Link 2</button>
+            </li>
+            <li class="page-header-list-item">
+                <button class="page-header-list-item-link">Link 3</button>
+            </li>
+            <li class="page-header-list-item">
+                <button class="page-header-list-item-link">Link 4</button>
+            </li>
+            <li class="page-header-list-item">
+                <button class="page-header-list-item-link">Link 5</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="page-content">
+        <button class="toggle-side">TOGGLE SIDE</button>
+        <button class="toggle-header">TOGGLE HEADER</button>
+    </div>
+
+
+    <script>
+        document.querySelector('.toggle-side').addEventListener('click', function() {
+            document.querySelector('.side').classList.toggle('side-close')
+            if(document.querySelector('.side').classList.contains('side-close')) {
+                document.documentElement.style.setProperty('--side-open-width', "0em");
+            } else {
+                document.documentElement.style.setProperty('--side-open-width', "24em");
+            }
+        })
+
+        document.querySelector('.toggle-header').addEventListener('click', function() {
+            document.querySelector('.header').classList.toggle('header-close')
+            if(document.querySelector('.header').classList.contains('header-close')) {
+                document.documentElement.style.setProperty('--header-height', "0em");
+            } else {
+                document.documentElement.style.setProperty('--header-height', "5.5em");
+            }
+        })
+    </script>
+    
+</body>
+</html>
