@@ -638,6 +638,28 @@
     // width: 0;
     // height: 0;
     // }
+
+    &.top {
+
+      & .header {
+        top: 0;
+        visibility: visible;
+      }
+
+      & .side {
+
+        &-bar {
+          margin-left: -7.5em!important;
+          visibility: hidden;
+
+          &-close {
+            margin-left: 0;
+          }
+        }
+      }
+
+    }
+
   }
 
   //HEADER
@@ -655,6 +677,8 @@
     visibility: visible;
     transition: all .5s ease-in-out;
     transition-property: height opacity visibility;
+    visibility: hidden;
+    top: -5.5em;
 
     @include flexbox();
     @include align-items(center);
@@ -698,6 +722,15 @@
 
       &-close {
         margin-left: -5.5em;
+
+        & .side-arrow .fa-chevron-left {
+          transform: rotateZ(180deg);
+        }
+      }
+
+      &-hide {
+        margin-left: -7.5em;
+        visibility: hidden;
 
         & .side-arrow .fa-chevron-left {
           transform: rotateZ(180deg);

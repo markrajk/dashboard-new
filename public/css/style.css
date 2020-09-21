@@ -30,6 +30,14 @@ body {
   font-size: 1rem;
   transition: all .5s ease-in-out;
   transition-property: height width margin-left margin-top; }
+  body.top .header {
+    top: 0;
+    visibility: visible; }
+  body.top .side-bar {
+    margin-left: -7.5em !important;
+    visibility: hidden; }
+    body.top .side-bar-close {
+      margin-left: 0; }
 
 .header {
   padding-left: 3.2em;
@@ -45,6 +53,8 @@ body {
   visibility: visible;
   transition: all .5s ease-in-out;
   transition-property: height opacity visibility;
+  visibility: hidden;
+  top: -5.5em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -116,6 +126,11 @@ body {
     .side-bar-close {
       margin-left: -5.5em; }
       .side-bar-close .side-arrow .fa-chevron-left {
+        transform: rotateZ(180deg); }
+    .side-bar-hide {
+      margin-left: -7.5em;
+      visibility: hidden; }
+      .side-bar-hide .side-arrow .fa-chevron-left {
         transform: rotateZ(180deg); }
   .side-menu {
     position: relative;

@@ -81,6 +81,10 @@
         <button class="toggle-side-bar">TOGGLE SIDE BAR</button>
         <button class="toggle-side-menu">TOGGLE SIDE MENU</button>
         <button class="toggle-header">TOGGLE HEADER</button>
+        <div>
+            <input type="checkbox" id="top" name="bars" value="top" checked>
+            <label for="top">top</label><br>
+        </div>
     </div>
 
 
@@ -113,6 +117,24 @@
                 document.documentElement.style.setProperty('--header-height', "5.5em");
             }
         })
+
+        document.querySelector('#top').addEventListener('click', checkMenuPos)
+
+        function checkMenuPos() {
+            document.querySelector('body').classList.toggle('top')
+
+            if(document.querySelector('body').classList.contains('top')) {
+                document.documentElement.style.setProperty('--header-height', "5.5em");
+                document.documentElement.style.setProperty('--side-bar-width', "0em");
+            } else {
+                document.documentElement.style.setProperty('--header-height', "0em");
+                document.documentElement.style.setProperty('--side-bar-width', "7.5em");
+            }
+
+            console.log(getComputedStyle(document.documentElement).getPropertyValue('--side-bar-width'))
+        }
+
+        checkMenuPos()
     </script>
     
 </body>
