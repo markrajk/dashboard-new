@@ -3,7 +3,8 @@
 // ==================================
 :root {
   --header-height: 5.5em;
-  --side-open-width: 24em;
+  --side-bar-width: 7.5em;
+  --side-menu-width: 24em;
   --side-closed-width: 2em;
   --padding-top: 2.6em;
   --padding-left: 4.2em;
@@ -615,11 +616,11 @@
   
   body {
     box-sizing: border-box;
-    margin-left: calc(var(--side-open-width) + var(--padding-left));
+    margin-left: calc(var(--side-menu-width) + var(--side-bar-width) + var(--padding-left));
     margin-top: calc(var(--header-height) + var(--padding-top));
     margin-right: var(--padding-right);
     min-width: 0;
-    width: calc(100vw - var(--side-open-width) - var(--padding-left) - var(--padding-right));  
+    width: calc(100vw - var(--side-menu-width) - var(--side-bar-width) - var(--padding-left) - var(--padding-right));  
     max-width: 100vw;
     font-family: 'Inter', sans-serif!important;
     font-size: 1rem;
@@ -673,28 +674,54 @@
     }
   }
 
+  //SIDE ELEMENT
   .side {
+    height: calc(100% - var(--header-height));
+    max-height: 100vh;
+    @include flexbox();
+    @include align-items(flex-start);
+    @include justify-content(flex-start);
     position: fixed;
     top: var(--header-height);
     left: 0;
-    width: var(--side-open-width);
-    width: 24em;
-    height: calc(100% - var(--header-height));
-    max-height: 100vh;
-    background-color: #f6f7f8;
-    z-index: 900;
     transition: all .5s ease-in-out;
     transition-property: height width;
     opacity: 1;
     visibility: visible;
+    z-index: 900;
 
     &-close {
       left: -24em;
       opacity: 0;
       visibility: hidden;
     }
+
+    &-bar {
+      height: 100%;
+      width: 7.5em;
+      background-color: #0c52cc;
+      transition: all .5s ease-in-out;
+      z-index: 100;
+
+      &-close {
+        margin-left: -6em;
+      }
+    }
+
+    &-menu {
+      height: 100%;
+      width: 24em;
+      background-color: #f6f7f8;
+      transition: all .5s ease-in-out;
+      z-index: 50;
+
+      &-close {
+        margin-left: -24em;
+      }
+    }
   }
 
+  //PAGE HEADER
   .page-header {
     width: inherit;
     top: calc(var(--header-height) + var(--padding-top));
@@ -709,6 +736,7 @@
     }
   }
 
+  //PAGE CONTENT
   .page-content {
     width: 100%;
     margin-top: var(--content-padding-top);

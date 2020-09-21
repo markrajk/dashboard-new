@@ -35,19 +35,16 @@
         </div>
     </div>
     <div class="side">
-        <div>Lorem ipsum dolor sit amet.</div>
-        <div>Lorem ipsum dolor sit amet.</div>
-        <div>Lorem ipsum dolor sit amet.</div>
-        <div>Lorem ipsum dolor sit amet.</div>
-        <div>Lorem ipsum dolor sit amet.</div>
-        <div>Lorem ipsum dolor sit amet.</div>
-        <div>Lorem ipsum dolor sit amet.</div>
-        <div>Lorem ipsum dolor sit amet.</div>
-        <div>Lorem ipsum dolor sit amet.</div>
-        <div>Lorem ipsum dolor sit amet.</div>
-        <div>Lorem ipsum dolor sit amet.</div>
-        <div>Lorem ipsum dolor sit amet.</div>
-        <div>Lorem ipsum dolor sit amet.</div>
+        <div class="side-bar"></div>
+        <div class="side-menu">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
     </div>
 
     <div class="page-header">
@@ -74,21 +71,32 @@
     </div>
 
     <div class="page-content">
-        <button class="toggle-side">TOGGLE SIDE</button>
+        <button class="toggle-side-bar">TOGGLE SIDE BAR</button>
+        <button class="toggle-side-menu">TOGGLE SIDE MENU</button>
         <button class="toggle-header">TOGGLE HEADER</button>
     </div>
 
 
     <script>
-        document.querySelector('.toggle-side').addEventListener('click', function() {
-            document.querySelector('.side').classList.toggle('side-close')
-            if(document.querySelector('.side').classList.contains('side-close')) {
-                document.documentElement.style.setProperty('--side-open-width', "0em");
+        //TOGGLE SIDE BAR
+        document.querySelector('.toggle-side-bar').addEventListener('click', function() {
+            document.querySelector('.side-bar').classList.toggle('side-bar-close')
+            if(document.querySelector('.side-bar').classList.contains('side-bar-close')) {
+                document.documentElement.style.setProperty('--side-bar-width', "1.5em");
             } else {
-                document.documentElement.style.setProperty('--side-open-width', "24em");
+                document.documentElement.style.setProperty('--side-bar-width', "7.5em");
             }
         })
-
+        //TOGGLE SIDE MENU
+        document.querySelector('.toggle-side-menu').addEventListener('click', function() {
+            document.querySelector('.side-menu').classList.toggle('side-menu-close')
+            if(document.querySelector('.side-menu').classList.contains('side-menu-close')) {
+                document.documentElement.style.setProperty('--side-menu-width', "0em");
+            } else {
+                document.documentElement.style.setProperty('--side-menu-width', "24em");
+            }
+        })
+        //TOGGLE HEADER
         document.querySelector('.toggle-header').addEventListener('click', function() {
             document.querySelector('.header').classList.toggle('header-close')
             if(document.querySelector('.header').classList.contains('header-close')) {
