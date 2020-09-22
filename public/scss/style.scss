@@ -988,6 +988,11 @@ body {
       & .side-arrow .icon-chevron-left {
         transform: rotateZ(180deg);
       }
+
+      & .side-bar-top,
+      & .side-bar-bottom {
+        opacity: 0;
+      }
     }
 
     &-hide {
@@ -1005,6 +1010,7 @@ body {
       @include flex-direction(column);
       @include align-items(center);
       @include justify-content(space-between);
+      transition: all 0.5s ease-in-out;
     }
 
     &-top {
@@ -1086,9 +1092,14 @@ body {
       & .side-arrow .icon-chevron-left {
         transform: rotateZ(180deg);
       }
+
+      & .side-menu-content {
+        opacity: 0;
+      }
     }
 
     &-content {
+      transition: all 0.5s ease-in-out;
       &-section {
         padding: 2.8em 2.5em 0;
 
