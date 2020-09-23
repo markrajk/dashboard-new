@@ -1107,9 +1107,9 @@ body {
       @include inline-flex();
       @include align-items(center);
       @include justify-content(center);
-      width: emcalc(3.2, 2.1);
-      height: emcalc(3.2, 2.1);
-      font-size: 2.1em;
+      width: emcalc(3.2, 1.95);
+      height: emcalc(3.2, 1.95);
+      font-size: 1.95em;
       font-weight: 700;
       letter-spacing: 0.53px;
       color: #fff;
