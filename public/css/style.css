@@ -416,7 +416,7 @@ body {
   background-color: #fff; }
   .header-list {
     width: 100%;
-    max-width: 53.2em;
+    max-width: 54.8em;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
@@ -1160,16 +1160,16 @@ body {
   padding-left: 2em;
   padding-right: 2.6em; }
   .people-overview.side-menu-content .custom-accordion-card-header {
-    padding: 1.6em 0;
+    padding: 1.5384615385em 0;
     border-bottom: 2px solid #e2e4e9; }
     .people-overview.side-menu-content .custom-accordion-card-header .icon-chevron-down {
       font-size: 1.0769230769em;
       color: #42526e; }
   .people-overview.side-menu-content .custom-accordion-card-body .custom-accordion-card-item {
-    padding-bottom: 1.2307692308em;
+    padding-bottom: 1.5384615385em;
     font-weight: 400; }
     .people-overview.side-menu-content .custom-accordion-card-body .custom-accordion-card-item:first-of-type {
-      padding-top: 1.2307692308em; }
+      padding-top: 1.5384615385em; }
   .people-overview.side-menu-content .custom-accordion-card-item {
     padding-left: 0.8461538462em;
     padding-right: 0.3846153846em;

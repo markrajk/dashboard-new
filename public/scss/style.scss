@@ -1060,7 +1060,7 @@ body {
 
   &-list {
     width: 100%;
-    max-width: 53.2em;
+    max-width: 54.8em;
     @include flexbox();
     @include align-items(center);
     @include justify-content(space-between);
@@ -1808,7 +1808,7 @@ body {
     & .custom-accordion {
       &-card {
         &-header {
-          padding: 1.6em 0;
+          padding: emcalc(2, 1.3) 0;
           border-bottom: 2px solid #e2e4e9;
 
           & .icon-chevron-down {
@@ -1819,11 +1819,11 @@ body {
 
         &-body {
           & .custom-accordion-card-item {
-            padding-bottom: emcalc(1.6, 1.3);
+            padding-bottom: emcalc(2, 1.3);
             font-weight: 400;
 
             &:first-of-type {
-              padding-top: emcalc(1.6, 1.3);
+              padding-top: emcalc(2, 1.3);
             }
           }
         }
