@@ -1812,7 +1812,7 @@ body {
           border-bottom: 2px solid #e2e4e9;
 
           & .icon-chevron-down {
-            font-size: 1.4em;
+            font-size: emcalc(1.4, 1.3);
             color: #42526e;
           }
         }
@@ -1829,6 +1829,8 @@ body {
         }
 
         &-item {
+          padding-left: emcalc(1.1, 1.3);
+          padding-right: emcalc(0.5, 1.3);
           width: 100%;
           @include flexbox();
           @include align-items(center);

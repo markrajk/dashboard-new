@@ -1163,7 +1163,7 @@ body {
     padding: 1.6em 0;
     border-bottom: 2px solid #e2e4e9; }
     .people-overview.side-menu-content .custom-accordion-card-header .icon-chevron-down {
-      font-size: 1.4em;
+      font-size: 1.0769230769em;
       color: #42526e; }
   .people-overview.side-menu-content .custom-accordion-card-body .custom-accordion-card-item {
     padding-bottom: 1.2307692308em;
@@ -1171,6 +1171,8 @@ body {
     .people-overview.side-menu-content .custom-accordion-card-body .custom-accordion-card-item:first-of-type {
       padding-top: 1.2307692308em; }
   .people-overview.side-menu-content .custom-accordion-card-item {
+    padding-left: 0.8461538462em;
+    padding-right: 0.3846153846em;
     width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
