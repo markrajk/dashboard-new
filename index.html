@@ -32,7 +32,7 @@
 
       <div class="header-buttons">
         <button>
-          <i class="icon-cog"></i>
+          <i class="icon-cog toggle-top"></i>
         </button>
         <button>
           <i class="icon-question-outlined"></i>
@@ -62,7 +62,7 @@
 
         <div class="side-bar-bottom">
           <button class="side-bar-item">
-            <i class="icon-cog"></i>
+            <i class="icon-cog toggle-top"></i>
           </button>
           <button class="side-bar-item">
             <i class="icon-exit"></i>
@@ -168,33 +168,287 @@
       </div>
     </div>
 
-    <div class="page-header">
+    <div class="page-header team-members">
       <h3 class="page-header-subtitle">Team React Native / Settings</h3>
       <h2 class="page-header-title">Team Settings</h2>
 
       <ul class="page-header-list">
         <li class="page-header-list-item">
-          <button class="page-header-list-item-link">Link 1</button>
+          <button class="page-header-list-item-link">General settings</button>
         </li>
         <li class="page-header-list-item">
-          <button class="page-header-list-item-link">Link 2</button>
+          <button class="page-header-list-item-link active">
+            Team members
+          </button>
         </li>
         <li class="page-header-list-item">
-          <button class="page-header-list-item-link">Link 3</button>
+          <button class="page-header-list-item-link">Team lead</button>
         </li>
         <li class="page-header-list-item">
-          <button class="page-header-list-item-link">Link 4</button>
+          <button class="page-header-list-item-link">Viewing rights</button>
         </li>
         <li class="page-header-list-item">
-          <button class="page-header-list-item-link">Link 5</button>
+          <button class="page-header-list-item-link">Admin rights</button>
         </li>
       </ul>
     </div>
 
-    <div class="page-content">
-      <div class="toggle-top">
-        <input type="checkbox" id="top" name="bars" value="top" checked />
-        <label for="top">top</label><br />
+    <div class="page-content team-members">
+      <div class="caption">
+        <div>
+          <h2 class="caption-title">Team members</h2>
+          <p class="caption-text">
+            Here you can add, manage and delete members of this team.
+          </p>
+        </div>
+        <button class="button button-white toggle-input-row">Add new</button>
+      </div>
+
+      <div class="custom-table-wrapper">
+        <div class="custom-table-wrapper-head">
+          <table class="custom-table head">
+            <thead class="custom-table-head">
+              <tr class="custom-table-row">
+                <th class="column-01 active">
+                  <p>Name</p>
+                  <i class="icon-caret-down"></i>
+                </th>
+                <th class="column-02">
+                  <p>Email</p>
+                  <i class="icon-caret-down"></i>
+                </th>
+                <th class="column-03">
+                  <p>Job title</p>
+                  <i class="icon-caret-down"></i>
+                </th>
+                <th class="column-04">
+                  <p>Status</p>
+                  <i class="icon-caret-down"></i>
+                </th>
+                <th class="column-05"></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="custom-table-wrapper-body">
+          <table class="custom-table">
+            <tbody class="custom-table-body">
+              <tr class="custom-table-row">
+                <td class="column-01">
+                  <p>Johan Sebastian Bing</p>
+                </td>
+                <td class="column-02">
+                  <p>johan.sebastian@gmail.com</p>
+                </td>
+                <td class="column-03">
+                  <input
+                    class="td-input"
+                    type="text"
+                    placeholder="Add job title"
+                  />
+                </td>
+                <td class="column-04 active">
+                  <p>Active</p>
+                </td>
+                <td class="column-05">
+                  <div class="custom-dropdown table-dropdown">
+                    <button
+                      class="custom-dropdown-trigger"
+                      tabindex="-1"
+                      onclick="this.focus()"
+                    >
+                      <i class="icon-ellipsis"></i>
+                    </button>
+                    <div class="custom-dropdown-menu">
+                      <div class="custom-dropdown-menu-item">
+                        <button class="custom-dropdown-menu-item-link">
+                          <i class="icon-user"></i>
+                          <p>Open team</p>
+                          <i class="icon-chevron-right"></i>
+                        </button>
+                      </div>
+                      <div class="custom-dropdown-menu-item">
+                        <button class="custom-dropdown-menu-item-link">
+                          <i class="icon-give-feedback"></i>
+                          <p>Give feedback</p>
+                          <i class="icon-chevron-right"></i>
+                        </button>
+                      </div>
+                      <div class="custom-dropdown-menu-item">
+                        <button class="custom-dropdown-menu-item-link">
+                          <i class="icon-bin"></i>
+                          <p>Delete from team</p>
+                          <i class="icon-chevron-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="custom-table-row">
+                <td class="column-01">
+                  <p>Johan Sebastian Bing</p>
+                </td>
+                <td class="column-02">
+                  <p>johan.sebastian@gmail.com</p>
+                </td>
+                <td class="column-03">
+                  <p>Example job title</p>
+                </td>
+                <td class="column-04 pending">
+                  <p>Pending</p>
+                </td>
+                <td class="column-05">
+                  <div class="custom-dropdown table-dropdown">
+                    <button
+                      class="custom-dropdown-trigger"
+                      tabindex="-1"
+                      onclick="this.focus()"
+                    >
+                      <i class="icon-ellipsis"></i>
+                    </button>
+                    <div class="custom-dropdown-menu bot-left">
+                      <div class="custom-dropdown-menu-item">
+                        <button class="custom-dropdown-menu-item-link">
+                          <i class="icon-user"></i>
+                          <p>Open team</p>
+                          <i class="icon-chevron-right"></i>
+                        </button>
+                      </div>
+                      <div class="custom-dropdown-menu-item">
+                        <button class="custom-dropdown-menu-item-link">
+                          <i class="icon-give-feedback"></i>
+                          <p>Give feedback</p>
+                          <i class="icon-chevron-right"></i>
+                        </button>
+                      </div>
+                      <div class="custom-dropdown-menu-item">
+                        <button class="custom-dropdown-menu-item-link">
+                          <i class="icon-bin"></i>
+                          <p>Delete from team</p>
+                          <i class="icon-chevron-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="custom-table-row">
+                <td class="column-01">
+                  <p>Johan Sebastian Bing</p>
+                </td>
+                <td class="column-02">
+                  <p>johan.sebastian@gmail.com</p>
+                </td>
+                <td class="column-03">
+                  <p>Example job title</p>
+                </td>
+                <td class="column-04 pending">
+                  <p>Pending</p>
+                </td>
+                <td class="column-05">
+                  <div class="custom-dropdown table-dropdown">
+                    <button
+                      class="custom-dropdown-trigger"
+                      tabindex="-1"
+                      onclick="this.focus()"
+                    >
+                      <i class="icon-ellipsis"></i>
+                    </button>
+                    <div class="custom-dropdown-menu bot-left">
+                      <div class="custom-dropdown-menu-item">
+                        <button class="custom-dropdown-menu-item-link">
+                          <i class="icon-user"></i>
+                          <p>Open team</p>
+                          <i class="icon-chevron-right"></i>
+                        </button>
+                      </div>
+                      <div class="custom-dropdown-menu-item">
+                        <button class="custom-dropdown-menu-item-link">
+                          <i class="icon-give-feedback"></i>
+                          <p>Give feedback</p>
+                          <i class="icon-chevron-right"></i>
+                        </button>
+                      </div>
+                      <div class="custom-dropdown-menu-item">
+                        <button class="custom-dropdown-menu-item-link">
+                          <i class="icon-bin"></i>
+                          <p>Delete from team</p>
+                          <i class="icon-chevron-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="custom-table-row">
+                <td class="column-01">
+                  <p>Johan Sebastian Bing</p>
+                </td>
+                <td class="column-02">
+                  <p>johan.sebastian@gmail.com</p>
+                </td>
+                <td class="column-03">
+                  <input
+                    class="td-input"
+                    type="text"
+                    placeholder="Add job title"
+                  />
+                </td>
+                <td class="column-04 active">
+                  <p>Active</p>
+                </td>
+                <td class="column-05">
+                  <div class="custom-dropdown table-dropdown">
+                    <button
+                      class="custom-dropdown-trigger"
+                      tabindex="-1"
+                      onclick="this.focus()"
+                    >
+                      <i class="icon-ellipsis"></i>
+                    </button>
+                    <div class="custom-dropdown-menu">
+                      <div class="custom-dropdown-menu-item">
+                        <button class="custom-dropdown-menu-item-link">
+                          <i class="icon-user"></i>
+                          <p>Open team</p>
+                          <i class="icon-chevron-right"></i>
+                        </button>
+                      </div>
+                      <div class="custom-dropdown-menu-item">
+                        <button class="custom-dropdown-menu-item-link">
+                          <i class="icon-give-feedback"></i>
+                          <p>Give feedback</p>
+                          <i class="icon-chevron-right"></i>
+                        </button>
+                      </div>
+                      <div class="custom-dropdown-menu-item">
+                        <button class="custom-dropdown-menu-item-link">
+                          <i class="icon-bin"></i>
+                          <p>Delete from team</p>
+                          <i class="icon-chevron-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="custom-table-input-row">
+                <td class="column-01">
+                  <input type="text" placeholder="Enter name or email" />
+                </td>
+                <td class="column-02">
+                  <button class="button button-primary">Add</button>
+                  <button class="button button-white">Cancel</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
 
@@ -249,17 +503,11 @@
             );
           }
         });
-      // //TOGGLE HEADER
-      // document.querySelector('.toggle-header').addEventListener('click', function() {
-      //     document.querySelector('.header').classList.toggle('header-close')
-      //     if(document.querySelector('.header').classList.contains('header-close')) {
-      //         document.documentElement.style.setProperty('--header-height', "0em");
-      //     } else {
-      //         document.documentElement.style.setProperty('--header-height', "5.5em");
-      //     }
-      // })
 
-      document.querySelector("#top").addEventListener("click", checkMenuPos);
+      //TOGGLE TOP HEADER
+      document.querySelectorAll(".toggle-top").forEach((e) => {
+        e.addEventListener("click", checkMenuPos);
+      });
 
       function checkMenuPos() {
         document.querySelector("body").classList.toggle("top");
@@ -288,15 +536,37 @@
             );
           }
         }
-
-        console.log(
-          getComputedStyle(document.documentElement).getPropertyValue(
-            "--side-bar-width"
-          )
-        );
       }
 
       checkMenuPos();
+
+      // TABLE DROPDOWN MENU POSITION
+      let tableTriggers = document.querySelectorAll(
+        ".custom-table tbody .custom-dropdown-trigger"
+      );
+
+      tableTriggers.forEach((e) => {
+        e.addEventListener("click", function () {
+          const x = window.scrollY + this.getBoundingClientRect().top; // Y
+          const y = window.scrollX + this.getBoundingClientRect().left; // X
+
+          console.log(this.nextElementSibling.offsetHeight);
+
+          if (window.innerHeight < x + this.nextElementSibling.offsetHeight) {
+            this.classList.add("top-left");
+          } else {
+            this.classList.remove("top-left");
+          }
+        });
+      });
+
+      // TOGGLE INPUT ROW
+      let inputRowToggle = document.querySelector(".toggle-input-row");
+      let inputRow = document.querySelector(".custom-table-input-row");
+
+      inputRowToggle.addEventListener("click", function () {
+        inputRow.classList.toggle("open");
+      });
     </script>
   </body>
 </html>
