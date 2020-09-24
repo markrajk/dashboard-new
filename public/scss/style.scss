@@ -855,7 +855,7 @@ body {
   margin-left: calc(
     var(--side-menu-width) + var(--side-bar-width) + var(--padding-left)
   );
-  margin-top: calc(var(--header-height) + var(--padding-top));
+  margin-top: calc(var(--header-height));
   margin-right: var(--padding-right);
   min-width: 0;
   width: calc(
@@ -914,6 +914,7 @@ body {
 //    CUSTOM DROPDOWN
 //========================
 .custom-dropdown {
+  display: inline-block;
   position: relative;
 
   &-trigger {
@@ -1023,7 +1024,7 @@ body {
 //========================
 .custom-accordion {
   &-card {
-    overflow: hidden;
+    //overflow: hidden;
 
     &-header {
       cursor: pointer;
@@ -1688,6 +1689,7 @@ body {
 //    TEAM MEMBERS
 //========================
 #team-members {
+  margin-top: calc(var(--header-height) + var(--padding-top));
   & .page-header {
     min-width: 0;
     width: 100%;
@@ -1710,14 +1712,6 @@ body {
 //    PEOPLE OVERVIEW
 //========================
 #people-overview {
-  & .page-content {
-    min-width: 0;
-    width: 100%;
-    //max-width: 81.7em;
-    height: calc(100vh - var(--header-height) - var(--padding-top)) !important;
-    background-color: #f1f1f1;
-  }
-
   & .side-menu-content {
     padding-top: calc(6.5em - var(--header-height));
     padding-left: 2em;
@@ -1767,6 +1761,145 @@ body {
 
           & .custom-accordion-card-body {
             border-bottom: 2px solid #e2e4e9;
+          }
+        }
+      }
+    }
+  }
+
+  & .page-content {
+    min-width: 0;
+    width: 100%;
+    max-width: 94em;
+    padding-top: var(--padding-top);
+    height: calc(100vh - var(--header-height) - var(--padding-top)) !important;
+    //background-color: #f1f1f1;
+
+    & .custom-accordion {
+      &-card {
+        &-header {
+          padding-top: emcalc(1.7, 2);
+          padding-bottom: emcalc(1.7, 2);
+          @include flexbox();
+          @include align-items(center);
+          border-bottom: 2px solid #ebecf0;
+          font-size: 2em;
+          font-weight: 500;
+          color: #172b4d;
+
+          & .custom-dropdown {
+            margin-left: auto;
+
+            &-trigger {
+              font-size: emcalc(1.35, 2);
+              color: #828da0;
+            }
+          }
+
+          & .icon-chevron-down {
+            margin-left: emcalc(3, 2);
+            margin-right: emcalc(3, 2);
+            color: rgba(92, 106, 131, 0.76);
+          }
+        }
+
+        &.open {
+          & .custom-accordion-card-header {
+            & .icon-chevron-down {
+              transform: rotateZ(180deg);
+            }
+          }
+        }
+      }
+    }
+
+    & .people {
+      margin: 0 -2em;
+      padding-top: 3.6em;
+      @include flexbox();
+      @include flex-wrap(wrap);
+      @include align-items(flex-start);
+      @include justify-content(flex-start);
+
+      & .person {
+        margin: 0 2em;
+        margin-bottom: 4em;
+        @include inline-flex();
+        @include flex-direction(column);
+        @include align-items(center);
+        @include justify-content(center);
+
+        &-main {
+          margin-bottom: 1.1em;
+          position: relative;
+
+          &-img {
+            width: 8em;
+            height: 8em;
+            object-fit: contain;
+            border-radius: 16px;
+          }
+
+          &-icon {
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 2.8em;
+            height: 2.8em;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+            border: solid 1px #f5f5f5;
+            background-color: #ffffff;
+            border-radius: 50%;
+            transform: translate(45%, -45%);
+
+            & .icon-thumbs-up {
+              font-size: 1.56em;
+              color: #00be20;
+            }
+
+            & .icon-exclamation-circle {
+              font-size: 1.56em;
+              color: #f52600;
+            }
+
+            & .ok {
+              font-size: 1.2em;
+              font-weight: 700;
+              letter-spacing: -0.24px;
+              color: #ff8900;
+            }
+          }
+        }
+
+        &-info {
+          width: 100%;
+          max-width: 12em;
+          text-align: center;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          &-name {
+            margin-bottom: emcalc(0.3, 1.25);
+            font-size: 1.25em;
+            font-weight: 500;
+            color: #172b4d;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          &-position {
+            font-size: 1.15em;
+            font-weight: 400;
+            letter-spacing: -0.03px;
+            color: #7a869a;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
         }
       }
