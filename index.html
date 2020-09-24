@@ -93,13 +93,16 @@
                 </div>
               </div>
 
-              <div class="side-menu-content-back">
+              <div
+                class="side-menu-content-back side-trigger"
+                target-side="content-01-body"
+              >
                 <i class="icon-arrow-circle-left"></i>
                 <p class="side-menu-content-back-text">Back to all teams</p>
               </div>
             </div>
 
-            <div class="side-menu-content-body">
+            <div class="side-menu-content-body content-01-body">
               <div class="side-menu-content-segment">
                 <div class="side-menu-content-title">Feedback data</div>
 
@@ -126,7 +129,7 @@
 
               <div
                 class="side-menu-content-segment side-trigger"
-                target-side="#content-02"
+                target-side="content-02-body"
               >
                 <div class="side-menu-content-title">Team members</div>
               </div>
@@ -152,6 +155,50 @@
 
               <div class="side-menu-content-segment">
                 <div class="side-menu-content-title">Team settings</div>
+              </div>
+            </div>
+
+            <div class="side-menu-content-body content-02-body">
+              <div class="side-menu-content-segment">
+                <div class="side-menu-content-title">Team Members</div>
+
+                <div class="side-menu-content-item">
+                  <p class="side-menu-content-item-text">Julia Martinez</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <p class="side-menu-content-item-text">Harald Schwarz</p>
+                </div>
+
+                <div class="side-menu-content-item active">
+                  <p class="side-menu-content-item-text">Uli Ort</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <p class="side-menu-content-item-text">Ai Schwarz</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <p class="side-menu-content-item-text">Angelo Merte</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <p class="side-menu-content-item-text">Peter Popper</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <p class="side-menu-content-item-text">
+                    Esmeralda Tortellini
+                  </p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <p class="side-menu-content-item-text">Johan Stihl</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <p class="side-menu-content-item-text">Til Schweiger</p>
+                </div>
               </div>
             </div>
           </div>
@@ -559,6 +606,21 @@
 
       inputRowToggle.addEventListener("click", function () {
         inputRow.classList.toggle("open");
+      });
+
+      // SIDE MENU SLIDE
+      let sideMenuTriggers = document.querySelectorAll(".side-trigger");
+
+      sideMenuTriggers.forEach((e) => {
+        e.addEventListener("click", function () {
+          let target = this.getAttribute("target-side");
+          if (target === "content-02-body") {
+            document.querySelector(`.${target}`).classList.add("open");
+          } else if (target === "content-01-body") {
+            console.log("2CLICKED");
+            document.querySelector(`.content-02-body`).classList.remove("open");
+          }
+        });
       });
     </script>
   </body>
