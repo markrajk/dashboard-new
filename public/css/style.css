@@ -1109,6 +1109,8 @@ body {
       color: rgba(92, 106, 131, 0.76); }
   #people-overview .page-content .custom-accordion-card.open .custom-accordion-card-header .icon-chevron-down {
     transform: rotateZ(180deg); }
+  #people-overview .page-content .custom-accordion-card.open .custom-accordion-card-body {
+    border-bottom: 2px solid #e2e4e9; }
   #people-overview .page-content .people {
     margin: 0 -2em;
     padding-top: 3.6em;

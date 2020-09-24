@@ -1809,6 +1809,10 @@ body {
               transform: rotateZ(180deg);
             }
           }
+
+          & .custom-accordion-card-body {
+            border-bottom: 2px solid #e2e4e9;
+          }
         }
       }
     }
