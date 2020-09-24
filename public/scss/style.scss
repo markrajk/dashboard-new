@@ -1085,6 +1085,8 @@ body {
 
     &-item {
       margin-right: 2em;
+      position: relative;
+
       &-link {
         font-size: 1.325em;
         font-weight: 500;
@@ -1098,6 +1100,10 @@ body {
           position: relative;
           color: var(--blue-primary);
 
+          &::before {
+            display: none !important;
+          }
+
           &::after {
             content: "";
             position: absolute;
@@ -1109,6 +1115,24 @@ body {
             background-color: #096cf9;
             transform: translate(-50%, 0);
           }
+        }
+
+        &::before {
+          content: "";
+          display: none;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: calc(100% + 1.06em);
+          height: emcalc(3.2, 1.325);
+          background-color: #e2edfe;
+          transform: translate(-50%, -50%);
+          border-radius: 2.5px;
+          z-index: -1;
+        }
+
+        &:hover:before {
+          display: block;
         }
       }
 
