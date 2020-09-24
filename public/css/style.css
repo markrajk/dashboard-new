@@ -439,11 +439,7 @@ body {
     list-style: none; }
     @media (max-width: 767px) {
       .header-list {
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        -webkit-justify-content: flex-start;
-        -moz-justify-content: flex-start;
-        justify-content: flex-start; } }
+        max-width: 38.6em; } }
     .header-list-item {
       margin-right: 2em; }
       .header-list-item-link {

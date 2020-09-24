@@ -1080,7 +1080,7 @@ body {
     list-style: none;
 
     @include respond(desktop-sm) {
-      @include justify-content(flex-start);
+      max-width: 38.6em;
     }
 
     &-item {
