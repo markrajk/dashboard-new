@@ -1127,6 +1127,8 @@ body {
     font-size: 2em;
     font-weight: 500;
     color: #172b4d; }
+    #people-overview .page-content .custom-accordion-card-header span {
+      font-weight: 600; }
     #people-overview .page-content .custom-accordion-card-header .custom-dropdown {
       margin-left: auto; }
       #people-overview .page-content .custom-accordion-card-header .custom-dropdown-trigger {

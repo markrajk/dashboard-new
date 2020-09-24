@@ -1828,6 +1828,10 @@ body {
           font-weight: 500;
           color: #172b4d;
 
+          & span {
+            font-weight: 600;
+          }
+
           & .custom-dropdown {
             margin-left: auto;
 
