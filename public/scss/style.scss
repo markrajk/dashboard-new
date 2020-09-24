@@ -1071,6 +1071,7 @@ body {
   background-color: #fff;
 
   &-list {
+    margin-right: 5%;
     width: 100%;
     max-width: 54.2em;
     @include flexbox();
@@ -1079,6 +1080,7 @@ body {
     list-style: none;
 
     &-item {
+      margin-right: 2em;
       &-link {
         font-size: 1.325em;
         font-weight: 500;
