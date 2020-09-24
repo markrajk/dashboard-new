@@ -1232,8 +1232,7 @@ body {
             letter-spacing: -0.24px;
             color: #ff8900; }
       #people-overview .page-content .people .person-info {
-        width: 100%;
-        max-width: 12em;
+        width: 12em;
         text-align: center;
         white-space: nowrap;
         overflow: hidden;
