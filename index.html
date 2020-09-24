@@ -11,446 +11,439 @@
     <link rel="stylesheet" href="public/css/style.css" />
   </head>
   <body>
-    <div class="header">
-      <ul class="header-list">
-        <li class="header-list-item">
-          <button class="header-list-item-link">Home</button>
-        </li>
-        <li class="header-list-item">
-          <button class="header-list-item-link active">My Teams</button>
-        </li>
-        <li class="header-list-item">
-          <button class="header-list-item-link">My People</button>
-        </li>
-        <li class="header-list-item">
-          <button class="header-list-item-link">My Own Feedback</button>
-        </li>
-        <li class="header-list-item">
-          <button class="header-list-item-link">Give Feedback</button>
-        </li>
-      </ul>
+    <main class="main" id="team-members">
+      <div class="header">
+        <ul class="header-list">
+          <li class="header-list-item">
+            <button class="header-list-item-link">Home</button>
+          </li>
+          <li class="header-list-item">
+            <button class="header-list-item-link active">My Teams</button>
+          </li>
+          <li class="header-list-item">
+            <button class="header-list-item-link">My People</button>
+          </li>
+          <li class="header-list-item">
+            <button class="header-list-item-link">My Own Feedback</button>
+          </li>
+          <li class="header-list-item">
+            <button class="header-list-item-link">Give Feedback</button>
+          </li>
+        </ul>
 
-      <div class="header-buttons">
-        <button>
-          <i class="icon-cog toggle-top"></i>
-        </button>
-        <button>
-          <i class="icon-question-outlined"></i>
-        </button>
-        <button>
-          <i class="icon-bell"></i>
-        </button>
-        <button class="initials">T</button>
-      </div>
-    </div>
-    <div class="side">
-      <div class="side-bar">
-        <div class="side-arrow toggle-side-bar">
-          <i class="icon-chevron-left"></i>
-        </div>
-        <div class="side-bar-top">
-          <button class="side-bar-item active">
-            <i class="icon-users"></i>
-          </button>
-          <button class="side-bar-item">
-            <i class="icon-user"></i>
-          </button>
-          <button class="side-bar-item">
-            <i class="icon-give-feedback"></i>
-          </button>
-        </div>
-
-        <div class="side-bar-bottom">
-          <button class="side-bar-item">
+        <div class="header-buttons">
+          <button>
             <i class="icon-cog toggle-top"></i>
           </button>
-          <button class="side-bar-item">
-            <i class="icon-exit"></i>
+          <button>
+            <i class="icon-question"></i>
           </button>
-          <button class="side-bar-item">
-            <div class="initials">T</div>
+          <button>
+            <i class="icon-bell"></i>
           </button>
+          <button class="initials">T</button>
         </div>
       </div>
-      <div class="side-menu">
-        <div class="side-arrow toggle-side-menu">
-          <i class="icon-chevron-left"></i>
+      <div class="side">
+        <div class="side-bar">
+          <div class="side-arrow toggle-side-bar">
+            <i class="icon-chevron-left"></i>
+          </div>
+          <div class="side-bar-top">
+            <button class="side-bar-item active">
+              <i class="icon-users"></i>
+            </button>
+            <button class="side-bar-item">
+              <i class="icon-user"></i>
+            </button>
+            <button class="side-bar-item">
+              <i class="icon-give-feedback"></i>
+            </button>
+          </div>
+
+          <div class="side-bar-bottom">
+            <button class="side-bar-item">
+              <i class="icon-cog toggle-top"></i>
+            </button>
+            <button class="side-bar-item">
+              <i class="icon-exit"></i>
+            </button>
+            <button class="side-bar-item">
+              <div class="initials">T</div>
+            </button>
+          </div>
         </div>
-        <div class="side-menu-content team-members">
-          <div class="side-menu-content-section">
-            <div class="side-menu-content-section-header">
-              <div class="side-menu-content-section-header-icon">
-                <i class="icon-chart-column"></i>
+        <div class="side-menu">
+          <div class="side-arrow toggle-side-menu">
+            <i class="icon-chevron-left"></i>
+          </div>
+          <div class="side-menu-content content-01">
+            <div class="side-menu-content-header">
+              <div class="side-menu-content-header-item">
+                <div class="side-menu-content-header-item-icon">
+                  <i class="icon-chart-column"></i>
+                </div>
+                <div class="side-menu-content-header-item-info">
+                  <p class="side-menu-content-header-item-info-title">
+                    Team React Native
+                  </p>
+                  <p class="side-menu-content-header-item-info-subtitle">
+                    Our example test team
+                  </p>
+                </div>
               </div>
-              <div class="side-menu-content-section-header-info">
-                <p class="side-menu-content-section-header-info-title">
-                  Team React Native
-                </p>
-                <p class="side-menu-content-section-header-info-subtitle">
-                  Our example test team
-                </p>
+
+              <div class="side-menu-content-back">
+                <i class="icon-arrow-circle-left"></i>
+                <p class="side-menu-content-back-text">Back to all teams</p>
               </div>
             </div>
 
-            <div class="side-menu-content-section-back">
-              <i class="icon-arrow-circle-left"></i>
-              <p class="side-menu-content-section-back-text">
-                Back to all teams
-              </p>
+            <div class="side-menu-content-body">
+              <div class="side-menu-content-segment">
+                <div class="side-menu-content-title">Feedback data</div>
+
+                <div class="side-menu-content-item">
+                  <i class="icon-chart-bar"></i>
+                  <p class="side-menu-content-item-text">Team overall charts</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <i class="icon-chart-line"></i>
+                  <p class="side-menu-content-item-text">Team members charts</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <i class="icon-chart-area"></i>
+                  <p class="side-menu-content-item-text">Team lead charts</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <i class="icon-chat"></i>
+                  <p class="side-menu-content-item-text">Text feedback</p>
+                </div>
+              </div>
+
+              <div
+                class="side-menu-content-segment side-trigger"
+                target-side="#content-02"
+              >
+                <div class="side-menu-content-title">Team members</div>
+              </div>
+
+              <div class="side-menu-content-segment">
+                <div class="side-menu-content-title">Feedback tools</div>
+
+                <div class="side-menu-content-item active">
+                  <i class="icon-git-pull"></i>
+                  <p class="side-menu-content-item-text">Feedback requests</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <i class="icon-document"></i>
+                  <p class="side-menu-content-item-text">Feedback reports</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <i class="icon-question-circle"></i>
+                  <p class="side-menu-content-item-text">Custom feedback</p>
+                </div>
+              </div>
+
+              <div class="side-menu-content-segment">
+                <div class="side-menu-content-title">Team settings</div>
+              </div>
             </div>
-          </div>
-
-          <div class="side-menu-content-section">
-            <div class="side-menu-content-section-title">Feedback data</div>
-
-            <div class="side-menu-content-section-item">
-              <i class="icon-chart-bar"></i>
-              <p class="side-menu-content-section-item-text">
-                Back to all teams
-              </p>
-            </div>
-
-            <div class="side-menu-content-section-item">
-              <i class="icon-chart-line"></i>
-              <p class="side-menu-content-section-item-text">
-                Back to all teams
-              </p>
-            </div>
-
-            <div class="side-menu-content-section-item">
-              <i class="icon-chart-area"></i>
-              <p class="side-menu-content-section-item-text">
-                Back to all teams
-              </p>
-            </div>
-
-            <div class="side-menu-content-section-item">
-              <i class="icon-chat"></i>
-              <p class="side-menu-content-section-item-text">
-                Back to all teams
-              </p>
-            </div>
-          </div>
-
-          <div class="side-menu-content-section">
-            <div class="side-menu-content-section-title">Team members</div>
-          </div>
-
-          <div class="side-menu-content-section">
-            <div class="side-menu-content-section-title">Feedback data</div>
-
-            <div class="side-menu-content-section-item">
-              <i class="icon-git-pull"></i>
-              <p class="side-menu-content-section-item-text">
-                Back to all teams
-              </p>
-            </div>
-
-            <div class="side-menu-content-section-item">
-              <i class="icon-document"></i>
-              <p class="side-menu-content-section-item-text">
-                Back to all teams
-              </p>
-            </div>
-
-            <div class="side-menu-content-section-item">
-              <i class="icon-question-circle"></i>
-              <p class="side-menu-content-section-item-text">
-                Back to all teams
-              </p>
-            </div>
-          </div>
-
-          <div class="side-menu-content-section">
-            <div class="side-menu-content-section-title">Team members</div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="page-header team-members">
-      <h3 class="page-header-subtitle">Team React Native / Settings</h3>
-      <h2 class="page-header-title">Team Settings</h2>
+      <div class="page-header">
+        <h3 class="page-header-subtitle">
+          All Teams / Team React Native / Settings
+        </h3>
+        <h2 class="page-header-title">Team settings</h2>
 
-      <ul class="page-header-list">
-        <li class="page-header-list-item">
-          <button class="page-header-list-item-link">General settings</button>
-        </li>
-        <li class="page-header-list-item">
-          <button class="page-header-list-item-link active">
-            Team members
-          </button>
-        </li>
-        <li class="page-header-list-item">
-          <button class="page-header-list-item-link">Team lead</button>
-        </li>
-        <li class="page-header-list-item">
-          <button class="page-header-list-item-link">Viewing rights</button>
-        </li>
-        <li class="page-header-list-item">
-          <button class="page-header-list-item-link">Admin rights</button>
-        </li>
-      </ul>
-    </div>
-
-    <div class="page-content team-members">
-      <div class="caption">
-        <div>
-          <h2 class="caption-title">Team members</h2>
-          <p class="caption-text">
-            Here you can add, manage and delete members of this team.
-          </p>
-        </div>
-        <button class="button button-white toggle-input-row">Add new</button>
+        <ul class="page-header-list">
+          <li class="page-header-list-item">
+            <button class="page-header-list-item-link">General settings</button>
+          </li>
+          <li class="page-header-list-item">
+            <button class="page-header-list-item-link active">
+              Team members
+            </button>
+          </li>
+          <li class="page-header-list-item">
+            <button class="page-header-list-item-link">Team lead</button>
+          </li>
+          <li class="page-header-list-item">
+            <button class="page-header-list-item-link">Viewing rights</button>
+          </li>
+          <li class="page-header-list-item">
+            <button class="page-header-list-item-link">Admin rights</button>
+          </li>
+        </ul>
       </div>
 
-      <div class="custom-table-wrapper">
-        <div class="custom-table-wrapper-head">
-          <table class="custom-table head">
-            <thead class="custom-table-head">
-              <tr class="custom-table-row">
-                <th class="column-01 active">
-                  <p>Name</p>
-                  <i class="icon-caret-down"></i>
-                </th>
-                <th class="column-02">
-                  <p>Email</p>
-                  <i class="icon-caret-down"></i>
-                </th>
-                <th class="column-03">
-                  <p>Job title</p>
-                  <i class="icon-caret-down"></i>
-                </th>
-                <th class="column-04">
-                  <p>Status</p>
-                  <i class="icon-caret-down"></i>
-                </th>
-                <th class="column-05"></th>
-              </tr>
-            </thead>
-          </table>
+      <div class="page-content">
+        <div class="caption">
+          <div>
+            <h2 class="caption-title">Team members</h2>
+            <p class="caption-text">
+              Here you can add, manage and delete members of this team.
+            </p>
+          </div>
+          <button class="button button-white toggle-input-row">Add new</button>
         </div>
-        <div class="custom-table-wrapper-body">
-          <table class="custom-table">
-            <tbody class="custom-table-body">
-              <tr class="custom-table-row">
-                <td class="column-01">
-                  <p>Johan Sebastian Bing</p>
-                </td>
-                <td class="column-02">
-                  <p>johan.sebastian@gmail.com</p>
-                </td>
-                <td class="column-03">
-                  <input
-                    class="td-input"
-                    type="text"
-                    placeholder="Add job title"
-                  />
-                </td>
-                <td class="column-04 active">
-                  <p>Active</p>
-                </td>
-                <td class="column-05">
-                  <div class="custom-dropdown table-dropdown">
-                    <button
-                      class="custom-dropdown-trigger"
-                      tabindex="-1"
-                      onclick="this.focus()"
-                    >
-                      <i class="icon-ellipsis"></i>
-                    </button>
-                    <div class="custom-dropdown-menu">
-                      <div class="custom-dropdown-menu-item">
-                        <button class="custom-dropdown-menu-item-link">
-                          <i class="icon-user"></i>
-                          <p>Open team</p>
-                          <i class="icon-chevron-right"></i>
-                        </button>
-                      </div>
-                      <div class="custom-dropdown-menu-item">
-                        <button class="custom-dropdown-menu-item-link">
-                          <i class="icon-give-feedback"></i>
-                          <p>Give feedback</p>
-                          <i class="icon-chevron-right"></i>
-                        </button>
-                      </div>
-                      <div class="custom-dropdown-menu-item">
-                        <button class="custom-dropdown-menu-item-link">
-                          <i class="icon-bin"></i>
-                          <p>Delete from team</p>
-                          <i class="icon-chevron-right"></i>
-                        </button>
+
+        <div class="custom-table-wrapper">
+          <div class="custom-table-wrapper-head">
+            <table class="custom-table head">
+              <thead class="custom-table-head">
+                <tr class="custom-table-row">
+                  <th class="column-01 active">
+                    <p>Name</p>
+                    <i class="icon-caret-down"></i>
+                  </th>
+                  <th class="column-02">
+                    <p>Email</p>
+                    <i class="icon-caret-down"></i>
+                  </th>
+                  <th class="column-03">
+                    <p>Job title</p>
+                    <i class="icon-caret-down"></i>
+                  </th>
+                  <th class="column-04">
+                    <p>Status</p>
+                    <i class="icon-caret-down"></i>
+                  </th>
+                  <th class="column-05"></th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="custom-table-wrapper-body">
+            <table class="custom-table">
+              <tbody class="custom-table-body">
+                <tr class="custom-table-row">
+                  <td class="column-01">
+                    <p>Johan Sebastian Bing</p>
+                  </td>
+                  <td class="column-02">
+                    <p>johan.sebastian@gmail.com</p>
+                  </td>
+                  <td class="column-03">
+                    <input
+                      class="td-input"
+                      type="text"
+                      placeholder="Add job title"
+                    />
+                  </td>
+                  <td class="column-04 active">
+                    <p>Active</p>
+                  </td>
+                  <td class="column-05">
+                    <div class="custom-dropdown table-dropdown">
+                      <button
+                        class="custom-dropdown-trigger"
+                        tabindex="-1"
+                        onclick="this.focus()"
+                      >
+                        <i class="icon-ellipsis"></i>
+                      </button>
+                      <div class="custom-dropdown-menu">
+                        <div class="custom-dropdown-menu-item">
+                          <button class="custom-dropdown-menu-item-link">
+                            <i class="icon-user"></i>
+                            <p>Open team</p>
+                            <i class="icon-chevron-right"></i>
+                          </button>
+                        </div>
+                        <div class="custom-dropdown-menu-item">
+                          <button class="custom-dropdown-menu-item-link">
+                            <i class="icon-give-feedback"></i>
+                            <p>Give feedback</p>
+                            <i class="icon-chevron-right"></i>
+                          </button>
+                        </div>
+                        <div class="custom-dropdown-menu-item">
+                          <button class="custom-dropdown-menu-item-link">
+                            <i class="icon-bin"></i>
+                            <p>Delete from team</p>
+                            <i class="icon-chevron-right"></i>
+                          </button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </td>
-              </tr>
+                  </td>
+                </tr>
 
-              <tr class="custom-table-row">
-                <td class="column-01">
-                  <p>Johan Sebastian Bing</p>
-                </td>
-                <td class="column-02">
-                  <p>johan.sebastian@gmail.com</p>
-                </td>
-                <td class="column-03">
-                  <p>Example job title</p>
-                </td>
-                <td class="column-04 pending">
-                  <p>Pending</p>
-                </td>
-                <td class="column-05">
-                  <div class="custom-dropdown table-dropdown">
-                    <button
-                      class="custom-dropdown-trigger"
-                      tabindex="-1"
-                      onclick="this.focus()"
-                    >
-                      <i class="icon-ellipsis"></i>
-                    </button>
-                    <div class="custom-dropdown-menu bot-left">
-                      <div class="custom-dropdown-menu-item">
-                        <button class="custom-dropdown-menu-item-link">
-                          <i class="icon-user"></i>
-                          <p>Open team</p>
-                          <i class="icon-chevron-right"></i>
-                        </button>
-                      </div>
-                      <div class="custom-dropdown-menu-item">
-                        <button class="custom-dropdown-menu-item-link">
-                          <i class="icon-give-feedback"></i>
-                          <p>Give feedback</p>
-                          <i class="icon-chevron-right"></i>
-                        </button>
-                      </div>
-                      <div class="custom-dropdown-menu-item">
-                        <button class="custom-dropdown-menu-item-link">
-                          <i class="icon-bin"></i>
-                          <p>Delete from team</p>
-                          <i class="icon-chevron-right"></i>
-                        </button>
+                <tr class="custom-table-row">
+                  <td class="column-01">
+                    <p>Johan Sebastian Bing</p>
+                  </td>
+                  <td class="column-02">
+                    <p>johan.sebastian@gmail.com</p>
+                  </td>
+                  <td class="column-03">
+                    <p>Example job title</p>
+                  </td>
+                  <td class="column-04 pending">
+                    <p>Pending</p>
+                  </td>
+                  <td class="column-05">
+                    <div class="custom-dropdown table-dropdown">
+                      <button
+                        class="custom-dropdown-trigger"
+                        tabindex="-1"
+                        onclick="this.focus()"
+                      >
+                        <i class="icon-ellipsis"></i>
+                      </button>
+                      <div class="custom-dropdown-menu bot-left">
+                        <div class="custom-dropdown-menu-item">
+                          <button class="custom-dropdown-menu-item-link">
+                            <i class="icon-user"></i>
+                            <p>Open team</p>
+                            <i class="icon-chevron-right"></i>
+                          </button>
+                        </div>
+                        <div class="custom-dropdown-menu-item">
+                          <button class="custom-dropdown-menu-item-link">
+                            <i class="icon-give-feedback"></i>
+                            <p>Give feedback</p>
+                            <i class="icon-chevron-right"></i>
+                          </button>
+                        </div>
+                        <div class="custom-dropdown-menu-item">
+                          <button class="custom-dropdown-menu-item-link">
+                            <i class="icon-bin"></i>
+                            <p>Delete from team</p>
+                            <i class="icon-chevron-right"></i>
+                          </button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </td>
-              </tr>
+                  </td>
+                </tr>
 
-              <tr class="custom-table-row">
-                <td class="column-01">
-                  <p>Johan Sebastian Bing</p>
-                </td>
-                <td class="column-02">
-                  <p>johan.sebastian@gmail.com</p>
-                </td>
-                <td class="column-03">
-                  <p>Example job title</p>
-                </td>
-                <td class="column-04 pending">
-                  <p>Pending</p>
-                </td>
-                <td class="column-05">
-                  <div class="custom-dropdown table-dropdown">
-                    <button
-                      class="custom-dropdown-trigger"
-                      tabindex="-1"
-                      onclick="this.focus()"
-                    >
-                      <i class="icon-ellipsis"></i>
-                    </button>
-                    <div class="custom-dropdown-menu bot-left">
-                      <div class="custom-dropdown-menu-item">
-                        <button class="custom-dropdown-menu-item-link">
-                          <i class="icon-user"></i>
-                          <p>Open team</p>
-                          <i class="icon-chevron-right"></i>
-                        </button>
-                      </div>
-                      <div class="custom-dropdown-menu-item">
-                        <button class="custom-dropdown-menu-item-link">
-                          <i class="icon-give-feedback"></i>
-                          <p>Give feedback</p>
-                          <i class="icon-chevron-right"></i>
-                        </button>
-                      </div>
-                      <div class="custom-dropdown-menu-item">
-                        <button class="custom-dropdown-menu-item-link">
-                          <i class="icon-bin"></i>
-                          <p>Delete from team</p>
-                          <i class="icon-chevron-right"></i>
-                        </button>
+                <tr class="custom-table-row">
+                  <td class="column-01">
+                    <p>Johan Sebastian Bing</p>
+                  </td>
+                  <td class="column-02">
+                    <p>johan.sebastian@gmail.com</p>
+                  </td>
+                  <td class="column-03">
+                    <p>Example job title</p>
+                  </td>
+                  <td class="column-04 pending">
+                    <p>Pending</p>
+                  </td>
+                  <td class="column-05">
+                    <div class="custom-dropdown table-dropdown">
+                      <button
+                        class="custom-dropdown-trigger"
+                        tabindex="-1"
+                        onclick="this.focus()"
+                      >
+                        <i class="icon-ellipsis"></i>
+                      </button>
+                      <div class="custom-dropdown-menu bot-left">
+                        <div class="custom-dropdown-menu-item">
+                          <button class="custom-dropdown-menu-item-link">
+                            <i class="icon-user"></i>
+                            <p>Open team</p>
+                            <i class="icon-chevron-right"></i>
+                          </button>
+                        </div>
+                        <div class="custom-dropdown-menu-item">
+                          <button class="custom-dropdown-menu-item-link">
+                            <i class="icon-give-feedback"></i>
+                            <p>Give feedback</p>
+                            <i class="icon-chevron-right"></i>
+                          </button>
+                        </div>
+                        <div class="custom-dropdown-menu-item">
+                          <button class="custom-dropdown-menu-item-link">
+                            <i class="icon-bin"></i>
+                            <p>Delete from team</p>
+                            <i class="icon-chevron-right"></i>
+                          </button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </td>
-              </tr>
+                  </td>
+                </tr>
 
-              <tr class="custom-table-row">
-                <td class="column-01">
-                  <p>Johan Sebastian Bing</p>
-                </td>
-                <td class="column-02">
-                  <p>johan.sebastian@gmail.com</p>
-                </td>
-                <td class="column-03">
-                  <input
-                    class="td-input"
-                    type="text"
-                    placeholder="Add job title"
-                  />
-                </td>
-                <td class="column-04 active">
-                  <p>Active</p>
-                </td>
-                <td class="column-05">
-                  <div class="custom-dropdown table-dropdown">
-                    <button
-                      class="custom-dropdown-trigger"
-                      tabindex="-1"
-                      onclick="this.focus()"
-                    >
-                      <i class="icon-ellipsis"></i>
-                    </button>
-                    <div class="custom-dropdown-menu">
-                      <div class="custom-dropdown-menu-item">
-                        <button class="custom-dropdown-menu-item-link">
-                          <i class="icon-user"></i>
-                          <p>Open team</p>
-                          <i class="icon-chevron-right"></i>
-                        </button>
-                      </div>
-                      <div class="custom-dropdown-menu-item">
-                        <button class="custom-dropdown-menu-item-link">
-                          <i class="icon-give-feedback"></i>
-                          <p>Give feedback</p>
-                          <i class="icon-chevron-right"></i>
-                        </button>
-                      </div>
-                      <div class="custom-dropdown-menu-item">
-                        <button class="custom-dropdown-menu-item-link">
-                          <i class="icon-bin"></i>
-                          <p>Delete from team</p>
-                          <i class="icon-chevron-right"></i>
-                        </button>
+                <tr class="custom-table-row">
+                  <td class="column-01">
+                    <p>Johan Sebastian Bing</p>
+                  </td>
+                  <td class="column-02">
+                    <p>johan.sebastian@gmail.com</p>
+                  </td>
+                  <td class="column-03">
+                    <input
+                      class="td-input"
+                      type="text"
+                      placeholder="Add job title"
+                    />
+                  </td>
+                  <td class="column-04 active">
+                    <p>Active</p>
+                  </td>
+                  <td class="column-05">
+                    <div class="custom-dropdown table-dropdown">
+                      <button
+                        class="custom-dropdown-trigger"
+                        tabindex="-1"
+                        onclick="this.focus()"
+                      >
+                        <i class="icon-ellipsis"></i>
+                      </button>
+                      <div class="custom-dropdown-menu">
+                        <div class="custom-dropdown-menu-item">
+                          <button class="custom-dropdown-menu-item-link">
+                            <i class="icon-user"></i>
+                            <p>Open team</p>
+                            <i class="icon-chevron-right"></i>
+                          </button>
+                        </div>
+                        <div class="custom-dropdown-menu-item">
+                          <button class="custom-dropdown-menu-item-link">
+                            <i class="icon-give-feedback"></i>
+                            <p>Give feedback</p>
+                            <i class="icon-chevron-right"></i>
+                          </button>
+                        </div>
+                        <div class="custom-dropdown-menu-item">
+                          <button class="custom-dropdown-menu-item-link">
+                            <i class="icon-bin"></i>
+                            <p>Delete from team</p>
+                            <i class="icon-chevron-right"></i>
+                          </button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </td>
-              </tr>
+                  </td>
+                </tr>
 
-              <tr class="custom-table-input-row">
-                <td class="column-01">
-                  <input type="text" placeholder="Enter name or email" />
-                </td>
-                <td class="column-02">
-                  <button class="button button-primary">Add</button>
-                  <button class="button button-white">Cancel</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                <tr class="custom-table-input-row">
+                  <td class="column-01">
+                    <input type="text" placeholder="Enter name or email" />
+                  </td>
+                  <td class="column-02">
+                    <button class="button button-primary">Add</button>
+                    <button class="button button-white">Cancel</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
 
     <script
       src="https://kit.fontawesome.com/e9f50f9a1c.js"

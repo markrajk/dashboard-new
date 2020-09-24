@@ -11,165 +11,173 @@
     <link rel="stylesheet" href="../public/css/style.css" />
   </head>
   <body>
-    <div class="header">
-      <ul class="header-list">
-        <li class="header-list-item">
-          <button class="header-list-item-link">Home</button>
-        </li>
-        <li class="header-list-item">
-          <button class="header-list-item-link">My Teams</button>
-        </li>
-        <li class="header-list-item">
-          <button class="header-list-item-link active">My People</button>
-        </li>
-        <li class="header-list-item">
-          <button class="header-list-item-link">My Own Feedback</button>
-        </li>
-        <li class="header-list-item">
-          <button class="header-list-item-link">Give Feedback</button>
-        </li>
-      </ul>
+    <main class="main" id="people-overview">
+      <div class="header">
+        <ul class="header-list">
+          <li class="header-list-item">
+            <button class="header-list-item-link">Home</button>
+          </li>
+          <li class="header-list-item">
+            <button class="header-list-item-link">My Teams</button>
+          </li>
+          <li class="header-list-item">
+            <button class="header-list-item-link active">My People</button>
+          </li>
+          <li class="header-list-item">
+            <button class="header-list-item-link">My Own Feedback</button>
+          </li>
+          <li class="header-list-item">
+            <button class="header-list-item-link">Give Feedback</button>
+          </li>
+        </ul>
 
-      <div class="header-buttons">
-        <button>
-          <i class="icon-cog toggle-top"></i>
-        </button>
-        <button>
-          <i class="icon-question-outlined"></i>
-        </button>
-        <button>
-          <i class="icon-bell"></i>
-        </button>
-        <button class="initials">T</button>
-      </div>
-    </div>
-    <div class="side">
-      <div class="side-bar">
-        <div class="side-arrow toggle-side-bar">
-          <i class="icon-chevron-left"></i>
-        </div>
-        <div class="side-bar-top">
-          <button class="side-bar-item">
-            <i class="icon-users"></i>
-          </button>
-          <button class="side-bar-item active">
-            <i class="icon-user"></i>
-          </button>
-          <button class="side-bar-item">
-            <i class="icon-give-feedback"></i>
-          </button>
-        </div>
-
-        <div class="side-bar-bottom">
-          <button class="side-bar-item">
+        <div class="header-buttons">
+          <button>
             <i class="icon-cog toggle-top"></i>
           </button>
-          <button class="side-bar-item">
-            <i class="icon-exit"></i>
+          <button>
+            <i class="icon-question"></i>
           </button>
-          <button class="side-bar-item">
-            <div class="initials">T</div>
+          <button>
+            <i class="icon-bell"></i>
           </button>
+          <button class="initials">T</button>
         </div>
       </div>
-      <div class="side-menu">
-        <div class="side-arrow toggle-side-menu">
-          <i class="icon-chevron-left"></i>
+      <div class="side">
+        <div class="side-bar">
+          <div class="side-arrow toggle-side-bar">
+            <i class="icon-chevron-left"></i>
+          </div>
+          <div class="side-bar-top">
+            <button class="side-bar-item">
+              <i class="icon-users"></i>
+            </button>
+            <button class="side-bar-item active">
+              <i class="icon-user"></i>
+            </button>
+            <button class="side-bar-item">
+              <i class="icon-give-feedback"></i>
+            </button>
+          </div>
+
+          <div class="side-bar-bottom">
+            <button class="side-bar-item">
+              <i class="icon-cog toggle-top"></i>
+            </button>
+            <button class="side-bar-item">
+              <i class="icon-exit"></i>
+            </button>
+            <button class="side-bar-item">
+              <div class="initials">T</div>
+            </button>
+          </div>
         </div>
-        <div class="side-menu-content people-overview">
-          <div class="custom-accordion">
-            <div class="custom-accordion-card open">
-              <button
-                class="custom-accordion-card-header custom-accordion-card-item"
-                accordion-target="card-01"
-              >
-                Marketing
-                <i class="icon-chevron-down"></i>
-              </button>
-              <div class="custom-accordion-card-body" id="card-01">
-                <button class="custom-accordion-card-item">
-                  Jörgen Palkki
+        <div class="side-menu">
+          <div class="side-arrow toggle-side-menu">
+            <i class="icon-chevron-left"></i>
+          </div>
+          <div class="side-menu-content">
+            <div class="custom-accordion">
+              <div class="custom-accordion-card open">
+                <button
+                  class="custom-accordion-card-header custom-accordion-card-item"
+                  accordion-target="card-01"
+                >
+                  Marketing
+                  <i class="icon-chevron-down"></i>
                 </button>
-                <button class="custom-accordion-card-item">George Brown</button>
-                <button class="custom-accordion-card-item">Joe Black</button>
-                <button class="custom-accordion-card-item">Hans Zimmer</button>
-                <button class="custom-accordion-card-item">David Arnold</button>
-                <button class="custom-accordion-card-item">
-                  Thomas Newman
-                </button>
-                <button class="custom-accordion-card-item">
-                  -> Invite new
-                </button>
+                <div class="custom-accordion-card-body" id="card-01">
+                  <button class="custom-accordion-card-item">
+                    Jörgen Palkki
+                  </button>
+                  <button class="custom-accordion-card-item">
+                    George Brown
+                  </button>
+                  <button class="custom-accordion-card-item">Joe Black</button>
+                  <button class="custom-accordion-card-item">
+                    Hans Zimmer
+                  </button>
+                  <button class="custom-accordion-card-item">
+                    David Arnold
+                  </button>
+                  <button class="custom-accordion-card-item">
+                    Thomas Newman
+                  </button>
+                  <button class="custom-accordion-card-item">
+                    -> Invite new
+                  </button>
+                </div>
               </div>
-            </div>
 
-            <div class="custom-accordion-card">
-              <button
-                class="custom-accordion-card-header custom-accordion-card-item"
-                accordion-target="card-01"
-              >
-                React Native
-                <i class="icon-chevron-down"></i>
-              </button>
-              <div class="custom-accordion-card-body" id="card-01">
-                <button class="custom-accordion-card-item">
-                  Jörgen Palkki
+              <div class="custom-accordion-card">
+                <button
+                  class="custom-accordion-card-header custom-accordion-card-item"
+                  accordion-target="card-01"
+                >
+                  React Native
+                  <i class="icon-chevron-down"></i>
                 </button>
-                <button class="custom-accordion-card-item">George Brown</button>
-                <button class="custom-accordion-card-item">Joe Black</button>
-                <button class="custom-accordion-card-item">Hans Zimmer</button>
-                <button class="custom-accordion-card-item">David Arnold</button>
-                <button class="custom-accordion-card-item">
-                  Thomas Newman
-                </button>
-                <button class="custom-accordion-card-item">
-                  -> Invite new
-                </button>
+                <div class="custom-accordion-card-body" id="card-01">
+                  <button class="custom-accordion-card-item">
+                    Jörgen Palkki
+                  </button>
+                  <button class="custom-accordion-card-item">
+                    George Brown
+                  </button>
+                  <button class="custom-accordion-card-item">Joe Black</button>
+                  <button class="custom-accordion-card-item">
+                    Hans Zimmer
+                  </button>
+                  <button class="custom-accordion-card-item">
+                    David Arnold
+                  </button>
+                  <button class="custom-accordion-card-item">
+                    Thomas Newman
+                  </button>
+                  <button class="custom-accordion-card-item">
+                    -> Invite new
+                  </button>
+                </div>
               </div>
-            </div>
 
-            <div class="custom-accordion-card">
-              <button
-                class="custom-accordion-card-header custom-accordion-card-item"
-                accordion-target="card-01"
-              >
-                UI/UX Designer
-                <i class="icon-chevron-down"></i>
-              </button>
-              <div class="custom-accordion-card-body" id="card-01">
-                <button class="custom-accordion-card-item">
-                  Jörgen Palkki
+              <div class="custom-accordion-card">
+                <button
+                  class="custom-accordion-card-header custom-accordion-card-item"
+                  accordion-target="card-01"
+                >
+                  UI/UX Designer
+                  <i class="icon-chevron-down"></i>
                 </button>
-                <button class="custom-accordion-card-item">George Brown</button>
-                <button class="custom-accordion-card-item">Joe Black</button>
-                <button class="custom-accordion-card-item">Hans Zimmer</button>
-                <button class="custom-accordion-card-item">David Arnold</button>
-                <button class="custom-accordion-card-item">
-                  Thomas Newman
-                </button>
-                <button class="custom-accordion-card-item">
-                  -> Invite new
-                </button>
+                <div class="custom-accordion-card-body" id="card-01">
+                  <button class="custom-accordion-card-item">
+                    Jörgen Palkki
+                  </button>
+                  <button class="custom-accordion-card-item">
+                    George Brown
+                  </button>
+                  <button class="custom-accordion-card-item">Joe Black</button>
+                  <button class="custom-accordion-card-item">
+                    Hans Zimmer
+                  </button>
+                  <button class="custom-accordion-card-item">
+                    David Arnold
+                  </button>
+                  <button class="custom-accordion-card-item">
+                    Thomas Newman
+                  </button>
+                  <button class="custom-accordion-card-item">
+                    -> Invite new
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-
-          <!-- <div class="custom-accordion">
-            <div class="custom-accordion-card">
-              <button
-                class="custom-accordion-card-header"
-                accordion-target="card-02"
-              >
-                Header 02
-              </button>
-              <div class="custom-accordion-card-body" id="card-02">Body 02</div>
-            </div>
-          </div> -->
         </div>
       </div>
-    </div>
 
-    <div class="page-content people-overview"></div>
+      <div class="page-content"></div>
+    </main>
 
     <script
       src="https://kit.fontawesome.com/e9f50f9a1c.js"
