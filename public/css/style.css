@@ -437,6 +437,13 @@ body {
     -moz-justify-content: space-between;
     justify-content: space-between;
     list-style: none; }
+    @media (max-width: 767px) {
+      .header-list {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        -webkit-justify-content: flex-start;
+        -moz-justify-content: flex-start;
+        justify-content: flex-start; } }
     .header-list-item {
       margin-right: 2em; }
       .header-list-item-link {
@@ -460,6 +467,9 @@ body {
             height: 3px;
             background-color: #096cf9;
             transform: translate(-50%, 0); }
+      @media (max-width: 767px) {
+        .header-list-item:nth-of-type(4) {
+          display: none; } }
   .header-buttons {
     display: -webkit-box;
     display: -webkit-flex;

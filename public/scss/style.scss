@@ -1079,6 +1079,10 @@ body {
     @include justify-content(space-between);
     list-style: none;
 
+    @include respond(desktop-sm) {
+      @include justify-content(flex-start);
+    }
+
     &-item {
       margin-right: 2em;
       &-link {
@@ -1105,6 +1109,12 @@ body {
             background-color: #096cf9;
             transform: translate(-50%, 0);
           }
+        }
+      }
+
+      &:nth-of-type(4) {
+        @include respond(desktop-sm) {
+          display: none;
         }
       }
     }
