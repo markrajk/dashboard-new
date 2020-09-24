@@ -825,6 +825,7 @@ button {
 
 html {
   font-size: 62.5%;
+  height: 100vh;
 }
 
 body {
@@ -1772,7 +1773,7 @@ body {
     width: 100%;
     max-width: 94em;
     padding-top: var(--padding-top);
-    height: calc(100vh - var(--header-height) - var(--padding-top)) !important;
+    height: calc(100vh - var(--header-height)) !important;
     //background-color: #f1f1f1;
 
     & .custom-accordion {

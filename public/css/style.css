@@ -239,7 +239,8 @@ button {
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  height: 100vh; }
 
 body {
   box-sizing: border-box;
@@ -1080,7 +1081,7 @@ body {
   width: 100%;
   max-width: 94em;
   padding-top: var(--padding-top);
-  height: calc(100vh - var(--header-height) - var(--padding-top)) !important; }
+  height: calc(100vh - var(--header-height)) !important; }
   #people-overview .page-content .custom-accordion-card-header {
     padding-top: 0.85em;
     padding-bottom: 0.85em;
