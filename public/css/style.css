@@ -464,7 +464,7 @@ body {
             display: block;
             width: 130%;
             height: 3px;
-            background-color: #096cf9;
+            background-color: var(--blue-primary);
             transform: translate(-50%, 0); }
         .header-list-item-link::before {
           content: "";
@@ -480,6 +480,8 @@ body {
           z-index: -1; }
         .header-list-item-link:hover:before {
           display: block; }
+        .header-list-item-link:hover {
+          color: var(--blue-primary); }
       @media (max-width: 767px) {
         .header-list-item:nth-of-type(4) {
           display: none; } }

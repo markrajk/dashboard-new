@@ -1112,7 +1112,7 @@ body {
             display: block;
             width: 130%;
             height: 3px;
-            background-color: #096cf9;
+            background-color: var(--blue-primary);
             transform: translate(-50%, 0);
           }
         }
@@ -1133,6 +1133,10 @@ body {
 
         &:hover:before {
           display: block;
+        }
+
+        &:hover {
+          color: var(--blue-primary);
         }
       }
 
