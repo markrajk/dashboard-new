@@ -1212,7 +1212,8 @@ body {
   .custom-modal-close {
     position: absolute;
     top: 2.3em;
-    right: 2.3em; }
+    right: 2.3em;
+    cursor: pointer; }
     .custom-modal-close .icon-close {
       font-size: 1.5em;
       color: #bdbebf; }
