@@ -79,15 +79,15 @@
           </div>
           <div class="side-menu-content">
             <div class="custom-accordion">
-              <div class="custom-accordion-card open">
+              <div class="custom-accordion-card card-01 open">
                 <button
-                  class="custom-accordion-card-header custom-accordion-card-item"
-                  accordion-target="card-01"
+                  class="custom-accordion-card-header custom-accordion-card-item accordion-card-trigger"
+                  accordion-trigger-target="card-01"
                 >
                   Marketing
                   <i class="icon-chevron-down"></i>
                 </button>
-                <div class="custom-accordion-card-body" id="card-01">
+                <div class="custom-accordion-card-body">
                   <button class="custom-accordion-card-item">
                     Jörgen Palkki
                   </button>
@@ -110,15 +110,15 @@
                 </div>
               </div>
 
-              <div class="custom-accordion-card">
+              <div class="custom-accordion-card card-02">
                 <button
-                  class="custom-accordion-card-header custom-accordion-card-item"
-                  accordion-target="card-01"
+                  class="custom-accordion-card-header custom-accordion-card-item accordion-card-trigger"
+                  accordion-trigger-target="card-02"
                 >
                   React Native
                   <i class="icon-chevron-down"></i>
                 </button>
-                <div class="custom-accordion-card-body" id="card-01">
+                <div class="custom-accordion-card-body">
                   <button class="custom-accordion-card-item">
                     Jörgen Palkki
                   </button>
@@ -141,15 +141,15 @@
                 </div>
               </div>
 
-              <div class="custom-accordion-card">
+              <div class="custom-accordion-card card-03">
                 <button
-                  class="custom-accordion-card-header custom-accordion-card-item"
-                  accordion-target="card-01"
+                  class="custom-accordion-card-header custom-accordion-card-item accordion-card-trigger"
+                  accordion-trigger-target="card-03"
                 >
                   UI/UX Designer
                   <i class="icon-chevron-down"></i>
                 </button>
-                <div class="custom-accordion-card-body" id="card-01">
+                <div class="custom-accordion-card-body">
                   <button class="custom-accordion-card-item">
                     Jörgen Palkki
                   </button>
@@ -178,9 +178,14 @@
 
       <div class="page-content">
         <div class="custom-accordion">
-          <div class="custom-accordion-card open">
+          <div class="custom-accordion-card card-01 open">
             <div class="custom-accordion-card-header">
-              <span>Team&nbsp;</span> - Marketing
+              <p
+                class="accordion-card-trigger"
+                accordion-trigger-target="card-01"
+              >
+                <span>Team&nbsp;</span> - Marketing
+              </p>
 
               <div class="custom-dropdown">
                 <button
@@ -197,7 +202,10 @@
                 </div>
               </div>
 
-              <i class="icon-chevron-down"></i>
+              <i
+                class="icon-chevron-down accordion-card-trigger"
+                accordion-trigger-target="card-01"
+              ></i>
             </div>
 
             <div class="custom-accordion-card-body">
@@ -417,9 +425,14 @@
             </div>
           </div>
 
-          <div class="custom-accordion-card">
+          <div class="custom-accordion-card card-02">
             <div class="custom-accordion-card-header">
-              <span>Team&nbsp;</span> - React Native
+              <p
+                class="accordion-card-trigger"
+                accordion-trigger-target="card-02"
+              >
+                <span>Team&nbsp;</span> - React Native
+              </p>
 
               <div class="custom-dropdown">
                 <button
@@ -436,7 +449,10 @@
                 </div>
               </div>
 
-              <i class="icon-chevron-down"></i>
+              <i
+                class="icon-chevron-down accordion-card-trigger"
+                accordion-trigger-target="card-02"
+              ></i>
             </div>
 
             <div class="custom-accordion-card-body">
@@ -656,9 +672,14 @@
             </div>
           </div>
 
-          <div class="custom-accordion-card">
+          <div class="custom-accordion-card card-03">
             <div class="custom-accordion-card-header">
-              <span>Team&nbsp;</span> - UI/UX Designer
+              <p
+                class="accordion-card-trigger"
+                accordion-trigger-target="card-03"
+              >
+                <span>Team&nbsp;</span> - UI/UX Designer
+              </p>
 
               <div class="custom-dropdown">
                 <button
@@ -675,10 +696,13 @@
                 </div>
               </div>
 
-              <i class="icon-chevron-down"></i>
+              <i
+                class="icon-chevron-down"
+                accordion-trigger-target="card-03"
+              ></i>
             </div>
 
-            <div class="custom-accordion-card-body">
+            <div class="custom-accordion-card-body accordion-card-trigger">
               <div class="people">
                 <div class="person">
                   <div class="person-main">
@@ -1008,13 +1032,16 @@
 
       //ACCORDION
       let accordionTriggers = document.querySelectorAll(
-        ".custom-accordion-card-header"
+        ".accordion-card-trigger"
       );
 
       accordionTriggers.forEach((e) => {
         e.addEventListener("click", function () {
-          console.log("clicked");
-          e.parentElement.classList.toggle("open");
+          document
+            .querySelectorAll(`.${e.getAttribute("accordion-trigger-target")}`)
+            .forEach((e) => {
+              e.classList.toggle("open");
+            });
         });
       });
     </script>

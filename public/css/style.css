@@ -375,8 +375,6 @@ body {
     .custom-dropdown.table-dropdown .custom-dropdown-menu-item:hover {
       background-color: #f2f5f7; }
 
-.custom-accordion-card-header {
-  cursor: pointer; }
 .custom-accordion-card-body {
   max-height: 0;
   overflow: hidden;
@@ -384,6 +382,9 @@ body {
 .custom-accordion-card.open .custom-accordion-card-body {
   max-height: 100vh;
   transition: max-height 1s ease-in-out; }
+
+.accordion-card-trigger {
+  cursor: pointer; }
 
 .header {
   padding-left: 3.9em;

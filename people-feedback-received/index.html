@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic Layout</title>
+    <title>Team Feedback | People Feedback Received</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -244,11 +244,14 @@
 
       <div class="page-content">
         <div class="custom-accordion">
-          <div class="custom-accordion-card open card-01-01">
+          <div class="custom-accordion-card open card-01">
             <div class="custom-accordion-card-header">
               <div class="section-header">
                 <p class="section-header-text">Feedback from colleagues</p>
-                <button class="section-header-toggle">
+                <button
+                  class="section-header-toggle accordion-card-trigger"
+                  accordion-trigger-target="card-01"
+                >
                   Close section <i class="icon-arrow-down"></i>
                 </button>
                 <div class="custom-dropdown">
@@ -648,11 +651,14 @@
             </div>
           </div>
 
-          <div class="custom-accordion-card open card-01-01">
+          <div class="custom-accordion-card open card-02">
             <div class="custom-accordion-card-header">
               <div class="section-header">
                 <p class="section-header-text">Feedback from colleagues</p>
-                <button class="section-header-toggle">
+                <button
+                  class="section-header-toggle accordion-card-trigger"
+                  accordion-trigger-target="card-02"
+                >
                   Close section <i class="icon-arrow-down"></i>
                 </button>
                 <div class="custom-dropdown">
@@ -1052,11 +1058,14 @@
             </div>
           </div>
 
-          <div class="custom-accordion-card open card-01-01">
+          <div class="custom-accordion-card open card-03">
             <div class="custom-accordion-card-header">
               <div class="section-header">
                 <p class="section-header-text">Feedback from colleagues</p>
-                <button class="section-header-toggle">
+                <button
+                  class="section-header-toggle accordion-card-trigger"
+                  accordion-trigger-target="card-03"
+                >
                   Close section <i class="icon-arrow-down"></i>
                 </button>
                 <div class="custom-dropdown">
@@ -1968,13 +1977,16 @@
 
       //ACCORDION
       let accordionTriggers = document.querySelectorAll(
-        ".custom-accordion-card-header"
+        ".accordion-card-trigger"
       );
 
       accordionTriggers.forEach((e) => {
         e.addEventListener("click", function () {
-          console.log("clicked");
-          e.parentElement.classList.toggle("open");
+          document
+            .querySelectorAll(`.${e.getAttribute("accordion-trigger-target")}`)
+            .forEach((e) => {
+              e.classList.toggle("open");
+            });
         });
       });
     </script>
