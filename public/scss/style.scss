@@ -2064,24 +2064,28 @@ body {
     padding-top: 1.8em;
   }
 
-  & .feedback-column {
-    margin: 0 1.3em;
-    width: calc(33.333% - 2.6em);
-    @include flexbox();
-    @include flex-direction(column);
-    @include align-items(flex-start);
-    @include justify-content(flex-start);
-  }
-
   & .feedback {
-    // margin: 0 1.3em;
+    margin: 0 1.3em;
     margin-bottom: 2em;
-    //width: calc(33.333% - 2.6em);
-    width: 100%;
+    width: calc(25% - 2.6em);
     background-color: rgba(246, 247, 248, 0);
     border-radius: 8px;
     border: solid 1.5px #efefef;
     box-shadow: 0 3px 8px 0 rgba(222, 222, 222, 0.15);
+    //min-width: 29em;
+    // flex: 1;
+
+    @include custom-respond(1600) {
+      width: calc(33.333% - 2.6em);
+    }
+
+    @include custom-respond(1100) {
+      width: calc(50% - 2.6em);
+    }
+
+    @include custom-respond(660) {
+      width: calc(100% - 2.6em);
+    }
 
     &-header {
       padding-left: 1.7em;
