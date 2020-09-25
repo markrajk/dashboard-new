@@ -1876,6 +1876,86 @@ body {
   }
 }
 
+.custom-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 0;
+  width: 40em;
+  max-width: calc(100% - 4em);
+  background-color: #fff;
+  border: 1.5px solid #f0f0f0;
+  border-radius: 6px;
+  z-index: 1000;
+
+  // &-header {
+  //   position: relative;
+  //   padding: 2.3em;
+  //   padding-bottom: 0;
+  //   height: 4.9em;
+  //   border-bottom: 1.5px solid #f0f0f0;
+  // }
+
+  &-close {
+    position: absolute;
+    top: 2.3em;
+    right: 2.3em;
+
+    & .icon-close {
+      font-size: 1.5em;
+      color: #bdbebf;
+    }
+  }
+
+  &-body {
+    position: relative;
+    padding: 4.9em 6.1em;
+  }
+
+  &-buttons {
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(space-between);
+
+    & .button {
+      height: emcalc(3.4, 1.6);
+      width: 48%;
+      font-size: 1.6em;
+    }
+  }
+
+  // &-footer {
+  //   height: 4.9em;
+  // @include flexbox();
+  // @include align-items(flex-start);
+  // @include justify-content(flex-end);
+  // }
+
+  &-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+
+    &.open {
+      display: block;
+    }
+  }
+
+  &-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
 //************************************************************************************************************
 //                                              PAGE SPECIFIC
 //************************************************************************************************************

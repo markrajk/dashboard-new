@@ -379,12 +379,48 @@
             </div>
 
             <div class="settings-table-row-column-03">
-              <button class="button button-white">Transfer ownership</button>
+              <button
+                class="button button-white modal-trigger"
+                target-modal="modal-01"
+              >
+                Transfer ownership
+              </button>
             </div>
           </div>
         </div>
       </div>
     </main>
+
+    <div class="custom-modal-wrapper" id="modal-01">
+      <div class="custom-modal">
+        <!-- <div class="custom-modal-header">
+          <div class="custom-modal-close">
+            <i class="icon-close"></i>
+          </div>
+        </div> -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="modal-01">
+            <i class="icon-close"></i>
+          </div>
+          <div class="custom-modal-buttons">
+            <button class="button button-white" close-modal="modal-01">
+              Cancel
+            </button>
+            <button class="button button-primary">Ok</button>
+          </div>
+        </div>
+        <!-- <div class="custom-modal-footer">
+          <button
+            class="button button-white custom-modal-close"
+            close-modal="modal-01"
+          >
+            Cancel
+          </button>
+          <button class="button button-primary custom-modal-close">Ok</button>
+        </div> -->
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
 
     <script
       src="https://kit.fontawesome.com/e9f50f9a1c.js"
@@ -486,6 +522,29 @@
             console.log("2CLICKED");
             document.querySelector(`.content-02-body`).classList.remove("open");
           }
+        });
+      });
+
+      //MODAL
+      let modalTriggers = document.querySelectorAll(".modal-trigger");
+      let modalCloseBtns = document.querySelectorAll("[close-modal]");
+      console.log(modalCloseBtns);
+
+      modalTriggers.forEach((e) => {
+        e.addEventListener("click", function () {
+          let modal = document.getElementById(
+            `${e.getAttribute("target-modal")}`
+          );
+          modal.classList.add("open");
+        });
+      });
+
+      modalCloseBtns.forEach((e) => {
+        e.addEventListener("click", function () {
+          let modal = document.getElementById(
+            `${e.getAttribute("close-modal")}`
+          );
+          modal.classList.remove("open");
         });
       });
     </script>
