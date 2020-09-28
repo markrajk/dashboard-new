@@ -1986,9 +1986,60 @@ body {
 //   height: 400px;
 // }
 
+/// 2222222222222222222222222
+// .widgets {
+//   padding-top: 2em;
+//   margin: 0 -1em;
+//   @include flexbox();
+//   @include flex-wrap(wrap);
+//   @include align-items(flex-start);
+//   @include justify-content(flex-start);
+// }
+
+// .widget-wrapper {
+//   padding: 2rem;
+//   margin: 0 1em;
+//   margin-bottom: 2em;
+//   min-width: calc(45em);
+//   flex-grow: 1;
+
+//   @include respond(desktop-sm) {
+//     min-width: calc(100% - 2em);
+//   }
+
+//   &.small {
+//     flex-basis: calc(calc(991px - 100%) * 999);
+//     //max-width: calc(50% - 4em);
+//     max-width: 70em;
+//     background-color: red;
+//   }
+
+//   &.big {
+//     flex-basis: 100%;
+//     max-width: 116em;
+//     //max-width: calc(100% - 4em);
+//     background-color: blue;
+//   }
+// }
+
+// .widget {
+//   border: 5px solid #fff;
+//   @include flexbox();
+//   @include align-items(center);
+//   @include justify-content(center);
+//   width: 100%;
+//   height: 400px;
+//   font-size: 6em;
+//   font-weight: 700;
+//   color: #fff;
+// }
+
 .widgets {
+  width: 100%;
   padding-top: 2em;
-  margin: 0 -1em;
+  margin: 0 0;
+  margin-left: -1em;
+  margin-right: -1em;
   @include flexbox();
   @include flex-wrap(wrap);
   @include align-items(flex-start);
@@ -1999,25 +2050,39 @@ body {
   padding: 2rem;
   margin: 0 1em;
   margin-bottom: 2em;
-  min-width: calc(45em);
+  //min-width: calc(45em);
   flex-grow: 1;
 
-  @include respond(desktop-sm) {
-    min-width: calc(100% - 2em);
+  @include respond(desktop-md) {
+    //min-width: calc(45em) !important;
+    min-width: calc(100% - 2em) !important;
   }
+
+  // @include respond(desktop-sm) {
+  //   min-width: calc(100% - 2em);
+  // }
 
   &.small {
     flex-basis: calc(calc(991px - 100%) * 999);
-    //max-width: calc(50% - 4em);
-    max-width: 70em;
+    min-width: calc(33.333% - 2em);
+    max-width: calc(33.333% - 2em);
     background-color: red;
+
+    @include respond(desktop-xxl) {
+      min-width: calc(50% - 2em);
+      max-width: calc(50% - 2em);
+    }
   }
 
   &.big {
-    flex-basis: 100%;
-    max-width: 116em;
-    //max-width: calc(100% - 4em);
     background-color: blue;
+    min-width: calc(66.666% - 2em);
+    max-width: calc(66.666% - 2em);
+
+    @include respond(desktop-xxl) {
+      min-width: calc(100% - 2em);
+      max-width: calc(100% - 2em);
+    }
   }
 }
 
