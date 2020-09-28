@@ -28,6 +28,9 @@
 
   //SIDE MENU VARIABLES
   --side-menu-header-height: 12.86em;
+
+  //TESTING SIDE MENU SLIDES
+  --side-menu-slide-header-01: 20em;
 }
 
 // ==================================
@@ -1369,6 +1372,7 @@ body {
     border-radius: 50%;
     border: solid 1.5px #e5e5e5;
     background-color: #fff;
+    z-index: 500;
 
     & .icon-chevron-left {
       font-size: 1.2em;
@@ -2096,6 +2100,84 @@ body {
   font-size: 6em;
   font-weight: 700;
   color: #fff;
+}
+
+.side-menu-slide-wrapper {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.side-menu-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+  //transform: translate(-100%, 0);
+
+  &.active {
+    //transform: translate(0, 0);
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+  }
+
+  & .test-text {
+    margin-bottom: 1em;
+    display: block;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &.slide-01 {
+    background-color: green;
+  }
+
+  &.slide-02 {
+    background-color: blue;
+  }
+
+  &.slide-03 {
+    background-color: red;
+  }
+
+  &-header {
+    height: var(--side-menu-slide-header-01);
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid #fff;
+  }
+
+  &-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - var(--side-menu-slide-header-01));
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+
+    &.active {
+      //transform: translate(0, 0);
+      opacity: 1;
+      visibility: visible;
+      left: 0;
+    }
+
+    &.slide-body-01 {
+      background-color: yellow;
+    }
+
+    &.slide-body-02 {
+      background-color: orange;
+    }
+  }
 }
 
 //************************************************************************************************************
@@ -3037,5 +3119,48 @@ body {
     &.open {
       transform: translate(0, 0);
     }
+  }
+}
+
+//=================================================================
+//                      ANIMATIONS
+//=================================================================
+@keyframes slide-in-right {
+  from {
+    transform: translate(-100%, 0);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translate(100%, 0);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slide-out-right {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(100%, 0);
+  }
+}
+
+@keyframes slide-out-left {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-100%, 0);
   }
 }

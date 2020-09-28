@@ -12,7 +12,8 @@
   --page-caption-height: 7.04em;
   --table-head-row-height: 3.5em;
   --table-body-row-height: 4.6em;
-  --side-menu-header-height: 12.86em; }
+  --side-menu-header-height: 12.86em;
+  --side-menu-slide-header-01: 20em; }
 
 @font-face {
   font-family: "dashoard-icons";
@@ -728,7 +729,8 @@ body {
     height: 2.75em;
     border-radius: 50%;
     border: solid 1.5px #e5e5e5;
-    background-color: #fff; }
+    background-color: #fff;
+    z-index: 500; }
     .side-arrow .icon-chevron-left {
       font-size: 1.2em; }
 
@@ -1332,6 +1334,59 @@ body {
   font-size: 6em;
   font-weight: 700;
   color: #fff; }
+
+.side-menu-slide-wrapper {
+  position: relative;
+  height: 100%;
+  overflow: hidden; }
+
+.side-menu-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out; }
+  .side-menu-slide.active {
+    opacity: 1;
+    visibility: visible;
+    left: 0; }
+  .side-menu-slide .test-text {
+    margin-bottom: 1em;
+    display: block;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer; }
+  .side-menu-slide.slide-01 {
+    background-color: green; }
+  .side-menu-slide.slide-02 {
+    background-color: blue; }
+  .side-menu-slide.slide-03 {
+    background-color: red; }
+  .side-menu-slide-header {
+    height: var(--side-menu-slide-header-01);
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid #fff; }
+  .side-menu-slide-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - var(--side-menu-slide-header-01));
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out; }
+    .side-menu-slide-body.active {
+      opacity: 1;
+      visibility: visible;
+      left: 0; }
+    .side-menu-slide-body.slide-body-01 {
+      background-color: yellow; }
+    .side-menu-slide-body.slide-body-02 {
+      background-color: orange; }
 
 #give-feedback {
   margin-left: calc(var(--side-bar-width) + var(--padding-left));
@@ -2181,3 +2236,24 @@ body {
       margin-left: 0 !important; }
   .content-02-body.side-menu-content-body.open {
     transform: translate(0, 0); }
+
+@keyframes slide-in-right {
+  from {
+    transform: translate(-100%, 0); }
+  to {
+    transform: translate(0, 0); } }
+@keyframes slide-in-left {
+  from {
+    transform: translate(100%, 0); }
+  to {
+    transform: translate(0, 0); } }
+@keyframes slide-out-right {
+  from {
+    transform: translate(0, 0); }
+  to {
+    transform: translate(100%, 0); } }
+@keyframes slide-out-left {
+  from {
+    transform: translate(0, 0); }
+  to {
+    transform: translate(-100%, 0); } }

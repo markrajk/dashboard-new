@@ -77,7 +77,51 @@
           <div class="side-arrow toggle-side-menu">
             <i class="icon-chevron-left"></i>
           </div>
-          <div class="side-menu-content content-01">
+
+          <div class="side-menu-slide-wrapper">
+            <div class="side-menu-slide slide-01 active">
+              <div class="side-menu-slide-header">
+                <button
+                  class="test-text"
+                  target-slide="slide-02"
+                  current-slide="slide-01"
+                >
+                  Slide 02
+                </button>
+              </div>
+              <div class="side-menu-slide-body slide-body-01 active">
+                <button
+                  class="test-text"
+                  target-slide="slide-body-02"
+                  current-slide="slide-body-01"
+                >
+                  Slide body 02
+                </button>
+              </div>
+              <div class="side-menu-slide-body slide-body-02">
+                <button
+                  class="test-text"
+                  target-slide="slide-body-01"
+                  current-slide="slide-body-02"
+                >
+                  Slide body 01
+                </button>
+              </div>
+            </div>
+            <div class="side-menu-slide slide-02">
+              <div class="side-menu-slide-header">
+                <button
+                  class="test-text"
+                  target-slide="slide-01"
+                  current-slide="slide-02"
+                >
+                  Slide 01
+                </button>
+              </div>
+              <div class="side-menu-slide-body"></div>
+            </div>
+          </div>
+          <!-- <div class="side-menu-content content-01">
             <div class="side-menu-content-header">
               <div class="side-menu-content-header-item">
                 <div class="side-menu-content-header-item-icon">
@@ -201,7 +245,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -376,20 +420,20 @@
 
       checkMenuPos();
 
-      // SIDE MENU SLIDE
-      let sideMenuTriggers = document.querySelectorAll(".side-trigger");
+      // // SIDE MENU SLIDE
+      // let sideMenuTriggers = document.querySelectorAll(".side-trigger");
 
-      sideMenuTriggers.forEach((e) => {
-        e.addEventListener("click", function () {
-          let target = this.getAttribute("target-side");
-          if (target === "content-02-body") {
-            document.querySelector(`.${target}`).classList.add("open");
-          } else if (target === "content-01-body") {
-            console.log("2CLICKED");
-            document.querySelector(`.content-02-body`).classList.remove("open");
-          }
-        });
-      });
+      // sideMenuTriggers.forEach((e) => {
+      //   e.addEventListener("click", function () {
+      //     let target = this.getAttribute("target-side");
+      //     if (target === "content-02-body") {
+      //       document.querySelector(`.${target}`).classList.add("open");
+      //     } else if (target === "content-01-body") {
+      //       console.log("2CLICKED");
+      //       document.querySelector(`.content-02-body`).classList.remove("open");
+      //     }
+      //   });
+      // });
 
       //MODAL
       let modalTriggers = document.querySelectorAll(".modal-trigger");
@@ -411,6 +455,46 @@
             `${e.getAttribute("close-modal")}`
           );
           modal.classList.remove("open");
+        });
+      });
+
+      //SIDE MENU SLIDER
+      let sideMenuSlides = document.querySelectorAll(".side-menu-slide");
+
+      let sideMenuTriggers = document.querySelectorAll(".test-text");
+
+      sideMenuTriggers.forEach((e) => {
+        e.addEventListener("click", function () {
+          let currentIndex;
+          let targetIndex;
+
+          let currentClass = e.getAttribute("current-slide");
+          let targetClass = e.getAttribute("target-slide");
+
+          let currentSlide = document.querySelector(`.${currentClass}`);
+          let targetSlide = document.querySelector(`.${targetClass}`);
+
+          // Check if menu-slide or sub-menu-slide
+          if (targetSlide.classList.contains("side-menu-slide")) {
+            currentIndex = parseInt(currentClass.split("-")[1]);
+            targetIndex = parseInt(targetClass.split("-")[1]);
+          } else {
+            currentIndex = parseInt(currentClass.split("-")[2]);
+            targetIndex = parseInt(targetClass.split("-")[2]);
+          }
+
+          // Remove active from current & add to target
+          currentSlide.classList.remove("active");
+          targetSlide.classList.add("active");
+
+          // Check for direction of animation. left or right
+          if (currentIndex < targetIndex) {
+            currentSlide.style.animation = "slide-out-left .5s ease-in-out";
+            targetSlide.style.animation = "slide-in-left .5s ease-in-out";
+          } else {
+            currentSlide.style.animation = "slide-out-right .5s ease-in-out";
+            targetSlide.style.animation = "slide-in-right .5s ease-in-out";
+          }
         });
       });
     </script>
