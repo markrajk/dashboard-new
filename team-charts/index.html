@@ -85,6 +85,7 @@
                   class="test-text"
                   target-slide="slide-02"
                   current-slide="slide-01"
+                  main-slide="true"
                 >
                   Slide 02
                 </button>
@@ -114,6 +115,7 @@
                   class="test-text"
                   target-slide="slide-01"
                   current-slide="slide-02"
+                  main-slide="true"
                 >
                   Slide 01
                 </button>
@@ -474,8 +476,10 @@
           let currentSlide = document.querySelector(`.${currentClass}`);
           let targetSlide = document.querySelector(`.${targetClass}`);
 
+          let mainSlide = e.getAttribute("main-slide");
+
           // Check if menu-slide or sub-menu-slide
-          if (targetSlide.classList.contains("side-menu-slide")) {
+          if (mainSlide) {
             currentIndex = parseInt(currentClass.split("-")[1]);
             targetIndex = parseInt(targetClass.split("-")[1]);
           } else {
