@@ -45,7 +45,7 @@
         </div>
       </div>
       <div class="side">
-        <div class="side-bar">
+        <div class="side-bar side-bar-hide">
           <div class="side-arrow toggle-side-bar">
             <i class="icon-chevron-left"></i>
           </div>
@@ -80,47 +80,210 @@
 
           <div class="side-menu-slide-wrapper">
             <div class="side-menu-slide slide-01 active">
-              <div class="side-menu-slide-header">
-                <button
-                  class="test-text"
-                  target-slide="slide-02"
-                  current-slide="slide-01"
-                  main-slide="true"
-                >
-                  Slide 02
-                </button>
-              </div>
-              <div class="side-menu-slide-body slide-body-01 active">
-                <button
-                  class="test-text"
-                  target-slide="slide-body-02"
-                  current-slide="slide-body-01"
-                >
-                  Slide body 02
-                </button>
-              </div>
-              <div class="side-menu-slide-body slide-body-02">
-                <button
-                  class="test-text"
-                  target-slide="slide-body-01"
-                  current-slide="slide-body-02"
-                >
-                  Slide body 01
+              <div class="side-menu-slide-body active">
+                <div class="side-menu-slide-body-section section-01">
+                  <button
+                    class="side-menu-slide-body-section-title test-text"
+                    target-slide="slide-02"
+                    current-slide="slide-01"
+                    main-slide="true"
+                  >
+                    Your Teams
+                  </button>
+                  <button
+                    class="side-menu-slide-body-section-item test-text"
+                    target-slide="slide-02"
+                    current-slide="slide-01"
+                    main-slide="true"
+                  >
+                    Team Sales
+                  </button>
+                  <button
+                    class="side-menu-slide-body-section-item test-text"
+                    target-slide="slide-02"
+                    current-slide="slide-01"
+                    main-slide="true"
+                  >
+                    Team Marketing
+                  </button>
+                  <button
+                    class="side-menu-slide-body-section-item test-text"
+                    target-slide="slide-02"
+                    current-slide="slide-01"
+                    main-slide="true"
+                  >
+                    Team Recruitment
+                  </button>
+                </div>
+
+                <div class="side-menu-slide-body-section section-02">
+                  <button class="side-menu-slide-body-section-title">
+                    Your viewing rights
+                  </button>
+                  <button class="side-menu-slide-body-section-item">
+                    Team Management
+                  </button>
+                  <button class="side-menu-slide-body-section-item">
+                    Team Sales
+                  </button>
+                  <button class="side-menu-slide-body-section-item">
+                    Team Developers
+                  </button>
+                </div>
+
+                <div class="side-menu-slide-body-buttons section-03">
+                  <button class="side-menu-slide-body-buttons-item">
+                    <i class="icon-plus-circle-full"></i>
+                    Your viewing rights
+                  </button>
+                  <button class="side-menu-slide-body-buttons-item">
+                    <i class="icon-plus-circle-full"></i>
+                    Team Management
+                  </button>
+                </div>
+
+                <button class="compare-button">
+                  <i class="icon-compare"></i>
+                  <p class="compare-button-text">Start compare mode</p>
                 </button>
               </div>
             </div>
+
             <div class="side-menu-slide slide-02">
               <div class="side-menu-slide-header">
-                <button
+                <!-- <button
                   class="test-text"
                   target-slide="slide-01"
                   current-slide="slide-02"
                   main-slide="true"
                 >
                   Slide 01
+                </button> -->
+                <div class="side-menu-slide-header-set">
+                  <div class="side-menu-slide-header-set-icon">
+                    <i class="icon-chart-column"></i>
+                  </div>
+                  <div class="side-menu-slide-header-set-info">
+                    <p class="side-menu-slide-header-set-info-title">
+                      Team Marketing
+                    </p>
+                    <p class="side-menu-slide-header-set-info-desc">
+                      Example team description longer
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="side-menu-slide-header-back test-text"
+                  target-slide="slide-01"
+                  current-slide="slide-02"
+                  main-slide="true"
+                >
+                  <i class="icon-arrow-circle-left"></i>
+                  <p class="side-menu-slide-header-back-text">
+                    Back to teams overview
+                  </p>
+                </div>
+              </div>
+              <div class="side-menu-slide-body slide-body-01 active">
+                <!-- <div class="side-menu-slide-body-section section-01">
+                  <button
+                    class="side-menu-slide-body-section-item test-text"
+                    target-slide="slide-02"
+                    current-slide="slide-01"
+                    main-slide="true"
+                  >
+                    Your Teams
+                  </button>
+                </div> -->
+
+                <button class="side-menu-slide-body-section-title">
+                  Team Members
+                </button>
+                <button
+                  class="side-menu-slide-body-section-item test-text"
+                  target-slide="slide-body-02"
+                  current-slide="slide-body-01"
+                >
+                  Julia Martinez
+                </button>
+                <button
+                  class="side-menu-slide-body-section-item test-text"
+                  target-slide="slide-body-02"
+                  current-slide="slide-body-01"
+                >
+                  Harald Schwarz
+                </button>
+                <button
+                  class="side-menu-slide-body-section-item test-text"
+                  target-slide="slide-body-02"
+                  current-slide="slide-body-01"
+                >
+                  Ai Schwarz
                 </button>
               </div>
-              <div class="side-menu-slide-body"></div>
+
+              <div class="side-menu-slide-body slide-body-02">
+                <!-- <div class="side-menu-slide-body-section section-01">
+                  <button
+                    class="side-menu-slide-body-section-item test-text"
+                    target-slide="slide-02"
+                    current-slide="slide-01"
+                    main-slide="true"
+                  >
+                    Your Teams
+                  </button>
+                </div> -->
+
+                <button class="side-menu-slide-body-set active">
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-chart-bar"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Feedback charts</p>
+                </button>
+
+                <button class="side-menu-slide-body-set">
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-chat"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Text feedback</p>
+                </button>
+
+                <button class="side-menu-slide-body-set">
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-users"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Team members</p>
+                </button>
+
+                <button class="side-menu-slide-body-set">
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-git-pull"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Feedback requests</p>
+                </button>
+
+                <button class="side-menu-slide-body-set">
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-document"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Feedback reports</p>
+                </button>
+
+                <button class="side-menu-slide-body-set">
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-question-circle"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Custom feedback</p>
+                </button>
+
+                <button class="side-menu-slide-body-set">
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-cog"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Team settings</p>
+                </button>
+              </div>
             </div>
           </div>
           <!-- <div class="side-menu-content content-01">
@@ -414,7 +577,7 @@
           } else {
             document.documentElement.style.setProperty(
               "--side-bar-width",
-              "7.5em"
+              "0em"
             );
           }
         }
@@ -422,20 +585,55 @@
 
       checkMenuPos();
 
-      // // SIDE MENU SLIDE
-      // let sideMenuTriggers = document.querySelectorAll(".side-trigger");
+      // //HOWER SIDEBAR
+      let side = document.querySelector(".side");
+      let sideBar = document.querySelector(".side-bar");
+      let body = document.querySelector("body");
 
-      // sideMenuTriggers.forEach((e) => {
-      //   e.addEventListener("click", function () {
-      //     let target = this.getAttribute("target-side");
-      //     if (target === "content-02-body") {
-      //       document.querySelector(`.${target}`).classList.add("open");
-      //     } else if (target === "content-01-body") {
-      //       console.log("2CLICKED");
-      //       document.querySelector(`.content-02-body`).classList.remove("open");
+      // document.addEventListener("mousemove", function (e) {
+      //   if (e.screenX < 90 && !body.classList.contains("top")) {
+      //     sideBar.classList.remove("side-bar-hide");
+      //     if (sideBar.classList.contains(".side-bar-close")) {
+      //       document.documentElement.style.setProperty(
+      //         "--side-bar-width",
+      //         "2em"
+      //       );
+      //     } else {
+      //       document.documentElement.style.setProperty(
+      //         "--side-bar-width",
+      //         "7.5em"
+      //       );
       //     }
-      //   });
+      //   } else {
+      //     sideBar.classList.add("side-bar-hide");
+      //     document.documentElement.style.setProperty("--side-bar-width", "0em");
+      //   }
       // });
+
+      side.addEventListener("mouseover", function () {
+        if (!body.classList.contains("top")) {
+          sideBar.classList.remove("side-bar-hide");
+
+          if (sideBar.classList.contains("side-bar-close")) {
+            document.documentElement.style.setProperty(
+              "--side-bar-width",
+              "2em"
+            );
+          } else {
+            document.documentElement.style.setProperty(
+              "--side-bar-width",
+              "7.5em"
+            );
+          }
+        }
+      });
+
+      side.addEventListener("mouseout", function () {
+        if (!body.classList.contains("top")) {
+          sideBar.classList.add("side-bar-hide");
+          document.documentElement.style.setProperty("--side-bar-width", "0em");
+        }
+      });
 
       //MODAL
       let modalTriggers = document.querySelectorAll(".modal-trigger");
