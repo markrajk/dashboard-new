@@ -41,7 +41,7 @@
           <button>
             <i class="icon-bell"></i>
           </button>
-          <button class="initials">T</button>
+          <button class="initials fullscreen-toggle">T</button>
         </div>
       </div>
       <div class="side">
@@ -68,7 +68,7 @@
             <button class="side-bar-item">
               <i class="icon-exit"></i>
             </button>
-            <button class="side-bar-item">
+            <button class="side-bar-item fullscreen-toggle">
               <div class="initials">T</div>
             </button>
           </div>
@@ -499,6 +499,34 @@
             currentSlide.style.animation = "slide-out-right .5s ease-in-out";
             targetSlide.style.animation = "slide-in-right .5s ease-in-out";
           }
+        });
+      });
+
+      //FULL SCREEN MODE
+      let fullScreenToggle = document.querySelectorAll(".fullscreen-toggle");
+
+      function getFullscreenElement() {
+        return (
+          document.fullscreenElement ||
+          document.webkitFullscreenElement ||
+          document.mozFullscreenElement ||
+          document.msFullscreenElement
+        );
+      }
+
+      function toggleFullscreen() {
+        if (getFullscreenElement()) {
+          document.exitFullscreen();
+        } else {
+          document.documentElement.requestFullscreen().catch((err) => {
+            console.log(err);
+          });
+        }
+      }
+
+      fullScreenToggle.forEach((e) => {
+        e.addEventListener("click", () => {
+          toggleFullscreen();
         });
       });
     </script>
