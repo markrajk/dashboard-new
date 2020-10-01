@@ -478,6 +478,9 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }
+    @media (max-width: 1100px) {
+      .header-company {
+        display: none; } }
     .header-company-logo {
       margin-right: 1em;
       height: 3.55em;
@@ -512,6 +515,10 @@ body {
     -moz-justify-content: space-between;
     justify-content: space-between;
     list-style: none; }
+    @media (max-width: 1100px) {
+      .header-list {
+        margin-left: 0;
+        margin-right: auto; } }
     .header-list-item {
       margin-right: 2em;
       position: relative; }
@@ -627,6 +634,11 @@ body {
   transition-property: height width;
   z-index: 900;
   grid-area: side; }
+  @media (max-width: 991px) {
+    .side {
+      position: absolute;
+      top: 0;
+      left: 0; } }
   .side-bar {
     padding: 3em 0;
     padding-top: 4em;

@@ -1197,6 +1197,10 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
 
+    @include custom-respond(1100) {
+      display: none;
+    }
+
     &-logo {
       margin-right: 1em;
       height: 3.55em;
@@ -1224,6 +1228,11 @@ body {
     @include align-items(center);
     @include justify-content(space-between);
     list-style: none;
+
+    @include custom-respond(1100) {
+      margin-left: 0;
+      margin-right: auto;
+    }
 
     // @include respond(desktop-sm) {
     //   max-width: 38.6em;
@@ -1351,6 +1360,12 @@ body {
   transition-property: height width;
   z-index: 900;
   grid-area: side;
+
+  @include respond(desktop-md) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
   &-bar {
     padding: 3em 0;
