@@ -814,7 +814,6 @@ body {
   display: inline-block; }
 
 .page-header {
-  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -839,8 +838,7 @@ body {
   height: var(--page-header-height-default);
   width: 100%;
   background-color: #fff;
-  z-index: 800;
-  z-index: 5000; }
+  z-index: 800; }
   .page-header .header-buttons {
     position: absolute;
     top: 0;
@@ -849,7 +847,6 @@ body {
     visibility: visible;
     transition: all 0.5s ease-in-out; }
   .page-header-info {
-    position: relative;
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -moz-inline-flex;
@@ -865,22 +862,6 @@ body {
     -webkit-justify-content: center;
     -moz-justify-content: center;
     justify-content: center; }
-    .page-header-info::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      border-top: 1px solid magenta;
-      transform: translate(-50%, 0); }
-    .page-header-info::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100vw;
-      border-bottom: 1px solid magenta;
-      transform: translate(-50%, 0); }
     .page-header-info-img {
       margin-right: 1.3em;
       width: 5.7em;
@@ -938,7 +919,7 @@ body {
       color: #fff;
       font-weight: 700; }
     .page-header-info-name {
-      margin-bottom: 0.2954545455em;
+      margin-bottom: 0.3409090909em;
       font-size: 2.4em;
       font-weight: 400;
       letter-spacing: -0.12px;
@@ -946,6 +927,7 @@ body {
       .page-header-info-name-strong {
         font-weight: 500; }
     .page-header-info-position {
+      padding-left: 1px;
       font-size: 1.3em;
       font-weight: 400;
       color: #62677b; }
@@ -962,7 +944,6 @@ body {
     font-weight: 500;
     color: #172b4d; }
   .page-header-list {
-    position: relative;
     width: 100%;
     margin-top: auto;
     padding-left: 1.25em;
@@ -983,14 +964,6 @@ body {
     justify-content: flex-start;
     list-style: none;
     border-bottom: 1.5px solid #ebecf0; }
-    .page-header-list::before {
-      content: "";
-      position: absolute;
-      bottom: -1.5px;
-      left: 0;
-      width: 100vw;
-      border-bottom: 1px solid magenta;
-      transform: translate(-50%, 0); }
     .page-header-list-item:not(:last-of-type) {
       margin-right: 3.1em; }
     .page-header-list-item-link {

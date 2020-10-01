@@ -1546,7 +1546,7 @@ body {
 //    PAGE HEADER
 //========================
 .page-header {
-  position: relative;
+  //position: relative;
   @include flexbox();
   @include flex-direction(column);
   @include align-items(flex-start);
@@ -1557,7 +1557,7 @@ body {
   background-color: #fff;
   z-index: 800;
 
-  z-index: 5000;
+  //z-index: 5000;
 
   & .header-buttons {
     position: absolute;
@@ -1569,30 +1569,30 @@ body {
   }
 
   &-info {
-    position: relative;
+    //position: relative;
     @include inline-flex();
     @include align-items(center);
     @include justify-content(center);
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      border-top: 1px solid magenta;
-      transform: translate(-50%, 0);
-    }
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100vw;
+    //   border-top: 1px solid magenta;
+    //   transform: translate(-50%, 0);
+    // }
 
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100vw;
-      border-bottom: 1px solid magenta;
-      transform: translate(-50%, 0);
-    }
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   width: 100vw;
+    //   border-bottom: 1px solid magenta;
+    //   transform: translate(-50%, 0);
+    // }
 
     &-img {
       margin-right: 1.3em;
@@ -1635,7 +1635,7 @@ body {
     }
 
     &-name {
-      margin-bottom: emcalc(0.65, 2.2);
+      margin-bottom: emcalc(0.75, 2.2);
       font-size: 2.4em;
       font-weight: 400;
       letter-spacing: -0.12px;
@@ -1647,6 +1647,7 @@ body {
     }
 
     &-position {
+      padding-left: 1px;
       font-size: 1.3em;
       font-weight: 400;
       color: #62677b;
@@ -1672,7 +1673,7 @@ body {
   }
 
   &-list {
-    position: relative;
+    //position: relative;
     width: 100%;
     margin-top: auto;
     padding-left: 1.25em;
@@ -1682,15 +1683,15 @@ body {
     list-style: none;
     border-bottom: 1.5px solid #ebecf0;
 
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -1.5px;
-      left: 0;
-      width: 100vw;
-      border-bottom: 1px solid magenta;
-      transform: translate(-50%, 0);
-    }
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   bottom: -1.5px;
+    //   left: 0;
+    //   width: 100vw;
+    //   border-bottom: 1px solid magenta;
+    //   transform: translate(-50%, 0);
+    // }
 
     &-item {
       &:not(:last-of-type) {
