@@ -590,12 +590,12 @@
 
 @font-face {
   font-family: "dashoard-icons";
-  src: url("../fonts/dashoard-icons.eot?uoxiph");
-  src: url("../fonts/dashoard-icons.eot?uoxiph#iefix")
+  src: url("../fonts/dashoard-icons.eot?6mkgm7");
+  src: url("../fonts/dashoard-icons.eot?6mkgm7#iefix")
       format("embedded-opentype"),
-    url("../fonts/dashoard-icons.ttf?uoxiph") format("truetype"),
-    url("../fonts/dashoard-icons.woff?uoxiph") format("woff"),
-    url("../fonts/dashoard-icons.svg?uoxiph#dashoard-icons") format("svg");
+    url("../fonts/dashoard-icons.ttf?6mkgm7") format("truetype"),
+    url("../fonts/dashoard-icons.woff?6mkgm7") format("woff"),
+    url("../fonts/dashoard-icons.svg?6mkgm7#dashoard-icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -617,6 +617,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-shield-circle:before {
+  content: "\e92f";
+}
+.icon-bell:before {
+  content: "\e940";
+}
 .icon-search:before {
   content: "\e93f";
 }
@@ -769,9 +775,6 @@
 }
 .icon-bin:before {
   content: "\e92e";
-}
-.icon-bell:before {
-  content: "\e92f";
 }
 .icon-caret-left:before {
   content: "\e930";
@@ -2491,7 +2494,7 @@ body {
         cursor: pointer;
 
         &:not(:last-of-type) {
-          margin-bottom: emcalc(2.1, 1.3);
+          margin-bottom: emcalc(2.2, 1.3);
         }
 
         &:hover {
@@ -2528,7 +2531,7 @@ body {
     }
 
     &-buttons {
-      margin-bottom: 3.2em;
+      margin-bottom: 2.8em;
       padding-bottom: 2.3em;
       border-bottom: 2px solid #e2e4e9;
 
@@ -2544,7 +2547,7 @@ body {
         cursor: pointer;
 
         &:not(:last-of-type) {
-          margin-bottom: emcalc(1.2, 1.3);
+          margin-bottom: emcalc(1.4, 1.3);
         }
 
         & i {
@@ -2560,13 +2563,14 @@ body {
       text-align: center;
 
       & i {
-        margin-bottom: emcalc(1, 3);
+        display: inline-block;
+        margin-bottom: emcalc(0.5, 3);
         font-size: 3em;
         color: #42526e;
       }
 
       &-text {
-        font-size: 1.3;
+        font-size: 1.3em;
         font-weight: 600;
         color: #42526e;
       }
@@ -2626,7 +2630,7 @@ body {
   &.slide-01 {
     padding: 4.4em 1.7em 0;
     & .side-menu-slide-body-section {
-      margin-bottom: 2.3em;
+      margin-bottom: 2.1em;
       padding-bottom: 3.3em;
     }
   }
