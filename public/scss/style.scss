@@ -590,12 +590,12 @@
 
 @font-face {
   font-family: "dashoard-icons";
-  src: url("../fonts/dashoard-icons.eot?6mkgm7");
-  src: url("../fonts/dashoard-icons.eot?6mkgm7#iefix")
+  src: url("../fonts/dashoard-icons.eot?1598d4");
+  src: url("../fonts/dashoard-icons.eot?1598d4#iefix")
       format("embedded-opentype"),
-    url("../fonts/dashoard-icons.ttf?6mkgm7") format("truetype"),
-    url("../fonts/dashoard-icons.woff?6mkgm7") format("woff"),
-    url("../fonts/dashoard-icons.svg?6mkgm7#dashoard-icons") format("svg");
+    url("../fonts/dashoard-icons.ttf?1598d4") format("truetype"),
+    url("../fonts/dashoard-icons.woff?1598d4") format("woff"),
+    url("../fonts/dashoard-icons.svg?1598d4#dashoard-icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -617,6 +617,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-cog:before {
+  content: "\e91f";
+}
 .icon-shield-circle:before {
   content: "\e92f";
 }
@@ -730,9 +733,6 @@
 }
 .icon-expand-outlined:before {
   content: "\e91e";
-}
-.icon-cog:before {
-  content: "\e91f";
 }
 .icon-chevron-left-outlined:before {
   content: "\e920";
@@ -1337,9 +1337,9 @@ body {
       @include inline-flex();
       @include align-items(center);
       @include justify-content(center);
-      width: emcalc(3.2, 1.95);
-      height: emcalc(3.2, 1.95);
-      font-size: 1.85em;
+      width: emcalc(3.2, 1.83);
+      height: emcalc(3.2, 1.83);
+      font-size: 1.83em;
       font-weight: 700;
       letter-spacing: 0.53px;
       color: #fff;
@@ -1364,6 +1364,7 @@ body {
 //    SIDE ELEMENT
 //========================
 .side {
+  position: relative;
   // height: calc(100% - var(--header-height));
   // max-height: 100vh;
   height: 100%;
@@ -1509,15 +1510,15 @@ body {
     }
 
     &-close {
-      margin-left: -21em;
+      margin-left: -21.5em;
       box-shadow: none;
 
       & .side-arrow .icon-chevron-left {
         transform: rotateZ(180deg);
       }
 
-      & .side-menu-content {
-        opacity: 0;
+      & .side-menu-slide {
+        opacity: 0 !important;
       }
     }
 
@@ -1701,7 +1702,7 @@ body {
     border-bottom: 1.5px solid #ebecf0;
 
     & .give-feedback-button {
-      margin-top: -0.9em;
+      margin-top: -1.1em;
       margin-left: auto;
 
       & .button {
