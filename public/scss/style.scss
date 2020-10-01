@@ -1552,7 +1552,7 @@ body {
 //    PAGE HEADER
 //========================
 .page-header {
-  //position: relative;
+  position: relative;
   @include flexbox();
   @include flex-direction(column);
   @include align-items(flex-start);
