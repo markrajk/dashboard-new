@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../public/css/style.css" />
   </head>
   <body>
-    <main class="main" id="team-charts">
+    <main class="main top-nav" id="team-charts">
       <div class="header">
         <ul class="header-list">
           <li class="header-list-item">
@@ -33,22 +33,23 @@
 
         <div class="header-buttons">
           <button>
-            <i class="icon-cog toggle-top"></i>
+            <i class="icon-cog top-nav-trigger"></i>
           </button>
           <button>
-            <i class="icon-question"></i>
+            <i class="icon-question side-nav-trigger"></i>
           </button>
           <button>
-            <i class="icon-bell"></i>
+            <i class="icon-bell side-nav-toggle-trigger"></i>
           </button>
           <button class="initials fullscreen-toggle">T</button>
         </div>
       </div>
       <div class="side">
-        <div class="side-bar side-bar-hide">
-          <div class="side-arrow toggle-side-bar">
+        <div class="side-bar-toggle"></div>
+        <div class="side-bar">
+          <!-- <div class="side-arrow toggle-side-bar">
             <i class="icon-chevron-left"></i>
-          </div>
+          </div> -->
           <div class="side-bar-top">
             <button class="side-bar-item active">
               <i class="icon-users"></i>
@@ -63,7 +64,7 @@
 
           <div class="side-bar-bottom">
             <button class="side-bar-item">
-              <i class="icon-cog toggle-top"></i>
+              <i class="icon-cog top-nav-trigger"></i>
             </button>
             <button class="side-bar-item">
               <i class="icon-exit"></i>
@@ -414,53 +415,57 @@
         </div>
       </div>
 
-      <div class="page-header">
-        <h3 class="page-header-subtitle">
-          All Teams / Team React Native / Settings
-        </h3>
-        <h2 class="page-header-title">Team settings</h2>
+      <div class="page-content-wrapper">
+        <div class="page-header">
+          <h3 class="page-header-subtitle">
+            All Teams / Team React Native / Settings
+          </h3>
+          <h2 class="page-header-title">Team settings</h2>
 
-        <ul class="page-header-list">
-          <li class="page-header-list-item">
-            <button class="page-header-list-item-link">General settings</button>
-          </li>
-          <li class="page-header-list-item">
-            <button class="page-header-list-item-link active">
-              Team members
-            </button>
-          </li>
-          <li class="page-header-list-item">
-            <button class="page-header-list-item-link">Team lead</button>
-          </li>
-          <li class="page-header-list-item">
-            <button class="page-header-list-item-link">Viewing rights</button>
-          </li>
-          <li class="page-header-list-item">
-            <button class="page-header-list-item-link">Admin rights</button>
-          </li>
-        </ul>
-      </div>
+          <ul class="page-header-list">
+            <li class="page-header-list-item">
+              <button class="page-header-list-item-link">
+                General settings
+              </button>
+            </li>
+            <li class="page-header-list-item">
+              <button class="page-header-list-item-link active">
+                Team members
+              </button>
+            </li>
+            <li class="page-header-list-item">
+              <button class="page-header-list-item-link">Team lead</button>
+            </li>
+            <li class="page-header-list-item">
+              <button class="page-header-list-item-link">Viewing rights</button>
+            </li>
+            <li class="page-header-list-item">
+              <button class="page-header-list-item-link">Admin rights</button>
+            </li>
+          </ul>
+        </div>
 
-      <div class="page-content">
-        <div class="widgets">
-          <div class="widget-wrapper small">
-            <div class="widget">1</div>
-          </div>
+        <div class="page-content">
+          <div class="widgets">
+            <div class="widget-wrapper small">
+              <div class="widget">1</div>
+            </div>
 
-          <div class="widget-wrapper big">
-            <div class="widget">2</div>
-          </div>
+            <div class="widget-wrapper big">
+              <div class="widget">2</div>
+            </div>
 
-          <div class="widget-wrapper small">
-            <div class="widget">3</div>
-          </div>
+            <div class="widget-wrapper small">
+              <div class="widget">3</div>
+            </div>
 
-          <div class="widget-wrapper small">
-            <div class="widget">4</div>
-          </div>
+            <div class="widget-wrapper small">
+              <div class="widget">4</div>
+            </div>
 
-          <div class="widget-wrapper small">
-            <div class="widget">5</div>
+            <div class="widget-wrapper small">
+              <div class="widget">5</div>
+            </div>
           </div>
         </div>
       </div>
@@ -502,29 +507,29 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      //TOGGLE SIDE BAR
-      document
-        .querySelector(".toggle-side-bar")
-        .addEventListener("click", function () {
-          document
-            .querySelector(".side-bar")
-            .classList.toggle("side-bar-close");
-          if (
-            document
-              .querySelector(".side-bar")
-              .classList.contains("side-bar-close")
-          ) {
-            document.documentElement.style.setProperty(
-              "--side-bar-width",
-              "2em"
-            );
-          } else {
-            document.documentElement.style.setProperty(
-              "--side-bar-width",
-              "7.5em"
-            );
-          }
-        });
+      // //TOGGLE SIDE BAR
+      // document
+      //   .querySelector(".toggle-side-bar")
+      //   .addEventListener("click", function () {
+      //     document
+      //       .querySelector(".side-bar")
+      //       .classList.toggle("side-bar-close");
+      //     if (
+      //       document
+      //         .querySelector(".side-bar")
+      //         .classList.contains("side-bar-close")
+      //     ) {
+      //       document.documentElement.style.setProperty(
+      //         "--side-bar-width",
+      //         "2em"
+      //       );
+      //     } else {
+      //       document.documentElement.style.setProperty(
+      //         "--side-bar-width",
+      //         "7.5em"
+      //       );
+      //     }
+      //   });
       //TOGGLE SIDE MENU
       document
         .querySelector(".toggle-side-menu")
@@ -549,51 +554,63 @@
           }
         });
 
-      //TOGGLE TOP HEADER
-      document.querySelectorAll(".toggle-top").forEach((e) => {
-        e.addEventListener("click", checkMenuPos);
+      // TOP NAV TRIGGER
+      document.querySelectorAll(".top-nav-trigger").forEach((e) => {
+        e.addEventListener("click", function () {
+          document.querySelector(".main").classList.add("top-nav");
+          document.querySelector(".main").classList.remove("side-nav");
+          document.querySelector(".main").classList.remove("side-nav-toggle");
+        });
       });
 
-      function checkMenuPos() {
-        document.querySelector("body").classList.toggle("top");
+      // SIDE NAV TRIGGER
+      document.querySelectorAll(".side-nav-trigger").forEach((e) => {
+        e.addEventListener("click", function () {
+          document.querySelector(".main").classList.add("side-nav");
+          document.querySelector(".main").classList.remove("top-nav");
+          document.querySelector(".main").classList.remove("side-nav-toggle");
+        });
+      });
 
-        if (document.querySelector("body").classList.contains("top")) {
-          document.documentElement.style.setProperty(
-            "--header-height",
-            "5.5em"
-          );
-          document.documentElement.style.setProperty("--side-bar-width", "0em");
-        } else {
-          document.documentElement.style.setProperty("--header-height", "0em");
-          if (
-            document
-              .querySelector(".side-bar")
-              .classList.contains("side-bar-close")
-          ) {
-            document.documentElement.style.setProperty(
-              "--side-bar-width",
-              "2em"
-            );
-          } else {
-            document.documentElement.style.setProperty(
-              "--side-bar-width",
-              "0em"
-            );
-          }
-        }
-      }
+      // SIDE NAV TOGGLE TRIGGER
+      document.querySelectorAll(".side-nav-toggle-trigger").forEach((e) => {
+        e.addEventListener("click", function () {
+          document.querySelector(".main").classList.add("side-nav-toggle");
+          document.querySelector(".main").classList.remove("side-nav");
+          document.querySelector(".main").classList.remove("top-nav");
+        });
+      });
 
-      checkMenuPos();
+      // // //HOWER SIDEBAR
+      // let side = document.querySelector(".side");
+      // let sideBar = document.querySelector(".side-bar");
+      // let body = document.querySelector("body");
 
-      // //HOWER SIDEBAR
-      let side = document.querySelector(".side");
-      let sideBar = document.querySelector(".side-bar");
-      let body = document.querySelector("body");
+      // // document.addEventListener("mousemove", function (e) {
+      // //   if (e.screenX < 90 && !body.classList.contains("top")) {
+      // //     sideBar.classList.remove("side-bar-hide");
+      // //     if (sideBar.classList.contains(".side-bar-close")) {
+      // //       document.documentElement.style.setProperty(
+      // //         "--side-bar-width",
+      // //         "2em"
+      // //       );
+      // //     } else {
+      // //       document.documentElement.style.setProperty(
+      // //         "--side-bar-width",
+      // //         "7.5em"
+      // //       );
+      // //     }
+      // //   } else {
+      // //     sideBar.classList.add("side-bar-hide");
+      // //     document.documentElement.style.setProperty("--side-bar-width", "0em");
+      // //   }
+      // // });
 
-      // document.addEventListener("mousemove", function (e) {
-      //   if (e.screenX < 90 && !body.classList.contains("top")) {
+      // side.addEventListener("mouseover", function () {
+      //   if (!body.classList.contains("top")) {
       //     sideBar.classList.remove("side-bar-hide");
-      //     if (sideBar.classList.contains(".side-bar-close")) {
+
+      //     if (sideBar.classList.contains("side-bar-close")) {
       //       document.documentElement.style.setProperty(
       //         "--side-bar-width",
       //         "2em"
@@ -604,36 +621,15 @@
       //         "7.5em"
       //       );
       //     }
-      //   } else {
+      //   }
+      // });
+
+      // side.addEventListener("mouseout", function () {
+      //   if (!body.classList.contains("top")) {
       //     sideBar.classList.add("side-bar-hide");
       //     document.documentElement.style.setProperty("--side-bar-width", "0em");
       //   }
       // });
-
-      side.addEventListener("mouseover", function () {
-        if (!body.classList.contains("top")) {
-          sideBar.classList.remove("side-bar-hide");
-
-          if (sideBar.classList.contains("side-bar-close")) {
-            document.documentElement.style.setProperty(
-              "--side-bar-width",
-              "2em"
-            );
-          } else {
-            document.documentElement.style.setProperty(
-              "--side-bar-width",
-              "7.5em"
-            );
-          }
-        }
-      });
-
-      side.addEventListener("mouseout", function () {
-        if (!body.classList.contains("top")) {
-          sideBar.classList.add("side-bar-hide");
-          document.documentElement.style.setProperty("--side-bar-width", "0em");
-        }
-      });
 
       //MODAL
       let modalTriggers = document.querySelectorAll(".modal-trigger");
