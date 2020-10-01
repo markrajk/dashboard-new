@@ -910,6 +910,12 @@ body {
         opacity: 0;
         visibility: hidden;
       }
+
+      &-info {
+        &-name {
+          font-size: 2.1em;
+        }
+      }
     }
   }
 

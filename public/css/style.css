@@ -274,6 +274,8 @@ body {
   .main.top-nav .page-header .header-buttons {
     opacity: 0;
     visibility: hidden; }
+  .main.top-nav .page-header-info-name {
+    font-size: 2.1em; }
   .main.side-nav .side-bar {
     margin-left: 0;
     visibility: visible; }
