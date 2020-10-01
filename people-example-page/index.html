@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Feedback | Teams | Charts</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/css/style.css" />
+  </head>
+  <body>
+    <main class="main top-nav" id="team-charts">
+      <div class="header">
+        <div class="header-company">
+          <div class="header-company-logo"></div>
+          <h2 class="header-company-name">Example Company</h2>
+        </div>
+
+        <ul class="header-list">
+          <li class="header-list-item">
+            <button class="header-list-item-link active">My teams</button>
+          </li>
+          <li class="header-list-item">
+            <button class="header-list-item-link">Give feedback</button>
+          </li>
+          <li class="header-list-item">
+            <button class="header-list-item-link">My Own Feedback</button>
+          </li>
+          <li class="header-list-item">
+            <button class="header-list-item-link">Help to get started</button>
+          </li>
+        </ul>
+
+        <div class="header-buttons">
+          <button>
+            <i class="icon-cog top-nav-trigger"></i>
+          </button>
+          <button>
+            <i class="icon-question side-nav-trigger"></i>
+          </button>
+          <button>
+            <i class="icon-bell side-nav-toggle-trigger"></i>
+          </button>
+          <button class="initials fullscreen-toggle">T</button>
+        </div>
+      </div>
+      <div class="side">
+        <div class="side-bar-toggle"></div>
+        <div class="side-bar">
+          <!-- <div class="side-arrow toggle-side-bar">
+            <i class="icon-chevron-left"></i>
+          </div> -->
+          <div class="side-bar-top">
+            <button class="side-bar-item active">
+              <i class="icon-users"></i>
+            </button>
+            <button class="side-bar-item">
+              <i class="icon-user"></i>
+            </button>
+            <button class="side-bar-item">
+              <i class="icon-give-feedback"></i>
+            </button>
+          </div>
+
+          <div class="side-bar-bottom">
+            <button class="side-bar-item">
+              <i class="icon-cog top-nav-trigger"></i>
+            </button>
+            <button class="side-bar-item">
+              <i class="icon-exit"></i>
+            </button>
+            <button class="side-bar-item fullscreen-toggle">
+              <div class="initials">T</div>
+            </button>
+          </div>
+        </div>
+        <div class="side-menu">
+          <div class="side-arrow toggle-side-menu">
+            <i class="icon-chevron-left"></i>
+          </div>
+
+          <div class="side-menu-slide-wrapper">
+            <div class="side-menu-slide slide-01">
+              <div class="side-menu-slide-body active">
+                <div class="side-menu-slide-body-section section-01">
+                  <button
+                    class="side-menu-slide-body-section-title test-text"
+                    target-slide="slide-02"
+                    current-slide="slide-01"
+                    main-slide="true"
+                  >
+                    Your Teams
+                  </button>
+                  <button
+                    class="side-menu-slide-body-section-item test-text"
+                    target-slide="slide-02"
+                    current-slide="slide-01"
+                    main-slide="true"
+                  >
+                    Team Sales
+                  </button>
+                  <button
+                    class="side-menu-slide-body-section-item test-text"
+                    target-slide="slide-02"
+                    current-slide="slide-01"
+                    main-slide="true"
+                  >
+                    Team Marketing
+                  </button>
+                  <button
+                    class="side-menu-slide-body-section-item test-text"
+                    target-slide="slide-02"
+                    current-slide="slide-01"
+                    main-slide="true"
+                  >
+                    Team Recruitment
+                  </button>
+                </div>
+
+                <div class="side-menu-slide-body-section section-02">
+                  <button class="side-menu-slide-body-section-title">
+                    Your viewing rights
+                  </button>
+                  <button class="side-menu-slide-body-section-item">
+                    Team Management
+                  </button>
+                  <button class="side-menu-slide-body-section-item">
+                    Team Sales
+                  </button>
+                  <button class="side-menu-slide-body-section-item">
+                    Team Developers
+                  </button>
+                </div>
+
+                <div class="side-menu-slide-body-buttons section-03">
+                  <button class="side-menu-slide-body-buttons-item">
+                    <i class="icon-plus-circle-full"></i>
+                    Create a new team
+                  </button>
+                  <button class="side-menu-slide-body-buttons-item">
+                    <i class="icon-shield-circle"></i>
+                    Request new rights
+                  </button>
+                </div>
+
+                <button class="compare-button">
+                  <i class="icon-compare"></i>
+                  <p class="compare-button-text">Start compare mode</p>
+                </button>
+              </div>
+            </div>
+
+            <div class="side-menu-slide slide-02 active">
+              <div class="side-menu-slide-header">
+                <!-- <button
+                  class="test-text"
+                  target-slide="slide-01"
+                  current-slide="slide-02"
+                  main-slide="true"
+                >
+                  Slide 01
+                </button> -->
+                <div class="side-menu-slide-header-set">
+                  <div class="side-menu-slide-header-set-icon">
+                    <i class="icon-chart-column"></i>
+                  </div>
+                  <div class="side-menu-slide-header-set-info">
+                    <p class="side-menu-slide-header-set-info-title">
+                      Team Marketing
+                    </p>
+                    <p class="side-menu-slide-header-set-info-desc">
+                      Example team description longer
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="side-menu-slide-header-back test-text"
+                  target-slide="slide-01"
+                  current-slide="slide-02"
+                  main-slide="true"
+                >
+                  <i class="icon-arrow-circle-left"></i>
+                  <p class="side-menu-slide-header-back-text">
+                    Back to teams overview
+                  </p>
+                </div>
+              </div>
+              <div class="side-menu-slide-body slide-body-01 active">
+                <!-- <div class="side-menu-slide-body-section section-01">
+                  <button
+                    class="side-menu-slide-body-section-item test-text"
+                    target-slide="slide-02"
+                    current-slide="slide-01"
+                    main-slide="true"
+                  >
+                    Your Teams
+                  </button>
+                </div> -->
+
+                <button class="side-menu-slide-body-section-title">
+                  Team Members
+                </button>
+                <button
+                  class="side-menu-slide-body-section-item test-text"
+                  target-slide="slide-body-02"
+                  current-slide="slide-body-01"
+                >
+                  Julia Martinez
+                </button>
+                <button
+                  class="side-menu-slide-body-section-item test-text"
+                  target-slide="slide-body-02"
+                  current-slide="slide-body-01"
+                >
+                  Harald Schwarz
+                </button>
+                <button
+                  class="side-menu-slide-body-section-item test-text"
+                  target-slide="slide-body-02"
+                  current-slide="slide-body-01"
+                >
+                  Ai Schwarz
+                </button>
+              </div>
+
+              <div class="side-menu-slide-body slide-body-02">
+                <!-- <div class="side-menu-slide-body-section section-01">
+                  <button
+                    class="side-menu-slide-body-section-item test-text"
+                    target-slide="slide-02"
+                    current-slide="slide-01"
+                    main-slide="true"
+                  >
+                    Your Teams
+                  </button>
+                </div> -->
+
+                <button class="side-menu-slide-body-set active">
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-chart-bar"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Feedback charts</p>
+                </button>
+
+                <button class="side-menu-slide-body-set">
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-chat"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Text feedback</p>
+                </button>
+
+                <button class="side-menu-slide-body-set">
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-users"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Team members</p>
+                </button>
+
+                <button class="side-menu-slide-body-set">
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-git-pull"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Feedback requests</p>
+                </button>
+
+                <button class="side-menu-slide-body-set">
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-document"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Feedback reports</p>
+                </button>
+
+                <button class="side-menu-slide-body-set">
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-question-circle"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Custom feedback</p>
+                </button>
+
+                <button class="side-menu-slide-body-set">
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-cog"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Team settings</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="side-menu-content content-01">
+            <div class="side-menu-content-header">
+              <div class="side-menu-content-header-item">
+                <div class="side-menu-content-header-item-icon">
+                  <i class="icon-chart-column"></i>
+                </div>
+                <div class="side-menu-content-header-item-info">
+                  <p class="side-menu-content-header-item-info-title">
+                    Team React Native
+                  </p>
+                  <p class="side-menu-content-header-item-info-subtitle">
+                    Our example test team
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="side-menu-content-back side-trigger"
+                target-side="content-01-body"
+              >
+                <i class="icon-arrow-circle-left"></i>
+                <p class="side-menu-content-back-text">Back to all teams</p>
+              </div>
+            </div>
+
+            <div class="side-menu-content-body content-01-body">
+              <div class="side-menu-content-segment">
+                <div class="side-menu-content-title">Feedback data</div>
+
+                <div class="side-menu-content-item">
+                  <i class="icon-chart-bar"></i>
+                  <p class="side-menu-content-item-text">Team overall charts</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <i class="icon-chart-line"></i>
+                  <p class="side-menu-content-item-text">Team members charts</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <i class="icon-chart-area"></i>
+                  <p class="side-menu-content-item-text">Team lead charts</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <i class="icon-chat"></i>
+                  <p class="side-menu-content-item-text">Text feedback</p>
+                </div>
+              </div>
+
+              <div
+                class="side-menu-content-segment side-trigger"
+                target-side="content-02-body"
+              >
+                <div class="side-menu-content-title">Team members</div>
+              </div>
+
+              <div class="side-menu-content-segment">
+                <div class="side-menu-content-title">Feedback tools</div>
+
+                <div class="side-menu-content-item active">
+                  <i class="icon-git-pull"></i>
+                  <p class="side-menu-content-item-text">Feedback requests</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <i class="icon-document"></i>
+                  <p class="side-menu-content-item-text">Feedback reports</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <i class="icon-question-circle"></i>
+                  <p class="side-menu-content-item-text">Custom feedback</p>
+                </div>
+              </div>
+
+              <div class="side-menu-content-segment">
+                <div class="side-menu-content-title">Team settings</div>
+              </div>
+            </div>
+
+            <div class="side-menu-content-body content-02-body">
+              <div class="side-menu-content-segment">
+                <div class="side-menu-content-title">Team Members</div>
+
+                <div class="side-menu-content-item">
+                  <p class="side-menu-content-item-text">Julia Martinez</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <p class="side-menu-content-item-text">Harald Schwarz</p>
+                </div>
+
+                <div class="side-menu-content-item active">
+                  <p class="side-menu-content-item-text">Uli Ort</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <p class="side-menu-content-item-text">Ai Schwarz</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <p class="side-menu-content-item-text">Angelo Merte</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <p class="side-menu-content-item-text">Peter Popper</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <p class="side-menu-content-item-text">
+                    Esmeralda Tortellini
+                  </p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <p class="side-menu-content-item-text">Johan Stihl</p>
+                </div>
+
+                <div class="side-menu-content-item">
+                  <p class="side-menu-content-item-text">Til Schweiger</p>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="page-content-wrapper">
+        <div class="page-header">
+          <div class="header-buttons">
+            <button>
+              <i class="icon-cog top-nav-trigger"></i>
+            </button>
+            <button>
+              <i class="icon-question side-nav-trigger"></i>
+            </button>
+            <button>
+              <i class="icon-bell side-nav-toggle-trigger"></i>
+            </button>
+            <button class="initials fullscreen-toggle">T</button>
+          </div>
+          <div class="page-header-info">
+            <img
+              src="../public/img/p-01.png"
+              alt="User's profile picture"
+              class="page-header-info-img"
+            />
+            <!-- <div class="page-header-info-icon">
+              <i class="icon-users"></i>
+            </div> -->
+            <div>
+              <p class="page-header-info-name">
+                <span class="page-header-info-name-strong">Julia Martinez</span>
+              </p>
+              <p class="page-header-info-position">
+                <span class="page-header-info-position-strong">Job title:</span>
+                This is an example team description.
+              </p>
+            </div>
+          </div>
+
+          <ul class="page-header-list">
+            <li class="page-header-list-item">
+              <button class="page-header-list-item-link">
+                Feedback charts
+              </button>
+            </li>
+            <li class="page-header-list-item">
+              <button class="page-header-list-item-link active">
+                Received feedback
+              </button>
+            </li>
+            <li class="page-header-list-item">
+              <button class="page-header-list-item-link">Given feedback</button>
+            </li>
+            <li class="page-header-list-item">
+              <button class="page-header-list-item-link">
+                Self evaluations
+              </button>
+            </li>
+            <li class="give-feedback-button">
+              <button class="button button-primary-outlined">
+                Give feedback
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="page-content"></div>
+      </div>
+    </main>
+
+    <div class="custom-modal-wrapper" id="modal-01">
+      <div class="custom-modal">
+        <!-- <div class="custom-modal-header">
+          <div class="custom-modal-close">
+            <i class="icon-close"></i>
+          </div>
+        </div> -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="modal-01">
+            <i class="icon-close"></i>
+          </div>
+          <div class="custom-modal-buttons">
+            <button class="button button-white" close-modal="modal-01">
+              Cancel
+            </button>
+            <button class="button button-primary">Ok</button>
+          </div>
+        </div>
+        <!-- <div class="custom-modal-footer">
+          <button
+            class="button button-white custom-modal-close"
+            close-modal="modal-01"
+          >
+            Cancel
+          </button>
+          <button class="button button-primary custom-modal-close">Ok</button>
+        </div> -->
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/e9f50f9a1c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // //TOGGLE SIDE BAR
+      // document
+      //   .querySelector(".toggle-side-bar")
+      //   .addEventListener("click", function () {
+      //     document
+      //       .querySelector(".side-bar")
+      //       .classList.toggle("side-bar-close");
+      //     if (
+      //       document
+      //         .querySelector(".side-bar")
+      //         .classList.contains("side-bar-close")
+      //     ) {
+      //       document.documentElement.style.setProperty(
+      //         "--side-bar-width",
+      //         "2em"
+      //       );
+      //     } else {
+      //       document.documentElement.style.setProperty(
+      //         "--side-bar-width",
+      //         "7.5em"
+      //       );
+      //     }
+      //   });
+      //TOGGLE SIDE MENU
+      document
+        .querySelector(".toggle-side-menu")
+        .addEventListener("click", function () {
+          document
+            .querySelector(".side-menu")
+            .classList.toggle("side-menu-close");
+          if (
+            document
+              .querySelector(".side-menu")
+              .classList.contains("side-menu-close")
+          ) {
+            document.documentElement.style.setProperty(
+              "--side-menu-width",
+              "3em"
+            );
+          } else {
+            document.documentElement.style.setProperty(
+              "--side-menu-width",
+              "24em"
+            );
+          }
+        });
+
+      // TOP NAV TRIGGER
+      document.querySelectorAll(".top-nav-trigger").forEach((e) => {
+        e.addEventListener("click", function () {
+          document.querySelector(".main").classList.add("top-nav");
+          document.querySelector(".main").classList.remove("side-nav");
+          document.querySelector(".main").classList.remove("side-nav-toggle");
+        });
+      });
+
+      // SIDE NAV TRIGGER
+      document.querySelectorAll(".side-nav-trigger").forEach((e) => {
+        e.addEventListener("click", function () {
+          document.querySelector(".main").classList.add("side-nav");
+          document.querySelector(".main").classList.remove("top-nav");
+          document.querySelector(".main").classList.remove("side-nav-toggle");
+        });
+      });
+
+      // SIDE NAV TOGGLE TRIGGER
+      document.querySelectorAll(".side-nav-toggle-trigger").forEach((e) => {
+        e.addEventListener("click", function () {
+          document.querySelector(".main").classList.add("side-nav-toggle");
+          document.querySelector(".main").classList.remove("side-nav");
+          document.querySelector(".main").classList.remove("top-nav");
+        });
+      });
+
+      // // //HOWER SIDEBAR
+      // let side = document.querySelector(".side");
+      // let sideBar = document.querySelector(".side-bar");
+      // let body = document.querySelector("body");
+
+      // // document.addEventListener("mousemove", function (e) {
+      // //   if (e.screenX < 90 && !body.classList.contains("top")) {
+      // //     sideBar.classList.remove("side-bar-hide");
+      // //     if (sideBar.classList.contains(".side-bar-close")) {
+      // //       document.documentElement.style.setProperty(
+      // //         "--side-bar-width",
+      // //         "2em"
+      // //       );
+      // //     } else {
+      // //       document.documentElement.style.setProperty(
+      // //         "--side-bar-width",
+      // //         "7.5em"
+      // //       );
+      // //     }
+      // //   } else {
+      // //     sideBar.classList.add("side-bar-hide");
+      // //     document.documentElement.style.setProperty("--side-bar-width", "0em");
+      // //   }
+      // // });
+
+      // side.addEventListener("mouseover", function () {
+      //   if (!body.classList.contains("top")) {
+      //     sideBar.classList.remove("side-bar-hide");
+
+      //     if (sideBar.classList.contains("side-bar-close")) {
+      //       document.documentElement.style.setProperty(
+      //         "--side-bar-width",
+      //         "2em"
+      //       );
+      //     } else {
+      //       document.documentElement.style.setProperty(
+      //         "--side-bar-width",
+      //         "7.5em"
+      //       );
+      //     }
+      //   }
+      // });
+
+      // side.addEventListener("mouseout", function () {
+      //   if (!body.classList.contains("top")) {
+      //     sideBar.classList.add("side-bar-hide");
+      //     document.documentElement.style.setProperty("--side-bar-width", "0em");
+      //   }
+      // });
+
+      //MODAL
+      let modalTriggers = document.querySelectorAll(".modal-trigger");
+      let modalCloseBtns = document.querySelectorAll("[close-modal]");
+      console.log(modalCloseBtns);
+
+      modalTriggers.forEach((e) => {
+        e.addEventListener("click", function () {
+          let modal = document.getElementById(
+            `${e.getAttribute("target-modal")}`
+          );
+          modal.classList.add("open");
+        });
+      });
+
+      modalCloseBtns.forEach((e) => {
+        e.addEventListener("click", function () {
+          let modal = document.getElementById(
+            `${e.getAttribute("close-modal")}`
+          );
+          modal.classList.remove("open");
+        });
+      });
+
+      //SIDE MENU SLIDER
+      let sideMenuSlides = document.querySelectorAll(".side-menu-slide");
+
+      let sideMenuTriggers = document.querySelectorAll(".test-text");
+
+      sideMenuTriggers.forEach((e) => {
+        e.addEventListener("click", function () {
+          let currentIndex;
+          let targetIndex;
+
+          let currentClass = e.getAttribute("current-slide");
+          let targetClass = e.getAttribute("target-slide");
+
+          let currentSlide = document.querySelector(`.${currentClass}`);
+          let targetSlide = document.querySelector(`.${targetClass}`);
+
+          let mainSlide = e.getAttribute("main-slide");
+
+          // Check if menu-slide or sub-menu-slide
+          if (mainSlide) {
+            currentIndex = parseInt(currentClass.split("-")[1]);
+            targetIndex = parseInt(targetClass.split("-")[1]);
+          } else {
+            currentIndex = parseInt(currentClass.split("-")[2]);
+            targetIndex = parseInt(targetClass.split("-")[2]);
+          }
+
+          // Remove active from current & add to target
+          currentSlide.classList.remove("active");
+          targetSlide.classList.add("active");
+
+          // Check for direction of animation. left or right
+          if (currentIndex < targetIndex) {
+            currentSlide.style.animation = "slide-out-left .5s ease-in-out";
+            targetSlide.style.animation = "slide-in-left .5s ease-in-out";
+          } else {
+            currentSlide.style.animation = "slide-out-right .5s ease-in-out";
+            targetSlide.style.animation = "slide-in-right .5s ease-in-out";
+          }
+        });
+      });
+
+      //FULL SCREEN MODE
+      let fullScreenToggle = document.querySelectorAll(".fullscreen-toggle");
+
+      let enterFs = document.fullscreenElement ? "requestFullscreen" : null;
+
+      console.log(enterFs);
+
+      function getFullscreenElement() {
+        return (
+          document.fullscreenElement ||
+          document.webkitFullscreenElement ||
+          document.mozFullscreenElement ||
+          document.msFullscreenElement
+        );
+      }
+
+      function toggleFullscreen() {
+        if (getFullscreenElement()) {
+          document.exitFullscreen =
+            document.exitFullscreen ||
+            document.mozExitFullscreen ||
+            document.webkitExitFullscreen ||
+            document.msExitFullscreen;
+
+          document.exitFullscreen();
+        } else {
+          document.documentElement.requestFullscreen =
+            document.documentElement.requestFullscreen ||
+            document.documentElement.mozRequestFullScreen ||
+            document.documentElement.webkitRequestFullscreen ||
+            document.documentElement.msRequestFullscreen;
+
+          document.documentElement.requestFullscreen();
+        }
+      }
+
+      fullScreenToggle.forEach((e) => {
+        e.addEventListener("click", () => {
+          toggleFullscreen();
+        });
+      });
+    </script>
+  </body>
+</html>

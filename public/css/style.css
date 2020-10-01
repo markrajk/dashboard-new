@@ -329,6 +329,7 @@ body {
   -webkit-justify-content: center;
   -moz-justify-content: center;
   justify-content: center;
+  white-space: nowrap;
   cursor: pointer; }
   .button-primary {
     font-weight: 500;
@@ -336,6 +337,11 @@ body {
     background-color: var(--blue-primary);
     border: solid 1px var(--blue-primary);
     color: #fff; }
+  .button-primary-outlined {
+    font-weight: 600;
+    background-color: transparent;
+    color: var(--blue-primary);
+    border: solid 1.5px var(--blue-primary); }
   .button-white {
     font-weight: 400;
     letter-spacing: normal;
@@ -970,10 +976,18 @@ body {
     justify-content: flex-start;
     list-style: none;
     border-bottom: 1.5px solid #ebecf0; }
+    .page-header-list .give-feedback-button {
+      margin-top: -0.9em;
+      margin-left: auto; }
+      .page-header-list .give-feedback-button .button {
+        padding: 0 1.2307692308em;
+        height: 2.2556390977em;
+        border-radius: 15px;
+        font-size: 1.33em; }
     .page-header-list-item:not(:last-of-type) {
       margin-right: 3.1em; }
     .page-header-list-item-link {
-      padding-bottom: 0.7518796992em;
+      padding-bottom: 1.2030075188em;
       font-size: 1.33em;
       font-weight: 400;
       color: #344562; }
