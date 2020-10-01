@@ -941,9 +941,9 @@ body {
         position: absolute;
         top: 0;
         left: 0;
-        width: 10px;
+        width: 3em;
         height: 100%;
-        background-color: transparent;
+        background-color: red;
         z-index: 200;
 
         &:hover ~ .side-bar {
@@ -2387,6 +2387,7 @@ body {
       border-bottom: 2px solid #e2e4e9;
 
       &-item {
+        padding-left: emcalc(1.2, 1.3);
         @include flexbox();
         @include align-items(center);
         @include justify-content(flex-start);

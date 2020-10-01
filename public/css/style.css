@@ -290,9 +290,9 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      width: 10px;
+      width: 3em;
       height: 100%;
-      background-color: transparent;
+      background-color: red;
       z-index: 200; }
       .main.side-nav-toggle .side .side-bar-toggle:hover ~ .side-bar {
         transform: translate(0, 0); }
@@ -1546,6 +1546,7 @@ body {
       padding-bottom: 2.3em;
       border-bottom: 2px solid #e2e4e9; }
       .side-menu-slide-body-buttons-item {
+        padding-left: 0.9230769231em;
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-flex;
