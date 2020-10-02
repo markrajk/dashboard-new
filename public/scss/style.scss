@@ -1717,6 +1717,12 @@ body {
     z-index: 100;
     visibility: hidden;
 
+    &.relative {
+      position: relative !important;
+      transform: translate(0, 0) !important;
+      transition: all 0.5s ease-in-out !important;
+    }
+
     &-close {
       margin-left: -5.5em;
 
@@ -1860,7 +1866,7 @@ body {
     border-radius: 50%;
     border: solid 1.5px #e5e5e5;
     background-color: #fff;
-    z-index: 500;
+    z-index: 100;
     transition: all 0.3s ease-in-out;
 
     & .icon-chevron-left {

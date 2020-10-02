@@ -845,11 +845,13 @@
               .querySelector(".side-menu")
               .classList.contains("side-menu-close")
           ) {
+            document.querySelector(".side-bar").classList.add("relative");
             document.documentElement.style.setProperty(
               "--side-menu-width",
               "3em"
             );
           } else {
+            document.querySelector(".side-bar").classList.remove("relative");
             document.documentElement.style.setProperty(
               "--side-menu-width",
               "24em"
