@@ -969,10 +969,6 @@ body {
         &:hover ~ .side-menu-close {
           margin-left: -14em;
         }
-
-        // & ~ .side-menu-close:hover {
-        //   background-color: red !important;
-        // }
       }
     }
 
@@ -1474,8 +1470,6 @@ body {
 //========================
 .custom-accordion {
   &-card {
-    //overflow: hidden;
-
     &-header {
     }
 
@@ -1723,12 +1717,6 @@ body {
     z-index: 100;
     visibility: hidden;
 
-    // &.relative {
-    //   position: relative !important;
-    //   transform: translate(0, 0) !important;
-    //   transition: all 0.5s ease-in-out !important;
-    // }
-
     &-close {
       margin-left: -5.5em;
 
@@ -1918,7 +1906,6 @@ body {
   }
 
   &-info {
-    //position: relative;
     @include inline-flex();
     @include align-items(center);
     @include justify-content(center);
@@ -3102,7 +3089,6 @@ body {
 //    TEAM MEMBERS
 //========================
 #team-members {
-  //margin-top: calc(var(--header-height) + var(--padding-top));
   & .page-header {
     min-width: 0;
     width: 100%;
