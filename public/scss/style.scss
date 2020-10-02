@@ -894,6 +894,16 @@ body {
         }
       }
     }
+
+    & .top-nav-trigger {
+      & .custom-dropdown-menu-nav-pos-check {
+        border-color: var(--blue-primary) !important;
+      }
+
+      & .custom-dropdown-menu-nav-pos-check span {
+        display: inline-block !important;
+      }
+    }
   }
 
   &.side-nav {
@@ -901,6 +911,16 @@ body {
       &-bar {
         margin-left: 0;
         visibility: visible;
+      }
+    }
+
+    & .side-nav-trigger {
+      & .custom-dropdown-menu-nav-pos-check {
+        border-color: var(--blue-primary) !important;
+      }
+
+      & .custom-dropdown-menu-nav-pos-check span {
+        display: inline-block !important;
       }
     }
   }
@@ -947,6 +967,16 @@ body {
           height: 100%;
           background-color: red;
         }
+      }
+    }
+
+    & .side-nav-toggle-trigger {
+      & .custom-dropdown-menu-nav-pos-check {
+        border-color: var(--blue-primary) !important;
+      }
+
+      & .custom-dropdown-menu-nav-pos-check span {
+        display: inline-block !important;
       }
     }
   }
@@ -1212,13 +1242,28 @@ body {
         @include flexbox();
         @include align-items(center);
         @include justify-content(flex-start);
+        cursor: pointer;
 
         &:not(:last-of-type) {
           margin-bottom: 1.8em;
         }
 
-        & input {
-          transform: scale(1.2);
+        &-check {
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(center);
+          width: 1.7em;
+          height: 1.7em;
+          border: solid 2px #9b9b9b;
+          border-radius: 50%;
+
+          & span {
+            display: none;
+            width: 0.9em;
+            height: 0.9em;
+            border-radius: 50%;
+            background-color: var(--blue-primary);
+          }
         }
 
         &-set {
@@ -1586,6 +1631,28 @@ body {
       margin-right: 0.5em;
     }
 
+    & .fullscreen-toggle {
+      margin-right: 1.4em;
+      & i {
+        font-size: 1.7em;
+      }
+
+      & .icon-fullscreen-enter {
+        display: inline-block;
+      }
+      & .icon-fullscreen-exit {
+        display: none;
+      }
+      &.active {
+        & .icon-fullscreen-enter {
+          display: none;
+        }
+        & .icon-fullscreen-exit {
+          display: inline-block;
+        }
+      }
+    }
+
     & .initials {
       margin-left: emcalc(0.75, 1.83);
       @include inline-flex();
@@ -1604,13 +1671,6 @@ body {
     & i {
       font-size: 2em;
       color: #4a5767;
-    }
-
-    & .enter-fullscreen {
-      margin-right: 1.4em;
-      & i {
-        font-size: 1.7em;
-      }
     }
   }
 

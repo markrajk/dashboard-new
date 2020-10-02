@@ -35,10 +35,12 @@
         </ul>
 
         <div class="header-buttons">
-          <!-- SETTINGS DROPDOWN -->
-          <button class="enter-fullscreen">
+          <button class="fullscreen-toggle">
             <i class="icon-fullscreen-enter"></i>
+            <i class="icon-fullscreen-exit"></i>
           </button>
+
+          <!-- SETTINGS DROPDOWN -->
           <div class="custom-dropdown settings-dropdown">
             <button
               class="custom-dropdown-trigger"
@@ -55,17 +57,11 @@
                 <p class="custom-dropdown-menu-title-small-text">Menu mode</p>
               </li>
               <li class="custom-dropdown-menu-nav-pos-wrapper">
-                <label
-                  class="custom-dropdown-menu-nav-pos top-nav-trigger"
-                  for="top-nav"
-                >
-                  <input
-                    id="top-nav"
-                    type="radio"
-                    name="navPos"
-                    value="top"
-                    checked
-                  />
+                <div class="custom-dropdown-menu-nav-pos top-nav-trigger">
+                  <div class="custom-dropdown-menu-nav-pos-check">
+                    <span></span>
+                  </div>
+
                   <div class="custom-dropdown-menu-nav-pos-set">
                     <p class="custom-dropdown-menu-nav-pos-set-title">
                       Fixed top menu
@@ -79,18 +75,13 @@
                     alt="Position of navigation option"
                     class="custom-dropdown-menu-nav-pos-img"
                   />
-                </label>
+                </div>
 
-                <label
-                  class="custom-dropdown-menu-nav-pos side-nav-trigger"
-                  for="side-nav"
-                >
-                  <input
-                    id="side-nav"
-                    type="radio"
-                    name="navPos"
-                    value="sideNav"
-                  />
+                <div class="custom-dropdown-menu-nav-pos side-nav-trigger">
+                  <div class="custom-dropdown-menu-nav-pos-check">
+                    <span></span>
+                  </div>
+
                   <div class="custom-dropdown-menu-nav-pos-set">
                     <p class="custom-dropdown-menu-nav-pos-set-title">
                       Fixed side menu
@@ -104,18 +95,15 @@
                     alt="Position of navigation option"
                     class="custom-dropdown-menu-nav-pos-img"
                   />
-                </label>
+                </div>
 
-                <label
+                <div
                   class="custom-dropdown-menu-nav-pos side-nav-toggle-trigger"
-                  for="side-toggle"
                 >
-                  <input
-                    id="side-toggle"
-                    type="radio"
-                    name="navPos"
-                    value="sideToggle"
-                  />
+                  <div class="custom-dropdown-menu-nav-pos-check">
+                    <span></span>
+                  </div>
+
                   <div class="custom-dropdown-menu-nav-pos-set">
                     <p class="custom-dropdown-menu-nav-pos-set-title">
                       Toggled side menu
@@ -129,7 +117,7 @@
                     alt="Position of navigation option"
                     class="custom-dropdown-menu-nav-pos-img"
                   />
-                </label>
+                </div>
               </li>
               <li class="custom-dropdown-menu-title-small">
                 <p class="custom-dropdown-menu-title-small-text">
@@ -287,7 +275,7 @@
               </li>
             </ul>
           </div>
-          <button class="initials fullscreen-toggle">T</button>
+          <button class="initials">T</button>
         </div>
       </div>
       <div class="side">
@@ -296,9 +284,6 @@
         </div>
         <div class="side-bar-toggle"></div>
         <div class="side-bar">
-          <!-- <div class="side-arrow toggle-side-bar">
-            <i class="icon-chevron-left"></i>
-          </div> -->
           <div class="side-bar-top">
             <button class="side-bar-item active">
               <i class="icon-users"></i>
@@ -313,12 +298,12 @@
 
           <div class="side-bar-bottom">
             <button class="side-bar-item">
-              <i class="icon-cog top-nav-trigger"></i>
+              <i class="icon-cog"></i>
             </button>
             <button class="side-bar-item">
               <i class="icon-exit"></i>
             </button>
-            <button class="side-bar-item fullscreen-toggle">
+            <button class="side-bar-item">
               <div class="initials">T</div>
             </button>
           </div>
@@ -524,6 +509,10 @@
       <div class="page-content-wrapper">
         <div class="page-header">
           <div class="header-buttons">
+            <button class="fullscreen-toggle">
+              <i class="icon-fullscreen-enter"></i>
+              <i class="icon-fullscreen-exit"></i>
+            </button>
             <!-- SETTINGS DROPDOWN -->
             <div class="custom-dropdown settings-dropdown">
               <button
@@ -541,17 +530,11 @@
                   <p class="custom-dropdown-menu-title-small-text">Menu mode</p>
                 </li>
                 <li class="custom-dropdown-menu-nav-pos-wrapper">
-                  <label
-                    class="custom-dropdown-menu-nav-pos top-nav-trigger"
-                    for="top-nav"
-                  >
-                    <input
-                      id="top-nav"
-                      type="radio"
-                      name="navPos"
-                      value="top"
-                      checked
-                    />
+                  <div class="custom-dropdown-menu-nav-pos top-nav-trigger">
+                    <div class="custom-dropdown-menu-nav-pos-check">
+                      <span></span>
+                    </div>
+
                     <div class="custom-dropdown-menu-nav-pos-set">
                       <p class="custom-dropdown-menu-nav-pos-set-title">
                         Fixed top menu
@@ -565,18 +548,13 @@
                       alt="Position of navigation option"
                       class="custom-dropdown-menu-nav-pos-img"
                     />
-                  </label>
+                  </div>
 
-                  <label
-                    class="custom-dropdown-menu-nav-pos side-nav-trigger"
-                    for="side-nav"
-                  >
-                    <input
-                      id="side-nav"
-                      type="radio"
-                      name="navPos"
-                      value="sideNav"
-                    />
+                  <div class="custom-dropdown-menu-nav-pos side-nav-trigger">
+                    <div class="custom-dropdown-menu-nav-pos-check">
+                      <span></span>
+                    </div>
+
                     <div class="custom-dropdown-menu-nav-pos-set">
                       <p class="custom-dropdown-menu-nav-pos-set-title">
                         Fixed side menu
@@ -590,18 +568,15 @@
                       alt="Position of navigation option"
                       class="custom-dropdown-menu-nav-pos-img"
                     />
-                  </label>
+                  </div>
 
-                  <label
+                  <div
                     class="custom-dropdown-menu-nav-pos side-nav-toggle-trigger"
-                    for="side-toggle"
                   >
-                    <input
-                      id="side-toggle"
-                      type="radio"
-                      name="navPos"
-                      value="sideToggle"
-                    />
+                    <div class="custom-dropdown-menu-nav-pos-check">
+                      <span></span>
+                    </div>
+
                     <div class="custom-dropdown-menu-nav-pos-set">
                       <p class="custom-dropdown-menu-nav-pos-set-title">
                         Toggled side menu
@@ -615,7 +590,7 @@
                       alt="Position of navigation option"
                       class="custom-dropdown-menu-nav-pos-img"
                     />
-                  </label>
+                  </div>
                 </li>
                 <li class="custom-dropdown-menu-title-small">
                   <p class="custom-dropdown-menu-title-small-text">
@@ -773,7 +748,7 @@
                 </li>
               </ul>
             </div>
-            <button class="initials fullscreen-toggle">T</button>
+            <button class="initials">T</button>
           </div>
           <div class="page-header-info">
             <!-- <img
@@ -1012,6 +987,7 @@
 
       fullScreenToggle.forEach((e) => {
         e.addEventListener("click", () => {
+          e.classList.toggle("active");
           toggleFullscreen();
         });
       });
