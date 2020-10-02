@@ -4,10 +4,16 @@
 // ==================================
 :root {
   //COLORS
-  --blue-primary: #086cf9;
+  --color-primary: #086cf9;
   --color-info: #0997fa;
   --color-warning: #ffa82b;
   --color-dark: #565656;
+
+  //GRADIENTS
+  --gradient-primary: linear-gradient(#1d7bff, #0066f8);
+  --gradient-info: linear-gradient(#009dff, #0a8eff);
+  --gradient-warning: linear-gradient(#ff9d00, #ffb40a);
+  --gradient-dark: linear-gradient(#646464, #4a4a4a);
 
   //GENERAL COMPONENTS
   --header-height: 5.5em;
@@ -897,7 +903,7 @@ body {
 
     & .top-nav-trigger {
       & .custom-dropdown-menu-nav-pos-check {
-        border-color: var(--blue-primary) !important;
+        border-color: var(--color-primary) !important;
       }
 
       & .custom-dropdown-menu-nav-pos-check span {
@@ -916,7 +922,7 @@ body {
 
     & .side-nav-trigger {
       & .custom-dropdown-menu-nav-pos-check {
-        border-color: var(--blue-primary) !important;
+        border-color: var(--color-primary) !important;
       }
 
       & .custom-dropdown-menu-nav-pos-check span {
@@ -972,7 +978,7 @@ body {
 
     & .side-nav-toggle-trigger {
       & .custom-dropdown-menu-nav-pos-check {
-        border-color: var(--blue-primary) !important;
+        border-color: var(--color-primary) !important;
       }
 
       & .custom-dropdown-menu-nav-pos-check span {
@@ -999,16 +1005,16 @@ body {
   &-primary {
     font-weight: 500;
     border-radius: 4px;
-    background-color: var(--blue-primary);
-    border: solid 1px var(--blue-primary);
+    background-color: var(--color-primary);
+    border: solid 1px var(--color-primary);
     color: #fff;
   }
 
   &-primary-outlined {
     font-weight: 600;
     background-color: transparent;
-    color: var(--blue-primary);
-    border: solid 1.5px var(--blue-primary);
+    color: var(--color-primary);
+    border: solid 1.5px var(--color-primary);
   }
 
   &-white {
@@ -1262,7 +1268,7 @@ body {
             width: 0.9em;
             height: 0.9em;
             border-radius: 50%;
-            background-color: var(--blue-primary);
+            background-color: var(--color-primary);
           }
         }
 
@@ -1333,10 +1339,10 @@ body {
             }
 
             &.primary {
-              border-color: var(--blue-primary);
+              border-color: #0e6ff9;
 
               & span {
-                background-color: var(--blue-primary);
+                background-color: #0e6ff9;
               }
             }
 
@@ -1574,7 +1580,7 @@ body {
         &.active {
           font-weight: 600;
           position: relative;
-          color: var(--blue-primary);
+          color: var(--color-primary);
 
           &::before {
             display: none !important;
@@ -1588,7 +1594,7 @@ body {
             display: block;
             width: 130%;
             height: 3px;
-            background-color: var(--blue-primary);
+            background-color: var(--color-primary);
             transform: translate(-50%, 0);
           }
         }
@@ -1612,7 +1618,7 @@ body {
         }
 
         &:hover {
-          color: var(--blue-primary);
+          color: var(--color-primary);
         }
       }
     }
@@ -1712,7 +1718,7 @@ body {
     position: relative;
     height: 100%;
     width: 7.5em;
-    background-color: var(--blue-primary);
+    background: var(--gradient-primary);
     transition: all 0.5s ease-in-out;
     z-index: 100;
     visibility: hidden;
@@ -1797,7 +1803,7 @@ body {
         transform: translate(-50%, -50%);
         width: 4.2em;
         height: 4.2em;
-        background-color: #5990f0;
+        background-color: rgba(255, 255, 255, 0.2);
         border-radius: 50%;
         z-index: -1;
       }
@@ -1934,7 +1940,7 @@ body {
       height: 5.7em;
       border-radius: 50%;
       border: solid 1px #f7f7f7;
-      background-color: #007aff;
+      background-color: var(--color-primary);
 
       & i {
         font-size: 3.59em;
@@ -2253,7 +2259,7 @@ body {
 
       &.pending {
         font-weight: 500;
-        color: var(--blue-primary);
+        color: var(--color-primary);
       }
     }
 
@@ -3574,7 +3580,7 @@ body {
           width: 2.75em;
           height: 2.75em;
           border-radius: 3px;
-          background-color: var(--blue-primary);
+          background-color: var(--color-primary);
 
           & i {
             font-size: 1.9em;

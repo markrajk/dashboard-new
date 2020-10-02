@@ -995,6 +995,61 @@
           toggleFullscreen();
         });
       });
+
+      //COLOR THEME SETTINGS
+      let colorTriggers = document.querySelectorAll(
+        ".custom-dropdown-menu-color-set-item"
+      );
+
+      colorTriggers.forEach((e) => {
+        e.addEventListener("click", function () {
+          colorTriggers.forEach((e) => {
+            e.classList.remove("active");
+          });
+          this.classList.add("active");
+          if (this.classList.contains("primary")) {
+            document.documentElement.style.setProperty(
+              "--color-primary",
+              "#086cf9"
+            );
+
+            document.documentElement.style.setProperty(
+              "--gradient-primary",
+              "linear-gradient(#1d7bff, #0066f8)"
+            );
+          } else if (this.classList.contains("info")) {
+            document.documentElement.style.setProperty(
+              "--color-primary",
+              "#0997fa"
+            );
+
+            document.documentElement.style.setProperty(
+              "--gradient-primary",
+              "linear-gradient(#009dff, #0a8eff)"
+            );
+          } else if (this.classList.contains("warning")) {
+            document.documentElement.style.setProperty(
+              "--color-primary",
+              "#ffa82b"
+            );
+
+            document.documentElement.style.setProperty(
+              "--gradient-primary",
+              "linear-gradient(#ff9d00, #ffb40a)"
+            );
+          } else if (this.classList.contains("dark")) {
+            document.documentElement.style.setProperty(
+              "--color-primary",
+              "#565656"
+            );
+
+            document.documentElement.style.setProperty(
+              "--gradient-primary",
+              "linear-gradient(#646464, #4a4a4a)"
+            );
+          }
+        });
+      });
     </script>
   </body>
 </html>
