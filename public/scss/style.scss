@@ -952,21 +952,21 @@ body {
         background-color: transparent;
         z-index: 200;
 
+        &:hover {
+          width: 7.5em;
+        }
+
         &:hover ~ .side-bar {
           transform: translate(0, 0);
         }
-      }
 
-      &-menu {
-        & .side-bar-toggle {
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 10px;
-          height: 100%;
-          background-color: red;
+        &:hover ~ .side-menu-close {
+          margin-left: -14em;
         }
+
+        // & ~ .side-menu-close:hover {
+        //   background-color: red !important;
+        // }
       }
     }
 
@@ -1717,11 +1717,11 @@ body {
     z-index: 100;
     visibility: hidden;
 
-    &.relative {
-      position: relative !important;
-      transform: translate(0, 0) !important;
-      transition: all 0.5s ease-in-out !important;
-    }
+    // &.relative {
+    //   position: relative !important;
+    //   transform: translate(0, 0) !important;
+    //   transition: all 0.5s ease-in-out !important;
+    // }
 
     &-close {
       margin-left: -5.5em;
@@ -1866,8 +1866,14 @@ body {
     border-radius: 50%;
     border: solid 1.5px #e5e5e5;
     background-color: #fff;
-    z-index: 100;
+    z-index: 500;
     transition: all 0.3s ease-in-out;
+
+    &.rotate {
+      & .icon-chevron-left {
+        transform: rotateZ(-180deg);
+      }
+    }
 
     & .icon-chevron-left {
       font-size: 1.2em;

@@ -845,13 +845,15 @@
               .querySelector(".side-menu")
               .classList.contains("side-menu-close")
           ) {
-            document.querySelector(".side-bar").classList.add("relative");
+            this.classList.add("rotate");
+            //document.querySelector(".side-bar").classList.add("relative");
             document.documentElement.style.setProperty(
               "--side-menu-width",
               "3em"
             );
           } else {
-            document.querySelector(".side-bar").classList.remove("relative");
+            this.classList.remove("rotate");
+            //document.querySelector(".side-bar").classList.remove("relative");
             document.documentElement.style.setProperty(
               "--side-menu-width",
               "24em"
