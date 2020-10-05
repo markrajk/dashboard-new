@@ -1514,6 +1514,7 @@ body {
   overflow: hidden;
 
   &-company {
+    //max-width: 30em;
     margin-right: 2em;
     @include flexbox();
     @include align-items(center);
@@ -1529,13 +1530,21 @@ body {
     &-logo {
       margin-right: 1em;
       height: 3.55em;
-      min-width: 3.55em;
+      //min-width: 3.55em;
       border-radius: 3px;
-      background-color: #ededed;
+      //background-color: #ededed;
+
+      &-img {
+        min-height: 0;
+        height: 100%;
+        max-height: 100%;
+        max-width: 10em;
+        object-fit: contain;
+      }
     }
 
     &-name {
-      max-width: emcalc(18, 2);
+      //max-width: emcalc(18, 2);
       font-size: 2em;
       font-weight: 500;
       color: #172b4d;
