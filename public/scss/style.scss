@@ -884,6 +884,12 @@ body {
   max-height: 100vh;
 
   &.top-nav {
+    @include respond(desktop-md) {
+      & .page-content-wrapper {
+        padding-left: calc(var(--padding-left) + 2.5em);
+      }
+    }
+
     & .header {
       height: var(--header-height);
       transform: translate(0, 0);
@@ -927,6 +933,11 @@ body {
   }
 
   &.side-nav {
+    @include respond(desktop-md) {
+      & .page-content-wrapper {
+        padding-left: calc(var(--padding-left) + 7.5em + 2.5em);
+      }
+    }
     & .side {
       &-bar {
         margin-left: 0;
@@ -945,13 +956,18 @@ body {
       }
     }
 
-    @include respond(desktop-md) {
-      padding-left: calc(7.5em + 2.5em);
-    }
+    // @include respond(desktop-md) {
+    //   padding-left: calc(7.5em + 2.5em);
+    // }
   }
 
   &.side-nav-toggle {
-    padding-left: 2.5em;
+    @include respond(desktop-md) {
+      & .page-content-wrapper {
+        padding-left: calc(var(--padding-left) + 2.5em);
+      }
+    }
+
     & .side {
       margin-left: -7.5em;
       position: relative;
