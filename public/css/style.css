@@ -1099,9 +1099,9 @@ body {
       height: 3.5em;
       border-radius: 50%; }
       .header-buttons .fullscreen-toggle:focus, .header-buttons .fullscreen-toggle:hover, .header-buttons .settings-dropdown .custom-dropdown-trigger:focus, .header-buttons .settings-dropdown .custom-dropdown-trigger:hover, .header-buttons .notification-dropdown .custom-dropdown-trigger:focus, .header-buttons .notification-dropdown .custom-dropdown-trigger:hover, .header-buttons .help-dropdown .custom-dropdown-trigger:focus, .header-buttons .help-dropdown .custom-dropdown-trigger:hover {
-        background-color: #dbdbdb; }
+        background-color: #ededed; }
     .header-buttons .fullscreen-toggle i {
-      font-size: 1.8em !important; }
+      font-size: 1.75em !important; }
     .header-buttons .fullscreen-toggle {
       margin-right: 0.5em; }
       .header-buttons .fullscreen-toggle .icon-fullscreen-enter {
@@ -1150,7 +1150,7 @@ body {
       background-color: #ffd800;
       border-radius: 50%; }
     .header-buttons i {
-      font-size: 2.1em;
+      font-size: 2.05em;
       color: #3c4043; }
   .header-close {
     top: -5.5em !important;
@@ -1551,12 +1551,13 @@ body {
     .page-header-list-item:not(:last-of-type) {
       margin-right: 3.1em; }
     .page-header-list-item-link {
+      position: relative;
       padding-bottom: 1.2030075188em;
       font-size: 1.33em;
       font-weight: 400;
-      color: #344562; }
+      color: #344562;
+      cursor: pointer; }
       .page-header-list-item-link.active {
-        position: relative;
         font-weight: 600;
         color: #19232e; }
         .page-header-list-item-link.active::after {
@@ -1565,11 +1566,18 @@ body {
           bottom: 0;
           left: 50%;
           display: block;
-          width: 120%;
+          width: 128%;
           transform: translate(-50%, 100%);
           border-bottom: 1.5px solid #7c7c7c; }
-      .page-header-list-item-link:hover {
-        font-weight: 500; }
+      .page-header-list-item-link:hover:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        display: block;
+        width: 128%;
+        transform: translate(-50%, 100%);
+        border-bottom: 1.5px solid #7c7c7c; }
 
 .page-content-wrapper {
   height: 100vh;

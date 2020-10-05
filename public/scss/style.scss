@@ -1874,7 +1874,7 @@ body {
       &:focus,
       &:hover {
         //border: 2px solid #f7f7f7;
-        background-color: #dbdbdb;
+        background-color: #ededed;
       }
     }
 
@@ -1884,7 +1884,7 @@ body {
       // }
 
       & i {
-        font-size: 1.8em !important;
+        font-size: 1.75em !important;
       }
     }
 
@@ -1947,7 +1947,7 @@ body {
     }
 
     & i {
-      font-size: 2.1em;
+      font-size: 2.05em;
       color: #3c4043;
     }
   }
@@ -2327,13 +2327,14 @@ body {
       }
 
       &-link {
+        position: relative;
         padding-bottom: emcalc(1.6, 1.33);
         font-size: 1.33em;
         font-weight: 400;
         color: #344562;
+        cursor: pointer;
 
         &.active {
-          position: relative;
           font-weight: 600;
           color: #19232e;
 
@@ -2343,14 +2344,21 @@ body {
             bottom: 0;
             left: 50%;
             display: block;
-            width: 120%;
+            width: 128%;
             transform: translate(-50%, 100%);
             border-bottom: 1.5px solid #7c7c7c;
           }
         }
 
-        &:hover {
-          font-weight: 500;
+        &:hover:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          display: block;
+          width: 128%;
+          transform: translate(-50%, 100%);
+          border-bottom: 1.5px solid #7c7c7c;
         }
       }
     }
