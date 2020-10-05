@@ -1560,7 +1560,7 @@ body {
     }
 
     &-name {
-      //max-width: emcalc(18, 2);
+      max-width: emcalc(20, 2);
       font-size: 2em;
       font-weight: 500;
       color: #172b4d;
@@ -1680,15 +1680,15 @@ body {
       // }
 
       & i {
-        font-size: 1.9em !important;
+        font-size: 1.8em !important;
       }
     }
 
     & .fullscreen-toggle {
       margin-right: 0.5em;
-      & i {
-        font-size: 1.7em;
-      }
+      // & i {
+      //   font-size: 1.7em;
+      // }
 
       & .icon-fullscreen-enter {
         display: inline-block;
@@ -2135,6 +2135,10 @@ body {
             transform: translate(-50%, 100%);
             border-bottom: 1.5px solid #7c7c7c;
           }
+        }
+
+        &:hover {
+          font-weight: 500;
         }
       }
     }
