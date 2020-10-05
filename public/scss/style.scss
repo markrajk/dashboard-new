@@ -892,11 +892,11 @@ body {
       visibility: visible;
     }
 
-    // & .side {
-    //   &-bar {
-    //     transition-duration: 0s;
-    //   }
-    // }
+    & .side {
+      @include respond(desktop-md) {
+        height: calc(100% - var(--header-height));
+      }
+    }
 
     & .page-content-wrapper {
       height: calc(100vh - var(--header-height));
@@ -944,12 +944,23 @@ body {
         display: inline-block !important;
       }
     }
+
+    @include respond(desktop-md) {
+      padding-left: calc(7.5em + 2.5em);
+    }
   }
 
   &.side-nav-toggle {
+    padding-left: 2.5em;
     & .side {
       margin-left: -7.5em;
       position: relative;
+
+      @include respond(desktop-md) {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
 
       &-bar {
         position: -webkit-sticky;
@@ -1869,7 +1880,7 @@ body {
 
   @include respond(desktop-md) {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
   }
 
