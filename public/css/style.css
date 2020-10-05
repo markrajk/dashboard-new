@@ -479,7 +479,8 @@ body {
     -webkit-justify-content: center;
     -moz-justify-content: center;
     justify-content: center;
-    border-bottom: 1px solid #e8eaed; }
+    border-bottom: 1px solid #e8eaed;
+    cursor: default; }
     .custom-dropdown.user-dropdown .user-dropdown-menu-header-set {
       margin-bottom: 2.4em;
       position: relative;
@@ -568,6 +569,8 @@ body {
     color: #373738;
     border-bottom: 1px solid #e8eaed;
     cursor: pointer; }
+    .custom-dropdown.user-dropdown .user-dropdown-menu-item:hover {
+      background-color: #f1f1f1; }
   .custom-dropdown.notification-dropdown .custom-dropdown-menu {
     width: 37.6em;
     border-radius: 5px;

@@ -1157,6 +1157,7 @@ body {
         @include align-items(center);
         @include justify-content(center);
         border-bottom: 1px solid #e8eaed;
+        cursor: default;
 
         &-set {
           margin-bottom: 2.4em;
@@ -1223,6 +1224,10 @@ body {
         color: #373738;
         border-bottom: 1px solid #e8eaed;
         cursor: pointer;
+
+        &:hover {
+          background-color: #f1f1f1;
+        }
       }
     }
   }
