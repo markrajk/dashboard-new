@@ -1,5 +1,80 @@
 //@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 // ==================================
+// MIXINS & FUNCTIONS
+// ==================================
+
+@mixin custom-respond($value) {
+  @media (max-width: $value * 1px) {
+    @content;
+  }
+}
+
+@mixin custom-respond-vertical($value) {
+  @media (max-height: $value * 1px) {
+    @content;
+  }
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint==desktop-xxsm {
+    @media (max-width: 379px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==desktop-xsm {
+    @media (max-width: 575px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==desktop-sm {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==desktop-md {
+    @media (max-width: 991px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==desktop-lg {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==desktop-xl {
+    @media (max-width: 1379px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==desktop-xxl {
+    @media (max-width: 1720px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==desktop-xxxl {
+    @media (max-width: 1900px) {
+      @content;
+    }
+  }
+}
+
+@function resize($base, $value) {
+  $result: $base * $value;
+  @return $result;
+}
+
+@function emcalc($base, $value) {
+  $result: $base / $value;
+  @return $result * 1em;
+}
+// ==================================
 // VARIABLES
 // ==================================
 :root {
@@ -40,6 +115,11 @@
 
   //TESTING SIDE MENU SLIDES
   --side-menu-slide-header-01: 20em;
+
+  @include respond(desktop-md) {
+    --padding-left: 2em;
+    --padding-right: 2em;
+  }
 }
 
 // ==================================

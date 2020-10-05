@@ -21,6 +21,10 @@
   --table-body-row-height: 4.6em;
   --side-menu-header-height: 12.86em;
   --side-menu-slide-header-01: 20em; }
+  @media (max-width: 991px) {
+    :root {
+      --padding-left: 2em;
+      --padding-right: 2em; } }
 
 @font-face {
   font-family: "dashoard-icons";
