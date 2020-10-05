@@ -599,16 +599,15 @@
 
 @font-face {
   font-family: "dashoard-icons";
-  src: url("../fonts/dashoard-icons.eot?ln0uv2");
-  src: url("../fonts/dashoard-icons.eot?ln0uv2#iefix")
+  src: url("../fonts/dashoard-icons.eot?ahtv1q");
+  src: url("../fonts/dashoard-icons.eot?ahtv1q#iefix")
       format("embedded-opentype"),
-    url("../fonts/dashoard-icons.ttf?ln0uv2") format("truetype"),
-    url("../fonts/dashoard-icons.woff?ln0uv2") format("woff"),
-    url("../fonts/dashoard-icons.svg?ln0uv2#dashoard-icons") format("svg");
+    url("../fonts/dashoard-icons.ttf?ahtv1q") format("truetype"),
+    url("../fonts/dashoard-icons.woff?ahtv1q") format("woff"),
+    url("../fonts/dashoard-icons.svg?ahtv1q#dashoard-icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
-  text-rendering: optimizeLegibility;
 }
 
 [class^="icon-"],
@@ -627,10 +626,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-fullscreen-exit:before {
+.icon-fullscreen-enter:before {
   content: "\e941";
 }
-.icon-fullscreen-enter:before {
+.icon-fullscreen-exit:before {
   content: "\e942";
 }
 .icon-cog:before {
