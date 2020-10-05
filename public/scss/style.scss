@@ -608,6 +608,7 @@
   font-weight: normal;
   font-style: normal;
   font-display: block;
+  text-rendering: optimizeLegibility;
 }
 
 [class^="icon-"],
@@ -1661,8 +1662,6 @@ body {
 
       & .icon-fullscreen-enter {
         display: inline-block;
-        width: 1.8423em;
-        height: 1.8881em;
       }
       & .icon-fullscreen-exit {
         display: none;
@@ -1670,6 +1669,8 @@ body {
 
       & .fullscreen-enter {
         display: inline-block;
+        width: 1.8423em;
+        height: 1.8881em;
       }
 
       & .fullscreen-enter {
@@ -1681,8 +1682,6 @@ body {
           display: none;
         }
         & .icon-fullscreen-exit {
-          width: 1.9054em;
-          height: 1.9512em;
           display: inline-block;
         }
 
@@ -1692,6 +1691,8 @@ body {
 
         & .fullscreen-exit {
           display: inline-block;
+          width: 1.9054em;
+          height: 1.9512em;
         }
       }
     }

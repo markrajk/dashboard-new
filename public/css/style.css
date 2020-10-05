@@ -28,7 +28,8 @@
   src: url("../fonts/dashoard-icons.eot?ln0uv2#iefix") format("embedded-opentype"), url("../fonts/dashoard-icons.ttf?ln0uv2") format("truetype"), url("../fonts/dashoard-icons.woff?ln0uv2") format("woff"), url("../fonts/dashoard-icons.svg?ln0uv2#dashoard-icons") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: block; }
+  font-display: block;
+  text-rendering: optimizeLegibility; }
 [class^="icon-"],
 [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -955,25 +956,25 @@ body {
       .header-buttons .fullscreen-toggle i {
         font-size: 1.7em; }
       .header-buttons .fullscreen-toggle .icon-fullscreen-enter {
-        display: inline-block;
-        width: 1.8423em;
-        height: 1.8881em; }
+        display: inline-block; }
       .header-buttons .fullscreen-toggle .icon-fullscreen-exit {
         display: none; }
       .header-buttons .fullscreen-toggle .fullscreen-enter {
-        display: inline-block; }
+        display: inline-block;
+        width: 1.8423em;
+        height: 1.8881em; }
       .header-buttons .fullscreen-toggle .fullscreen-enter {
         display: none; }
       .header-buttons .fullscreen-toggle.active .icon-fullscreen-enter {
         display: none; }
       .header-buttons .fullscreen-toggle.active .icon-fullscreen-exit {
-        width: 1.9054em;
-        height: 1.9512em;
         display: inline-block; }
       .header-buttons .fullscreen-toggle.active .fullscreen-enter {
         display: none; }
       .header-buttons .fullscreen-toggle.active .fullscreen-exit {
-        display: inline-block; }
+        display: inline-block;
+        width: 1.9054em;
+        height: 1.9512em; }
     .header-buttons .initials {
       margin-left: 0.4098360656em;
       display: -webkit-inline-box;
