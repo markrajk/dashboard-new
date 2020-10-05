@@ -996,13 +996,15 @@ body {
         top: 1em;
         right: 1em;
         font-size: 1.8em;
-        color: #fff; }
+        color: #fff;
+        cursor: pointer; }
     .header .burger-dropdown-menu-item {
       padding-left: 1.0625em;
       margin-bottom: 2.1875em;
       font-size: 1.6em;
       font-weight: 700;
-      color: #ffffff; }
+      color: #ffffff;
+      cursor: pointer; }
   .header-company {
     margin-right: 2em;
     display: -webkit-box;
