@@ -1286,7 +1286,19 @@ body {
         transform: translate(-50%, -50%);
         width: 4.2em;
         height: 4.2em;
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        z-index: -1; }
+      .side-bar-item:hover:after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 4.2em;
+        height: 4.2em;
+        background-color: rgba(255, 255, 255, 0.15);
         border-radius: 50%;
         z-index: -1; }
     .side-bar .initials {
