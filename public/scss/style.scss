@@ -882,7 +882,15 @@ body {
       height: var(--header-height);
       transform: translate(0, 0);
       overflow: visible;
+      opacity: 1;
+      visibility: visible;
     }
+
+    // & .side {
+    //   &-bar {
+    //     transition-duration: 0s;
+    //   }
+    // }
 
     & .page-content-wrapper {
       height: calc(100vh - var(--header-height));
@@ -917,6 +925,7 @@ body {
       &-bar {
         margin-left: 0;
         visibility: visible;
+        transform: translate(0, 0);
       }
     }
 
@@ -1514,6 +1523,8 @@ body {
   transform: translate(0, -100%);
   height: 0;
   overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
 
   &-company {
     //max-width: 30em;
@@ -1728,6 +1739,7 @@ body {
     transition: all 0.5s ease-in-out;
     z-index: 100;
     visibility: hidden;
+    transform: translate(-100%, 0);
 
     &-close {
       margin-left: -5.5em;
