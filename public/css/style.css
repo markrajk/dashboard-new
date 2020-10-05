@@ -1286,7 +1286,7 @@ body {
         transform: translate(-50%, -50%);
         width: 4.2em;
         height: 4.2em;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.3) !important;
         border-radius: 50%;
         z-index: -1; }
       .side-bar-item:hover:after {
@@ -2185,8 +2185,8 @@ body {
         font-size: 1.3em;
         font-weight: 400;
         color: #42526e; }
-      .side-menu-slide-header-back-hover .side-menu-slide-header-back-text {
-        text-decoration: underline !important; }
+      .side-menu-slide-header-back:hover .side-menu-slide-header-back-text {
+        font-weight: 500; }
   .side-menu-slide-body {
     position: relative;
     bottom: 0;
@@ -2275,6 +2275,8 @@ body {
           margin-right: 1.03rem;
           font-size: 1.5923076923em;
           color: #42526e; }
+        .side-menu-slide-body-buttons-item:hover {
+          font-weight: 600; }
     .side-menu-slide-body .compare-button {
       width: 100%;
       text-align: center; }
