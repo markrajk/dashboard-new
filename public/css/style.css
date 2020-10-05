@@ -336,7 +336,7 @@ body {
         left: 0;
         margin-left: 0;
         visibility: visible;
-        transform: translate(-100%, 0); }
+        transform: translate(-100.3%, 0); }
         .main.side-nav-toggle .side-bar:hover {
           transform: translate(0, 0); }
       .main.side-nav-toggle .side .side-bar-toggle {
