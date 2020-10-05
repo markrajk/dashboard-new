@@ -3109,8 +3109,13 @@ body {
     }
 
     & .compare-button {
+      @include flexbox();
+      @include flex-direction(column);
+      @include align-items(center);
+      @include justify-content(center);
       width: 100%;
       text-align: center;
+      cursor: pointer;
 
       & i {
         display: inline-block;
@@ -3120,9 +3125,15 @@ body {
       }
 
       &-text {
+        padding-bottom: emcalc(0.8, 1.3);
+        width: auto;
         font-size: 1.3em;
         font-weight: 600;
         color: #42526e;
+      }
+
+      &:hover .compare-button-text {
+        border-bottom: 1.5px solid #42526e;
       }
     }
 
