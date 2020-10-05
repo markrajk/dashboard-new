@@ -2621,6 +2621,18 @@ body {
   visibility: hidden;
   transition: all 0.5s ease-in-out;
 
+  overflow-y: auto;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+
+  &::-webkit-scrollbar {
+    /* WebKit */
+    width: 0;
+    height: 0;
+  }
+
   &.active {
     opacity: 1;
     visibility: visible;
@@ -2629,9 +2641,13 @@ body {
   }
 
   &-header {
+    position: sticky;
+    top: 0;
     margin-bottom: 2.2em;
     width: 100%;
-    border-bottom: 2px solid #e2e4e9;
+    border-bottom: 1.5px solid #ebecf0;
+    z-index: 100;
+    background-color: #f6f7f8;
 
     &-set {
       padding-left: 1.2em;
@@ -2873,7 +2889,7 @@ body {
   }
 
   &.slide-01 {
-    padding: 4.4em 1.7em 0;
+    padding: 4.4em 1.7em 4.4em;
     & .side-menu-slide-body-section {
       margin-bottom: 2.1em;
       padding-bottom: 3.3em;
@@ -2881,7 +2897,11 @@ body {
   }
 
   &.slide-02 {
-    padding: 4.4em 1.7em 0;
+    padding: 0 1.7em 4.4em;
+
+    & .side-menu-slide-header {
+      padding-top: 4.4em;
+    }
   }
 
   &.slide-03 {
