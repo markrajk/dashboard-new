@@ -840,7 +840,7 @@ body {
         max-width: 10em;
         object-fit: contain; }
     .header-company-name {
-      max-width: 10em;
+      max-width: 7.5em;
       font-size: 2em;
       font-weight: 500;
       color: #172b4d;
