@@ -955,12 +955,24 @@ body {
       .header-buttons .fullscreen-toggle i {
         font-size: 1.7em; }
       .header-buttons .fullscreen-toggle .icon-fullscreen-enter {
-        display: inline-block; }
+        display: inline-block;
+        width: 1.8423em;
+        height: 1.8881em; }
       .header-buttons .fullscreen-toggle .icon-fullscreen-exit {
+        display: none; }
+      .header-buttons .fullscreen-toggle .fullscreen-enter {
+        display: inline-block; }
+      .header-buttons .fullscreen-toggle .fullscreen-enter {
         display: none; }
       .header-buttons .fullscreen-toggle.active .icon-fullscreen-enter {
         display: none; }
       .header-buttons .fullscreen-toggle.active .icon-fullscreen-exit {
+        width: 1.9054em;
+        height: 1.9512em;
+        display: inline-block; }
+      .header-buttons .fullscreen-toggle.active .fullscreen-enter {
+        display: none; }
+      .header-buttons .fullscreen-toggle.active .fullscreen-exit {
         display: inline-block; }
     .header-buttons .initials {
       margin-left: 0.4098360656em;

@@ -1661,15 +1661,36 @@ body {
 
       & .icon-fullscreen-enter {
         display: inline-block;
+        width: 1.8423em;
+        height: 1.8881em;
       }
       & .icon-fullscreen-exit {
         display: none;
       }
+
+      & .fullscreen-enter {
+        display: inline-block;
+      }
+
+      & .fullscreen-enter {
+        display: none;
+      }
+
       &.active {
         & .icon-fullscreen-enter {
           display: none;
         }
         & .icon-fullscreen-exit {
+          width: 1.9054em;
+          height: 1.9512em;
+          display: inline-block;
+        }
+
+        & .fullscreen-enter {
+          display: none;
+        }
+
+        & .fullscreen-exit {
           display: inline-block;
         }
       }
