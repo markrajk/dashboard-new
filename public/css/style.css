@@ -305,9 +305,11 @@ body {
   .main.side-nav .side-nav-trigger .custom-dropdown-menu-nav-pos-check span {
     display: inline-block !important; }
   .main.side-nav-toggle .side {
+    margin-left: -7.5em;
     position: relative; }
     .main.side-nav-toggle .side-bar {
-      position: absolute;
+      position: -webkit-sticky;
+      position: sticky;
       top: 0;
       left: 0;
       margin-left: 0;
@@ -317,7 +319,7 @@ body {
         transform: translate(0, 0); }
     .main.side-nav-toggle .side .side-bar-toggle {
       display: block;
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 3em;
@@ -1006,6 +1008,7 @@ body {
   -webkit-justify-content: flex-start;
   -moz-justify-content: flex-start;
   justify-content: flex-start;
+  background-color: #f6f7f8;
   transition: all 0.5s ease-in-out;
   transition-property: height width;
   z-index: 900;

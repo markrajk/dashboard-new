@@ -933,10 +933,12 @@ body {
 
   &.side-nav-toggle {
     & .side {
+      margin-left: -7.5em;
       position: relative;
 
       &-bar {
-        position: absolute;
+        position: -webkit-sticky;
+        position: sticky;
         top: 0;
         left: 0;
         margin-left: 0;
@@ -950,7 +952,7 @@ body {
 
       & .side-bar-toggle {
         display: block;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 3em;
@@ -1699,6 +1701,7 @@ body {
   @include flexbox();
   @include align-items(flex-start);
   @include justify-content(flex-start);
+  background-color: #f6f7f8;
   transition: all 0.5s ease-in-out;
   transition-property: height width;
   z-index: 900;
@@ -3798,3 +3801,13 @@ body {
     transform: translate(-100%, 0);
   }
 }
+
+// @keyframes transition-left {
+//   from {
+//     transform: translate(0, 0);
+//   }
+
+//   to {
+//     transform: translate(-100%, 0);
+//   }
+// }
