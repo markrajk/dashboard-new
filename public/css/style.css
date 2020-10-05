@@ -954,7 +954,7 @@ body {
       .header-buttons .fullscreen-toggle:focus, .header-buttons .fullscreen-toggle:hover, .header-buttons .settings-dropdown .custom-dropdown-trigger:focus, .header-buttons .settings-dropdown .custom-dropdown-trigger:hover, .header-buttons .notification-dropdown .custom-dropdown-trigger:focus, .header-buttons .notification-dropdown .custom-dropdown-trigger:hover, .header-buttons .help-dropdown .custom-dropdown-trigger:focus, .header-buttons .help-dropdown .custom-dropdown-trigger:hover {
         background-color: #dbdbdb; }
     .header-buttons .fullscreen-toggle i {
-      font-size: 2em !important; }
+      font-size: 1.9em !important; }
     .header-buttons .fullscreen-toggle {
       margin-right: 0.5em; }
       .header-buttons .fullscreen-toggle i {
@@ -980,7 +980,7 @@ body {
         width: 1.9054em;
         height: 1.9512em; }
     .header-buttons .initials {
-      margin-left: 0.6557377049em;
+      margin-left: 0.7650273224em;
       display: -webkit-inline-box;
       display: -webkit-inline-flex;
       display: -moz-inline-flex;
@@ -1005,7 +1005,7 @@ body {
       background-color: #ffd800;
       border-radius: 50%; }
     .header-buttons i {
-      font-size: 2em;
+      font-size: 2.1em;
       color: #3c4043; }
   .header-close {
     top: -5.5em !important;
@@ -2026,6 +2026,8 @@ body {
         font-size: 1.3em;
         font-weight: 400;
         color: #42526e; }
+      .side-menu-slide-header-back-hover .side-menu-slide-header-back-text {
+        text-decoration: underline !important; }
   .side-menu-slide-body {
     position: relative;
     bottom: 0;
