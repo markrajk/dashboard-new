@@ -679,12 +679,12 @@
 
 @font-face {
   font-family: "dashoard-icons";
-  src: url("../fonts/dashoard-icons.eot?xpxxc2");
-  src: url("../fonts/dashoard-icons.eot?xpxxc2#iefix")
+  src: url("../fonts/dashoard-icons.eot?rcnyhv");
+  src: url("../fonts/dashoard-icons.eot?rcnyhv#iefix")
       format("embedded-opentype"),
-    url("../fonts/dashoard-icons.ttf?xpxxc2") format("truetype"),
-    url("../fonts/dashoard-icons.woff?xpxxc2") format("woff"),
-    url("../fonts/dashoard-icons.svg?xpxxc2#dashoard-icons") format("svg");
+    url("../fonts/dashoard-icons.ttf?rcnyhv") format("truetype"),
+    url("../fonts/dashoard-icons.woff?rcnyhv") format("woff"),
+    url("../fonts/dashoard-icons.svg?rcnyhv#dashoard-icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -706,6 +706,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-burger:before {
+  content: "\e945";
+}
 .icon-camera:before {
   content: "\e944";
 }
@@ -1733,6 +1736,54 @@ body {
   opacity: 0;
   visibility: hidden;
 
+  & .burger-dropdown {
+    display: none;
+    height: 100%;
+
+    @include respond(desktop-sm) {
+      display: block;
+    }
+
+    & .custom-dropdown-trigger {
+      height: 100%;
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+
+      & i {
+        font-size: 2.2em;
+        color: #3c4043;
+      }
+    }
+    & .custom-dropdown-menu {
+      position: relative;
+      padding-top: 3.7em;
+      width: 22.1em;
+      position: absolute;
+      bottom: 0;
+      right: calc(100% + 3.9em);
+      background-color: #4e4e4e;
+      transform: translate(100%, 100%);
+      border-bottom-right-radius: 20px;
+
+      & .close {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        font-size: 1.8em;
+        color: #fff;
+      }
+    }
+
+    &-menu-item {
+      padding-left: emcalc(1.7, 1.6);
+      margin-bottom: emcalc(3.5, 1.6);
+      font-size: 1.6em;
+      font-weight: 700;
+      color: #ffffff;
+    }
+  }
+
   &-company {
     //max-width: 30em;
     margin-right: 2em;
@@ -1786,6 +1837,10 @@ body {
     @include custom-respond(1100) {
       margin-left: 0;
       margin-right: auto;
+    }
+
+    @include respond(desktop-sm) {
+      display: none;
     }
 
     &-item {
@@ -2929,7 +2984,7 @@ body {
 
     &-set {
       padding-left: 1.2em;
-      padding-right: 1.6em;
+      //padding-right: 1.6em;
       margin-bottom: 4.5em;
       @include flexbox();
       @include align-items(center);

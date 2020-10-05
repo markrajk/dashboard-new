@@ -14,6 +14,22 @@
   <body>
     <main class="main top-nav" id="team-charts">
       <div class="header">
+        <div class="custom-dropdown burger-dropdown">
+          <button
+            class="custom-dropdown-trigger"
+            tabindex="-1"
+            onclick="this.focus()"
+          >
+            <i class="icon-burger"></i>
+          </button>
+          <ul class="custom-dropdown-menu">
+            <li class="close"><i class="icon-close"></i></li>
+            <li class="burger-dropdown-menu-item">My teams</li>
+            <li class="burger-dropdown-menu-item">Give feedback</li>
+            <li class="burger-dropdown-menu-item">My own feedback</li>
+            <li class="burger-dropdown-menu-item">Help to get started</li>
+          </ul>
+        </div>
         <div class="header-company">
           <div class="header-company-logo">
             <img
@@ -983,7 +999,31 @@
                 </li>
               </ul>
             </div>
-            <button class="initials">M</button>
+            <div class="custom-dropdown user-dropdown">
+              <button
+                class="custom-dropdown-trigger initials"
+                tabindex="-1"
+                onclick="this.focus()"
+              >
+                M
+              </button>
+              <ul class="custom-dropdown-menu">
+                <li class="user-dropdown-menu-header">
+                  <div class="user-dropdown-menu-header-set">
+                    <div class="user-dropdown-menu-header-set-initials">M</div>
+                    <div class="user-dropdown-menu-header-set-upload">
+                      <i class="icon-camera"></i>
+                    </div>
+                  </div>
+                  <p class="user-dropdown-menu-header-title">Max Matinpalo</p>
+                  <p class="user-dropdown-menu-header-desc">
+                    Click here to add your job title
+                  </p>
+                </li>
+                <li class="user-dropdown-menu-item">Open user settings</li>
+                <li class="user-dropdown-menu-item">Sign out</li>
+              </ul>
+            </div>
           </div>
           <div class="page-header-info">
             <!-- <img
@@ -1270,6 +1310,13 @@
             );
           }
         });
+      });
+
+      //BURGER CLOSE
+      let burgerCloseBtn = document.querySelector(".burger-dropdown .close");
+
+      burgerCloseBtn.addEventListener("click", function () {
+        this.parentElement.style.display = "none";
       });
     </script>
   </body>
