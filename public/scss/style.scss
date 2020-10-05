@@ -1932,7 +1932,7 @@ body {
     }
 
     & .initials {
-      margin-left: emcalc(1.4, 1.83);
+      margin-left: emcalc(1.25, 1.83);
       @include inline-flex();
       @include align-items(center);
       @include justify-content(center);
