@@ -117,7 +117,7 @@
   --side-menu-slide-header-01: 20em;
 
   @include respond(desktop-md) {
-    --padding-left: 2em;
+    --padding-left: 2.5em;
     --padding-right: 2em;
   }
 }

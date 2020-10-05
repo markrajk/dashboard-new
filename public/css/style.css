@@ -23,7 +23,7 @@
   --side-menu-slide-header-01: 20em; }
   @media (max-width: 991px) {
     :root {
-      --padding-left: 2em;
+      --padding-left: 2.5em;
       --padding-right: 2em; } }
 
 @font-face {
