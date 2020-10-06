@@ -2898,6 +2898,18 @@ body {
     max-width: 81.35em;
     height: calc( 100vh - var(--header-height) - var(--padding-top) - var(--page-header-height-default) ); }
 
+#team-settings-members .page-header {
+  min-width: 0;
+  width: 100%;
+  max-width: 81.7em; }
+#team-settings-members .page-content {
+  padding-top: 3.9em;
+  min-width: 0;
+  width: 100%;
+  max-width: 81.7em;
+  height: calc(100% - var(--page-header-height-default));
+  overflow-x: hidden; }
+
 #people-overview .side-menu-content {
   padding-top: calc(6.5em - var(--header-height));
   padding-left: 2em;

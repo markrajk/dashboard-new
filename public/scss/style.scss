@@ -3729,6 +3729,28 @@ body {
 }
 
 //========================
+//    TEAM SETTINGS MEMBERS
+//========================
+#team-settings-members {
+  & .page-header {
+    min-width: 0;
+    width: 100%;
+    max-width: 81.7em;
+  }
+
+  & .page-content {
+    padding-top: 3.9em;
+    min-width: 0;
+    width: 100%;
+    max-width: 81.7em;
+    //max-width: 100em;
+    //margin-top: var(--content-padding-top);
+    height: calc(100% - var(--page-header-height-default));
+    overflow-x: hidden;
+  }
+}
+
+//========================
 //    PEOPLE OVERVIEW
 //========================
 #people-overview {
