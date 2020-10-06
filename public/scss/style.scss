@@ -2479,7 +2479,6 @@ body {
 .page-content {
   transition: all 0.5s ease-in-out;
   transition-property: height width;
-
   overflow-y: auto;
   scrollbar-width: none;
   /* Firefox */
@@ -3577,30 +3576,35 @@ body {
     min-width: 0;
     width: 100%;
     //max-width: 100em;
-    margin-top: var(--content-padding-top);
+    //margin-top: var(--content-padding-top);
     height: calc(
-      100vh - var(--header-height) - var(--padding-top) -
-        var(--content-padding-top) - var(--page-header-height-default)
-    ) !important;
+      100vh - var(--padding-top) - var(--page-header-height-default)
+    );
+    overflow-x: hidden;
 
     & .people {
-      margin: 0 -2em;
-      padding-top: 3.6em;
+      margin: 0 -1.75em;
+      padding-top: 4.7em;
       @include flexbox();
       @include flex-wrap(wrap);
       @include align-items(flex-start);
       @include justify-content(flex-start);
+      overflow: hidden;
+
+      @include respond(desktop-md) {
+        justify-content: center;
+      }
 
       & .person {
-        margin: 0 1.8em;
-        margin-bottom: 4em;
+        margin: 0 1.75em;
+        margin-bottom: 4.4em;
         @include inline-flex();
         @include flex-direction(column);
         @include align-items(center);
         @include justify-content(center);
 
         &-main {
-          margin-bottom: 1.1em;
+          margin-bottom: 0.7em;
           position: relative;
 
           &-img {
@@ -4007,8 +4011,7 @@ body {
     width: calc(25% - 2.8em);
     background-color: rgba(246, 247, 248, 0);
     border-radius: 5px;
-    border: solid 1.5px #efefef;
-    box-shadow: 0 3px 8px 0 rgba(222, 222, 222, 0.15);
+    border: solid 1px #efefef;
 
     @include custom-respond(1600) {
       width: calc(33.333% - 2.8em);
@@ -4029,7 +4032,7 @@ body {
       @include flexbox();
       @include align-items(center);
       @include justify-content(flex-start);
-      border-bottom: 1.5px solid #efefef;
+      border-bottom: 1px solid #efefef;
 
       &-img {
         margin-right: 1.4em;
@@ -4060,7 +4063,7 @@ body {
       margin-bottom: 0;
       padding: 0 0.45em;
       padding-bottom: 0.43em;
-      border-bottom: 1.5px solid #efefef;
+      border-bottom: 1px solid #efefef;
 
       &-item {
         margin-bottom: 0.7em;
@@ -4382,3 +4385,13 @@ body {
 //     transform: translate(-100%, 0);
 //   }
 // }
+
+//SAFARI FIX
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .icon-caret-up,
+    .icon-caret-down {
+      font-size: 6px !important;
+    }
+  }
+}

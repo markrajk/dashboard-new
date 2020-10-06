@@ -764,6 +764,17 @@
           toggleFullscreen();
         });
       });
+
+      //NOT PRODUCTION LINKING TO PEOPLE FEEDBACK RECEIVED
+      let peopleFeedgackReceivedLinks = document.querySelectorAll(
+        ".slide-body-02 .side-menu-slide-body-section-item"
+      );
+
+      peopleFeedgackReceivedLinks.forEach((e) => {
+        e.addEventListener("click", function () {
+          location.href = "/people-feedback-received";
+        });
+      });
     </script>
   </body>
 </html>

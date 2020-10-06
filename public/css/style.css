@@ -2753,11 +2753,11 @@ body {
 #team-members .page-content {
   min-width: 0;
   width: 100%;
-  margin-top: var(--content-padding-top);
-  height: calc( 100vh - var(--header-height) - var(--padding-top) - var(--content-padding-top) - var(--page-header-height-default) ) !important; }
+  height: calc( 100vh - var(--padding-top) - var(--page-header-height-default) );
+  overflow-x: hidden; }
   #team-members .page-content .people {
-    margin: 0 -2em;
-    padding-top: 3.6em;
+    margin: 0 -1.75em;
+    padding-top: 4.7em;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
@@ -2776,10 +2776,14 @@ body {
     -ms-flex-pack: start;
     -webkit-justify-content: flex-start;
     -moz-justify-content: flex-start;
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    overflow: hidden; }
+    @media (max-width: 991px) {
+      #team-members .page-content .people {
+        justify-content: center; } }
     #team-members .page-content .people .person {
-      margin: 0 1.8em;
-      margin-bottom: 4em;
+      margin: 0 1.75em;
+      margin-bottom: 4.4em;
       display: -webkit-inline-box;
       display: -webkit-inline-flex;
       display: -moz-inline-flex;
@@ -2802,7 +2806,7 @@ body {
       -moz-justify-content: center;
       justify-content: center; }
       #team-members .page-content .people .person-main {
-        margin-bottom: 1.1em;
+        margin-bottom: 0.7em;
         position: relative; }
         #team-members .page-content .people .person-main-img {
           width: 8em;
@@ -3047,8 +3051,7 @@ body {
   width: calc(25% - 2.8em);
   background-color: rgba(246, 247, 248, 0);
   border-radius: 5px;
-  border: solid 1.5px #efefef;
-  box-shadow: 0 3px 8px 0 rgba(222, 222, 222, 0.15); }
+  border: solid 1px #efefef; }
   @media (max-width: 1600px) {
     #people-feedback-received .feedback {
       width: calc(33.333% - 2.8em); } }
@@ -3077,7 +3080,7 @@ body {
     -webkit-justify-content: flex-start;
     -moz-justify-content: flex-start;
     justify-content: flex-start;
-    border-bottom: 1.5px solid #efefef; }
+    border-bottom: 1px solid #efefef; }
     #people-feedback-received .feedback-header-img {
       margin-right: 1.4em;
       width: 4em;
@@ -3100,7 +3103,7 @@ body {
     margin-bottom: 0;
     padding: 0 0.45em;
     padding-bottom: 0.43em;
-    border-bottom: 1.5px solid #efefef; }
+    border-bottom: 1px solid #efefef; }
     #people-feedback-received .feedback-rating-item {
       margin-bottom: 0.7em;
       display: -webkit-box;
@@ -3352,3 +3355,8 @@ body {
     transform: translate(0, 0); }
   to {
     transform: translate(-100%, 0); } }
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .icon-caret-up,
+    .icon-caret-down {
+      font-size: 6px !important; } } }
