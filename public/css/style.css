@@ -1620,6 +1620,11 @@ body {
         font-size: 1.33em; }
     .page-header-list-item:not(:last-of-type) {
       margin-right: 3.1em; }
+    .page-header-list-item:first-of-type .page-header-list-item-link::after {
+      content: "";
+      width: 122%;
+      transform: translate(0, 100%);
+      left: -1.25rem; }
     .page-header-list-item-link {
       position: relative;
       padding-bottom: 1.2030075188em;
