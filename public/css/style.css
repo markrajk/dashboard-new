@@ -16,6 +16,7 @@
   --padding-right: 3.8em;
   --content-padding-top: 3.6em;
   --page-header-height-default: 13.2em;
+  --page-header-height-compare: 8.25em;
   --page-caption-height: 7.04em;
   --table-head-row-height: 3.5em;
   --table-body-row-height: 4.6em;
@@ -1679,6 +1680,13 @@ body {
       letter-spacing: -0.06px;
       color: #172b4d;
       transform: translate(0, -0.5rem); }
+  .page-header-compare {
+    height: var(--page-header-height-compare);
+    border-bottom: 1.5px solid #ebecf0; }
+    .page-header-compare .page-header-info-position button {
+      font-weight: 500;
+      color: inherit;
+      text-decoration: underline; }
 
 .page-content-wrapper {
   height: 100vh;
@@ -2885,6 +2893,275 @@ body {
   min-width: 0;
   width: 100%;
   height: calc(100% - var(--page-header-height-default)); }
+
+#team-compare .page-header {
+  min-width: 0;
+  width: 100%; }
+#team-compare .side .side-menu-slide-body-section-item-close {
+  display: none; }
+#team-compare .side .side-menu-slide-body-section-item.active {
+  position: relative;
+  font-weight: 500;
+  color: var(--color-primary); }
+  #team-compare .side .side-menu-slide-body-section-item.active .side-menu-slide-body-section-item-close {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 1.38em;
+    transform: translate(0, -50%); }
+    #team-compare .side .side-menu-slide-body-section-item.active .side-menu-slide-body-section-item-close i {
+      font-size: 1.25rem;
+      color: rgba(66, 82, 110, 0.49); }
+  #team-compare .side .side-menu-slide-body-section-item.active::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 20.6rem;
+    height: 3.6rem;
+    border-radius: 3px;
+    background-color: #ebecf0;
+    z-index: -1; }
+#team-compare .page-content {
+  min-width: 0;
+  width: 100%;
+  height: calc(100% - var(--page-header-height-compare)); }
+#team-compare .compare-wrapper {
+  margin: 0 -1.75em;
+  margin-top: 3.5em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  justify-content: flex-start; }
+#team-compare .compare-card {
+  margin: 0 1.75em;
+  position: relative;
+  padding-left: 2.2em;
+  padding-right: 2.2em;
+  width: 28.5em;
+  border-radius: 7px;
+  box-shadow: 0 4px 6px 0 rgba(240, 240, 240, 0.25);
+  border: solid 1.5px #ebecf0;
+  background-color: #ffffff; }
+  #team-compare .compare-card-header {
+    padding-top: 1.9em;
+    padding-bottom: 1.65em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    border-bottom: 1.5px solid #f4f4f4; }
+    #team-compare .compare-card-header-title {
+      margin-bottom: 0.3333333333em;
+      font-size: 1.8em;
+      font-weight: 500;
+      letter-spacing: -0.27px;
+      color: #272748;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    #team-compare .compare-card-header-desc {
+      font-size: 1.2em;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.25;
+      letter-spacing: 0.06px;
+      text-align: center;
+      color: #696d7e;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    #team-compare .compare-card-header-order {
+      position: absolute;
+      top: 0.8em;
+      left: 1.1em; }
+      #team-compare .compare-card-header-order-left, #team-compare .compare-card-header-order-right {
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -moz-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        justify-content: center;
+        width: 1.6em;
+        height: 1.6em;
+        border: 1.5px solid #6b778c;
+        border-radius: 50%;
+        color: #6b778c; }
+        #team-compare .compare-card-header-order-left i, #team-compare .compare-card-header-order-right i {
+          font-size: 0.87em; }
+        #team-compare .compare-card-header-order-left.disabled, #team-compare .compare-card-header-order-right.disabled {
+          border-color: #bebebe;
+          color: #bebebe; }
+    #team-compare .compare-card-header-close {
+      position: absolute;
+      top: 0.8em;
+      right: 1.1em;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -moz-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      justify-content: center;
+      width: 1.75em;
+      height: 1.75em;
+      border: 1.5px solid #bebebe;
+      border-radius: 50%;
+      color: #bebebe; }
+      #team-compare .compare-card-header-close i {
+        font-size: 0.82em; }
+#team-compare .graph-header {
+  padding-top: 2em;
+  padding-bottom: 1.8em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between; }
+  #team-compare .graph-header-title {
+    font-size: 1.28em;
+    font-weight: 500;
+    letter-spacing: -0.06px;
+    color: #172b4d; }
+  #team-compare .graph-header-button {
+    font-size: 1.28em;
+    font-weight: 500;
+    letter-spacing: -0.06px;
+    color: var(--color-primary);
+    cursor: pointer; }
+#team-compare .graph {
+  margin-bottom: 1.9em;
+  padding-bottom: 4.3em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  border-bottom: 1.5px solid #f4f4f4; }
+  #team-compare .graph-bar {
+    position: relative;
+    height: 12.75em;
+    width: 1.7em;
+    border-radius: 3.5px;
+    background-color: #ecf0f6; }
+    #team-compare .graph-bar:not(:last-of-type) {
+      margin-right: 2.78em; }
+    #team-compare .graph-bar-fill {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-radius: 3.5px;
+      width: 100%; }
+      #team-compare .graph-bar-fill.good {
+        background-color: #28c944; }
+      #team-compare .graph-bar-fill.ok {
+        background-color: #ffcc19; }
+      #team-compare .graph-bar-fill.bad {
+        background-color: #ff4500; }
+    #team-compare .graph-bar-info {
+      position: absolute;
+      bottom: -1.17rem;
+      font-size: 1.05em;
+      font-weight: 500;
+      letter-spacing: 0.05px;
+      color: #172b4d;
+      transform: translate(0, 100%); }
+#team-compare .progress {
+  margin-bottom: 4em; }
+  #team-compare .progress:not(:last-of-type) {
+    margin-bottom: 3em; }
+  #team-compare .progress-header {
+    margin-bottom: 1em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between; }
+    #team-compare .progress-header-title {
+      font-size: 1.28em;
+      font-weight: 500;
+      letter-spacing: -0.06px;
+      color: #172b4d; }
+    #team-compare .progress-header-grade {
+      font-size: 1.28em;
+      font-weight: 500;
+      letter-spacing: -0.06px;
+      color: #172b4d; }
+  #team-compare .progress-bar {
+    height: 0.75em;
+    border-radius: 2px;
+    background-color: #ecf0f6; }
+    #team-compare .progress-bar-fill {
+      height: 100%;
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px; }
+      #team-compare .progress-bar-fill.good {
+        background-color: #28c944; }
+      #team-compare .progress-bar-fill.ok {
+        background-color: #ffcc19; }
+      #team-compare .progress-bar-fill.bad {
+        background-color: #ff4500; }
 
 #team-settings-general .page-header {
   min-width: 0;

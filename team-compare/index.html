@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Feedback | Teams | Compare</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/css/pretty-checkbox.css" />
+    <link rel="stylesheet" href="../public/css/style.css" />
+  </head>
+  <body>
+    <main class="main top-nav" id="team-compare">
+      <div class="header">
+        <div class="custom-dropdown burger-dropdown">
+          <button
+            class="custom-dropdown-trigger"
+            tabindex="-1"
+            onclick="this.focus()"
+          >
+            <i class="icon-burger"></i>
+          </button>
+          <ul class="custom-dropdown-menu">
+            <li class="close"><i class="icon-close"></i></li>
+            <li class="burger-dropdown-menu-item active">
+              <p class="burger-dropdown-menu-item-text">My teams</p>
+            </li>
+            <li class="burger-dropdown-menu-item">
+              <p class="burger-dropdown-menu-item-text">Give feedback</p>
+            </li>
+            <li class="burger-dropdown-menu-item">
+              <p class="burger-dropdown-menu-item-text">My own feedback</p>
+            </li>
+            <li class="burger-dropdown-menu-item">
+              <p class="burger-dropdown-menu-item-text">Help to get started</p>
+            </li>
+          </ul>
+        </div>
+        <div class="header-company">
+          <div class="header-company-logo">
+            <img
+              src="../public/img/logos/logo-01.png"
+              alt=""
+              class="header-company-logo-img"
+            />
+          </div>
+          <h2 class="header-company-name">Very Long Example Company Name</h2>
+        </div>
+
+        <ul class="header-list">
+          <li class="header-list-item">
+            <button class="header-list-item-link active">My teams</button>
+          </li>
+          <li class="header-list-item">
+            <button class="header-list-item-link">Give feedback</button>
+          </li>
+          <li class="header-list-item">
+            <button class="header-list-item-link">My Own Feedback</button>
+          </li>
+          <li class="header-list-item">
+            <button class="header-list-item-link">Help to get started</button>
+          </li>
+        </ul>
+
+        <div class="header-buttons">
+          <button class="fullscreen-toggle">
+            <i class="icon-fullscreen-enter"></i>
+            <i class="icon-fullscreen-exit"></i>
+          </button>
+
+          <!-- SETTINGS DROPDOWN -->
+          <div class="custom-dropdown settings-dropdown">
+            <button
+              class="custom-dropdown-trigger"
+              tabindex="-1"
+              onclick="this.focus()"
+            >
+              <i class="icon-cog"></i>
+            </button>
+            <ul class="custom-dropdown-menu">
+              <li class="custom-dropdown-menu-title-big">
+                <p class="custom-dropdown-menu-title-big-text">Settings</p>
+              </li>
+              <li class="custom-dropdown-menu-title-small">
+                <p class="custom-dropdown-menu-title-small-text">Menu mode</p>
+              </li>
+              <li class="custom-dropdown-menu-nav-pos-wrapper">
+                <div class="custom-dropdown-menu-nav-pos top-nav-trigger">
+                  <div class="custom-dropdown-menu-nav-pos-check">
+                    <span></span>
+                  </div>
+
+                  <div class="custom-dropdown-menu-nav-pos-set">
+                    <p class="custom-dropdown-menu-nav-pos-set-title">
+                      Fixed top menu
+                    </p>
+                    <p class="custom-dropdown-menu-nav-pos-set-desc">
+                      Default for beginners
+                    </p>
+                  </div>
+                  <img
+                    src="../public/img/nav-pos-top.png"
+                    alt="Position of navigation option"
+                    class="custom-dropdown-menu-nav-pos-img"
+                  />
+                </div>
+
+                <div class="custom-dropdown-menu-nav-pos side-nav-trigger">
+                  <div class="custom-dropdown-menu-nav-pos-check">
+                    <span></span>
+                  </div>
+
+                  <div class="custom-dropdown-menu-nav-pos-set">
+                    <p class="custom-dropdown-menu-nav-pos-set-title">
+                      Fixed side menu
+                    </p>
+                    <p class="custom-dropdown-menu-nav-pos-set-desc">
+                      For advanced users
+                    </p>
+                  </div>
+                  <img
+                    src="../public/img/nav-pos-left.png"
+                    alt="Position of navigation option"
+                    class="custom-dropdown-menu-nav-pos-img"
+                  />
+                </div>
+
+                <div
+                  class="custom-dropdown-menu-nav-pos side-nav-toggle-trigger"
+                >
+                  <div class="custom-dropdown-menu-nav-pos-check">
+                    <span></span>
+                  </div>
+
+                  <div class="custom-dropdown-menu-nav-pos-set">
+                    <p class="custom-dropdown-menu-nav-pos-set-title">
+                      Toggled side menu
+                    </p>
+                    <p class="custom-dropdown-menu-nav-pos-set-desc">
+                      Full screen experience
+                    </p>
+                  </div>
+                  <img
+                    src="../public/img/nav-pos-left-toggle.png"
+                    alt="Position of navigation option"
+                    class="custom-dropdown-menu-nav-pos-img"
+                  />
+                </div>
+              </li>
+              <li class="custom-dropdown-menu-title-small">
+                <p class="custom-dropdown-menu-title-small-text">
+                  Sidebar color
+                </p>
+              </li>
+
+              <li class="custom-dropdown-menu-color">
+                <p class="custom-dropdown-menu-color-name">
+                  <span class="custom-dropdown-menu-color-name-strong"
+                    >Ocean Blue</span
+                  >
+                  - Default
+                </p>
+                <div class="custom-dropdown-menu-color-set">
+                  <div
+                    class="custom-dropdown-menu-color-set-item primary active"
+                  >
+                    <span></span>
+                  </div>
+                  <div class="custom-dropdown-menu-color-set-item info">
+                    <span></span>
+                  </div>
+                  <div class="custom-dropdown-menu-color-set-item warning">
+                    <span></span>
+                  </div>
+                  <div class="custom-dropdown-menu-color-set-item dark">
+                    <span></span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="custom-dropdown-menu-title-small">
+                <p class="custom-dropdown-menu-title-small-text">
+                  Content size
+                </p>
+              </li>
+
+              <li class="custom-dropdown-menu-size">
+                <p class="custom-dropdown-menu-size-text">
+                  <span class="custom-dropdown-menu-size-text-strong"
+                    >Zoom factor</span
+                  >
+                  - Natural
+                </p>
+
+                <div class="custom-dropdown-menu-size-set">
+                  <button class="custom-dropdown-menu-size-set-item minus">
+                    <i class="icon-minus-outlined"></i>
+                  </button>
+
+                  <button class="custom-dropdown-menu-size-set-item plus">
+                    <i class="icon-plus-outlined"></i>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- HELP DROPDOWN -->
+          <div class="custom-dropdown help-dropdown">
+            <button class="custom-dropdown-trigger">
+              <i class="icon-question"></i>
+            </button>
+          </div>
+
+          <!-- NOTIFICATION DROPDOWN -->
+          <div class="custom-dropdown notification-dropdown">
+            <div
+              class="custom-dropdown-trigger"
+              tabindex="-1"
+              onclick="this.focus()"
+            >
+              <i class="icon-bell"></i>
+            </div>
+
+            <ul class="custom-dropdown-menu">
+              <li class="custom-dropdown-menu-title-big">
+                <p class="custom-dropdown-menu-title-big-text">
+                  Notifications (4)
+                </p>
+              </li>
+              <li class="custom-dropdown-menu-title-small">
+                <p class="custom-dropdown-menu-title-small-text">
+                  Invitations / Rights
+                </p>
+              </li>
+              <li class="custom-dropdown-menu-notifications">
+                <div class="notification">
+                  <img
+                    src="../public/img/p-01.png"
+                    alt="User's profile image"
+                    class="notification-img"
+                  />
+                  <div class="notification-main">
+                    <p class="notification-main-text">
+                      Abdula Ahmed wants to invite you to become a
+                      <span>member</span> of the team <span>salsa-kings</span>
+                    </p>
+                    <div class="notification-main-buttons">
+                      <button class="notification-button confirm">
+                        Confirm
+                      </button>
+                      <button class="notification-button deny">Deny</button>
+                    </div>
+                    <p class="notification-main-time">1 Day ago</p>
+                  </div>
+                </div>
+
+                <div class="notification">
+                  <img
+                    src="../public/img/p-01.png"
+                    alt="User's profile image"
+                    class="notification-img"
+                  />
+                  <div class="notification-main">
+                    <p class="notification-main-text">
+                      Abdula Ahmed wants to invite you to become a
+                      <span>member</span> of the team <span>salsa-kings</span>
+                    </p>
+                    <div class="notification-main-buttons">
+                      <button class="button notification-button confirm">
+                        Confirm
+                      </button>
+                      <button class="button notification-button deny">
+                        Deny
+                      </button>
+                    </div>
+                    <p class="notification-main-time">1 Day ago</p>
+                  </div>
+                </div>
+
+                <div class="notification">
+                  <img
+                    src="../public/img/p-01.png"
+                    alt="User's profile image"
+                    class="notification-img"
+                  />
+                  <div class="notification-main">
+                    <p class="notification-main-text">
+                      Abdula Ahmed wants to invite you to become a
+                      <span>member</span> of the team <span>salsa-kings</span>
+                    </p>
+                    <div class="notification-main-buttons">
+                      <button class="button notification-button confirm">
+                        Confirm
+                      </button>
+                      <button class="button notification-button deny">
+                        Deny
+                      </button>
+                    </div>
+                    <p class="notification-main-time">1 Day ago</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="custom-dropdown user-dropdown">
+            <button
+              class="custom-dropdown-trigger initials"
+              tabindex="-1"
+              onclick="this.focus()"
+            >
+              M
+            </button>
+            <ul class="custom-dropdown-menu">
+              <li class="user-dropdown-menu-header">
+                <div class="user-dropdown-menu-header-set">
+                  <div class="user-dropdown-menu-header-set-initials">M</div>
+                  <div class="user-dropdown-menu-header-set-upload">
+                    <i class="icon-camera"></i>
+                  </div>
+                </div>
+                <p class="user-dropdown-menu-header-title">Max Matinpalo</p>
+                <p class="user-dropdown-menu-header-desc">
+                  Click here to add your job title
+                </p>
+              </li>
+              <li class="user-dropdown-menu-item">Open user settings</li>
+              <li class="user-dropdown-menu-item">Sign out</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="side">
+        <div class="side-arrow toggle-side-menu">
+          <i class="icon-chevron-left"></i>
+        </div>
+        <div class="side-bar-toggle"></div>
+        <div class="side-bar">
+          <div class="side-bar-top">
+            <button class="side-bar-item active">
+              <i class="icon-users"></i>
+            </button>
+            <button class="side-bar-item">
+              <i class="icon-user"></i>
+            </button>
+            <button class="side-bar-item">
+              <i class="icon-give-feedback"></i>
+            </button>
+          </div>
+
+          <div class="side-bar-bottom">
+            <button class="side-bar-item">
+              <i class="icon-cog-full"></i>
+            </button>
+            <button class="side-bar-item">
+              <i class="icon-exit"></i>
+            </button>
+            <button class="side-bar-item">
+              <div class="initials">T</div>
+            </button>
+          </div>
+        </div>
+        <div class="side-menu">
+          <div class="side-menu-slide-wrapper">
+            <div class="side-menu-slide slide-01 active">
+              <div class="side-menu-slide-body active">
+                <div class="side-menu-slide-body-section section-01">
+                  <button class="side-menu-slide-body-section-title">
+                    Your Teams
+                  </button>
+                  <button class="side-menu-slide-body-section-item active">
+                    Team Sales
+                    <div class="side-menu-slide-body-section-item-close">
+                      <i class="icon-close"></i>
+                    </div>
+                  </button>
+                  <button class="side-menu-slide-body-section-item active">
+                    Team Marketing
+                    <div class="side-menu-slide-body-section-item-close">
+                      <i class="icon-close"></i>
+                    </div>
+                  </button>
+                  <button class="side-menu-slide-body-section-item">
+                    Team Recruitment
+                    <div class="side-menu-slide-body-section-item-close">
+                      <i class="icon-close"></i>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="side-menu-slide-body-section section-02">
+                  <button class="side-menu-slide-body-section-title">
+                    Your viewing rights
+                  </button>
+                  <button class="side-menu-slide-body-section-item">
+                    Team Management
+                  </button>
+                  <button class="side-menu-slide-body-section-item">
+                    Team Sales
+                  </button>
+                  <button class="side-menu-slide-body-section-item">
+                    Team Developers
+                  </button>
+                </div>
+
+                <div class="side-menu-slide-body-buttons section-03">
+                  <button class="side-menu-slide-body-buttons-item">
+                    <i class="icon-plus-circle-full"></i>
+                    Create a new team
+                  </button>
+                  <button class="side-menu-slide-body-buttons-item">
+                    <i class="icon-shield-circle"></i>
+                    Request new rights
+                  </button>
+                </div>
+
+                <button class="compare-button">
+                  <i class="icon-compare"></i>
+                  <p class="compare-button-text">Exit compare mode</p>
+                </button>
+              </div>
+            </div>
+
+            <div class="side-menu-slide slide-02">
+              <div class="side-menu-slide-header">
+                <div class="side-menu-slide-header-set">
+                  <div class="side-menu-slide-header-set-icon">
+                    <i class="icon-chart-column"></i>
+                  </div>
+                  <div class="side-menu-slide-header-set-info">
+                    <p class="side-menu-slide-header-set-info-title">
+                      Team Marketing
+                    </p>
+                    <p class="side-menu-slide-header-set-info-desc">
+                      Example team description longer
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="side-menu-slide-header-back test-text"
+                  target-slide="slide-01"
+                  current-slide="slide-02"
+                  main-slide="true"
+                >
+                  <i class="icon-arrow-circle-left"></i>
+                  <p class="side-menu-slide-header-back-text">
+                    Back to teams overview
+                  </p>
+                </div>
+              </div>
+              <div class="side-menu-slide-body slide-body-02">
+                <button class="side-menu-slide-body-section-title">
+                  Team Members
+                </button>
+                <button class="side-menu-slide-body-section-item">
+                  Julia Martinez
+                </button>
+                <button class="side-menu-slide-body-section-item">
+                  Harald Schwarz
+                </button>
+                <button class="side-menu-slide-body-section-item">
+                  Ai Schwarz
+                </button>
+                <button class="side-menu-slide-body-section-item">
+                  Julia Martinez
+                </button>
+                <button class="side-menu-slide-body-section-item">
+                  Harald Schwarz
+                </button>
+                <button class="side-menu-slide-body-section-item">
+                  Ai Schwarz
+                </button>
+                <button class="side-menu-slide-body-section-item">
+                  Julia Martinez
+                </button>
+                <button class="side-menu-slide-body-section-item">
+                  Harald Schwarz
+                </button>
+                <button class="side-menu-slide-body-section-item">
+                  Ai Schwarz
+                </button>
+                <button class="side-menu-slide-body-section-item">
+                  Julia Martinez
+                </button>
+                <button class="side-menu-slide-body-section-item">
+                  Harald Schwarz
+                </button>
+                <button class="side-menu-slide-body-section-item">
+                  Ai Schwarz
+                </button>
+                <button class="side-menu-slide-body-section-item">
+                  Julia Martinez
+                </button>
+                <button class="side-menu-slide-body-section-item">
+                  Harald Schwarz
+                </button>
+                <button class="side-menu-slide-body-section-item">
+                  Ai Schwarz
+                </button>
+              </div>
+
+              <div class="side-menu-slide-body slide-body-01 active">
+                <button
+                  class="side-menu-slide-body-set active test-text"
+                  target-slide="slide-body-02"
+                  current-slide="slide-body-01"
+                >
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-chart-bar"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Feedback charts</p>
+                </button>
+
+                <button
+                  class="side-menu-slide-body-set test-text"
+                  target-slide="slide-body-02"
+                  current-slide="slide-body-01"
+                >
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-chat"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Text feedback</p>
+                </button>
+
+                <button
+                  class="side-menu-slide-body-set test-text"
+                  target-slide="slide-body-02"
+                  current-slide="slide-body-01"
+                >
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-users"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Team members</p>
+                </button>
+
+                <button
+                  class="side-menu-slide-body-set test-text"
+                  target-slide="slide-body-02"
+                  current-slide="slide-body-01"
+                >
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-git-pull"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Feedback requests</p>
+                </button>
+
+                <button
+                  class="side-menu-slide-body-set test-text"
+                  target-slide="slide-body-02"
+                  current-slide="slide-body-01"
+                >
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-document"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Feedback reports</p>
+                </button>
+
+                <button
+                  class="side-menu-slide-body-set test-text"
+                  target-slide="slide-body-02"
+                  current-slide="slide-body-01"
+                >
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-question-circle"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Custom feedback</p>
+                </button>
+
+                <button
+                  class="side-menu-slide-body-set test-text"
+                  target-slide="slide-body-02"
+                  current-slide="slide-body-01"
+                >
+                  <div class="side-menu-slide-body-set-icon">
+                    <i class="icon-cog-full"></i>
+                  </div>
+                  <p class="side-menu-slide-body-set-text">Team settings</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-content-wrapper">
+        <div class="page-header page-header-compare">
+          <div class="header-buttons">
+            <button class="fullscreen-toggle">
+              <i class="icon-fullscreen-enter"></i>
+              <i class="icon-fullscreen-exit"></i>
+            </button>
+            <!-- SETTINGS DROPDOWN -->
+            <div class="custom-dropdown settings-dropdown">
+              <button
+                class="custom-dropdown-trigger"
+                tabindex="-1"
+                onclick="this.focus()"
+              >
+                <i class="icon-cog"></i>
+              </button>
+              <ul class="custom-dropdown-menu">
+                <li class="custom-dropdown-menu-title-big">
+                  <p class="custom-dropdown-menu-title-big-text">Settings</p>
+                </li>
+                <li class="custom-dropdown-menu-title-small">
+                  <p class="custom-dropdown-menu-title-small-text">Menu mode</p>
+                </li>
+                <li class="custom-dropdown-menu-nav-pos-wrapper">
+                  <div class="custom-dropdown-menu-nav-pos top-nav-trigger">
+                    <div class="custom-dropdown-menu-nav-pos-check">
+                      <span></span>
+                    </div>
+
+                    <div class="custom-dropdown-menu-nav-pos-set">
+                      <p class="custom-dropdown-menu-nav-pos-set-title">
+                        Fixed top menu
+                      </p>
+                      <p class="custom-dropdown-menu-nav-pos-set-desc">
+                        Default for beginners
+                      </p>
+                    </div>
+                    <img
+                      src="../public/img/nav-pos-top.png"
+                      alt="Position of navigation option"
+                      class="custom-dropdown-menu-nav-pos-img"
+                    />
+                  </div>
+
+                  <div class="custom-dropdown-menu-nav-pos side-nav-trigger">
+                    <div class="custom-dropdown-menu-nav-pos-check">
+                      <span></span>
+                    </div>
+
+                    <div class="custom-dropdown-menu-nav-pos-set">
+                      <p class="custom-dropdown-menu-nav-pos-set-title">
+                        Fixed side menu
+                      </p>
+                      <p class="custom-dropdown-menu-nav-pos-set-desc">
+                        For advanced users
+                      </p>
+                    </div>
+                    <img
+                      src="../public/img/nav-pos-left.png"
+                      alt="Position of navigation option"
+                      class="custom-dropdown-menu-nav-pos-img"
+                    />
+                  </div>
+
+                  <div
+                    class="custom-dropdown-menu-nav-pos side-nav-toggle-trigger"
+                  >
+                    <div class="custom-dropdown-menu-nav-pos-check">
+                      <span></span>
+                    </div>
+
+                    <div class="custom-dropdown-menu-nav-pos-set">
+                      <p class="custom-dropdown-menu-nav-pos-set-title">
+                        Toggled side menu
+                      </p>
+                      <p class="custom-dropdown-menu-nav-pos-set-desc">
+                        Full screen experience
+                      </p>
+                    </div>
+                    <img
+                      src="../public/img/nav-pos-left-toggle.png"
+                      alt="Position of navigation option"
+                      class="custom-dropdown-menu-nav-pos-img"
+                    />
+                  </div>
+                </li>
+                <li class="custom-dropdown-menu-title-small">
+                  <p class="custom-dropdown-menu-title-small-text">
+                    Sidebar color
+                  </p>
+                </li>
+
+                <li class="custom-dropdown-menu-color">
+                  <p class="custom-dropdown-menu-color-name">
+                    <span class="custom-dropdown-menu-color-name-strong"
+                      >Ocean Blue</span
+                    >
+                    - Default
+                  </p>
+                  <div class="custom-dropdown-menu-color-set">
+                    <div
+                      class="custom-dropdown-menu-color-set-item primary active"
+                    >
+                      <span></span>
+                    </div>
+                    <div class="custom-dropdown-menu-color-set-item info">
+                      <span></span>
+                    </div>
+                    <div class="custom-dropdown-menu-color-set-item warning">
+                      <span></span>
+                    </div>
+                    <div class="custom-dropdown-menu-color-set-item dark">
+                      <span></span>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="custom-dropdown-menu-title-small">
+                  <p class="custom-dropdown-menu-title-small-text">
+                    Content size
+                  </p>
+                </li>
+
+                <li class="custom-dropdown-menu-size">
+                  <p class="custom-dropdown-menu-size-text">
+                    <span class="custom-dropdown-menu-size-text-strong"
+                      >Zoom factor</span
+                    >
+                    - Natural
+                  </p>
+
+                  <div class="custom-dropdown-menu-size-set">
+                    <button class="custom-dropdown-menu-size-set-item minus">
+                      <i class="icon-minus-outlined"></i>
+                    </button>
+
+                    <button class="custom-dropdown-menu-size-set-item plus">
+                      <i class="icon-plus-outlined"></i>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- HELP DROPDOWN -->
+            <div class="custom-dropdown help-dropdown">
+              <button class="custom-dropdown-trigger">
+                <i class="icon-question"></i>
+              </button>
+            </div>
+
+            <!-- NOTIFICATION DROPDOWN -->
+            <div class="custom-dropdown notification-dropdown">
+              <div
+                class="custom-dropdown-trigger"
+                tabindex="-1"
+                onclick="this.focus()"
+              >
+                <i class="icon-bell"></i>
+              </div>
+
+              <ul class="custom-dropdown-menu">
+                <li class="custom-dropdown-menu-title-big">
+                  <p class="custom-dropdown-menu-title-big-text">
+                    Notifications (4)
+                  </p>
+                </li>
+                <li class="custom-dropdown-menu-title-small">
+                  <p class="custom-dropdown-menu-title-small-text">
+                    Invitations / Rights
+                  </p>
+                </li>
+                <li class="custom-dropdown-menu-notifications">
+                  <div class="notification">
+                    <img
+                      src="../public/img/p-01.png"
+                      alt="User's profile image"
+                      class="notification-img"
+                    />
+                    <div class="notification-main">
+                      <p class="notification-main-text">
+                        Abdula Ahmed wants to invite you to become a
+                        <span>member</span> of the team <span>salsa-kings</span>
+                      </p>
+                      <div class="notification-main-buttons">
+                        <button class="notification-button confirm">
+                          Confirm
+                        </button>
+                        <button class="notification-button deny">Deny</button>
+                      </div>
+                      <p class="notification-main-time">1 Day ago</p>
+                    </div>
+                  </div>
+
+                  <div class="notification">
+                    <img
+                      src="../public/img/p-01.png"
+                      alt="User's profile image"
+                      class="notification-img"
+                    />
+                    <div class="notification-main">
+                      <p class="notification-main-text">
+                        Abdula Ahmed wants to invite you to become a
+                        <span>member</span> of the team <span>salsa-kings</span>
+                      </p>
+                      <div class="notification-main-buttons">
+                        <button class="button notification-button confirm">
+                          Confirm
+                        </button>
+                        <button class="button notification-button deny">
+                          Deny
+                        </button>
+                      </div>
+                      <p class="notification-main-time">1 Day ago</p>
+                    </div>
+                  </div>
+
+                  <div class="notification">
+                    <img
+                      src="../public/img/p-01.png"
+                      alt="User's profile image"
+                      class="notification-img"
+                    />
+                    <div class="notification-main">
+                      <p class="notification-main-text">
+                        Abdula Ahmed wants to invite you to become a
+                        <span>member</span> of the team <span>salsa-kings</span>
+                      </p>
+                      <div class="notification-main-buttons">
+                        <button class="button notification-button confirm">
+                          Confirm
+                        </button>
+                        <button class="button notification-button deny">
+                          Deny
+                        </button>
+                      </div>
+                      <p class="notification-main-time">1 Day ago</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="custom-dropdown user-dropdown">
+              <button
+                class="custom-dropdown-trigger initials"
+                tabindex="-1"
+                onclick="this.focus()"
+              >
+                M
+              </button>
+              <ul class="custom-dropdown-menu">
+                <li class="user-dropdown-menu-header">
+                  <div class="user-dropdown-menu-header-set">
+                    <div class="user-dropdown-menu-header-set-initials">M</div>
+                    <div class="user-dropdown-menu-header-set-upload">
+                      <i class="icon-camera"></i>
+                    </div>
+                  </div>
+                  <p class="user-dropdown-menu-header-title">Max Matinpalo</p>
+                  <p class="user-dropdown-menu-header-desc">
+                    Click here to add your job title
+                  </p>
+                </li>
+                <li class="user-dropdown-menu-item">Open user settings</li>
+                <li class="user-dropdown-menu-item">Sign out</li>
+              </ul>
+            </div>
+          </div>
+          <div class="page-header-info">
+            <!-- <img
+              src="../public/img/p-01.png"
+              alt="User's profile picture"
+              class="page-header-info-img"
+            /> -->
+            <div class="page-header-info-icon">
+              <i class="icon-compare"></i>
+            </div>
+            <div>
+              <p class="page-header-info-name">
+                <span class="page-header-info-name-strong"
+                  >Teams Compare Mode</span
+                >
+              </p>
+              <p class="page-header-info-position">
+                Click <button>here</button> to exit compare mode
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-content">
+          <div class="compare-wrapper">
+            <div class="compare-card">
+              <div class="compare-card-header">
+                <div class="compare-card-header-order">
+                  <div class="compare-card-header-order-left disabled">
+                    <i class="icon-chevron-left"></i>
+                  </div>
+                  <div class="compare-card-header-order-right">
+                    <i class="icon-chevron-right"></i>
+                  </div>
+                </div>
+                <div class="compare-card-header-close">
+                  <i class="icon-close"></i>
+                </div>
+
+                <p class="compare-card-header-title">Team iOS</p>
+                <p class="compare-card-header-desc">
+                  This is the team description
+                </p>
+              </div>
+
+              <div class="compare-card-body">
+                <div class="graph-header">
+                  <p class="graph-header-title">Team average score</p>
+                  <button class="graph-header-button">Months</button>
+                </div>
+                <div class="graph">
+                  <div class="graph-bar">
+                    <div class="graph-bar-fill bad" style="height: 30%"></div>
+                    <div class="graph-bar-info">Jan</div>
+                  </div>
+                  <div class="graph-bar">
+                    <div class="graph-bar-fill bad" style="height: 35%"></div>
+                    <div class="graph-bar-info">Feb</div>
+                  </div>
+                  <div class="graph-bar">
+                    <div class="graph-bar-fill ok" style="height: 60%"></div>
+                    <div class="graph-bar-info">Mar</div>
+                  </div>
+                  <div class="graph-bar">
+                    <div class="graph-bar-fill good" style="height: 80%"></div>
+                    <div class="graph-bar-info">Apr</div>
+                  </div>
+                  <div class="graph-bar">
+                    <div class="graph-bar-fill good" style="height: 70%"></div>
+                    <div class="graph-bar-info">May</div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-header">
+                    <p class="progress-header-title">Attitude</p>
+                    <p class="progress-header-grade">Good</p>
+                  </div>
+                  <div class="progress-bar">
+                    <div
+                      class="progress-bar-fill good"
+                      style="width: 80%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-header">
+                    <p class="progress-header-title">Productivity</p>
+                    <p class="progress-header-grade">Amazing</p>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill ok" style="width: 40%"></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-header">
+                    <p class="progress-header-title">Teamworking</p>
+                    <p class="progress-header-grade">Great +</p>
+                  </div>
+                  <div class="progress-bar">
+                    <div
+                      class="progress-bar-fill good"
+                      style="width: 80%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-header">
+                    <p class="progress-header-title">Feeling in team</p>
+                    <p class="progress-header-grade">Poor</p>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill bad" style="width: 25%"></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-header">
+                    <p class="progress-header-title">How work is organised</p>
+                    <p class="progress-header-grade">Amazing</p>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill ok" style="width: 40%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="compare-card">
+              <div class="compare-card-header">
+                <div class="compare-card-header-order">
+                  <div class="compare-card-header-order-left disabled">
+                    <i class="icon-chevron-left"></i>
+                  </div>
+                  <div class="compare-card-header-order-right">
+                    <i class="icon-chevron-right"></i>
+                  </div>
+                </div>
+                <div class="compare-card-header-close">
+                  <i class="icon-close"></i>
+                </div>
+
+                <p class="compare-card-header-title">Team iOS</p>
+                <p class="compare-card-header-desc">
+                  This is the team description
+                </p>
+              </div>
+
+              <div class="compare-card-body">
+                <div class="graph-header">
+                  <p class="graph-header-title">Team average score</p>
+                  <button class="graph-header-button">Months</button>
+                </div>
+                <div class="graph">
+                  <div class="graph-bar">
+                    <div class="graph-bar-fill bad" style="height: 30%"></div>
+                    <div class="graph-bar-info">Jan</div>
+                  </div>
+                  <div class="graph-bar">
+                    <div class="graph-bar-fill bad" style="height: 35%"></div>
+                    <div class="graph-bar-info">Feb</div>
+                  </div>
+                  <div class="graph-bar">
+                    <div class="graph-bar-fill ok" style="height: 60%"></div>
+                    <div class="graph-bar-info">Mar</div>
+                  </div>
+                  <div class="graph-bar">
+                    <div class="graph-bar-fill good" style="height: 80%"></div>
+                    <div class="graph-bar-info">Apr</div>
+                  </div>
+                  <div class="graph-bar">
+                    <div class="graph-bar-fill good" style="height: 70%"></div>
+                    <div class="graph-bar-info">May</div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-header">
+                    <p class="progress-header-title">Attitude</p>
+                    <p class="progress-header-grade">Good</p>
+                  </div>
+                  <div class="progress-bar">
+                    <div
+                      class="progress-bar-fill good"
+                      style="width: 80%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-header">
+                    <p class="progress-header-title">Productivity</p>
+                    <p class="progress-header-grade">Amazing</p>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill ok" style="width: 40%"></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-header">
+                    <p class="progress-header-title">Teamworking</p>
+                    <p class="progress-header-grade">Great +</p>
+                  </div>
+                  <div class="progress-bar">
+                    <div
+                      class="progress-bar-fill good"
+                      style="width: 80%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-header">
+                    <p class="progress-header-title">Feeling in team</p>
+                    <p class="progress-header-grade">Poor</p>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill bad" style="width: 25%"></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-header">
+                    <p class="progress-header-title">How work is organised</p>
+                    <p class="progress-header-grade">Amazing</p>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill ok" style="width: 40%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="compare-card">
+              <div class="compare-card-header">
+                <div class="compare-card-header-order">
+                  <div class="compare-card-header-order-left disabled">
+                    <i class="icon-chevron-left"></i>
+                  </div>
+                  <div class="compare-card-header-order-right">
+                    <i class="icon-chevron-right"></i>
+                  </div>
+                </div>
+                <div class="compare-card-header-close">
+                  <i class="icon-close"></i>
+                </div>
+
+                <p class="compare-card-header-title">Team iOS</p>
+                <p class="compare-card-header-desc">
+                  This is the team description
+                </p>
+              </div>
+
+              <div class="compare-card-body">
+                <div class="graph-header">
+                  <p class="graph-header-title">Team average score</p>
+                  <button class="graph-header-button">Months</button>
+                </div>
+                <div class="graph">
+                  <div class="graph-bar">
+                    <div class="graph-bar-fill bad" style="height: 30%"></div>
+                    <div class="graph-bar-info">Jan</div>
+                  </div>
+                  <div class="graph-bar">
+                    <div class="graph-bar-fill bad" style="height: 35%"></div>
+                    <div class="graph-bar-info">Feb</div>
+                  </div>
+                  <div class="graph-bar">
+                    <div class="graph-bar-fill ok" style="height: 60%"></div>
+                    <div class="graph-bar-info">Mar</div>
+                  </div>
+                  <div class="graph-bar">
+                    <div class="graph-bar-fill good" style="height: 80%"></div>
+                    <div class="graph-bar-info">Apr</div>
+                  </div>
+                  <div class="graph-bar">
+                    <div class="graph-bar-fill good" style="height: 70%"></div>
+                    <div class="graph-bar-info">May</div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-header">
+                    <p class="progress-header-title">Attitude</p>
+                    <p class="progress-header-grade">Good</p>
+                  </div>
+                  <div class="progress-bar">
+                    <div
+                      class="progress-bar-fill good"
+                      style="width: 80%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-header">
+                    <p class="progress-header-title">Productivity</p>
+                    <p class="progress-header-grade">Amazing</p>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill ok" style="width: 40%"></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-header">
+                    <p class="progress-header-title">Teamworking</p>
+                    <p class="progress-header-grade">Great +</p>
+                  </div>
+                  <div class="progress-bar">
+                    <div
+                      class="progress-bar-fill good"
+                      style="width: 80%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-header">
+                    <p class="progress-header-title">Feeling in team</p>
+                    <p class="progress-header-grade">Poor</p>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill bad" style="width: 25%"></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-header">
+                    <p class="progress-header-title">How work is organised</p>
+                    <p class="progress-header-grade">Amazing</p>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill ok" style="width: 40%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="custom-modal-wrapper" id="modal-01">
+      <div class="custom-modal">
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="modal-01">
+            <i class="icon-close"></i>
+          </div>
+          <div class="custom-modal-buttons">
+            <button class="button button-white" close-modal="modal-01">
+              Cancel
+            </button>
+            <button class="button button-primary">Ok</button>
+          </div>
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/e9f50f9a1c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      //TOGGLE SIDE MENU
+      document
+        .querySelector(".toggle-side-menu")
+        .addEventListener("click", function () {
+          document
+            .querySelector(".side-menu")
+            .classList.toggle("side-menu-close");
+          if (
+            document
+              .querySelector(".side-menu")
+              .classList.contains("side-menu-close")
+          ) {
+            this.classList.add("rotate");
+            //document.querySelector(".side-bar").classList.add("relative");
+            document.documentElement.style.setProperty(
+              "--side-menu-width",
+              "3em"
+            );
+          } else {
+            this.classList.remove("rotate");
+            //document.querySelector(".side-bar").classList.remove("relative");
+            document.documentElement.style.setProperty(
+              "--side-menu-width",
+              "24em"
+            );
+          }
+        });
+
+      // TOP NAV TRIGGER
+      document.querySelectorAll(".top-nav-trigger").forEach((e) => {
+        e.addEventListener("click", function () {
+          document.querySelector(".main").classList.add("top-nav");
+          document.querySelector(".main").classList.remove("side-nav");
+          document.querySelector(".main").classList.remove("side-nav-toggle");
+        });
+      });
+
+      // SIDE NAV TRIGGER
+      document.querySelectorAll(".side-nav-trigger").forEach((e) => {
+        e.addEventListener("click", function () {
+          document.querySelector(".main").classList.add("side-nav");
+          document.querySelector(".main").classList.remove("top-nav");
+          document.querySelector(".main").classList.remove("side-nav-toggle");
+        });
+      });
+
+      // SIDE NAV TOGGLE TRIGGER
+      document.querySelectorAll(".side-nav-toggle-trigger").forEach((e) => {
+        e.addEventListener("click", function () {
+          document.querySelector(".main").classList.add("side-nav-toggle");
+          document.querySelector(".main").classList.remove("side-nav");
+          document.querySelector(".main").classList.remove("top-nav");
+        });
+      });
+
+      //MODAL
+      let modalTriggers = document.querySelectorAll(".modal-trigger");
+      let modalCloseBtns = document.querySelectorAll("[close-modal]");
+      console.log(modalCloseBtns);
+
+      modalTriggers.forEach((e) => {
+        e.addEventListener("click", function () {
+          let modal = document.getElementById(
+            `${e.getAttribute("target-modal")}`
+          );
+          modal.classList.add("open");
+        });
+      });
+
+      modalCloseBtns.forEach((e) => {
+        e.addEventListener("click", function () {
+          let modal = document.getElementById(
+            `${e.getAttribute("close-modal")}`
+          );
+          modal.classList.remove("open");
+        });
+      });
+
+      //SIDE MENU SLIDER
+      let sideMenuSlides = document.querySelectorAll(".side-menu-slide");
+
+      let sideMenuTriggers = document.querySelectorAll(".test-text");
+
+      sideMenuTriggers.forEach((e) => {
+        e.addEventListener("click", function () {
+          let currentIndex;
+          let targetIndex;
+
+          let currentClass = e.getAttribute("current-slide");
+          let targetClass = e.getAttribute("target-slide");
+
+          let currentSlide = document.querySelector(`.${currentClass}`);
+          let targetSlide = document.querySelector(`.${targetClass}`);
+
+          let mainSlide = e.getAttribute("main-slide");
+
+          // Check if menu-slide or sub-menu-slide
+          if (mainSlide) {
+            currentIndex = parseInt(currentClass.split("-")[1]);
+            targetIndex = parseInt(targetClass.split("-")[1]);
+          } else {
+            currentIndex = parseInt(currentClass.split("-")[2]);
+            targetIndex = parseInt(targetClass.split("-")[2]);
+          }
+
+          // Remove active from current & add to target
+          currentSlide.classList.remove("active");
+          targetSlide.classList.add("active");
+
+          // Check for direction of animation. left or right
+          if (currentIndex < targetIndex) {
+            currentSlide.style.animation = "slide-out-left .5s ease-in-out";
+            targetSlide.style.animation = "slide-in-left .5s ease-in-out";
+          } else {
+            currentSlide.style.animation = "slide-out-right .5s ease-in-out";
+            targetSlide.style.animation = "slide-in-right .5s ease-in-out";
+          }
+        });
+      });
+
+      //FULL SCREEN MODE
+      let fullScreenToggle = document.querySelectorAll(".fullscreen-toggle");
+
+      let enterFs = document.fullscreenElement ? "requestFullscreen" : null;
+
+      console.log(enterFs);
+
+      function getFullscreenElement() {
+        return (
+          document.fullscreenElement ||
+          document.webkitFullscreenElement ||
+          document.mozFullscreenElement ||
+          document.msFullscreenElement
+        );
+      }
+
+      function toggleFullscreen() {
+        if (getFullscreenElement()) {
+          document.exitFullscreen =
+            document.exitFullscreen ||
+            document.mozExitFullscreen ||
+            document.webkitExitFullscreen ||
+            document.msExitFullscreen;
+
+          document.exitFullscreen();
+        } else {
+          document.documentElement.requestFullscreen =
+            document.documentElement.requestFullscreen ||
+            document.documentElement.mozRequestFullScreen ||
+            document.documentElement.webkitRequestFullscreen ||
+            document.documentElement.msRequestFullscreen;
+
+          document.documentElement.requestFullscreen();
+        }
+      }
+
+      fullScreenToggle.forEach((e) => {
+        e.addEventListener("click", () => {
+          e.classList.toggle("active");
+          toggleFullscreen();
+        });
+      });
+
+      //COLOR THEME SETTINGS
+      let colorTriggers = document.querySelectorAll(
+        ".custom-dropdown-menu-color-set-item"
+      );
+
+      colorTriggers.forEach((e) => {
+        e.addEventListener("click", function () {
+          colorTriggers.forEach((e) => {
+            e.classList.remove("active");
+          });
+          this.classList.add("active");
+          if (this.classList.contains("primary")) {
+            document.documentElement.style.setProperty(
+              "--color-primary",
+              "#086cf9"
+            );
+
+            document.documentElement.style.setProperty(
+              "--gradient-primary",
+              "linear-gradient(#1d7bff, #0066f8)"
+            );
+          } else if (this.classList.contains("info")) {
+            document.documentElement.style.setProperty(
+              "--color-primary",
+              "#0997fa"
+            );
+
+            document.documentElement.style.setProperty(
+              "--gradient-primary",
+              "linear-gradient(#009dff, #0a8eff)"
+            );
+          } else if (this.classList.contains("warning")) {
+            document.documentElement.style.setProperty(
+              "--color-primary",
+              "#ffa82b"
+            );
+
+            document.documentElement.style.setProperty(
+              "--gradient-primary",
+              "linear-gradient(#ff9d00, #ffb40a)"
+            );
+          } else if (this.classList.contains("dark")) {
+            document.documentElement.style.setProperty(
+              "--color-primary",
+              "#565656"
+            );
+
+            document.documentElement.style.setProperty(
+              "--gradient-primary",
+              "linear-gradient(#646464, #4a4a4a)"
+            );
+          }
+        });
+      });
+
+      //BURGER CLOSE
+      let burgerCloseBtn = document.querySelector(".burger-dropdown .close");
+
+      burgerCloseBtn.addEventListener("click", function () {
+        this.parentElement.style.display = "none";
+      });
+
+      //NOT PRODUCTION LINKING TO PEOPLE FEEDBACK RECEIVED
+      let peopleFeedgackReceivedLinks = document.querySelectorAll(
+        ".slide-body-02 .side-menu-slide-body-section-item"
+      );
+
+      peopleFeedgackReceivedLinks.forEach((e) => {
+        e.addEventListener("click", function () {
+          location.href = "../people-feedback-received";
+        });
+      });
+    </script>
+  </body>
+</html>
