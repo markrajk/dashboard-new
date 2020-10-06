@@ -2753,7 +2753,7 @@ body {
 #team-members .page-content {
   min-width: 0;
   width: 100%;
-  height: calc( 100vh - var(--padding-top) - var(--page-header-height-default) );
+  height: calc(100% - var(--page-header-height-default));
   overflow-x: hidden; }
   #team-members .page-content .people {
     margin: 0 -1.75em;
