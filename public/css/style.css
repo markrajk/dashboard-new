@@ -3216,7 +3216,7 @@ body {
           color: #2c374a; }
       #people-feedback-received .feedback-main-item .read-more {
         display: none;
-        padding-left: 0.3rem;
+        padding-left: 2em;
         position: absolute;
         bottom: 0;
         right: 0;
@@ -3224,8 +3224,8 @@ body {
         color: #adadad;
         font-size: 1.2em;
         letter-spacing: -0.03px;
-        background: black;
-        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, white 5%);
+        background-color: #fff;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 25%, white 100%);
         cursor: pointer; }
       #people-feedback-received .feedback-main-item.trunc {
         overflow: hidden;
