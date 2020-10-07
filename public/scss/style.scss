@@ -1148,6 +1148,10 @@ body {
     background-color: #fff;
     border-radius: 4px;
     border: solid 1px #e1e4e8;
+
+    &:hover {
+      background-color: #f6f6f6;
+    }
   }
 }
 
@@ -1703,7 +1707,7 @@ body {
 
     &.open {
       & .custom-accordion-card-body {
-        max-height: 100vh;
+        max-height: 9999px;
         transition: max-height 1s ease-in-out;
       }
     }
@@ -1907,7 +1911,7 @@ body {
           position: absolute;
           top: 50%;
           left: 50%;
-          width: calc(100% + 1.06em);
+          width: calc(100% + 1.46em);
           height: emcalc(3.2, 1.325);
           background-color: #e2edfe;
           transform: translate(-50%, -50%);
@@ -2395,7 +2399,7 @@ body {
     border-bottom: 1.5px solid #ebecf0;
 
     & .give-feedback-button {
-      margin-top: -1.1em;
+      margin-top: -2em;
       margin-left: auto;
 
       & .button {
@@ -2506,6 +2510,7 @@ body {
   transition: all 0.5s ease-in-out;
   transition-property: height width;
   overflow-y: auto;
+  //overflow-x: auto;
   scrollbar-width: none;
   /* Firefox */
   -ms-overflow-style: none;
@@ -2861,7 +2866,7 @@ body {
 
   & .custom-dropdown {
     &-trigger {
-      padding: 0 1.2em;
+      padding: 0 emcalc(1.2, 1.23);
       @include inline-flex();
       @include align-items(center);
       @include justify-content(space-between);
@@ -2869,10 +2874,36 @@ body {
       height: 3.4em;
       border-radius: 4px;
       border: solid 1px #cfd7e0;
+      font-size: 1.23em;
+      font-weight: 400;
+      letter-spacing: -0.06px;
+      color: #2d3640;
 
       & .icon-caret-down {
-        font-size: 0.7em;
+        font-size: emcalc(0.7, 1.23);
         color: #686f7c;
+      }
+    }
+
+    &-menu {
+      width: 100%;
+      border: solid 1px #cfd7e0;
+      background-color: #fff;
+
+      &-item {
+        padding: emcalc(1.2, 1.23);
+        font-size: 1.23em;
+        font-weight: 400;
+        letter-spacing: -0.06px;
+        color: #2d3640;
+
+        &:not(:last-of-type) {
+          border-bottom: solid 1px #cfd7e0;
+        }
+
+        &:hover {
+          background-color: #f5f5f5;
+        }
       }
     }
   }
@@ -3729,6 +3760,13 @@ body {
     width: 100%;
   }
 
+  & .page-content {
+    min-width: 0;
+    width: 100%;
+    overflow-x: hidden;
+    height: calc(100% - var(--page-header-height-compare)) !important;
+  }
+
   & .side {
     & .side-menu-slide-body-section-item-close {
       display: none;
@@ -3769,15 +3807,9 @@ body {
     }
   }
 
-  & .page-content {
-    min-width: 0;
-    width: 100%;
-    height: calc(100% - var(--page-header-height-compare));
-  }
-
   & .compare-wrapper {
     margin: 0 -1.75em;
-    margin-top: 3.5em;
+    padding-top: 3.5em;
     @include flexbox();
     @include align-items(flex-start);
     @include justify-content(flex-start);
@@ -3796,7 +3828,7 @@ body {
 
     &-header {
       padding-top: 1.9em;
-      padding-bottom: 1.65em;
+      padding-bottom: 1.5em;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -3876,13 +3908,14 @@ body {
   }
 
   & .graph-header {
-    padding-top: 2em;
+    padding-top: 1.8em;
     padding-bottom: 1.8em;
     @include flexbox();
     @include align-items(center);
     @include justify-content(space-between);
 
     &-title {
+      margin-left: -0.15rem;
       font-size: 1.28em;
       font-weight: 500;
       letter-spacing: -0.06px;
@@ -3899,7 +3932,7 @@ body {
   }
 
   & .graph {
-    margin-bottom: 1.9em;
+    margin-bottom: 1.8em;
     padding-bottom: 4.3em;
     @include flexbox();
     @include align-items(center);
@@ -3939,12 +3972,13 @@ body {
 
       &-info {
         position: absolute;
+        left: 50%;
         bottom: -1.17rem;
         font-size: 1.05em;
         font-weight: 500;
         letter-spacing: 0.05px;
         color: #172b4d;
-        transform: translate(0, 100%);
+        transform: translate(-50%, 100%);
       }
     }
   }
@@ -3953,7 +3987,7 @@ body {
     margin-bottom: 4em;
 
     &:not(:last-of-type) {
-      margin-bottom: 3em;
+      margin-bottom: 2.9em;
     }
 
     &-header {
@@ -4319,6 +4353,8 @@ body {
 
     & .custom-dropdown-trigger {
       & .icon-caret-down {
+        margin-top: -0.1em;
+        margin-left: 0.2rem;
         font-size: emcalc(0.65, 1.13);
       }
     }

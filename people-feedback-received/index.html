@@ -1090,6 +1090,7 @@
                   <button
                     class="section-header-toggle accordion-card-trigger"
                     accordion-trigger-target="card-01"
+                    onclick="if(/Close/.test(this.innerText)) {this.innerHTML = `Open section <i class='icon-arrow-down'></i>`} else {this.innerHTML = `Close section <i class='icon-arrow-up'></i>`}"
                   >
                     Close section <i class="icon-arrow-down"></i>
                   </button>
@@ -1533,6 +1534,7 @@
                   <button
                     class="section-header-toggle accordion-card-trigger"
                     accordion-trigger-target="card-02"
+                    onclick="if(/Close/.test(this.innerText)) {this.innerHTML = `Open section <i class='icon-arrow-down'></i>`} else {this.innerHTML = `Close section <i class='icon-arrow-up'></i>`}"
                   >
                     Close section <i class="icon-arrow-down"></i>
                   </button>
@@ -1976,6 +1978,7 @@
                   <button
                     class="section-header-toggle accordion-card-trigger"
                     accordion-trigger-target="card-03"
+                    onclick="if(/Close/.test(this.innerText)) {this.innerHTML = `Open section <i class='icon-arrow-down'></i>`} else {this.innerHTML = `Close section <i class='icon-arrow-up'></i>`}"
                   >
                     Close section <i class="icon-arrow-down"></i>
                   </button>
@@ -3066,6 +3069,7 @@
             .querySelectorAll(`.${e.getAttribute("accordion-trigger-target")}`)
             .forEach((e) => {
               e.classList.toggle("open");
+              console.log(e.innerText);
             });
         });
       });
