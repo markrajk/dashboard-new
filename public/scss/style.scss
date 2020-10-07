@@ -3509,9 +3509,49 @@ body {
 //        TEAM COMPARE
 //========================
 #team-compare {
+  overflow: hidden;
+
+  &.side-nav {
+    & .page-header {
+      @include respond(desktop-md) {
+        margin-left: calc(var(--padding-left) + 10em);
+        width: calc(100vw - 10em - var(--padding-left) - var(--padding-right));
+      }
+    }
+
+    & .compare-wrapper {
+      @include respond(desktop-md) {
+        padding-left: calc(var(--padding-left) + 10em);
+        margin-left: 0;
+        width: 100vw;
+      }
+    }
+  }
+
+  &.header {
+    width: 100vw;
+  }
+  & .page-content-wrapper {
+    // padding-left: var(--padding-left);
+    // padding-right: var(--padding-right);
+    // padding-top: var(--padding-top);
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   & .page-header {
     min-width: 0;
-    width: 100%;
+    margin-left: var(--padding-left);
+    margin-right: var(--padding-right);
+    width: calc(
+      100vw - var(--padding-left) - var(--padding-right) -
+        var(--side-menu-width)
+    );
+    transition: all 0.5s ease-in-out;
+    @include respond(desktop-md) {
+      margin-left: calc(var(--padding-left) + 2.5em);
+      width: calc(100vw - 2.5em - var(--padding-left) - var(--padding-right));
+    }
   }
 
   & .page-content {
@@ -3562,15 +3602,36 @@ body {
   }
 
   & .compare-wrapper {
-    margin: 0 -1.75em;
+    //margin: 0 -1.75em;
     padding-top: 3.5em;
+    padding-left: var(--padding-left);
+    padding-right: var(--padding-right);
     @include flexbox();
     @include align-items(flex-start);
     @include justify-content(flex-start);
+    overflow-x: auto;
+    width: calc(100vw - var(--side-menu-width));
+    transition: all 0.5s ease-in-out;
+    overflow-y: auto;
+    height: 100%;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+
+    &::-webkit-scrollbar {
+      /* WebKit */
+      width: 0;
+      //height: 0;
+    }
+    @include respond(desktop-md) {
+      margin-left: 2.5em;
+      width: calc(100vw - 2.5em);
+    }
   }
 
   & .compare-card {
-    margin: 0 1.75em;
+    margin-right: 1.75em;
     position: relative;
     padding-left: 2.2em;
     padding-right: 2.2em;
@@ -3579,6 +3640,10 @@ body {
     box-shadow: 0 4px 6px 0 rgba(240, 240, 240, 0.25);
     border: solid 1.5px #ebecf0;
     background-color: #ffffff;
+
+    &:not(:first-of-type) {
+      margin: 0 1.75em;
+    }
 
     &-header {
       padding-top: 1.9em;
