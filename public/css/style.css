@@ -3210,8 +3210,7 @@ body {
 
 #team-settings-general .page-header {
   min-width: 0;
-  width: 100%;
-  max-width: 81.7em; }
+  width: 100%; }
 #team-settings-general .page-content {
   min-width: 0;
   width: 100%;
@@ -3221,8 +3220,7 @@ body {
 
 #team-settings-members .page-header {
   min-width: 0;
-  width: 100%;
-  max-width: 81.7em; }
+  width: 100%; }
 #team-settings-members .page-content {
   padding-top: 3.9em;
   min-width: 0;
