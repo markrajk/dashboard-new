@@ -1843,7 +1843,7 @@ body {
     }
 
     &-name {
-      max-width: emcalc(20, 2);
+      max-width: 14vw;
       font-size: 2em;
       font-weight: 500;
       color: #172b4d;
@@ -2461,6 +2461,10 @@ body {
           transform: translate(-50%, 100%);
           border-bottom: 1.5px solid #7c7c7c;
         }
+
+        &:hover {
+          color: #19232e;
+        }
       }
 
       &-notification {
@@ -2871,13 +2875,18 @@ body {
       @include align-items(center);
       @include justify-content(space-between);
       width: 16.8em;
-      height: 3.4em;
+      height: emcalc(3.4, 1.23);
       border-radius: 4px;
       border: solid 1px #cfd7e0;
       font-size: 1.23em;
       font-weight: 400;
       letter-spacing: -0.06px;
       color: #2d3640;
+
+      &:focus {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
 
       & .icon-caret-down {
         font-size: emcalc(0.7, 1.23);
@@ -2888,10 +2897,15 @@ body {
     &-menu {
       width: 100%;
       border: solid 1px #cfd7e0;
+      border-top: 0;
       background-color: #fff;
 
       &-item {
-        padding: emcalc(1.2, 1.23);
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(flex-start);
+        padding: 0 emcalc(1.2, 1.23);
+        height: emcalc(3.4, 1.23);
         font-size: 1.23em;
         font-weight: 400;
         letter-spacing: -0.06px;
