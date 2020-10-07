@@ -91,7 +91,7 @@
   --gradient-dark: linear-gradient(#646464, #4a4a4a);
 
   //GENERAL COMPONENTS
-  --header-height: 5.5em;
+  --header-height: 6.4em;
   --side-bar-width: 7.5em;
   --side-menu-width: 24em;
   --side-closed-width: 2em;
@@ -1731,8 +1731,8 @@ body {
   z-index: 1000;
   transition: all 0.5s ease-in-out;
   transition-property: height opacity visibility;
-  top: -5.5em;
-  box-shadow: 0 3px 6px 0 rgba(147, 147, 162, 0.16);
+  top: -6.4em;
+  border-bottom: 1px solid #e5e5e5;
   background-color: #fff;
   grid-area: header;
   transform: translate(0, -100%);
@@ -1833,6 +1833,11 @@ body {
       border-radius: 3px;
       //background-color: #ededed;
 
+      &.empty {
+        min-width: 3.55em;
+        background-color: #ededed;
+      }
+
       &-img {
         min-height: 0;
         height: 100%;
@@ -1854,6 +1859,7 @@ body {
   }
 
   &-list {
+    height: 100%;
     margin: 0 auto;
     width: 100%;
     max-width: 53.2em;
@@ -1872,14 +1878,17 @@ body {
     }
 
     &-item {
+      height: 100%;
       margin-right: 2em;
       position: relative;
 
       &-link {
+        position: relative;
+        height: 100%;
         font-size: 1.325em;
         font-weight: 500;
         letter-spacing: -0.07px;
-        color: #344563;
+        color: #29323c;
         white-space: nowrap;
         cursor: pointer;
 
@@ -1895,7 +1904,7 @@ body {
           &::after {
             content: "";
             position: absolute;
-            bottom: -1.47em;
+            bottom: 0;
             left: 50%;
             display: block;
             width: 130%;
@@ -2042,7 +2051,7 @@ body {
   }
 
   &-close {
-    top: -5.5em !important;
+    top: -6.4em !important;
     opacity: 0;
     visibility: hidden;
   }
@@ -2286,7 +2295,6 @@ body {
 //    PAGE HEADER
 //========================
 .page-header {
-  position: relative;
   @include flexbox();
   @include flex-direction(column);
   @include align-items(flex-start);
@@ -2298,8 +2306,8 @@ body {
 
   & .header-buttons {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: var(--padding-top);
+    right: var(--padding-right);
     opacity: 1;
     visibility: visible;
     transition: all 0.5s ease-in-out;
@@ -4058,7 +4066,7 @@ body {
   & .page-header {
     min-width: 0;
     width: 100%;
-    // max-width: 81.7em;
+    max-width: 81.7em;
   }
 
   & .page-content {

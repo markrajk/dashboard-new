@@ -7,7 +7,7 @@
   --gradient-info: linear-gradient(#009dff, #0a8eff);
   --gradient-warning: linear-gradient(#ff9d00, #ffb40a);
   --gradient-dark: linear-gradient(#646464, #4a4a4a);
-  --header-height: 5.5em;
+  --header-height: 6.4em;
   --side-bar-width: 7.5em;
   --side-menu-width: 24em;
   --side-closed-width: 2em;
@@ -949,8 +949,8 @@ body {
   z-index: 1000;
   transition: all 0.5s ease-in-out;
   transition-property: height opacity visibility;
-  top: -5.5em;
-  box-shadow: 0 3px 6px 0 rgba(147, 147, 162, 0.16);
+  top: -6.4em;
+  border-bottom: 1px solid #e5e5e5;
   background-color: #fff;
   grid-area: header;
   transform: translate(0, -100%);
@@ -1046,6 +1046,9 @@ body {
       margin-right: 1em;
       height: 3.55em;
       border-radius: 3px; }
+      .header-company-logo.empty {
+        min-width: 3.55em;
+        background-color: #ededed; }
       .header-company-logo-img {
         min-height: 0;
         height: 100%;
@@ -1061,6 +1064,7 @@ body {
       overflow: hidden;
       text-overflow: ellipsis; }
   .header-list {
+    height: 100%;
     margin: 0 auto;
     width: 100%;
     max-width: 53.2em;
@@ -1088,13 +1092,16 @@ body {
       .header-list {
         display: none; } }
     .header-list-item {
+      height: 100%;
       margin-right: 2em;
       position: relative; }
       .header-list-item-link {
+        position: relative;
+        height: 100%;
         font-size: 1.325em;
         font-weight: 500;
         letter-spacing: -0.07px;
-        color: #344563;
+        color: #29323c;
         white-space: nowrap;
         cursor: pointer; }
         .header-list-item-link.active {
@@ -1106,7 +1113,7 @@ body {
           .header-list-item-link.active::after {
             content: "";
             position: absolute;
-            bottom: -1.47em;
+            bottom: 0;
             left: 50%;
             display: block;
             width: 130%;
@@ -1226,7 +1233,7 @@ body {
       font-size: 2.05em;
       color: #3c4043; }
   .header-close {
-    top: -5.5em !important;
+    top: -6.4em !important;
     opacity: 0;
     visibility: hidden; }
 
@@ -1462,7 +1469,6 @@ body {
   display: inline-block; }
 
 .page-header {
-  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -1490,8 +1496,8 @@ body {
   z-index: 800; }
   .page-header .header-buttons {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: var(--padding-top);
+    right: var(--padding-right);
     opacity: 1;
     visibility: visible;
     transition: all 0.5s ease-in-out; }
@@ -3210,7 +3216,8 @@ body {
 
 #team-settings-general .page-header {
   min-width: 0;
-  width: 100%; }
+  width: 100%;
+  max-width: 81.7em; }
 #team-settings-general .page-content {
   min-width: 0;
   width: 100%;
