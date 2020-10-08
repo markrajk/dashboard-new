@@ -2743,6 +2743,7 @@ body {
       background-color: #ebecf0;
       z-index: -1; }
   #team-compare .compare-wrapper {
+    height: 100%;
     padding-top: 3.5em;
     padding-left: var(--padding-left);
     padding-right: var(--padding-right);
@@ -2780,23 +2781,38 @@ body {
   #team-compare .compare-card {
     margin-right: 1.75em;
     position: relative;
-    padding-left: 2.2em;
-    padding-right: 2.2em;
-    width: 28.5em;
+    min-width: 28.5em;
     border-radius: 7px;
     box-shadow: 0 4px 6px 0 rgba(240, 240, 240, 0.25);
     border: solid 1.5px #ebecf0;
-    background-color: #ffffff; }
+    background-color: #ffffff;
+    height: calc(100% - 1.5em);
+    max-height: 65em;
+    overflow-y: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */ }
+    #team-compare .compare-card::-webkit-scrollbar {
+      /* WebKit */
+      width: 0;
+      height: 0; }
     #team-compare .compare-card:not(:first-of-type) {
       margin: 0 1.75em; }
     #team-compare .compare-card-header {
+      margin: 0 -2.2em;
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
       padding-top: 1.9em;
       padding-bottom: 1.5em;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       text-align: center;
-      border-bottom: 1.5px solid #f4f4f4; }
+      background-color: #fff;
+      z-index: 100; }
       #team-compare .compare-card-header-title {
         margin-bottom: 0.3333333333em;
         font-size: 1.8em;
@@ -2874,129 +2890,140 @@ body {
         color: #bebebe; }
         #team-compare .compare-card-header-close i {
           font-size: 0.82em; }
-  #team-compare .graph-header {
-    padding-top: 1.8em;
-    padding-bottom: 1.8em;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
-    justify-content: space-between; }
-    #team-compare .graph-header-title {
-      margin-left: -0.15rem;
-      font-size: 1.28em;
-      font-weight: 500;
-      letter-spacing: -0.06px;
-      color: #172b4d; }
-    #team-compare .graph-header-button {
-      font-size: 1.28em;
-      font-weight: 500;
-      letter-spacing: -0.06px;
-      color: var(--color-primary);
-      cursor: pointer; }
-  #team-compare .graph {
-    margin-bottom: 1.8em;
-    padding-bottom: 4.3em;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    justify-content: center;
-    border-bottom: 1.5px solid #f4f4f4; }
-    #team-compare .graph-bar {
-      position: relative;
-      height: 12.75em;
-      width: 1.7em;
-      border-radius: 3.5px;
-      background-color: #ecf0f6; }
-      #team-compare .graph-bar:not(:last-of-type) {
-        margin-right: 2.78em; }
-      #team-compare .graph-bar-fill {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        border-radius: 3.5px;
-        width: 100%; }
-        #team-compare .graph-bar-fill.good {
-          background-color: #28c944; }
-        #team-compare .graph-bar-fill.ok {
-          background-color: #ffcc19; }
-        #team-compare .graph-bar-fill.bad {
-          background-color: #ff4500; }
-      #team-compare .graph-bar-info {
-        position: absolute;
-        left: 50%;
-        bottom: -1.17rem;
-        font-size: 1.05em;
-        font-weight: 500;
-        letter-spacing: 0.05px;
-        color: #172b4d;
-        transform: translate(-50%, 100%); }
-  #team-compare .progress {
-    margin-bottom: 4em; }
-    #team-compare .progress:not(:last-of-type) {
-      margin-bottom: 2.9em; }
-    #team-compare .progress-header {
-      margin-bottom: 1em;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      -moz-align-items: center;
-      align-items: center;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      -webkit-justify-content: space-between;
-      -moz-justify-content: space-between;
-      justify-content: space-between; }
-      #team-compare .progress-header-title {
-        font-size: 1.28em;
-        font-weight: 500;
-        letter-spacing: -0.06px;
-        color: #172b4d; }
-      #team-compare .progress-header-grade {
-        font-size: 1.28em;
-        font-weight: 500;
-        letter-spacing: -0.06px;
-        color: #172b4d; }
-    #team-compare .progress-bar {
-      height: 0.75em;
-      border-radius: 2px;
-      background-color: #ecf0f6; }
-      #team-compare .progress-bar-fill {
-        height: 100%;
-        border-top-left-radius: 2px;
-        border-bottom-left-radius: 2px; }
-        #team-compare .progress-bar-fill.good {
-          background-color: #28c944; }
-        #team-compare .progress-bar-fill.ok {
-          background-color: #ffcc19; }
-        #team-compare .progress-bar-fill.bad {
-          background-color: #ff4500; }
+    #team-compare .compare-card-divider {
+      margin-left: 2.2em;
+      margin-right: 2.2em;
+      position: sticky;
+      top: 7.667em;
+      left: 0;
+      width: calc(100% - 4.4em);
+      border-top: 1.5px solid #f4f4f4; }
+    #team-compare .compare-card-body {
+      padding-left: 2.2em;
+      padding-right: 2.2em; }
+      #team-compare .compare-card-body .graph-header {
+        padding-top: 1.8em;
+        padding-bottom: 1.8em;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        justify-content: space-between; }
+        #team-compare .compare-card-body .graph-header-title {
+          margin-left: -0.15rem;
+          font-size: 1.28em;
+          font-weight: 500;
+          letter-spacing: -0.06px;
+          color: #172b4d; }
+        #team-compare .compare-card-body .graph-header-button {
+          font-size: 1.28em;
+          font-weight: 500;
+          letter-spacing: -0.06px;
+          color: var(--color-primary);
+          cursor: pointer; }
+      #team-compare .compare-card-body .graph {
+        margin-bottom: 1.8em;
+        padding-bottom: 4.3em;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        justify-content: center;
+        border-bottom: 1.5px solid #f4f4f4; }
+        #team-compare .compare-card-body .graph-bar {
+          position: relative;
+          height: 12.75em;
+          width: 1.7em;
+          border-radius: 3.5px;
+          background-color: #ecf0f6; }
+          #team-compare .compare-card-body .graph-bar:not(:last-of-type) {
+            margin-right: 2.78em; }
+          #team-compare .compare-card-body .graph-bar-fill {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-radius: 3.5px;
+            width: 100%; }
+            #team-compare .compare-card-body .graph-bar-fill.good {
+              background-color: #28c944; }
+            #team-compare .compare-card-body .graph-bar-fill.ok {
+              background-color: #ffcc19; }
+            #team-compare .compare-card-body .graph-bar-fill.bad {
+              background-color: #ff4500; }
+          #team-compare .compare-card-body .graph-bar-info {
+            position: absolute;
+            left: 50%;
+            bottom: -1.17rem;
+            font-size: 1.05em;
+            font-weight: 500;
+            letter-spacing: 0.05px;
+            color: #172b4d;
+            transform: translate(-50%, 100%); }
+      #team-compare .compare-card-body .progress {
+        margin-bottom: 4em; }
+        #team-compare .compare-card-body .progress:not(:last-of-type) {
+          margin-bottom: 2.9em; }
+        #team-compare .compare-card-body .progress-header {
+          margin-bottom: 1em;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          -moz-align-items: center;
+          align-items: center;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          -webkit-justify-content: space-between;
+          -moz-justify-content: space-between;
+          justify-content: space-between; }
+          #team-compare .compare-card-body .progress-header-title {
+            font-size: 1.28em;
+            font-weight: 500;
+            letter-spacing: -0.06px;
+            color: #172b4d; }
+          #team-compare .compare-card-body .progress-header-grade {
+            font-size: 1.28em;
+            font-weight: 500;
+            letter-spacing: -0.06px;
+            color: #172b4d; }
+        #team-compare .compare-card-body .progress-bar {
+          height: 0.75em;
+          border-radius: 2px;
+          background-color: #ecf0f6; }
+          #team-compare .compare-card-body .progress-bar-fill {
+            height: 100%;
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px; }
+            #team-compare .compare-card-body .progress-bar-fill.good {
+              background-color: #28c944; }
+            #team-compare .compare-card-body .progress-bar-fill.ok {
+              background-color: #ffcc19; }
+            #team-compare .compare-card-body .progress-bar-fill.bad {
+              background-color: #ff4500; }
 
 #team-settings-general .page-header {
   min-width: 0;
