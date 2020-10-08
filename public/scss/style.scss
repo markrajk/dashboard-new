@@ -3003,16 +3003,26 @@ body {
 
   &.small {
     //min-width: 300px;
-    width: calc(50% - 2em);
+    width: calc(33.333% - 2em);
     max-width: 100%;
     background-color: red;
+
+    background-color: red;
+
+    @include respond(desktop-xxl) {
+      width: calc(50% - 2em);
+    }
   }
 
   &.big {
     //min-width: 600px;
-    width: calc(100% - 2em);
+    width: calc(66.666% - 2em);
     max-width: 100%;
     background-color: blue;
+
+    @include respond(desktop-xxl) {
+      width: calc(100% - 2em);
+    }
   }
 }
 
@@ -3041,24 +3051,24 @@ body {
 //   &.small {
 //     flex-basis: calc(calc(991px - 100%) * 999);
 //     min-width: calc(33.333% - 2em);
-//     max-width: calc(33.333% - 2em);
-//     background-color: red;
+// max-width: calc(33.333% - 2em);
+// background-color: red;
 
-//     @include respond(desktop-xxl) {
-//       min-width: calc(50% - 2em);
-//       max-width: calc(50% - 2em);
-//     }
-//   }
+// @include respond(desktop-xxl) {
+//   min-width: calc(50% - 2em);
+//   max-width: calc(50% - 2em);
+// }
+// }
 
 //   &.big {
 //     background-color: blue;
 //     min-width: calc(66.666% - 2em);
-//     max-width: calc(66.666% - 2em);
+// max-width: calc(66.666% - 2em);
 
-//     @include respond(desktop-xxl) {
-//       min-width: calc(100% - 2em);
-//       max-width: calc(100% - 2em);
-//     }
+// @include respond(desktop-xxl) {
+//   min-width: calc(100% - 2em);
+//   max-width: calc(100% - 2em);
+// }
 //   }
 // }
 

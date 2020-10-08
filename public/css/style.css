@@ -2188,13 +2188,20 @@ body {
   max-width: 110em !important;
   flex-shrink: 1; }
   .widget-wrapper.small {
-    width: calc(50% - 2em);
+    width: calc(33.333% - 2em);
     max-width: 100%;
+    background-color: red;
     background-color: red; }
+    @media (max-width: 1720px) {
+      .widget-wrapper.small {
+        width: calc(50% - 2em); } }
   .widget-wrapper.big {
-    width: calc(100% - 2em);
+    width: calc(66.666% - 2em);
     max-width: 100%;
     background-color: blue; }
+    @media (max-width: 1720px) {
+      .widget-wrapper.big {
+        width: calc(100% - 2em); } }
 
 .widget {
   border: 5px solid #fff;
