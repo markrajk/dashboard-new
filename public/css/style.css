@@ -1450,18 +1450,16 @@ body {
     -webkit-justify-content: center;
     -moz-justify-content: center;
     justify-content: center;
-    width: 2.75em;
-    height: 2.75em;
-    border-radius: 50%;
-    border: solid 1.5px #e5e5e5;
-    background-color: #fff;
     z-index: 500;
     transition: all 0.1s ease-in-out;
     cursor: pointer; }
+    .side-arrow.rotate svg {
+      transform: rotateZ(-180deg); }
+    .side-arrow svg {
+      width: 2.75rem;
+      height: 2.75rem; }
     .side-arrow:hover {
       transform: translate(50%, 0) scale(1.1); }
-    .side-arrow.rotate .icon-chevron-left {
-      transform: rotateZ(-180deg); }
     .side-arrow .icon-chevron-left {
       font-size: 1.2em; }
 
@@ -2853,16 +2851,11 @@ body {
           -ms-flex-pack: center;
           -webkit-justify-content: center;
           -moz-justify-content: center;
-          justify-content: center;
-          width: 1.6em;
-          height: 1.6em;
-          border: 1.5px solid #6b778c;
-          border-radius: 50%;
-          color: #6b778c; }
+          justify-content: center; }
           #team-compare .compare-card-header-order-left i, #team-compare .compare-card-header-order-right i {
-            font-size: 0.87em; }
-          #team-compare .compare-card-header-order-left.disabled, #team-compare .compare-card-header-order-right.disabled {
-            border-color: #bebebe;
+            font-size: 1.6em;
+            color: #6b778c; }
+          #team-compare .compare-card-header-order-left.disabled i, #team-compare .compare-card-header-order-right.disabled i {
             color: #bebebe; }
       #team-compare .compare-card-header-close {
         position: absolute;
@@ -2882,14 +2875,10 @@ body {
         -ms-flex-pack: center;
         -webkit-justify-content: center;
         -moz-justify-content: center;
-        justify-content: center;
-        width: 1.75em;
-        height: 1.75em;
-        border: 1.5px solid #bebebe;
-        border-radius: 50%;
-        color: #bebebe; }
+        justify-content: center; }
         #team-compare .compare-card-header-close i {
-          font-size: 0.82em; }
+          font-size: 1.75em;
+          color: #bebebe; }
     #team-compare .compare-card-divider {
       margin-left: 2.2em;
       margin-right: 2.2em;
