@@ -2977,7 +2977,9 @@ body {
 }
 
 .widgets {
+  height: 100%;
   width: 100%;
+  max-width: 100%;
   padding-top: 2em;
   margin: 0 0;
   margin-left: -1em;
@@ -2992,33 +2994,25 @@ body {
   padding: 2rem;
   margin: 0 1em;
   margin-bottom: 2em;
-  flex-grow: 1;
-
-  @include respond(desktop-md) {
-    min-width: calc(100% - 2em) !important;
-  }
+  //flex-grow: 1;
+  resize: horizontal;
+  overflow: auto;
+  min-width: 30em;
+  max-width: 110em !important;
+  flex-shrink: 1;
 
   &.small {
-    flex-basis: calc(calc(991px - 100%) * 999);
-    min-width: calc(33.333% - 2em);
-    max-width: calc(33.333% - 2em);
+    //min-width: 300px;
+    width: calc(50% - 2em);
+    max-width: 100%;
     background-color: red;
-
-    @include respond(desktop-xxl) {
-      min-width: calc(50% - 2em);
-      max-width: calc(50% - 2em);
-    }
   }
 
   &.big {
+    //min-width: 600px;
+    width: calc(100% - 2em);
+    max-width: 100%;
     background-color: blue;
-    min-width: calc(66.666% - 2em);
-    max-width: calc(66.666% - 2em);
-
-    @include respond(desktop-xxl) {
-      min-width: calc(100% - 2em);
-      max-width: calc(100% - 2em);
-    }
   }
 }
 
@@ -3033,6 +3027,52 @@ body {
   font-weight: 700;
   color: #fff;
 }
+
+// .widget-wrapper {
+//   padding: 2rem;
+//   margin: 0 1em;
+//   margin-bottom: 2em;
+//   flex-grow: 1;
+
+//   @include respond(desktop-md) {
+//     min-width: calc(100% - 2em) !important;
+//   }
+
+//   &.small {
+//     flex-basis: calc(calc(991px - 100%) * 999);
+//     min-width: calc(33.333% - 2em);
+//     max-width: calc(33.333% - 2em);
+//     background-color: red;
+
+//     @include respond(desktop-xxl) {
+//       min-width: calc(50% - 2em);
+//       max-width: calc(50% - 2em);
+//     }
+//   }
+
+//   &.big {
+//     background-color: blue;
+//     min-width: calc(66.666% - 2em);
+//     max-width: calc(66.666% - 2em);
+
+//     @include respond(desktop-xxl) {
+//       min-width: calc(100% - 2em);
+//       max-width: calc(100% - 2em);
+//     }
+//   }
+// }
+
+// .widget {
+//   border: 5px solid #fff;
+//   @include flexbox();
+//   @include align-items(center);
+//   @include justify-content(center);
+//   width: 100%;
+//   height: 400px;
+//   font-size: 6em;
+//   font-weight: 700;
+//   color: #fff;
+// }
 
 .side-menu-slide-wrapper {
   position: relative;
