@@ -4535,7 +4535,7 @@ body {
     }
   }
 
-  @include custom-respond-combined(620, 620) {
+  @include custom-respond-combined(575, 575) {
     @include align-items(flex-start);
     background-color: #fff;
 

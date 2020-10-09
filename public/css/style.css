@@ -3535,7 +3535,7 @@ body {
   @media (max-height: 690px) {
     .auth .auth-logo {
       display: none; } }
-  @media (max-width: 620px), (max-height: 620px) {
+  @media (max-width: 575px), (max-height: 575px) {
     .auth {
       -webkit-box-align: start;
       -ms-flex-align: start;
