@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Team Feedback | Sign In</title>
+    <title>Team Feedback | Create Account</title>
     <link rel="stylesheet" href="../public/css/style.css" />
   </head>
   <body>
-    <main class="auth" id="sign-in">
+    <main class="auth" id="create-account">
       <img
         src="../public/img/logo-only.png"
         alt="Team Feedback logo"
@@ -15,7 +15,7 @@
       />
 
       <div class="auth-card">
-        <h2 class="auth-card-title">Sign in to Team Feedback</h2>
+        <h2 class="auth-card-title">Create your account</h2>
         <div class="input-container pass">
           <input type="emal" placeholder="Email" />
           <i class="icon-check-circle"></i>
@@ -25,8 +25,8 @@
             <i class="icon-eye-closed"></i>
           </div>
         </div>
-        <div class="input-container">
-          <input type="password" placeholder="Password" />
+        <div class="input-container fail">
+          <input type="text" placeholder="Full name" />
           <i class="icon-check-circle"></i>
           <i class="icon-exclamation-circle"></i>
           <div class="show-password">
@@ -34,12 +34,27 @@
             <i class="icon-eye-closed"></i>
           </div>
         </div>
-        <button class="button-primary">Sign in</button>
+
+        <div class="input-container password">
+          <input type="password" placeholder="Choose a password" />
+          <i class="icon-check-circle"></i>
+          <i class="icon-exclamation-circle"></i>
+          <div class="show-password">
+            <i class="icon-eye-open"></i>
+            <i class="icon-eye-closed"></i>
+          </div>
+        </div>
+
+        <p class="auth-card-text small">
+          By creating my account, I accept the Team Feedback
+          <button>Terms of Service</button> and acknowledge the
+          <button>Privacy Policy.</button>
+        </p>
+
+        <button class="button-primary">Create account</button>
         <div class="auth-card-footer">
-          <button class="auth-card-link">Forgotten your password?</button>
           <p class="auth-card-text">
-            Don’t have an account yet?
-            <a href="../create-account/index.html">Create yours now.</a>
+            Already have an account? <a href="../sign-in/index.html">Sign in</a>
           </p>
         </div>
       </div>

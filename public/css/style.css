@@ -29,8 +29,8 @@
 
 @font-face {
   font-family: "dashoard-icons";
-  src: url("../fonts/dashoard-icons.eot?rcnyhv");
-  src: url("../fonts/dashoard-icons.eot?rcnyhv#iefix") format("embedded-opentype"), url("../fonts/dashoard-icons.ttf?rcnyhv") format("truetype"), url("../fonts/dashoard-icons.woff?rcnyhv") format("woff"), url("../fonts/dashoard-icons.svg?rcnyhv#dashoard-icons") format("svg");
+  src: url("../fonts/dashoard-icons.eot?7xzlv2");
+  src: url("../fonts/dashoard-icons.eot?7xzlv2#iefix") format("embedded-opentype"), url("../fonts/dashoard-icons.ttf?7xzlv2") format("truetype"), url("../fonts/dashoard-icons.woff?7xzlv2") format("woff"), url("../fonts/dashoard-icons.svg?7xzlv2#dashoard-icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block; }
@@ -47,6 +47,12 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.icon-eye-open:before {
+  content: "\e946"; }
+
+.icon-eye-closed:before {
+  content: "\e947"; }
 
 .icon-burger:before {
   content: "\e945"; }
@@ -3515,7 +3521,7 @@ body {
   @media (max-height: 780px) {
     .auth .auth-card {
       transform: translate(0, 0); } }
-  @media (max-height: 650px) {
+  @media (max-height: 690px) {
     .auth .auth-logo {
       display: none; } }
   .auth-logo {
@@ -3556,7 +3562,7 @@ body {
     border: solid 1px #dadce0;
     background-color: #ffffff;
     text-align: center;
-    transform: translate(0, -10%); }
+    transform: translate(0, -2em); }
     .auth-card-title {
       max-width: 15.619047619em;
       font-size: 2.1em;
@@ -3584,17 +3590,34 @@ body {
         .auth-card .input-container input:focus {
           border-color: #c9c9c9; }
       .auth-card .input-container i {
-        display: none; }
-      .auth-card .input-container.pass input {
-        border-color: #36b37e; }
-      .auth-card .input-container.pass i {
+        display: none;
         position: absolute;
         top: 50%;
         right: 0.61em;
         transform: translate(0, -50%);
+        font-size: 2em; }
+      .auth-card .input-container.pass input {
+        border-color: #36b37e; }
+      .auth-card .input-container.pass .icon-check-circle {
         display: inline-block;
-        font-size: 2em;
         color: #36b37e; }
+      .auth-card .input-container.fail input {
+        border-color: #ff2712; }
+      .auth-card .input-container.fail .icon-exclamation-circle {
+        display: inline-block;
+        color: #ff2712; }
+      .auth-card .input-container.password .show-password {
+        cursor: pointer; }
+        .auth-card .input-container.password .show-password .icon-eye-open, .auth-card .input-container.password .show-password .icon-eye-closed {
+          display: none;
+          color: #aaaaaa; }
+        .auth-card .input-container.password .show-password .icon-eye-closed {
+          display: inline-block; }
+        .auth-card .input-container.password .show-password.show .icon-eye-closed {
+          display: none; }
+        .auth-card .input-container.password .show-password.show .icon-eye-open {
+          margin-top: -0.5px;
+          display: inline-block; }
     .auth-card .button-primary {
       max-width: 20.5em;
       width: 100%;
@@ -3609,12 +3632,20 @@ body {
       font-weight: 500;
       color: #087af9; }
     .auth-card-text {
+      max-width: 25.2307692308em;
       font-size: 1.3em;
       font-weight: 400;
       color: #494949; }
-      .auth-card-text button {
+      .auth-card-text button, .auth-card-text a {
         font-weight: 500;
         color: #087af9; }
+      .auth-card-text.small {
+        margin-top: 0.5957446809em;
+        margin-bottom: 1.7021276596em;
+        max-width: 26.3829787234em;
+        font-size: 1.175em;
+        line-height: 1.7;
+        letter-spacing: -0.03px; }
 
 #sign-in .auth-card {
   padding-bottom: 5.5em;
@@ -3630,6 +3661,22 @@ body {
     padding-top: 1.75em;
     border-top: 1px solid #e2e2e2; }
   #sign-in .auth-card-link {
+    margin-bottom: 1.0769230769em; }
+
+#create-account .auth-card {
+  padding-bottom: 8.5em;
+  width: 48em;
+  height: 54em; }
+  #create-account .auth-card-title {
+    margin-bottom: 1.380952381em; }
+  #create-account .auth-card .button-primary {
+    margin-bottom: 0.8125em; }
+  #create-account .auth-card-footer {
+    max-width: 32.8em;
+    margin-top: auto;
+    padding-top: 1.75em;
+    border-top: 1px solid #e2e2e2; }
+  #create-account .auth-card-link {
     margin-bottom: 1.0769230769em; }
 
 @keyframes slide-in-right {

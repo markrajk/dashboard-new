@@ -19,9 +19,8 @@ window.addEventListener("resize", closeSideMenuOnResize);
 closeSideMenuOnResize();
 
 //TOGGLE SIDE MENU
-document
-  .querySelector(".toggle-side-menu")
-  .addEventListener("click", function () {
+if (sideMenu) {
+  sideMenu.addEventListener("click", function () {
     document.querySelector(".side-menu").classList.toggle("side-menu-close");
     if (
       document.querySelector(".side-menu").classList.contains("side-menu-close")
@@ -33,6 +32,7 @@ document
       document.documentElement.style.setProperty("--side-menu-width", "24em");
     }
   });
+}
 
 // TOP NAV TRIGGER
 document.querySelectorAll(".top-nav-trigger").forEach((e) => {
@@ -211,9 +211,11 @@ colorTriggers.forEach((e) => {
 //BURGER CLOSE
 let burgerCloseBtn = document.querySelector(".burger-dropdown .close");
 
-burgerCloseBtn.addEventListener("click", function () {
-  this.parentElement.style.display = "none";
-});
+if (burgerCloseBtn) {
+  burgerCloseBtn.addEventListener("click", function () {
+    this.parentElement.style.display = "none";
+  });
+}
 
 //NOT PRODUCTION LINKING TO PEOPLE FEEDBACK RECEIVED
 let peopleFeedgackReceivedLinks = document.querySelectorAll(
@@ -294,3 +296,22 @@ commentItems.forEach((e) => {
     });
   }
 });
+
+//INPUT PASSWORD VISIBILLITY
+let showPassToggle = document.querySelectorAll(
+  ".input-container.password .show-password"
+);
+
+if (showPassToggle.length) {
+  showPassToggle.forEach((e) => {
+    e.addEventListener("click", function () {
+      let input = this.parentElement.querySelector("input");
+      this.classList.toggle("show");
+      if (this.classList.contains("show")) {
+        input.type = "text";
+      } else {
+        input.type = "password";
+      }
+    });
+  });
+}
