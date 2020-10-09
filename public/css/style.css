@@ -3774,6 +3774,46 @@ body {
   #additional-info .auth-card-link {
     margin-bottom: 1.0769230769em; }
 
+#join-company .auth-card {
+  padding-bottom: 4.9em;
+  width: 48em;
+  height: 54em; }
+  #join-company .auth-card-title {
+    margin-bottom: 0.619047619em; }
+  #join-company .auth-card-subtitle {
+    max-width: 25.2307692308em;
+    margin-bottom: 3.9285714286em;
+    letter-spacing: -0.1px; }
+  #join-company .auth-card-icon {
+    margin-bottom: 1.9em; }
+    #join-company .auth-card-icon i {
+      font-size: 10em;
+      color: #007aff; }
+  #join-company .auth-card-info {
+    margin-bottom: 5.5em; }
+    #join-company .auth-card-info-name {
+      margin-bottom: 0.5555555556em;
+      font-size: 1.8em;
+      font-weight: 500;
+      letter-spacing: -0.27px;
+      color: #333333; }
+    #join-company .auth-card-info-inviter {
+      font-size: 1.3em;
+      font-weight: 400;
+      letter-spacing: -0.1px;
+      color: #575757; }
+      #join-company .auth-card-info-inviter span {
+        font-weight: 500; }
+  #join-company .auth-card .button-primary {
+    margin-bottom: 0.8125em; }
+  #join-company .auth-card-footer {
+    max-width: 32.8em;
+    margin-top: auto;
+    padding-top: 1.75em;
+    border-top: 1px solid #e2e2e2; }
+  #join-company .auth-card-link {
+    margin-bottom: 1.0769230769em; }
+
 @keyframes slide-in-right {
   from {
     transform: translate(-100%, 0); }
