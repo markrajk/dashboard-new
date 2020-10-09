@@ -3724,7 +3724,7 @@ body {
     margin-bottom: 1.0769230769em; }
 
 #verify-email .auth-card {
-  padding-bottom: 8.5em;
+  padding-bottom: 4.9em;
   width: 48em;
   height: 54em; }
   #verify-email .auth-card-title {
@@ -3752,7 +3752,8 @@ body {
     margin-bottom: 0.619047619em; }
   #additional-info .auth-card-subtitle {
     max-width: 21.4285714286em;
-    margin-bottom: 2.9285714286em; }
+    margin-bottom: 2.6428571429em;
+    line-height: 1.38; }
   #additional-info .auth-card .additional-info-img {
     margin-bottom: 4em;
     display: block;

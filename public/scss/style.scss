@@ -4793,7 +4793,7 @@ body {
 
 #verify-email {
   & .auth-card {
-    padding-bottom: 8.5em;
+    padding-bottom: 4.9em;
     width: 48em;
     height: 54em;
 
@@ -4837,7 +4837,8 @@ body {
 
     &-subtitle {
       max-width: emcalc(30, 1.4);
-      margin-bottom: emcalc(4.1, 1.4);
+      margin-bottom: emcalc(3.7, 1.4);
+      line-height: 1.38;
     }
 
     & .additional-info-img {
