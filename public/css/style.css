@@ -2304,9 +2304,7 @@ body {
   #giveFeedbackModal .custom-modal-body {
     padding: 0 4.5em;
     padding-bottom: 2.8em;
-    min-height: 0;
-    height: 100%;
-    height: calc(100% - 20em - 6.8em - 2.5px); }
+    min-height: 0; }
   #giveFeedbackModal .custom-modal-footer {
     position: sticky;
     bottom: 0;
