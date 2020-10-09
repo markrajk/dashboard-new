@@ -953,6 +953,7 @@ html {
 }
 
 body {
+  height: 100%;
   box-sizing: border-box;
   font-family: "Inter", sans-serif !important;
   font-size: 1rem;
@@ -4482,8 +4483,8 @@ body {
   @include justify-content(center);
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  //height: calc(100vh - calc(100vh - 100%));
+  height: 100%;
   background-color: #fcfdfd;
 
   @include custom-respond(530) {
