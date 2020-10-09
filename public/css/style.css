@@ -3509,7 +3509,7 @@ body {
   @media (max-height: 780px) {
     .auth .auth-card {
       transform: translate(0, 0); } }
-  @media (max-height: 780px) {
+  @media (max-height: 650px) {
     .auth .auth-logo {
       display: none; } }
   .auth-logo {

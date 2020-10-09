@@ -4498,7 +4498,7 @@ body {
     }
   }
 
-  @include custom-respond-vertical(780) {
+  @include custom-respond-vertical(650) {
     & .auth-logo {
       display: none;
     }
