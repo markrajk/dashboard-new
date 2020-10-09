@@ -3127,6 +3127,7 @@ body {
 //SPECIFIC MOODAL MODIFIERS
 #giveFeedbackModal {
   & .custom-modal {
+    width: 56.1em;
     max-height: 98vh;
     overflow-y: auto;
     scrollbar-width: none;
@@ -3143,6 +3144,7 @@ body {
     @include custom-respond-combined(600, 600) {
       max-height: 100%;
       width: 100%;
+      height: 100%;
       max-width: 100%;
       border: 0;
       border-radius: 0;
