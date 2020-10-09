@@ -3497,6 +3497,21 @@ body {
   width: 100vw;
   min-height: 100vh;
   background-color: #fcfdfd; }
+  @media (max-width: 530px) {
+    .auth {
+      background-color: #fff; }
+      .auth .auth-card {
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        width: 100%;
+        height: 100%; } }
+  @media (max-height: 780px) {
+    .auth .auth-card {
+      transform: translate(0, 0); } }
+  @media (max-height: 780px) {
+    .auth .auth-logo {
+      display: none; } }
   .auth-logo {
     position: absolute;
     top: 1.2em;
@@ -3559,6 +3574,8 @@ body {
         border: solid 1.8px #e3e3e3; }
         .auth-card .input-container input::placeholder {
           color: #a3a3a3; }
+        .auth-card .input-container input:focus {
+          border-color: #c9c9c9; }
       .auth-card .input-container i {
         display: none; }
       .auth-card .input-container.pass input {

@@ -4480,6 +4480,30 @@ body {
   min-height: 100vh;
   background-color: #fcfdfd;
 
+  @include custom-respond(530) {
+    background-color: #fff;
+
+    & .auth-card {
+      margin: 0;
+      border: none;
+      border-radius: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @include custom-respond-vertical(780) {
+    & .auth-card {
+      transform: translate(0, 0);
+    }
+  }
+
+  @include custom-respond-vertical(780) {
+    & .auth-logo {
+      display: none;
+    }
+  }
+
   &-logo {
     position: absolute;
     top: 1.2em;
@@ -4537,6 +4561,10 @@ body {
 
         &::placeholder {
           color: #a3a3a3;
+        }
+
+        &:focus {
+          border-color: #c9c9c9;
         }
       }
 
