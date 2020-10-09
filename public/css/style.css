@@ -3534,7 +3534,8 @@ body {
     border-radius: 8px;
     border: solid 1px #dadce0;
     background-color: #ffffff;
-    text-align: center; }
+    text-align: center;
+    transform: translate(0, -10%); }
     .auth-card-title {
       max-width: 15.619047619em;
       font-size: 2.1em;
