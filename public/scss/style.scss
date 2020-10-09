@@ -15,6 +15,12 @@
   }
 }
 
+@mixin custom-respond-combined($value01, $value02) {
+  @media (max-width: $value01 * 1px), (max-height: $value02 * 1px) {
+    @content;
+  }
+}
+
 @mixin respond($breakpoint) {
   @if $breakpoint==desktop-xxsm {
     @media (max-width: 379px) {
@@ -4493,7 +4499,7 @@ body {
   min-height: 100%;
   background-color: #fcfdfd;
 
-  @include custom-respond(530) {
+  @include custom-respond-combined(620, 620) {
     @include align-items(flex-start);
     background-color: #fff;
 
@@ -4527,6 +4533,29 @@ body {
     & .auth-logo {
       display: none;
     }
+  }
+
+  @include custom-respond-combined(620, 620) {
+    @include align-items(flex-start);
+    background-color: #fff;
+
+    & .auth-card {
+      padding-top: 8em !important;
+      position: relative !important;
+      top: 0 !important;
+      left: 0 !important;
+      transform: translate(0, 0) !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      border: none !important;
+      border-radius: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    // & .auth-logo {
+    //   display: none;!important
+    // }
   }
 
   &-logo {

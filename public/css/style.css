@@ -3509,7 +3509,7 @@ body {
   min-width: 100%;
   min-height: 100%;
   background-color: #fcfdfd; }
-  @media (max-width: 530px) {
+  @media (max-width: 620px), (max-height: 620px) {
     .auth {
       -webkit-box-align: start;
       -ms-flex-align: start;
@@ -3535,6 +3535,26 @@ body {
   @media (max-height: 690px) {
     .auth .auth-logo {
       display: none; } }
+  @media (max-width: 620px), (max-height: 620px) {
+    .auth {
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      -webkit-align-items: flex-start;
+      -moz-align-items: flex-start;
+      align-items: flex-start;
+      background-color: #fff; }
+      .auth .auth-card {
+        padding-top: 8em !important;
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        transform: translate(0, 0) !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        border: none !important;
+        border-radius: 0 !important;
+        width: 100% !important;
+        height: 100% !important; } }
   .auth-logo {
     position: absolute;
     top: 1.2em;
