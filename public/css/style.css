@@ -3563,6 +3563,7 @@ body {
       max-width: 32.8em;
       width: 100%; }
       .auth-card .input-container input {
+        padding-right: 0.3496503497em;
         padding-left: 1.0839160839em;
         width: 100%;
         height: 3.0769230769em;
