@@ -427,6 +427,10 @@ body {
     border: solid 1px #e1e4e8; }
     .button-white:hover {
       background-color: #f6f6f6; }
+  .button-dark {
+    font-weight: 500;
+    border-radius: 4px;
+    background-color: #45525f; }
 
 .custom-dropdown {
   display: inline-block;
@@ -2271,6 +2275,41 @@ body {
     border-bottom: 1.25px solid #f0f0f0; }
     .custom-modal-body .feedback-item-input::placeholder {
       color: #afafaf; }
+.custom-modal-body .success-message {
+  display: none;
+  margin-top: 8em;
+  margin-bottom: 6.1em;
+  text-align: center; }
+  .custom-modal-body .success-message i {
+    display: inline-block;
+    margin-bottom: 0.2em;
+    font-size: 15em;
+    color: #0cd332; }
+  .custom-modal-body .success-message-title {
+    margin-bottom: 0.6842105263em;
+    font-size: 1.9em;
+    font-weight: 500;
+    letter-spacing: -0.19px;
+    color: #414b62; }
+  .custom-modal-body .success-message-text {
+    font-size: 1.28em;
+    font-weight: 400;
+    letter-spacing: -0.13px;
+    color: #414b62; }
+.custom-modal.success .custom-modal-footer .button-primary {
+  display: none; }
+.custom-modal.success .custom-modal-footer .button-dark {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+.custom-modal.success .success-message {
+  display: block; }
+.custom-modal.success .rating-item {
+  display: none; }
+.custom-modal.success .feedback-item {
+  display: none; }
 
 #giveFeedbackModal .custom-modal {
   width: 56.1em;
@@ -2331,13 +2370,30 @@ body {
     background-color: #f7f9fa;
     border-top: 1.5px solid #f0f0f0;
     z-index: 100; }
-    #giveFeedbackModal .custom-modal-footer .button-primary {
+    #giveFeedbackModal .custom-modal-footer .button {
       padding: 0 1.1428571429em;
       height: 2.5714285714em;
       font-size: 1.4em;
       font-weight: 500;
       letter-spacing: -0.07px;
       color: #ffffff; }
+      #giveFeedbackModal .custom-modal-footer .button-dark {
+        display: none;
+        padding: 0 4.2857142857em; }
+  #giveFeedbackModal .custom-modal.success .custom-modal-footer .button-primary {
+    display: none; }
+  #giveFeedbackModal .custom-modal.success .custom-modal-footer .button-dark {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex; }
+  #giveFeedbackModal .custom-modal.success .success-message {
+    display: block; }
+  #giveFeedbackModal .custom-modal.success .rating-item {
+    display: none; }
+  #giveFeedbackModal .custom-modal.success .feedback-item {
+    display: none; }
 
 .widgets {
   height: auto;

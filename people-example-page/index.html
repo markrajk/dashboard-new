@@ -598,10 +598,21 @@
               placeholder="Write here..."
             />
           </div>
+
+          <div class="success-message">
+            <i class="icon-check-circle-full"></i>
+            <p class="success-message-title">Feedback sent</p>
+            <p class="success-message-text">
+              Window closes automatically in 3 seconds.
+            </p>
+          </div>
         </div>
         <!-- Modal footer -->
         <div class="custom-modal-footer">
-          <button class="button button-primary">Send feedback</button>
+          <button class="button button-primary send-feedback-modal">
+            Send feedback
+          </button>
+          <button class="button button-dark">Sent</button>
         </div>
       </div>
       <div class="custom-modal-backdrop"></div>
@@ -853,6 +864,15 @@
           location.href = "../people-feedback-received";
         });
       });
+
+      //SEND FEEDBACK
+      let sendFeedbackBtn = document.querySelector(".send-feedback-modal");
+
+      if (sendFeedbackBtn) {
+        sendFeedbackBtn.addEventListener("click", function () {
+          this.parentElement.parentElement.classList.add("success");
+        });
+      }
     </script>
   </body>
 </html>
