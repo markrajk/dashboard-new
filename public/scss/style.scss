@@ -4589,10 +4589,19 @@ body {
     // transform: translate(0, -2em);
 
     &-title {
-      max-width: emcalc(32.8, 2.1);
       font-size: 2.1em;
       font-weight: 500;
       letter-spacing: -0.21px;
+      color: #494949;
+    }
+
+    &-subtitle {
+      margin-bottom: emcalc(1.6, 1.4);
+      max-width: emcalc(32.8, 1.4);
+      font-size: 1.4em;
+      font-weight: 400;
+      line-height: 1.14;
+      letter-spacing: -0.11px;
       color: #494949;
     }
 
@@ -4763,6 +4772,84 @@ body {
 
     &-title {
       margin-bottom: emcalc(2.9, 2.1);
+    }
+
+    & .button-primary {
+      margin-bottom: emcalc(1.3, 1.6);
+    }
+
+    &-footer {
+      max-width: 32.8em;
+      margin-top: auto;
+      padding-top: 1.75em;
+      border-top: 1px solid #e2e2e2;
+    }
+
+    &-link {
+      margin-bottom: emcalc(1.4, 1.3);
+    }
+  }
+}
+
+#verify-email {
+  & .auth-card {
+    padding-bottom: 8.5em;
+    width: 48em;
+    height: 54em;
+
+    &-title {
+      margin-bottom: emcalc(1.3, 2.1);
+    }
+
+    & .verify-email-img {
+      margin-bottom: 1.1em;
+      min-width: 0;
+      width: 100%;
+      max-width: 19.2em;
+    }
+
+    & .button-primary {
+      margin-bottom: emcalc(1.3, 1.6);
+    }
+
+    &-footer {
+      max-width: 32.8em;
+      margin-top: auto;
+      padding-top: 1.75em;
+      border-top: 1px solid #e2e2e2;
+    }
+
+    &-link {
+      margin-bottom: emcalc(1.4, 1.3);
+    }
+  }
+}
+
+#additional-info {
+  & .auth-card {
+    padding-bottom: 4.9em;
+    width: 48em;
+    height: 54em;
+
+    &-title {
+      margin-bottom: emcalc(1.3, 2.1);
+    }
+
+    &-subtitle {
+      max-width: emcalc(30, 1.4);
+      margin-bottom: emcalc(4.1, 1.4);
+    }
+
+    & .additional-info-img {
+      margin-bottom: 4em;
+      display: block;
+      background-image: url("../img/additional-info-img.png");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 12em;
+      height: 12em;
+      cursor: pointer;
     }
 
     & .button-primary {

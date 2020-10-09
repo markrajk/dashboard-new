@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Team Feedback | Sign In</title>
+    <title>Team Feedback | Create Account | Add Aditional Information</title>
     <link rel="stylesheet" href="../public/css/style.css" />
   </head>
   <body>
-    <main class="auth" id="sign-in">
+    <main class="auth" id="additional-info">
       <img
         src="../public/img/logo-only.png"
         alt="Team Feedback logo"
@@ -15,18 +15,17 @@
       />
 
       <div class="auth-card">
-        <h2 class="auth-card-title">Sign in to Team Feedback</h2>
-        <div class="input-container pass">
-          <input type="emal" placeholder="Email" />
-          <i class="icon-check-circle"></i>
-          <i class="icon-exclamation-circle"></i>
-          <div class="show-password">
-            <i class="icon-eye-open"></i>
-            <i class="icon-eye-closed"></i>
-          </div>
-        </div>
+        <h2 class="auth-card-title">Two more details</h2>
+        <p class="auth-card-subtitle">
+          Your company requests you to add a job title and to upload a profile
+          picture.
+        </p>
+
+        <label for="uploadImage" class="additional-info-img"></label>
+        <input type="file" name="uploadImage" id="uploadImage" hidden />
+
         <div class="input-container">
-          <input type="password" placeholder="Password" />
+          <input type="text" placeholder="Enter your job title" />
           <i class="icon-check-circle"></i>
           <i class="icon-exclamation-circle"></i>
           <div class="show-password">
@@ -34,12 +33,11 @@
             <i class="icon-eye-closed"></i>
           </div>
         </div>
-        <button class="button-primary">Sign in</button>
+
+        <button class="button-primary">Confirm</button>
         <div class="auth-card-footer">
-          <button class="auth-card-link">Forgotten your password?</button>
           <p class="auth-card-text">
-            Don’t have an account yet?
-            <a href="../create-account/index.html">Create yours now.</a>
+            Didn’t receive the code? <button>Click here</button>
           </p>
         </div>
       </div>

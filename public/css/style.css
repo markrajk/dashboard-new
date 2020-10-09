@@ -3597,10 +3597,17 @@ body {
     background-color: #ffffff;
     text-align: center; }
     .auth-card-title {
-      max-width: 15.619047619em;
       font-size: 2.1em;
       font-weight: 500;
       letter-spacing: -0.21px;
+      color: #494949; }
+    .auth-card-subtitle {
+      margin-bottom: 1.1428571429em;
+      max-width: 23.4285714286em;
+      font-size: 1.4em;
+      font-weight: 400;
+      line-height: 1.14;
+      letter-spacing: -0.11px;
       color: #494949; }
     .auth-card .input-container {
       margin-bottom: 1.3em;
@@ -3714,6 +3721,56 @@ body {
     padding-top: 1.75em;
     border-top: 1px solid #e2e2e2; }
   #create-account .auth-card-link {
+    margin-bottom: 1.0769230769em; }
+
+#verify-email .auth-card {
+  padding-bottom: 8.5em;
+  width: 48em;
+  height: 54em; }
+  #verify-email .auth-card-title {
+    margin-bottom: 0.619047619em; }
+  #verify-email .auth-card .verify-email-img {
+    margin-bottom: 1.1em;
+    min-width: 0;
+    width: 100%;
+    max-width: 19.2em; }
+  #verify-email .auth-card .button-primary {
+    margin-bottom: 0.8125em; }
+  #verify-email .auth-card-footer {
+    max-width: 32.8em;
+    margin-top: auto;
+    padding-top: 1.75em;
+    border-top: 1px solid #e2e2e2; }
+  #verify-email .auth-card-link {
+    margin-bottom: 1.0769230769em; }
+
+#additional-info .auth-card {
+  padding-bottom: 4.9em;
+  width: 48em;
+  height: 54em; }
+  #additional-info .auth-card-title {
+    margin-bottom: 0.619047619em; }
+  #additional-info .auth-card-subtitle {
+    max-width: 21.4285714286em;
+    margin-bottom: 2.9285714286em; }
+  #additional-info .auth-card .additional-info-img {
+    margin-bottom: 4em;
+    display: block;
+    background-image: url("../img/additional-info-img.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 12em;
+    height: 12em;
+    cursor: pointer; }
+  #additional-info .auth-card .button-primary {
+    margin-bottom: 0.8125em; }
+  #additional-info .auth-card-footer {
+    max-width: 32.8em;
+    margin-top: auto;
+    padding-top: 1.75em;
+    border-top: 1px solid #e2e2e2; }
+  #additional-info .auth-card-link {
     margin-bottom: 1.0769230769em; }
 
 @keyframes slide-in-right {
