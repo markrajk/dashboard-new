@@ -2933,6 +2933,52 @@ body {
   }
 }
 
+//STARS
+.stars {
+  text-align: left;
+  position: relative;
+  @include flexbox;
+  @include flex-direction(row-reverse);
+
+  & input {
+    display: none;
+  }
+
+  & label {
+    display: block;
+    cursor: pointer;
+    width: 1em;
+    color: #e8e8e8;
+
+    &::before {
+      content: "\e935";
+      font-family: "dashoard-icons";
+      position: relative;
+      display: block;
+      font-size: 0.9em;
+      color: #e8e8e8;
+    }
+
+    &::after {
+      content: "\e935";
+      font-family: "dashoard-icons";
+      position: absolute;
+      display: block;
+      font-size: 0.9em;
+      color: #fedd31;
+      top: 0;
+      opacity: 0;
+    }
+  }
+
+  & label:hover::after,
+  & input:checked ~ label::after,
+  & label:hover ~ label::after {
+    opacity: 1;
+  }
+}
+
+//CUSTOM MODAL
 .custom-modal {
   position: absolute;
   top: 50%;
@@ -2958,21 +3004,12 @@ body {
     }
   }
 
-  &-body {
-    position: relative;
-    padding: 4.9em 6.1em;
+  &-header {
+    text-align: center;
   }
 
-  &-buttons {
-    @include flexbox();
-    @include align-items(center);
-    @include justify-content(space-between);
-
-    & .button {
-      height: emcalc(3.4, 1.6);
-      width: 48%;
-      font-size: 1.6em;
-    }
+  &-body {
+    position: relative;
   }
 
   &-wrapper {
@@ -2996,6 +3033,176 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+//CUSTOM MODAL COMPONENTS
+.custom-modal {
+  &-header {
+    //Header set with img
+    &-set {
+      &-img {
+        margin-bottom: 1.1em;
+        width: 8.41em;
+        height: 8.41em;
+        border: solid 1px rgba(0, 0, 0, 0);
+        border-radius: 50%;
+        object-fit: contain;
+      }
+
+      &-subtitle {
+        margin-bottom: 0.4em;
+        font-size: 1.38em;
+        font-weight: 500;
+        line-height: 1.02;
+        letter-spacing: -0.21px;
+        color: #969696;
+      }
+
+      &-title {
+        font-size: 2.25em;
+        font-weight: 500;
+        letter-spacing: -0.34px;
+        color: #353a48;
+      }
+    }
+  }
+
+  &-body {
+    //Rating item
+    & .rating-item {
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(space-between);
+      height: 6.8em;
+      border-bottom: 1.25px solid #f0f0f0;
+
+      &-name {
+        font-size: 1.4em;
+        font-weight: 500;
+        color: #414b62;
+      }
+
+      & .stars {
+        padding-right: 1.15em;
+        & label {
+          font-size: 2.4em;
+        }
+      }
+    }
+
+    //Feedback item
+    & .feedback-item {
+      height: 8.47em;
+      @include flexbox();
+      @include flex-direction(column);
+      @include align-items(flex-start);
+      @include justify-content(flex-end);
+
+      &-name {
+        font-size: 1.4em;
+        font-weight: 500;
+        letter-spacing: -0.14px;
+        color: #414b62;
+      }
+
+      &-input {
+        padding-top: 1em;
+        padding-bottom: emcalc(1.2, 1.4);
+        width: 100%;
+        font-size: 1.4em;
+        font-weight: 400;
+        letter-spacing: -0.07px;
+        border: 0;
+        border-bottom: 1.25px solid #f0f0f0;
+
+        &::placeholder {
+          color: #afafaf;
+        }
+      }
+    }
+  }
+}
+
+//SPECIFIC MOODAL MODIFIERS
+#giveFeedbackModal {
+  & .custom-modal {
+    max-height: 98vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+
+    &::-webkit-scrollbar {
+      /* WebKit */
+      width: 0;
+      height: 0;
+    }
+
+    @include custom-respond-combined(600, 600) {
+      max-height: 100%;
+      width: 100%;
+      max-width: 100%;
+      border: 0;
+      border-radius: 0;
+    }
+    &-header {
+      height: 20em;
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 2.7em;
+      border-bottom: 2px solid #f4f4f4;
+      background-color: #fff;
+      z-index: 100;
+    }
+
+    &-body {
+      // margin-top: 20em;
+      // margin-bottom: 6.8em;
+      padding: 0 4.5em;
+      padding-bottom: 2.8em;
+      min-height: 0;
+      height: 100%;
+      height: calc(100% - 20em - 6.8em - 2.5px);
+
+      // overflow-y: auto;
+      // scrollbar-width: none;
+      // /* Firefox */
+      // -ms-overflow-style: none;
+      // /* Internet Explorer 10+ */
+
+      // &::-webkit-scrollbar {
+      //   /* WebKit */
+      //   width: 0;
+      //   height: 0;
+      // }
+    }
+
+    &-footer {
+      position: sticky;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 6.8em;
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+      background-color: #f7f9fa;
+      border-top: 1.5px solid #f0f0f0;
+      z-index: 100;
+
+      & .button-primary {
+        padding: 0 emcalc(1.6, 1.4);
+        height: emcalc(3.6, 1.4);
+        font-size: 1.4em;
+        font-weight: 500;
+        letter-spacing: -0.07px;
+        color: #ffffff;
+      }
+    }
   }
 }
 

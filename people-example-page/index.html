@@ -494,37 +494,115 @@
           </ul>
         </div>
 
-        <div class="page-content"></div>
+        <div class="page-content">
+          <button class="modal-trigger" target-modal="giveFeedbackModal">
+            OPEN MODAL
+          </button>
+        </div>
       </div>
     </main>
 
-    <div class="custom-modal-wrapper" id="modal-01">
+    <div class="custom-modal-wrapper" id="giveFeedbackModal">
       <div class="custom-modal">
-        <!-- <div class="custom-modal-header">
-          <div class="custom-modal-close">
+        <!-- Modal header -->
+        <div class="custom-modal-header">
+          <div class="custom-modal-close" close-modal="giveFeedbackModal">
             <i class="icon-close"></i>
           </div>
-        </div> -->
-        <div class="custom-modal-body">
-          <div class="custom-modal-close" close-modal="modal-01">
-            <i class="icon-close"></i>
-          </div>
-          <div class="custom-modal-buttons">
-            <button class="button button-white" close-modal="modal-01">
-              Cancel
-            </button>
-            <button class="button button-primary">Ok</button>
+          <div class="custom-modal-header-set">
+            <img
+              src="../public/img/p-01.png"
+              alt="User's profile picture"
+              class="custom-modal-header-set-img"
+            />
+            <p class="custom-modal-header-set-subtitle">Give feedback to</p>
+            <p class="custom-modal-header-set-title">Marko Rajkovic</p>
           </div>
         </div>
-        <!-- <div class="custom-modal-footer">
-          <button
-            class="button button-white custom-modal-close"
-            close-modal="modal-01"
-          >
-            Cancel
-          </button>
-          <button class="button button-primary custom-modal-close">Ok</button>
-        </div> -->
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="rating-item">
+            <p class="rating-item-name">Attitude</p>
+            <div class="stars">
+              <input type="radio" name="attitude" id="attitude1" />
+              <label for="attitude1"></label>
+
+              <input type="radio" name="attitude" id="attitude2" />
+              <label for="attitude2"></label>
+
+              <input type="radio" name="attitude" id="attitude3" />
+              <label for="attitude3"></label>
+
+              <input type="radio" name="attitude" id="attitude4" />
+              <label for="attitude4"></label>
+
+              <input type="radio" name="attitude" id="attitude5" />
+              <label for="attitude5"></label>
+            </div>
+          </div>
+
+          <div class="rating-item">
+            <p class="rating-item-name">Productivity</p>
+            <div class="stars">
+              <input type="radio" name="productivity" id="productivity1" />
+              <label for="productivity1"></label>
+
+              <input type="radio" name="productivity" id="productivity2" />
+              <label for="productivity2"></label>
+
+              <input type="radio" name="productivity" id="productivity3" />
+              <label for="productivity3"></label>
+
+              <input type="radio" name="productivity" id="productivity4" />
+              <label for="productivity4"></label>
+
+              <input type="radio" name="productivity" id="productivity5" />
+              <label for="productivity5"></label>
+            </div>
+          </div>
+
+          <div class="rating-item">
+            <p class="rating-item-name">Teamworking</p>
+            <div class="stars">
+              <input type="radio" name="teamworking" id="teamworking1" />
+              <label for="teamworking1"></label>
+
+              <input type="radio" name="teamworking" id="teamworking2" />
+              <label for="teamworking2"></label>
+
+              <input type="radio" name="teamworking" id="teamworking3" />
+              <label for="teamworking3"></label>
+
+              <input type="radio" name="teamworking" id="teamworking4" />
+              <label for="teamworking4"></label>
+
+              <input type="radio" name="teamworking" id="teamworking5" />
+              <label for="teamworking5"></label>
+            </div>
+          </div>
+
+          <div class="feedback-item">
+            <p class="feedback-item-name">Add a compliment</p>
+            <input
+              class="feedback-item-input"
+              type="text"
+              placeholder="Write here..."
+            />
+          </div>
+
+          <div class="feedback-item">
+            <p class="feedback-item-name">Add an improvement idea</p>
+            <input
+              class="feedback-item-input"
+              type="text"
+              placeholder="Write here..."
+            />
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="custom-modal-footer">
+          <button class="button button-primary">Send feedback</button>
+        </div>
       </div>
       <div class="custom-modal-backdrop"></div>
     </div>
