@@ -1148,6 +1148,11 @@ body {
     background-color: var(--color-primary);
     border: solid 1px var(--color-primary);
     color: #fff;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
   }
 
   &-primary-outlined {

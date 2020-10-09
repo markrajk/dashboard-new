@@ -409,7 +409,10 @@ body {
     border-radius: 4px;
     background-color: var(--color-primary);
     border: solid 1px var(--color-primary);
-    color: #fff; }
+    color: #fff;
+    cursor: pointer; }
+    .button-primary:hover {
+      opacity: 0.9; }
   .button-primary-outlined {
     font-weight: 600;
     background-color: transparent;
