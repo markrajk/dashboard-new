@@ -2998,7 +2998,7 @@ body {
   border: 1.5px solid #f0f0f0;
   border-radius: 6px;
   z-index: 1000;
-  animation: modal-slide-in 0.27s ease-in;
+  animation: modal-slide-in 0.22s ease-in;
 
   &-close {
     position: absolute;
@@ -5216,7 +5216,7 @@ body {
 @keyframes modal-slide-in {
   from {
     opacity: 0;
-    transform: translate(-50%, -70%);
+    transform: translate(-50%, calc(-50% - 7em));
   }
 
   20% {
