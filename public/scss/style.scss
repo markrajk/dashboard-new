@@ -928,6 +928,11 @@ button {
 
 input {
   outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
 }
 
 // ==================================
@@ -4476,8 +4481,9 @@ body {
   @include align-items(center);
   @include justify-content(center);
   position: relative;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
+  min-height: -webkit-fill-available;
   background-color: #fcfdfd;
 
   @include custom-respond(530) {

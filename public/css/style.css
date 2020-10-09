@@ -266,7 +266,12 @@ button {
   outline: none; }
 
 input {
-  outline: none; }
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none; }
 
 *,
 *::after,
@@ -3494,8 +3499,9 @@ body {
   -moz-justify-content: center;
   justify-content: center;
   position: relative;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
+  min-height: -webkit-fill-available;
   background-color: #fcfdfd; }
   @media (max-width: 530px) {
     .auth {
