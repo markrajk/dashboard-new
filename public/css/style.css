@@ -2284,7 +2284,7 @@ body {
     /* WebKit */
     width: 0;
     height: 0; }
-  @media (max-width: 600px) and (max-height: 680px), (max-height: 680px) {
+  @media (max-width: 600px) and (max-height: 680px) {
     #giveFeedbackModal .custom-modal {
       position: relative;
       max-height: 100%;

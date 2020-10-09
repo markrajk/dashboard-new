@@ -22,8 +22,7 @@
 }
 
 @mixin custom-respond-combined-02($value01, $value02) {
-  @media (max-width: $value01 * 1px) and (max-height: $value02 * 1px),
-    (max-height: $value02 * 1px) {
+  @media (max-width: $value01 * 1px) and (max-height: $value02 * 1px) {
     @content;
   }
 }
