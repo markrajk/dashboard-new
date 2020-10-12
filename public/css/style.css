@@ -2181,6 +2181,8 @@ body {
     .custom-modal-close .icon-close {
       font-size: 1.75em;
       color: #bdbebf; }
+    .custom-modal-close:hover {
+      transform: scale(1.15); }
   .custom-modal-header {
     text-align: center; }
   .custom-modal-body {
@@ -2676,12 +2678,12 @@ body {
     -moz-justify-content: flex-start;
     justify-content: flex-start;
     padding: 4em; }
-    #imageUploadModal .custom-modal-body-custom-modal-close,
-    #usersModal .custom-modal-body-custom-modal-close {
+    #imageUploadModal .custom-modal-body .custom-modal-close,
+    #usersModal .custom-modal-body .custom-modal-close {
       top: 2.2em;
       right: 2.2em; }
-      #imageUploadModal .custom-modal-body-custom-modal-close i,
-      #usersModal .custom-modal-body-custom-modal-close i {
+      #imageUploadModal .custom-modal-body .custom-modal-close i,
+      #usersModal .custom-modal-body .custom-modal-close i {
         font-size: 2em; }
     #imageUploadModal .custom-modal-body-img,
     #usersModal .custom-modal-body-img {

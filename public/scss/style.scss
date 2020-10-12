@@ -3030,6 +3030,10 @@ body {
       font-size: 1.75em;
       color: #bdbebf;
     }
+
+    &:hover {
+      transform: scale(1.15);
+    }
   }
 
   &-header {
@@ -3471,7 +3475,7 @@ body {
 #settingsModal {
   & .custom-modal {
     width: 39em;
-    .custom-modal-close {
+    & .custom-modal-close {
       top: 2.2em;
       right: 2.2em;
 
@@ -3540,7 +3544,7 @@ body {
       @include justify-content(flex-start);
       padding: 4em;
 
-      &-custom-modal-close {
+      & .custom-modal-close {
         top: 2.2em;
         right: 2.2em;
 
