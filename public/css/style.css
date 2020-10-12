@@ -2305,7 +2305,7 @@ body {
         color: #afafaf; }
   .custom-modal-body .success-message {
     min-height: 25em;
-    height: calc(95vh - 20em - 6.8em - 3px);
+    height: calc(95vh - 19.4em - 6.8em - 3px);
     max-height: 40em;
     display: -webkit-box;
     display: -webkit-flex;

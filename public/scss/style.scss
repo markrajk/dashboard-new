@@ -3157,7 +3157,7 @@ body {
 
     & .success-message {
       min-height: 25em;
-      height: calc(95vh - 20em - 6.8em - 3px);
+      height: calc(95vh - 19.4em - 6.8em - 3px);
       max-height: 40em;
       @include flexbox();
       @include flex-direction(column);
