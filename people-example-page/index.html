@@ -768,7 +768,11 @@
       if (sendFeedbackBtn) {
         sendFeedbackBtn.forEach(e => {
           e.addEventListener("click", function () {
-          this.parentElement.parentElement.classList.add("success");
+            let modal = this.parentElement.parentElement;
+            let body = modal.querySelector('.custom-modal-body');
+            let successMessage = modal.querySelector('.success-message')
+            successMessage.style.maxHeight = `${body.clientHeight / parseFloat(getComputedStyle(document.documentElement).fontSize)}em`
+            modal.classList.add("success");
         });
         })
       }
