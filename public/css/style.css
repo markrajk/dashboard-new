@@ -433,6 +433,7 @@ body {
     background-color: #45525f; }
   .button-light-gray {
     font-weight: 400;
+    color: #3d464d;
     border: solid 1px #d9d9d9;
     border-radius: 4px;
     background-color: #fbfbfb; }
@@ -2360,8 +2361,9 @@ body {
     letter-spacing: -0.18px;
     color: #49566f; }
   .custom-modal-body-text {
-    margin-bottom: 2em;
+    margin-bottom: 1.7692307692em;
     font-size: 1.3em;
+    line-height: 1.54;
     font-weight: 500;
     color: #4e616f; }
   .custom-modal-body-buttons {
@@ -2385,8 +2387,8 @@ body {
       font-size: 1.35em;
       width: 48%; }
   .custom-modal-body-label {
-    margin-bottom: 0.6153846154em;
-    font-size: 1.3em;
+    margin-bottom: 0.6923076923em;
+    font-size: 1.2em;
     font-weight: 500;
     line-height: 1.23;
     color: #6c7b86; }
@@ -2405,7 +2407,7 @@ body {
       font-size: 1.33em;
       font-weight: 400;
       line-height: 1.21;
-      letter-spacing: -0.07px;
+      letter-spacing: 0.22px;
       color: #262a33;
       border-radius: 3px;
       border: solid 1px #d5d5d5; }
@@ -2449,7 +2451,8 @@ body {
   display: none; }
 
 #peerToPeerFeedback .custom-modal,
-#teamFeedback .custom-modal {
+#teamFeedback .custom-modal,
+#settingsModal .custom-modal {
   width: 56.1em;
   max-height: 95vh;
   overflow-y: auto;
@@ -2458,13 +2461,15 @@ body {
   -ms-overflow-style: none;
   /* Internet Explorer 10+ */ }
   #peerToPeerFeedback .custom-modal::-webkit-scrollbar,
-  #teamFeedback .custom-modal::-webkit-scrollbar {
+  #teamFeedback .custom-modal::-webkit-scrollbar,
+  #settingsModal .custom-modal::-webkit-scrollbar {
     /* WebKit */
     width: 0;
     height: 0; }
   @media (max-width: 600px) and (max-height: 680px) {
     #peerToPeerFeedback .custom-modal,
-    #teamFeedback .custom-modal {
+    #teamFeedback .custom-modal,
+    #settingsModal .custom-modal {
       position: relative;
       max-height: 100%;
       width: 100%;
@@ -2473,7 +2478,8 @@ body {
       border: 0;
       border-radius: 0; } }
   #peerToPeerFeedback .custom-modal-header,
-  #teamFeedback .custom-modal-header {
+  #teamFeedback .custom-modal-header,
+  #settingsModal .custom-modal-header {
     position: sticky;
     top: 0;
     left: 0;
@@ -2484,12 +2490,14 @@ body {
     background-color: #fff;
     z-index: 100; }
   #peerToPeerFeedback .custom-modal-body,
-  #teamFeedback .custom-modal-body {
+  #teamFeedback .custom-modal-body,
+  #settingsModal .custom-modal-body {
     padding: 0 4.3em;
     padding-bottom: 2.4em;
     min-height: 0; }
   #peerToPeerFeedback .custom-modal-footer,
-  #teamFeedback .custom-modal-footer {
+  #teamFeedback .custom-modal-footer,
+  #settingsModal .custom-modal-footer {
     position: sticky;
     bottom: 0;
     left: 0;
@@ -2514,57 +2522,90 @@ body {
     border-top: 1.5px solid #f0f0f0;
     z-index: 100; }
     #peerToPeerFeedback .custom-modal-footer .button,
-    #teamFeedback .custom-modal-footer .button {
+    #teamFeedback .custom-modal-footer .button,
+    #settingsModal .custom-modal-footer .button {
       padding: 0 1.7857142857em;
       height: 2.5714285714em;
       font-size: 1.4em;
       font-weight: 500;
-      letter-spacing: -0.07px;
-      color: #ffffff; }
+      letter-spacing: -0.07px; }
       #peerToPeerFeedback .custom-modal-footer .button-dark,
-      #teamFeedback .custom-modal-footer .button-dark {
+      #teamFeedback .custom-modal-footer .button-dark,
+      #settingsModal .custom-modal-footer .button-dark {
         display: none;
         padding: 0 4.2857142857em; }
   #peerToPeerFeedback .custom-modal.success .custom-modal-footer .button-primary,
-  #teamFeedback .custom-modal.success .custom-modal-footer .button-primary {
+  #teamFeedback .custom-modal.success .custom-modal-footer .button-primary,
+  #settingsModal .custom-modal.success .custom-modal-footer .button-primary {
     display: none; }
   #peerToPeerFeedback .custom-modal.success .custom-modal-footer .button-dark,
-  #teamFeedback .custom-modal.success .custom-modal-footer .button-dark {
+  #teamFeedback .custom-modal.success .custom-modal-footer .button-dark,
+  #settingsModal .custom-modal.success .custom-modal-footer .button-dark {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -moz-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex; }
   #peerToPeerFeedback .custom-modal.success .success-message,
-  #teamFeedback .custom-modal.success .success-message {
+  #teamFeedback .custom-modal.success .success-message,
+  #settingsModal .custom-modal.success .success-message {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex; }
   #peerToPeerFeedback .custom-modal.success .rating-item,
-  #teamFeedback .custom-modal.success .rating-item {
+  #teamFeedback .custom-modal.success .rating-item,
+  #settingsModal .custom-modal.success .rating-item {
     display: none; }
   #peerToPeerFeedback .custom-modal.success .feedback-item,
-  #teamFeedback .custom-modal.success .feedback-item {
+  #teamFeedback .custom-modal.success .feedback-item,
+  #settingsModal .custom-modal.success .feedback-item {
     display: none; }
 
-#confirmation .custom-modal .custom-modal-close,
-#inviteUsers .custom-modal .custom-modal-close,
-#ownerTransfer .custom-modal .custom-modal-close {
-  top: 2.4em;
-  right: 2.4em; }
-  #confirmation .custom-modal .custom-modal-close i,
-  #inviteUsers .custom-modal .custom-modal-close i,
-  #ownerTransfer .custom-modal .custom-modal-close i {
-    font-size: 1.5em; }
-#confirmation .custom-modal-body,
-#inviteUsers .custom-modal-body,
-#ownerTransfer .custom-modal-body {
-  padding: 4.9em 6em; }
+#confirmation .custom-modal,
+#inviteUsers .custom-modal,
+#ownerTransfer .custom-modal,
+#settingsModal .custom-modal {
+  width: 39em; }
+  #confirmation .custom-modal .custom-modal-close,
+  #inviteUsers .custom-modal .custom-modal-close,
+  #ownerTransfer .custom-modal .custom-modal-close,
+  #settingsModal .custom-modal .custom-modal-close {
+    top: 2.2em;
+    right: 2.2em; }
+    #confirmation .custom-modal .custom-modal-close i,
+    #inviteUsers .custom-modal .custom-modal-close i,
+    #ownerTransfer .custom-modal .custom-modal-close i,
+    #settingsModal .custom-modal .custom-modal-close i {
+      font-size: 1.5em; }
+  #confirmation .custom-modal-body,
+  #inviteUsers .custom-modal-body,
+  #ownerTransfer .custom-modal-body,
+  #settingsModal .custom-modal-body {
+    padding: 4.6em 6em; }
 
-#ownerTransfer .custom-modal-body-input-container {
-  margin-bottom: 2.7em; }
+#inviteUsers .custom-modal {
+  width: 40.5em; }
+
+#ownerTransfer .custom-modal {
+  width: 40.5em; }
+  #ownerTransfer .custom-modal-body-input-container {
+    margin-bottom: 2.7em; }
+
+#settingsModal .custom-modal-body {
+  padding-bottom: 2em; }
+  #settingsModal .custom-modal-body-input-container {
+    margin-bottom: 2.6em; }
+#settingsModal .custom-modal-footer {
+  padding: 0 6em;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between; }
+  #settingsModal .custom-modal-footer .button {
+    width: 48%; }
 
 .widgets {
   height: auto;

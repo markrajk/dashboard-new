@@ -386,6 +386,9 @@
           <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="ownerTransfer">
             Owner transfer
           </button>
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="settingsModal">
+            Settings modal
+          </button>
         </div>
       </div>
     </main>
@@ -737,6 +740,53 @@
             <button class="button button-light-gray" close-modal="ownerTransfer">Cancel</button>
             <button class="button button-primary">Update</button>
           </div>
+
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+    <!-- SETTINGS MODAL-->
+    <div class="custom-modal-wrapper" id="settingsModal">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="settingsModal">
+            <i class="icon-close"></i>
+          </div>
+          <p class="custom-modal-body-title">Settings page entry modal</p>
+          <p class="custom-modal-body-label">Input 1</p>
+          <div class="custom-modal-body-input-container">
+            <input type="email" placeholder="Enter here">
+            <div class="icon">
+              <i class="icon-check-circle"></i>
+            </div>
+          </div>
+
+          <p class="custom-modal-body-label">Input 2</p>
+          <div class="custom-modal-body-input-container">
+            <input type="email" placeholder="Enter here">
+            <div class="icon">
+              <i class="icon-check-circle"></i>
+            </div>
+          </div>
+
+          <p class="custom-modal-body-label">Input 3</p>
+          <div class="custom-modal-body-input-container">
+            <input type="email" placeholder="Enter here">
+            <div class="icon">
+              <i class="icon-check-circle"></i>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="custom-modal-footer">
+          <button class="button button-light-gray" close-modal="settingsModal">Cancel</button>
+          <button class="button button-primary send-feedback-modal">
+            Send feedback
+          </button>
 
         </div>
       </div>
