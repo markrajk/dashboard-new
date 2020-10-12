@@ -371,33 +371,45 @@
         </div>
 
         <div class="page-content">
-          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="peerToPeerFeedback">
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="peerToPeerFeedbackModal">
             Peer to peer
           </button>
-          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="teamFeedback">
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="teamFeedbackModal">
             Team feedback
           </button>
-          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="confirmation">
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="confirmationModal">
             Confirmation
           </button>
-          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="inviteUsers">
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="inviteUsersModal">
             Invite users
           </button>
-          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="ownerTransfer">
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="ownerTransferModal">
             Owner transfer
           </button>
           <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="settingsModal">
             Settings modal
           </button>
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="imageUploadModal">
+            Image upload
+          </button>
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="usersModal">
+            Users modal
+          </button>
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="inviteEmployeesModal">
+            Invite employees
+          </button>
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="inviteNewUsersModal">
+            Invite new users
+          </button>
         </div>
       </div>
     </main>
 
-    <div class="custom-modal-wrapper" id="teamFeedback">
+    <div class="custom-modal-wrapper" id="teamFeedbackModal">
       <div class="custom-modal">
         <!-- Modal header -->
         <div class="custom-modal-header">
-          <div class="custom-modal-close" close-modal="teamFeedback">
+          <div class="custom-modal-close" close-modal="teamFeedbackModal">
             <i class="icon-close"></i>
           </div>
           <div class="custom-modal-header-set">
@@ -546,11 +558,11 @@
     </div>
 
 
-    <div class="custom-modal-wrapper" id="peerToPeerFeedback">
+    <div class="custom-modal-wrapper" id="peerToPeerFeedbackModal">
       <div class="custom-modal">
         <!-- Modal header -->
         <div class="custom-modal-header">
-          <div class="custom-modal-close" close-modal="peerToPeerFeedback">
+          <div class="custom-modal-close" close-modal="peerToPeerFeedbackModal">
             <i class="icon-close"></i>
           </div>
           <div class="custom-modal-header-set">
@@ -664,18 +676,18 @@
 
 
     <!-- CONFIRMATION MODAL-->
-    <div class="custom-modal-wrapper" id="confirmation">
+    <div class="custom-modal-wrapper" id="confirmationModal">
       <div class="custom-modal">
         <!-- Modal body -->
         <div class="custom-modal-body">
-          <div class="custom-modal-close" close-modal="confirmation">
+          <div class="custom-modal-close" close-modal="confirmationModal">
             <i class="icon-close"></i>
           </div>
           <p class="custom-modal-body-title">Confirmation</p>
           <p class="custom-modal-body-text">Are you sure you want to link this team
             and all its employees to Google?</p>
             <div class="custom-modal-body-buttons">
-              <button class="button button-light-gray" close-modal="confirmation">Cancel</button>
+              <button class="button button-light-gray" close-modal="confirmationModal">Cancel</button>
               <button class="button button-primary">Confirm</button>
             </div>
         </div>
@@ -684,11 +696,11 @@
     </div>
 
     <!-- INVITE USERS MODAL-->
-    <div class="custom-modal-wrapper" id="inviteUsers">
+    <div class="custom-modal-wrapper" id="inviteUsersModal">
       <div class="custom-modal">
         <!-- Modal body -->
         <div class="custom-modal-body">
-          <div class="custom-modal-close" close-modal="inviteUsers">
+          <div class="custom-modal-close" close-modal="inviteUsersModal">
             <i class="icon-close"></i>
           </div>
           <p class="custom-modal-body-title">Team React Native</p>
@@ -720,11 +732,11 @@
     </div>
 
     <!-- OWNER TRANSFER MODAL-->
-    <div class="custom-modal-wrapper" id="ownerTransfer">
+    <div class="custom-modal-wrapper" id="ownerTransferModal">
       <div class="custom-modal">
         <!-- Modal body -->
         <div class="custom-modal-body">
-          <div class="custom-modal-close" close-modal="ownerTransfer">
+          <div class="custom-modal-close" close-modal="ownerTransferModal">
             <i class="icon-close"></i>
           </div>
           <p class="custom-modal-body-title">Owner Transfer</p>
@@ -737,7 +749,7 @@
           </div>
 
           <div class="custom-modal-body-buttons">
-            <button class="button button-light-gray" close-modal="ownerTransfer">Cancel</button>
+            <button class="button button-light-gray" close-modal="ownerTransferModal">Cancel</button>
             <button class="button button-primary">Update</button>
           </div>
 
@@ -788,6 +800,131 @@
             Send feedback
           </button>
 
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+    <!-- IMAGE UPLOAD MODAL-->
+    <div class="custom-modal-wrapper" id="imageUploadModal">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="imageUploadModal">
+            <i class="icon-close"></i>
+          </div>
+          <p class="custom-modal-body-title">Looks good!</p>
+
+          <img src="../public/img/p-01.png" alt="User's profile image" class="custom-modal-body-img">
+
+          <div class="custom-modal-body-buttons">
+            <label for="uploadImage" class="button button-light-gray">Upload new</label>
+            <input type="file" name="uploadImage" id="uploadImage" hidden />
+            <button class="button button-primary">Done</button>
+          </div>
+
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+    <!-- USERS MODAL-->
+    <div class="custom-modal-wrapper" id="usersModal">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="usersModal">
+            <i class="icon-close"></i>
+          </div>
+
+          <img src="../public/img/p-01.png" alt="User's profile image" class="custom-modal-body-img">
+
+          <div class="custom-modal-body-set">
+            <p class="custom-modal-body-set-subtitle">Marketing director</p>
+            <p class="custom-modal-body-set-title">Peter Smith</p>
+          </div>
+
+          <div class="custom-modal-body-buttons">
+            <button class="button button-primary">Open profile</button>
+          </div>
+
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+    <!-- INVITE EMPLOYEES MODAL-->
+    <div class="custom-modal-wrapper" id="inviteEmployeesModal">
+    <div class="custom-modal">
+      <!-- Modal body -->
+      <div class="custom-modal-body">
+        <div class="custom-modal-close" close-modal="inviteEmployeesModal">
+          <i class="icon-close"></i>
+        </div>
+        <p class="custom-modal-body-title">Invite new employees</p>
+        <p class="custom-modal-body-label">
+          <span class="custom-modal-body-label-text">Enter here the emails of the people who you want to invite</span>
+          <span class="custom-modal-body-label-amount">15 added</span></p>
+        <textarea class="custom-modal-body-textarea" placeholder="Enter emails"></textarea>
+
+      </div>
+
+      <!-- Modal footer -->
+      <div class="custom-modal-footer">
+        <button class="button button-light-gray" close-modal="inviteEmployeesModal">Cancel</button>
+        <button class="button button-primary send-feedback-modal">
+          Send Invites
+        </button>
+
+      </div>
+    </div>
+    <div class="custom-modal-backdrop"></div>
+  </div>
+
+  
+    <!-- INVITE USERS MODAL-->
+    <div class="custom-modal-wrapper" id="inviteNewUsersModal">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="inviteNewUsersModal">
+            <i class="icon-close"></i>
+          </div>
+          <p class="custom-modal-body-title">Invite new users</p>
+
+          <p class="custom-modal-body-label">Select team</p>
+          <div class="custom-dropdown">
+            <button class="custom-dropdown-trigger" tabindex="-1" onclick="this.focus()">
+              <p class="custom-dropdown-trigger-text">Team Marketing</p>
+              <div class="custom-dropdown-trigger-icon"><i class="icon-chevron-down"></i></div>
+            </button>
+            <ul class="custom-dropdown-menu">
+              <li class="custom-dropdown-menu-item">
+                <p class="custom-dropdown-menu-item-text">Example team</p>
+              </li>
+              <li class="custom-dropdown-menu-item">
+                <p class="custom-dropdown-menu-item-text">Example team</p>
+              </li>
+              <li class="custom-dropdown-menu-item">
+                <p class="custom-dropdown-menu-item-text">Example team</p>
+              </li>
+            </ul>
+          </div>
+
+          <p class="custom-modal-body-label">
+            <span class="custom-modal-body-label-text">Enter here the emails of the people who you want to invite</span>
+            <span class="custom-modal-body-label-amount">15 added</span></p>
+          <textarea class="custom-modal-body-textarea" placeholder="Enter emails"></textarea>
+  
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="custom-modal-footer">
+          <button class="button button-light-gray" close-modal="inviteNewUsersModal">Cancel</button>
+          <button class="button button-primary send-feedback-modal">
+            Send Invites
+          </button>
+  
         </div>
       </div>
       <div class="custom-modal-backdrop"></div>

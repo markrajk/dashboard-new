@@ -953,6 +953,13 @@ input {
   appearance: none;
 }
 
+textarea {
+  font-size: inherit;
+  font-family: inherit;
+  resize: none;
+  outline: none;
+}
+
 // ==================================
 // GENERAL SETTINGS
 // ==================================
@@ -3132,8 +3139,6 @@ body {
 
     //Feedback item
     & .feedback-item {
-      // padding: 2.5em 0;
-      //height: 8.47em;
       padding-top: 2.5em;
       @include flexbox();
       @include flex-direction(column);
@@ -3231,11 +3236,29 @@ body {
     }
 
     &-label {
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(space-between);
       margin-bottom: emcalc(0.9, 1.3);
       font-size: 1.2em;
       font-weight: 500;
       line-height: 1.23;
       color: #6c7b86;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      &-text {
+        margin-right: 2em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &-amount {
+        font-weight: 700;
+        color: #4f5458;
+      }
     }
 
     &-input-container {
@@ -3294,6 +3317,49 @@ body {
       height: emcalc(3.4, 1.35);
       font-size: 1.35em;
     }
+
+    &-textarea {
+      padding: emcalc(1, 1.3) emcalc(1.3, 1.3) 0;
+      font-family: inherit;
+      width: 100%;
+      height: emcalc(17.6, 1.3);
+      font-size: 1.3em;
+      font-weight: 400;
+      line-height: 1.23;
+      border: solid 1px #d1d7dd;
+      border-radius: 4px;
+
+      &::placeholder {
+        color: #a9a9a9;
+      }
+    }
+  }
+
+  &-footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6.8em;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    background-color: #f7f9fa;
+    border-top: 1.5px solid #f0f0f0;
+    z-index: 100;
+
+    & .button {
+      padding: 0 emcalc(2.5, 1.4);
+      height: emcalc(3.6, 1.4);
+      font-size: 1.4em;
+      font-weight: 500;
+      letter-spacing: -0.07px;
+
+      &-dark {
+        display: none;
+        padding: 0 emcalc(6, 1.4);
+      }
+    }
   }
 
   &.success {
@@ -3326,8 +3392,8 @@ body {
 
 //SPECIFIC MOODAL MODIFIERS
 //feedback modals
-#peerToPeerFeedback,
-#teamFeedback,
+#peerToPeerFeedbackModal,
+#teamFeedbackModal,
 #settingsModal {
   & .custom-modal {
     width: 56.1em;
@@ -3368,52 +3434,9 @@ body {
     }
 
     &-body {
-      // margin-top: 20em;
-      // margin-bottom: 6.8em;
       padding: 0 4.3em;
       padding-bottom: 2.4em;
       min-height: 0;
-      // height: 100%;
-      // height: calc(100% - 20em - 6.8em - 2.5px);
-
-      // overflow-y: auto;
-      // scrollbar-width: none;
-      // /* Firefox */
-      // -ms-overflow-style: none;
-      // /* Internet Explorer 10+ */
-
-      // &::-webkit-scrollbar {
-      //   /* WebKit */
-      //   width: 0;
-      //   height: 0;
-      // }
-    }
-
-    &-footer {
-      position: sticky;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 6.8em;
-      @include flexbox();
-      @include align-items(center);
-      @include justify-content(center);
-      background-color: #f7f9fa;
-      border-top: 1.5px solid #f0f0f0;
-      z-index: 100;
-
-      & .button {
-        padding: 0 emcalc(2.5, 1.4);
-        height: emcalc(3.6, 1.4);
-        font-size: 1.4em;
-        font-weight: 500;
-        letter-spacing: -0.07px;
-
-        &-dark {
-          display: none;
-          padding: 0 emcalc(6, 1.4);
-        }
-      }
     }
 
     &.success {
@@ -3442,9 +3465,9 @@ body {
 }
 
 //small modals
-#confirmation,
-#inviteUsers,
-#ownerTransfer,
+#confirmationModal,
+#inviteUsersModal,
+#ownerTransferModal,
 #settingsModal {
   & .custom-modal {
     width: 39em;
@@ -3495,6 +3518,180 @@ body {
 
       & .button {
         width: 48%;
+      }
+    }
+  }
+}
+
+//Image modals
+#imageUploadModal,
+#usersModal {
+  & .custom-modal {
+    width: 56em;
+
+    @include respond(desktop-sm) {
+      width: 40em;
+    }
+
+    &-body {
+      @include flexbox();
+      @include flex-direction(column);
+      @include align-items(center);
+      @include justify-content(flex-start);
+      padding: 4em;
+
+      &-custom-modal-close {
+        top: 2.2em;
+        right: 2.2em;
+
+        & i {
+          font-size: 2em;
+        }
+      }
+      &-img {
+        margin-bottom: 2.5em;
+        width: 16em;
+        height: 16em;
+        border-radius: 50%;
+        object-fit: contain;
+      }
+
+      &-set {
+        margin-bottom: 3.6em;
+        text-align: center;
+
+        &-subtitle {
+          margin-bottom: emcalc(0.65, 1.23);
+          font-size: 1.3em;
+          font-weight: 500;
+          line-height: 1.23;
+          color: #737580;
+        }
+        &-title {
+          font-size: 2.7em;
+          font-weight: 500;
+          line-height: 1.19;
+          letter-spacing: -0.54px;
+          color: #192239;
+        }
+      }
+
+      &-buttons {
+        & .button {
+          width: auto;
+          &-light-gray {
+            margin-right: emcalc(1.2, 1.35);
+            padding: 0 emcalc(2.6, 1.35);
+          }
+
+          &-primary {
+            padding: 0 emcalc(2, 1.35);
+          }
+        }
+      }
+    }
+  }
+}
+
+//Invite modals
+#inviteEmployeesModal,
+#inviteNewUsersModal {
+  & .custom-modal {
+    width: 57.2em;
+
+    &-body {
+      padding: 3.4em 2.6em 4.2em;
+    }
+
+    &-footer {
+      padding: 0 2.6em;
+      @include justify-content(flex-end);
+
+      & .button {
+        width: emcalc(12.8, 1.35);
+
+        &-light-gray {
+          margin-right: emcalc(1.4, 1.35);
+        }
+      }
+    }
+  }
+}
+
+#inviteNewUsersModal {
+  & .custom-modal {
+    &-body {
+      & .custom-dropdown {
+        margin-bottom: 3.4em;
+        width: 100%;
+        max-width: 32.6em;
+
+        &-trigger {
+          padding-left: 1.3em;
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(space-between);
+          width: 100%;
+          height: 3.5em;
+          border-radius: 3px;
+          border: solid 1px #d1d7dd;
+          background-color: #ffffff;
+
+          &:focus {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+
+          &-text {
+            font-size: 1.3em;
+            font-weight: 500;
+            line-height: 1.23;
+            color: #262626;
+          }
+
+          &-icon {
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+            width: 3.4em;
+            height: 2.1em;
+            border-left: 1.25px solid #d9d9d9;
+
+            & i {
+              font-size: 1.242em;
+              color: #818181;
+            }
+          }
+        }
+
+        &-menu {
+          width: 100%;
+          background-color: #fff;
+          border-radius: 3px;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          border: solid 1px #d1d7dd;
+          border-top: 0;
+
+          &-item {
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(flex-start);
+            padding-left: 1.3em;
+            height: 3.5em;
+
+            &:not(:last-of-type) {
+              border-bottom: solid 1px #d1d7dd;
+            }
+
+            &-text {
+              font-size: 1.3em;
+              font-weight: 500;
+              line-height: 1.23;
+              color: #818181;
+            }
+          }
+        }
       }
     }
   }
