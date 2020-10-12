@@ -3157,7 +3157,7 @@ body {
 
     & .success-message {
       min-height: 25em;
-      height: calc(98vh - 20em - 6.8em - 3px);
+      height: calc(95vh - 20em - 6.8em - 3px);
       max-height: 40em;
       @include flexbox();
       @include flex-direction(column);
@@ -3227,7 +3227,7 @@ body {
 #teamFeedback {
   & .custom-modal {
     width: 56.1em;
-    max-height: 98vh;
+    max-height: 95vh;
     overflow-y: auto;
     scrollbar-width: none;
     /* Firefox */

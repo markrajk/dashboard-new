@@ -2305,7 +2305,7 @@ body {
         color: #afafaf; }
   .custom-modal-body .success-message {
     min-height: 25em;
-    height: calc(98vh - 20em - 6.8em - 3px);
+    height: calc(95vh - 20em - 6.8em - 3px);
     max-height: 40em;
     display: -webkit-box;
     display: -webkit-flex;
@@ -2371,7 +2371,7 @@ body {
 #peerToPeerFeedback .custom-modal,
 #teamFeedback .custom-modal {
   width: 56.1em;
-  max-height: 98vh;
+  max-height: 95vh;
   overflow-y: auto;
   scrollbar-width: none;
   /* Firefox */
