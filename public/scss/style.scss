@@ -3052,7 +3052,6 @@ body {
 //CUSTOM MODAL COMPONENTS
 .custom-modal {
   &-header {
-    //Header set with img
     &-set {
       &-img {
         margin-bottom: 1.1em;
@@ -3061,6 +3060,22 @@ body {
         border: solid 1px rgba(0, 0, 0, 0);
         border-radius: 50%;
         object-fit: contain;
+      }
+
+      &-icon {
+        margin-bottom: 1.1em;
+        @include inline-flex();
+        @include align-items(center);
+        @include justify-content(center);
+        width: 8.41em;
+        height: 8.41em;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+
+        & i {
+          font-size: 5.38em;
+          color: #fff;
+        }
       }
 
       &-subtitle {
@@ -3082,19 +3097,21 @@ body {
   }
 
   &-body {
-    //Rating item
     max-height: 100%;
     & .rating-item {
       @include flexbox();
       @include align-items(center);
       @include justify-content(space-between);
-      height: 6.8em;
+      //height: 6.8em;
       border-bottom: 1.25px solid #f0f0f0;
 
       &-name {
+        max-width: emcalc(21, 1.4);
+        padding: 2.5rem 0;
         font-size: 1.4em;
         font-weight: 500;
         color: #414b62;
+        line-height: 1.45;
       }
 
       & .stars {
@@ -3107,7 +3124,9 @@ body {
 
     //Feedback item
     & .feedback-item {
-      height: 8.47em;
+      // padding: 2.5em 0;
+      //height: 8.47em;
+      padding-top: 2.5em;
       @include flexbox();
       @include flex-direction(column);
       @include align-items(flex-start);
@@ -3204,7 +3223,8 @@ body {
 }
 
 //SPECIFIC MOODAL MODIFIERS
-#giveFeedbackModal {
+#peerToPeerFeedback,
+#teamFeedback {
   & .custom-modal {
     width: 56.1em;
     max-height: 98vh;

@@ -305,131 +305,7 @@
               </div>
             </div>
           </div>
-          <!-- <div class="side-menu-content content-01">
-            <div class="side-menu-content-header">
-              <div class="side-menu-content-header-item">
-                <div class="side-menu-content-header-item-icon">
-                  <i class="icon-chart-column"></i>
-                </div>
-                <div class="side-menu-content-header-item-info">
-                  <p class="side-menu-content-header-item-info-title">
-                    Team React Native
-                  </p>
-                  <p class="side-menu-content-header-item-info-subtitle">
-                    Our example test team
-                  </p>
-                </div>
-              </div>
 
-              <div
-                class="side-menu-content-back side-trigger"
-                target-side="content-01-body"
-              >
-                <i class="icon-arrow-circle-left"></i>
-                <p class="side-menu-content-back-text">Back to all teams</p>
-              </div>
-            </div>
-
-            <div class="side-menu-content-body content-01-body">
-              <div class="side-menu-content-segment">
-                <div class="side-menu-content-title">Feedback data</div>
-
-                <div class="side-menu-content-item">
-                  <i class="icon-chart-bar"></i>
-                  <p class="side-menu-content-item-text">Team overall charts</p>
-                </div>
-
-                <div class="side-menu-content-item">
-                  <i class="icon-chart-line"></i>
-                  <p class="side-menu-content-item-text">Team members charts</p>
-                </div>
-
-                <div class="side-menu-content-item">
-                  <i class="icon-chart-area"></i>
-                  <p class="side-menu-content-item-text">Team lead charts</p>
-                </div>
-
-                <div class="side-menu-content-item">
-                  <i class="icon-chat"></i>
-                  <p class="side-menu-content-item-text">Text feedback</p>
-                </div>
-              </div>
-
-              <div
-                class="side-menu-content-segment side-trigger"
-                target-side="content-02-body"
-              >
-                <div class="side-menu-content-title">Team members</div>
-              </div>
-
-              <div class="side-menu-content-segment">
-                <div class="side-menu-content-title">Feedback tools</div>
-
-                <div class="side-menu-content-item active">
-                  <i class="icon-git-pull"></i>
-                  <p class="side-menu-content-item-text">Feedback requests</p>
-                </div>
-
-                <div class="side-menu-content-item">
-                  <i class="icon-document"></i>
-                  <p class="side-menu-content-item-text">Feedback reports</p>
-                </div>
-
-                <div class="side-menu-content-item">
-                  <i class="icon-question-circle"></i>
-                  <p class="side-menu-content-item-text">Custom feedback</p>
-                </div>
-              </div>
-
-              <div class="side-menu-content-segment">
-                <div class="side-menu-content-title">Team settings</div>
-              </div>
-            </div>
-
-            <div class="side-menu-content-body content-02-body">
-              <div class="side-menu-content-segment">
-                <div class="side-menu-content-title">Team Members</div>
-
-                <div class="side-menu-content-item">
-                  <p class="side-menu-content-item-text">Julia Martinez</p>
-                </div>
-
-                <div class="side-menu-content-item">
-                  <p class="side-menu-content-item-text">Harald Schwarz</p>
-                </div>
-
-                <div class="side-menu-content-item active">
-                  <p class="side-menu-content-item-text">Uli Ort</p>
-                </div>
-
-                <div class="side-menu-content-item">
-                  <p class="side-menu-content-item-text">Ai Schwarz</p>
-                </div>
-
-                <div class="side-menu-content-item">
-                  <p class="side-menu-content-item-text">Angelo Merte</p>
-                </div>
-
-                <div class="side-menu-content-item">
-                  <p class="side-menu-content-item-text">Peter Popper</p>
-                </div>
-
-                <div class="side-menu-content-item">
-                  <p class="side-menu-content-item-text">
-                    Esmeralda Tortellini
-                  </p>
-                </div>
-
-                <div class="side-menu-content-item">
-                  <p class="side-menu-content-item-text">Johan Stihl</p>
-                </div>
-
-                <div class="side-menu-content-item">
-                  <p class="side-menu-content-item-text">Til Schweiger</p>
-                </div>
-              </div>
-            </div>
-          </div> -->
         </div>
       </div>
 
@@ -495,18 +371,112 @@
         </div>
 
         <div class="page-content">
-          <button class="modal-trigger" target-modal="giveFeedbackModal">
-            OPEN MODAL
+          <button class=" button button-primary modal-trigger" target-modal="peerToPeerFeedback">
+            Peer to peer
+          </button>
+          <button class=" button button-primary modal-trigger" target-modal="teamFeedback">
+            Team feedback
           </button>
         </div>
       </div>
     </main>
 
-    <div class="custom-modal-wrapper" id="giveFeedbackModal">
+    <div class="custom-modal-wrapper" id="teamFeedback">
       <div class="custom-modal">
         <!-- Modal header -->
         <div class="custom-modal-header">
-          <div class="custom-modal-close" close-modal="giveFeedbackModal">
+          <div class="custom-modal-close" close-modal="teamFeedback">
+            <i class="icon-close"></i>
+          </div>
+          <div class="custom-modal-header-set">
+
+            <div class="custom-modal-header-set-icon">
+              <i class="icon-users"></i>
+            </div>
+            <p class="custom-modal-header-set-subtitle">Give feedback to</p>
+            <p class="custom-modal-header-set-title">Team React Native</p>
+          </div>
+        </div>
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="rating-item">
+            <p class="rating-item-name">How do you feel working in this
+              team at the moment?</p>
+            <div class="stars">
+              <input type="radio" name="question-01-0" id="question-01-01" />
+              <label for="question-01-01"></label>
+
+              <input type="radio" name="question-01-0" id="question-01-02" />
+              <label for="question-01-02"></label>
+
+              <input type="radio" name="question-01-0" id="question-01-03" />
+              <label for="question-01-03"></label>
+
+              <input type="radio" name="question-01-0" id="question-01-04" />
+              <label for="question-01-04"></label>
+
+              <input type="radio" name="question-01-0" id="question-01-05" />
+              <label for="question-01-05"></label>
+            </div>
+          </div>
+
+          <div class="rating-item">
+            <p class="rating-item-name">How do you feel working in this
+              team at the moment?</p>
+            <div class="stars">
+              <input type="radio" name="question-02-0" id="question-02-01" />
+              <label for="question-02-01"></label>
+
+              <input type="radio" name="question-02-0" id="question-02-02" />
+              <label for="question-02-02"></label>
+
+              <input type="radio" name="question-02-0" id="question-02-03" />
+              <label for="question-02-03"></label>
+
+              <input type="radio" name="question-02-0" id="question-02-04" />
+              <label for="question-02-04"></label>
+
+              <input type="radio" name="question-02-0" id="question-02-05" />
+              <label for="question-02-05"></label>
+            </div>
+          </div>
+
+
+          <div class="feedback-item">
+            <p class="feedback-item-name">What could we do better in this team</p>
+            <input
+              class="feedback-item-input"
+              type="text"
+              placeholder="Write here..."
+            />
+          </div>
+
+          
+          <div class="success-message">
+            <i class="icon-check-circle-full"></i>
+            <p class="success-message-title">Feedback sent</p>
+            <p class="success-message-text">
+              Window closes automatically in 3 seconds.
+            </p>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="custom-modal-footer">
+          <button class="button button-primary send-feedback-modal">
+            Send feedback
+          </button>
+          <button class="button button-dark">Sent</button>
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+
+    <div class="custom-modal-wrapper" id="peerToPeerFeedback">
+      <div class="custom-modal">
+        <!-- Modal header -->
+        <div class="custom-modal-header">
+          <div class="custom-modal-close" close-modal="peerToPeerFeedback">
             <i class="icon-close"></i>
           </div>
           <div class="custom-modal-header-set">
@@ -623,29 +593,6 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      // //TOGGLE SIDE BAR
-      // document
-      //   .querySelector(".toggle-side-bar")
-      //   .addEventListener("click", function () {
-      //     document
-      //       .querySelector(".side-bar")
-      //       .classList.toggle("side-bar-close");
-      //     if (
-      //       document
-      //         .querySelector(".side-bar")
-      //         .classList.contains("side-bar-close")
-      //     ) {
-      //       document.documentElement.style.setProperty(
-      //         "--side-bar-width",
-      //         "2em"
-      //       );
-      //     } else {
-      //       document.documentElement.style.setProperty(
-      //         "--side-bar-width",
-      //         "7.5em"
-      //       );
-      //     }
-      //   });
       //TOGGLE SIDE MENU
       document
         .querySelector(".toggle-side-menu")
@@ -696,56 +643,6 @@
           document.querySelector(".main").classList.remove("top-nav");
         });
       });
-
-      // // //HOWER SIDEBAR
-      // let side = document.querySelector(".side");
-      // let sideBar = document.querySelector(".side-bar");
-      // let body = document.querySelector("body");
-
-      // // document.addEventListener("mousemove", function (e) {
-      // //   if (e.screenX < 90 && !body.classList.contains("top")) {
-      // //     sideBar.classList.remove("side-bar-hide");
-      // //     if (sideBar.classList.contains(".side-bar-close")) {
-      // //       document.documentElement.style.setProperty(
-      // //         "--side-bar-width",
-      // //         "2em"
-      // //       );
-      // //     } else {
-      // //       document.documentElement.style.setProperty(
-      // //         "--side-bar-width",
-      // //         "7.5em"
-      // //       );
-      // //     }
-      // //   } else {
-      // //     sideBar.classList.add("side-bar-hide");
-      // //     document.documentElement.style.setProperty("--side-bar-width", "0em");
-      // //   }
-      // // });
-
-      // side.addEventListener("mouseover", function () {
-      //   if (!body.classList.contains("top")) {
-      //     sideBar.classList.remove("side-bar-hide");
-
-      //     if (sideBar.classList.contains("side-bar-close")) {
-      //       document.documentElement.style.setProperty(
-      //         "--side-bar-width",
-      //         "2em"
-      //       );
-      //     } else {
-      //       document.documentElement.style.setProperty(
-      //         "--side-bar-width",
-      //         "7.5em"
-      //       );
-      //     }
-      //   }
-      // });
-
-      // side.addEventListener("mouseout", function () {
-      //   if (!body.classList.contains("top")) {
-      //     sideBar.classList.add("side-bar-hide");
-      //     document.documentElement.style.setProperty("--side-bar-width", "0em");
-      //   }
-      // });
 
       //MODAL
       let modalTriggers = document.querySelectorAll(".modal-trigger");
@@ -866,12 +763,14 @@
       });
 
       //SEND FEEDBACK
-      let sendFeedbackBtn = document.querySelector(".send-feedback-modal");
+      let sendFeedbackBtn = document.querySelectorAll(".send-feedback-modal");
 
       if (sendFeedbackBtn) {
-        sendFeedbackBtn.addEventListener("click", function () {
+        sendFeedbackBtn.forEach(e => {
+          e.addEventListener("click", function () {
           this.parentElement.parentElement.classList.add("success");
         });
+        })
       }
     </script>
   </body>
