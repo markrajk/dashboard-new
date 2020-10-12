@@ -2127,7 +2127,7 @@ body {
   .stars label {
     display: block;
     cursor: pointer;
-    width: 1em;
+    width: 1.09em;
     color: #e8e8e8; }
     .stars label::before {
       content: "\e935";
@@ -2163,11 +2163,11 @@ body {
   animation: modal-slide-in 0.22s ease-in; }
   .custom-modal-close {
     position: absolute;
-    top: 2.3em;
-    right: 2.3em;
+    top: 1.7em;
+    right: 1.9em;
     cursor: pointer; }
     .custom-modal-close .icon-close {
-      font-size: 1.5em;
+      font-size: 1.75em;
       color: #bdbebf; }
   .custom-modal-header {
     text-align: center; }
@@ -2192,14 +2192,14 @@ body {
     background-color: rgba(0, 0, 0, 0.2); }
 
 .custom-modal-header-set-img {
-  margin-bottom: 1.1em;
+  margin-bottom: 0.95em;
   width: 8.41em;
   height: 8.41em;
   border: solid 1px rgba(0, 0, 0, 0);
   border-radius: 50%;
   object-fit: contain; }
 .custom-modal-header-set-icon {
-  margin-bottom: 1.1em;
+  margin-bottom: 0.95em;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -moz-inline-flex;
@@ -2223,7 +2223,7 @@ body {
     font-size: 5.38em;
     color: #fff; }
 .custom-modal-header-set-subtitle {
-  margin-bottom: 0.4em;
+  margin-bottom: 0.3em;
   font-size: 1.38em;
   font-weight: 500;
   line-height: 1.02;
@@ -2255,15 +2255,15 @@ body {
     border-bottom: 1.25px solid #f0f0f0; }
     .custom-modal-body .rating-item-name {
       max-width: 15em;
-      padding: 2.5rem 0;
+      padding: 2.25rem 0;
       font-size: 1.4em;
       font-weight: 500;
       color: #414b62;
       line-height: 1.45; }
     .custom-modal-body .rating-item .stars {
-      padding-right: 1.15em; }
+      padding-right: 0.5em; }
       .custom-modal-body .rating-item .stars label {
-        font-size: 2.4em; }
+        font-size: 2.6em; }
   .custom-modal-body .feedback-item {
     padding-top: 2.5em;
     display: -webkit-box;
@@ -2394,19 +2394,19 @@ body {
       border-radius: 0; } }
   #peerToPeerFeedback .custom-modal-header,
   #teamFeedback .custom-modal-header {
-    height: 20em;
     position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     padding: 2.7em;
+    padding-bottom: 2.5em;
     border-bottom: 2px solid #f4f4f4;
     background-color: #fff;
     z-index: 100; }
   #peerToPeerFeedback .custom-modal-body,
   #teamFeedback .custom-modal-body {
-    padding: 0 4.5em;
-    padding-bottom: 2.8em;
+    padding: 0 4.3em;
+    padding-bottom: 2.4em;
     min-height: 0; }
   #peerToPeerFeedback .custom-modal-footer,
   #teamFeedback .custom-modal-footer {
@@ -2435,7 +2435,7 @@ body {
     z-index: 100; }
     #peerToPeerFeedback .custom-modal-footer .button,
     #teamFeedback .custom-modal-footer .button {
-      padding: 0 1.1428571429em;
+      padding: 0 1.7857142857em;
       height: 2.5714285714em;
       font-size: 1.4em;
       font-weight: 500;

@@ -2959,7 +2959,7 @@ body {
   & label {
     display: block;
     cursor: pointer;
-    width: 1em;
+    width: 1.09em;
     color: #e8e8e8;
 
     &::before {
@@ -3007,12 +3007,12 @@ body {
 
   &-close {
     position: absolute;
-    top: 2.3em;
-    right: 2.3em;
+    top: 1.7em;
+    right: 1.9em;
     cursor: pointer;
 
     & .icon-close {
-      font-size: 1.5em;
+      font-size: 1.75em;
       color: #bdbebf;
     }
   }
@@ -3054,7 +3054,7 @@ body {
   &-header {
     &-set {
       &-img {
-        margin-bottom: 1.1em;
+        margin-bottom: 0.95em;
         width: 8.41em;
         height: 8.41em;
         border: solid 1px rgba(0, 0, 0, 0);
@@ -3063,7 +3063,7 @@ body {
       }
 
       &-icon {
-        margin-bottom: 1.1em;
+        margin-bottom: 0.95em;
         @include inline-flex();
         @include align-items(center);
         @include justify-content(center);
@@ -3079,7 +3079,7 @@ body {
       }
 
       &-subtitle {
-        margin-bottom: 0.4em;
+        margin-bottom: 0.3em;
         font-size: 1.38em;
         font-weight: 500;
         line-height: 1.02;
@@ -3107,7 +3107,7 @@ body {
 
       &-name {
         max-width: emcalc(21, 1.4);
-        padding: 2.5rem 0;
+        padding: 2.25rem 0;
         font-size: 1.4em;
         font-weight: 500;
         color: #414b62;
@@ -3115,9 +3115,9 @@ body {
       }
 
       & .stars {
-        padding-right: 1.15em;
+        padding-right: 0.5em;
         & label {
-          font-size: 2.4em;
+          font-size: 2.6em;
         }
       }
     }
@@ -3251,12 +3251,13 @@ body {
     }
 
     &-header {
-      height: 20em;
+      //height: 20em;
       position: sticky;
       top: 0;
       left: 0;
       width: 100%;
       padding: 2.7em;
+      padding-bottom: 2.5em;
       border-bottom: 2px solid #f4f4f4;
       background-color: #fff;
       z-index: 100;
@@ -3265,8 +3266,8 @@ body {
     &-body {
       // margin-top: 20em;
       // margin-bottom: 6.8em;
-      padding: 0 4.5em;
-      padding-bottom: 2.8em;
+      padding: 0 4.3em;
+      padding-bottom: 2.4em;
       min-height: 0;
       // height: 100%;
       // height: calc(100% - 20em - 6.8em - 2.5px);
@@ -3298,7 +3299,7 @@ body {
       z-index: 100;
 
       & .button {
-        padding: 0 emcalc(1.6, 1.4);
+        padding: 0 emcalc(2.5, 1.4);
         height: emcalc(3.6, 1.4);
         font-size: 1.4em;
         font-weight: 500;
