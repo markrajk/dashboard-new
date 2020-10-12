@@ -431,6 +431,11 @@ body {
     font-weight: 500;
     border-radius: 4px;
     background-color: #45525f; }
+  .button-light-gray {
+    font-weight: 400;
+    border: solid 1px #d9d9d9;
+    border-radius: 4px;
+    background-color: #fbfbfb; }
 
 .custom-dropdown {
   display: inline-block;
