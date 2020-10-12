@@ -3083,6 +3083,7 @@ body {
 
   &-body {
     //Rating item
+    max-height: 100%;
     & .rating-item {
       @include flexbox();
       @include align-items(center);
@@ -3135,10 +3136,19 @@ body {
       }
     }
 
-    .success-message {
+    & .success-message {
+      min-height: 25em;
+      height: calc(98vh - 20em - 6.8em - 3px);
+      max-height: 40em;
+      @include flexbox();
+      @include flex-direction(column);
+      @include align-items(center);
+      @include justify-content(center);
       display: none;
-      margin-top: 8em;
-      margin-bottom: 6.1em;
+      margin: auto 0;
+
+      // margin-top: 8em;
+      // margin-bottom: 6.1em;
       text-align: center;
 
       & i {
@@ -3166,6 +3176,10 @@ body {
   }
 
   &.success {
+    //@at-root: visible !important;
+    & .custom-modal-body {
+      padding: 0 !important;
+    }
     & .custom-modal-footer {
       & .button-primary {
         display: none;
@@ -3176,7 +3190,7 @@ body {
       }
     }
     & .success-message {
-      display: block;
+      @include flexbox();
     }
 
     & .rating-item {
@@ -3289,7 +3303,7 @@ body {
         }
       }
       & .success-message {
-        display: block;
+        @include flexbox();
       }
 
       & .rating-item {
