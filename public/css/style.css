@@ -2347,6 +2347,81 @@ body {
       font-weight: 400;
       letter-spacing: -0.13px;
       color: #414b62; }
+  .custom-modal-body-title {
+    margin-bottom: 1.4444444444em;
+    font-size: 1.8em;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: -0.18px;
+    color: #49566f; }
+  .custom-modal-body-text {
+    margin-bottom: 2em;
+    font-size: 1.3em;
+    font-weight: 500;
+    color: #4e616f; }
+  .custom-modal-body-buttons {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between; }
+    .custom-modal-body-buttons .button {
+      height: 2.5185185185em;
+      font-size: 1.35em;
+      width: 48%; }
+  .custom-modal-body-label {
+    margin-bottom: 0.6153846154em;
+    font-size: 1.3em;
+    font-weight: 500;
+    line-height: 1.23;
+    color: #6c7b86; }
+  .custom-modal-body-input-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%; }
+    .custom-modal-body-input-container:not(:last-of-type) {
+      margin-bottom: 1.5em; }
+    .custom-modal-body-input-container.pass .icon {
+      display: inline-block; }
+    .custom-modal-body-input-container input {
+      padding: 0 0.8270676692em;
+      width: 100%;
+      height: 2.5563909774em;
+      font-size: 1.33em;
+      font-weight: 400;
+      line-height: 1.21;
+      letter-spacing: -0.07px;
+      color: #262a33;
+      border-radius: 3px;
+      border: solid 1px #d5d5d5; }
+      .custom-modal-body-input-container input::placeholder {
+        color: #b1b1b1; }
+      .custom-modal-body-input-container input:focus {
+        border: solid 1px var(--color-primary); }
+    .custom-modal-body-input-container .icon {
+      display: none;
+      position: absolute;
+      top: 50%;
+      right: 1.1em;
+      transform: translate(0, -50%); }
+      .custom-modal-body-input-container .icon i {
+        font-size: 2em;
+        color: #36b37e; }
+  .custom-modal-body-single-button {
+    margin-top: 1.9259259259em;
+    padding: 0 1.7777777778em;
+    height: 2.5185185185em;
+    font-size: 1.35em; }
 .custom-modal.success .custom-modal-body {
   padding: 0 !important; }
 .custom-modal.success .custom-modal-footer .button-primary {
@@ -2468,6 +2543,23 @@ body {
   #peerToPeerFeedback .custom-modal.success .feedback-item,
   #teamFeedback .custom-modal.success .feedback-item {
     display: none; }
+
+#confirmation .custom-modal .custom-modal-close,
+#inviteUsers .custom-modal .custom-modal-close,
+#ownerTransfer .custom-modal .custom-modal-close {
+  top: 2.4em;
+  right: 2.4em; }
+  #confirmation .custom-modal .custom-modal-close i,
+  #inviteUsers .custom-modal .custom-modal-close i,
+  #ownerTransfer .custom-modal .custom-modal-close i {
+    font-size: 1.5em; }
+#confirmation .custom-modal-body,
+#inviteUsers .custom-modal-body,
+#ownerTransfer .custom-modal-body {
+  padding: 4.9em 6em; }
+
+#ownerTransfer .custom-modal-body-input-container {
+  margin-bottom: 2.7em; }
 
 .widgets {
   height: auto;

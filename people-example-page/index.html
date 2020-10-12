@@ -371,11 +371,20 @@
         </div>
 
         <div class="page-content">
-          <button class=" button button-primary modal-trigger" target-modal="peerToPeerFeedback">
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="peerToPeerFeedback">
             Peer to peer
           </button>
-          <button class=" button button-primary modal-trigger" target-modal="teamFeedback">
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="teamFeedback">
             Team feedback
+          </button>
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="confirmation">
+            Confirmation
+          </button>
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="inviteUsers">
+            Invite users
+          </button>
+          <button class=" button button-primary modal-trigger" style="padding: 1rem 2rem; margin-top: 2rem;" target-modal="ownerTransfer">
+            Owner transfer
           </button>
         </div>
       </div>
@@ -650,6 +659,90 @@
       <div class="custom-modal-backdrop"></div>
     </div>
 
+
+    <!-- CONFIRMATION MODAL-->
+    <div class="custom-modal-wrapper" id="confirmation">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="confirmation">
+            <i class="icon-close"></i>
+          </div>
+          <p class="custom-modal-body-title">Confirmation</p>
+          <p class="custom-modal-body-text">Are you sure you want to link this team
+            and all its employees to Google?</p>
+            <div class="custom-modal-body-buttons">
+              <button class="button button-white" close-modal="confirmation">Cancel</button>
+              <button class="button button-primary">Confirm</button>
+            </div>
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+    <!-- INVITE USERS MODAL-->
+    <div class="custom-modal-wrapper" id="inviteUsers">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="inviteUsers">
+            <i class="icon-close"></i>
+          </div>
+          <p class="custom-modal-body-title">Team React Native</p>
+          <p class="custom-modal-body-label">Invite new users</p>
+          <div class="custom-modal-body-input-container pass">
+            <input type="email" placeholder="Enter email">
+            <div class="icon">
+              <i class="icon-check-circle"></i>
+            </div>
+          </div>
+
+          <div class="custom-modal-body-input-container">
+            <input type="email" placeholder="Enter email">
+            <div class="icon">
+              <i class="icon-check-circle"></i>
+            </div>
+          </div>
+
+          <div class="custom-modal-body-input-container">
+            <input type="email" placeholder="Enter email">
+            <div class="icon">
+              <i class="icon-check-circle"></i>
+            </div>
+          </div>
+          <button class="button button-primary custom-modal-body-single-button">Send invites</button>
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
+    <!-- OWNER TRANSFER MODAL-->
+    <div class="custom-modal-wrapper" id="ownerTransfer">
+      <div class="custom-modal">
+        <!-- Modal body -->
+        <div class="custom-modal-body">
+          <div class="custom-modal-close" close-modal="ownerTransfer">
+            <i class="icon-close"></i>
+          </div>
+          <p class="custom-modal-body-title">Owner Transfer</p>
+          <p class="custom-modal-body-label">Email of the new owner</p>
+          <div class="custom-modal-body-input-container">
+            <input type="email" placeholder="Enter email">
+            <div class="icon">
+              <i class="icon-check-circle"></i>
+            </div>
+          </div>
+
+          <div class="custom-modal-body-buttons">
+            <button class="button button-white" close-modal="ownerTransfer">Cancel</button>
+            <button class="button button-primary">Update</button>
+          </div>
+          
+        </div>
+      </div>
+      <div class="custom-modal-backdrop"></div>
+    </div>
+
     <script
       src="https://kit.fontawesome.com/e9f50f9a1c.js"
       crossorigin="anonymous"
@@ -703,29 +796,6 @@
           document.querySelector(".main").classList.add("side-nav-toggle");
           document.querySelector(".main").classList.remove("side-nav");
           document.querySelector(".main").classList.remove("top-nav");
-        });
-      });
-
-      //MODAL
-      let modalTriggers = document.querySelectorAll(".modal-trigger");
-      let modalCloseBtns = document.querySelectorAll("[close-modal]");
-      console.log(modalCloseBtns);
-
-      modalTriggers.forEach((e) => {
-        e.addEventListener("click", function () {
-          let modal = document.getElementById(
-            `${e.getAttribute("target-modal")}`
-          );
-          modal.classList.add("open");
-        });
-      });
-
-      modalCloseBtns.forEach((e) => {
-        e.addEventListener("click", function () {
-          let modal = document.getElementById(
-            `${e.getAttribute("close-modal")}`
-          );
-          modal.classList.remove("open");
         });
       });
 
@@ -821,6 +891,29 @@
       peopleFeedgackReceivedLinks.forEach((e) => {
         e.addEventListener("click", function () {
           location.href = "../people-feedback-received";
+        });
+      });
+
+            //MODAL
+      let modalTriggers = document.querySelectorAll(".modal-trigger");
+      let modalCloseBtns = document.querySelectorAll("[close-modal]");
+      console.log(modalCloseBtns);
+
+      modalTriggers.forEach((e) => {
+        e.addEventListener("click", function () {
+          let modal = document.getElementById(
+            `${e.getAttribute("target-modal")}`
+          );
+          modal.classList.add("open");
+        });
+      });
+
+      modalCloseBtns.forEach((e) => {
+        e.addEventListener("click", function () {
+          let modal = document.getElementById(
+            `${e.getAttribute("close-modal")}`
+          );
+          modal.classList.remove("open");
         });
       });
 

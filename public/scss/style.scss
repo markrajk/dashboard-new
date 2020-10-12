@@ -3192,6 +3192,99 @@ body {
         color: #414b62;
       }
     }
+
+    &-title {
+      margin-bottom: emcalc(2.6, 1.8);
+      font-size: 1.8em;
+      font-weight: 400;
+      line-height: 1.17;
+      letter-spacing: -0.18px;
+      color: #49566f;
+    }
+
+    &-text {
+      margin-bottom: emcalc(2.6, 1.3);
+      font-size: 1.3em;
+      font-weight: 500;
+      color: #4e616f;
+    }
+
+    &-buttons {
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(space-between);
+
+      & .button {
+        height: emcalc(3.4, 1.35);
+        font-size: 1.35em;
+        width: 48%;
+      }
+    }
+
+    &-label {
+      margin-bottom: emcalc(0.8, 1.3);
+      font-size: 1.3em;
+      font-weight: 500;
+      line-height: 1.23;
+      color: #6c7b86;
+    }
+
+    &-input-container {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+
+      &:not(:last-of-type) {
+        margin-bottom: 1.5em;
+      }
+
+      &.pass {
+        & .icon {
+          display: inline-block;
+        }
+      }
+
+      & input {
+        padding: 0 emcalc(1.1, 1.33);
+        width: 100%;
+        height: emcalc(3.4, 1.33);
+        font-size: 1.33em;
+        font-weight: 400;
+        line-height: 1.21;
+        letter-spacing: -0.07px;
+        color: #262a33;
+        border-radius: 3px;
+        border: solid 1px #d5d5d5;
+
+        &::placeholder {
+          color: #b1b1b1;
+        }
+
+        &:focus {
+          border: solid 1px var(--color-primary);
+        }
+      }
+
+      & .icon {
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: 1.1em;
+        transform: translate(0, -50%);
+
+        & i {
+          font-size: 2em;
+          color: #36b37e;
+        }
+      }
+    }
+
+    &-single-button {
+      margin-top: emcalc(2.6, 1.35);
+      padding: 0 emcalc(2.4, 1.35);
+      height: emcalc(3.4, 1.35);
+      font-size: 1.35em;
+    }
   }
 
   &.success {
@@ -3223,6 +3316,7 @@ body {
 }
 
 //SPECIFIC MOODAL MODIFIERS
+//feedback modals
 #peerToPeerFeedback,
 #teamFeedback {
   & .custom-modal {
@@ -3333,6 +3427,35 @@ body {
 
       & .feedback-item {
         display: none;
+      }
+    }
+  }
+}
+
+//small modals
+#confirmation,
+#inviteUsers,
+#ownerTransfer {
+  & .custom-modal {
+    .custom-modal-close {
+      top: 2.4em;
+      right: 2.4em;
+
+      & i {
+        font-size: 1.5em;
+      }
+    }
+    &-body {
+      padding: 4.9em 6em;
+    }
+  }
+}
+
+#ownerTransfer {
+  & .custom-modal {
+    &-body {
+      &-input-container {
+        margin-bottom: 2.7em;
       }
     }
   }
