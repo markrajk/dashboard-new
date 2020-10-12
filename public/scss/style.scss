@@ -3356,7 +3356,6 @@ body {
       padding: 0 emcalc(2.5, 1.4);
       height: emcalc(3.6, 1.4);
       font-size: 1.4em;
-      font-weight: 500;
       letter-spacing: -0.07px;
 
       &-dark {
@@ -3592,6 +3591,23 @@ body {
             padding: 0 emcalc(2, 1.35);
           }
         }
+      }
+    }
+  }
+}
+
+#usersModal {
+  & .custom-modal {
+    &-body {
+      padding-top: 6em;
+      &-img {
+        margin-bottom: 3.3em;
+        width: 20em;
+        height: 20em;
+      }
+
+      & .button-primary {
+        padding: 0 emcalc(1.75, 1.35);
       }
     }
   }
